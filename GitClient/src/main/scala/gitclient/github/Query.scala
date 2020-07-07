@@ -1,6 +1,6 @@
 package gitclient.github
 
-import ujson.Value.Value
+import ujson.Obj
 
 import scala.io.Source
 
@@ -16,7 +16,40 @@ object Query {
     }
   }
 
-  def queryPullRequestsAndIssues(owner: String, name: String, withPull: Boolean, withIssue: Boolean, afterPull: String = null, afterIssue: String = null): Value = {
+  def queryAllPullRequestsAndIssues(owner: String, name: String): Obj = {
+    val pullRequests = ujson.Arr()
+    val issues = ujson.Arr()
+
+    var withPull = true
+    var withIssue = true
+    var afterPull: String = null
+    var afterIssue: String = null
+
+    while (withPull || withIssue) {
+      val query = Query.queryPullRequestsAndIssues(owner, name, withPull, withIssue, afterPull, afterIssue)
+      if (withPull) {
+        val pullResult = query("pullRequests").obj
+        val pullPageInfo = pullResult("pageInfo").obj
+        withPull = pullPageInfo("hasNextPage").bool
+        afterPull = pullPageInfo("endCursor").strOpt.orNull
+        pullRequests.value ++= pullResult("nodes").arr
+      }
+      if (withIssue) {
+        val issueResult = query("issues").obj
+        val issuePageInfo = issueResult("pageInfo").obj
+        withIssue = issuePageInfo("hasNextPage").bool
+        afterIssue = issuePageInfo("endCursor").strOpt.orNull
+        issues.value ++= issueResult("nodes").arr
+      }
+    }
+
+    ujson.Obj(
+      "pullRequests" -> pullRequests,
+      "issues" -> issues
+    )
+  }
+
+  def queryPullRequestsAndIssues(owner: String, name: String, withPull: Boolean, withIssue: Boolean, afterPull: String = null, afterIssue: String = null): Obj = {
     println(s"Querying pull requests and issues (owner: $owner, name: $name, afterPull: $afterPull, afterIssue: $afterIssue)")
     val query =
       """
@@ -31,18 +64,6 @@ object Query {
         |        number
         |        title
         |        bodyText
-        |        commits(first: 100) {
-        |          pageInfo {
-        |            hasNextPage
-        |            endCursor
-        |          }
-        |          nodes {
-        |            commit {
-        |              oid
-        |              message
-        |            }
-        |          }
-        |        }
         |      }
         |    }
         |    issues(states: CLOSED, labels: "bug", first: 100, after: $afterIssue) @include(if: $withIssue) {
@@ -68,45 +89,13 @@ object Query {
     executeQuery(query, variables)
   }
 
-  def queryPullRequestCommits(owner: String, name: String, number: Int, afterCommit: String = null): Value = {
-    println(s"Querying pull requests commits (owner: $owner, name: $name, number: $number, afterCommit: $afterCommit)")
-    val query =
-      """
-        |query PullRequestCommits($owner: String!, $name: String!, $number: Int!, $afterCommit: String) {
-        |  repository(owner: $owner, name: $name) {
-        |    pullRequest(number: $number) {
-        |      commits(first: 100, after: $afterCommit) {
-        |        pageInfo {
-        |          hasNextPage
-        |          endCursor
-        |        }
-        |        nodes {
-        |          commit {
-        |            oid
-        |            message
-        |          }
-        |        }
-        |      }
-        |    }
-        |  }
-        |}
-      """.stripMargin
-    val variables = ujson.Obj(
-      "owner" -> owner,
-      "name" -> name,
-      "number" -> number
-    )
-    if (afterCommit != null) variables.value += "afterCommit" -> afterCommit
-    executeQuery(query, variables)
-  }
-
-  def executeQuery(query: String, variables: Value): Value = {
+  def executeQuery(query: String, variables: Obj): Obj = {
     val headers = Map("Authorization" -> s"Bearer $token")
     val data = ujson.Obj(
       "query" -> query,
       "variables" -> variables
     )
     val r = requests.post("https://api.github.com/graphql", headers = headers, data = data)
-    ujson.read(r.text)
+    ujson.read(r.text).obj("data").obj("repository").obj
   }
 }

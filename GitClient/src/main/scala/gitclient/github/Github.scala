@@ -1,61 +1,42 @@
 package gitclient.github
 
+import gitclient.util.Cache
 import ujson.Value.Value
 
-import scala.collection.mutable
+import scala.collection.immutable.HashSet
+import scala.util.matching.Regex
 
 object Github {
-  def getPullRequestsAndFaults(owner: String, name: String): PullRequestsAndFaults = {
-    val pullRequests = mutable.ListBuffer[PullRequest]()
-    val faults = mutable.Set[Int]()
+  val issuePattern: Regex = """#(\d+)""".r
 
-    var withPull = true
-    var withIssue = true
-    var afterPull: String = null
-    var afterIssue: String = null
-    while (withPull || withIssue) {
-      val query = Query.queryPullRequestsAndIssues(owner, name, withPull, withIssue, afterPull, afterIssue)
-      val repository = query.obj("data").obj("repository").obj
-      if (withPull) {
-        val pullResult = repository("pullRequests").obj
-        val pullPageInfo = pullResult("pageInfo").obj
-        withPull = pullPageInfo("hasNextPage").bool
-        afterPull = pullPageInfo("endCursor").strOpt.orNull
-        pullRequests ++= pullResult("nodes").arr.map(node => new PullRequest(owner, name, node.obj.toMap))
+  /**
+   * Get a set of numbers referring to all issues labeled as faults
+   * and all pull requests referring to those issues.
+   */
+  def getFaults(owner: String, name: String, useCache: Boolean = true): Set[Int] =
+    if (useCache && Cache.isCached(owner + name)) {
+      Cache.readObject(owner + name).asInstanceOf[HashSet[Int]]
+    } else {
+      val pullRequestsAndIssues = Query.queryAllPullRequestsAndIssues(owner, name)
+      val pullRequests = pullRequestsAndIssues("pullRequests").arr
+      val issues = pullRequestsAndIssues("issues").arr
+
+      def toNumber(pullOrIssue: Value): Int = pullOrIssue.obj("number").num.toInt
+
+      val issueNumbers = HashSet.from(issues.map(toNumber))
+
+      def refersToIssue(pullRequest: Value): Boolean = {
+        val pullObject = pullRequest.obj
+        val pullText = pullObject("title").str + pullObject("bodyText").str
+        val matches = issuePattern.findAllIn(pullText)
+        val numbers = matches.matchData.map(_.group(1).toInt).toSet
+        numbers.intersect(issueNumbers).nonEmpty
       }
-      if (withIssue) {
-        val issueResult = repository("issues").obj
-        val issuePageInfo = issueResult("pageInfo").obj
-        withIssue = issuePageInfo("hasNextPage").bool
-        afterIssue = issuePageInfo("endCursor").strOpt.orNull
-        // Assumes issues representing faults are labeled with "bug" (see query)
-        faults ++= issueResult("nodes").arr.map(_.obj("number").num.toInt)
-      }
+
+      val pullRequestNumbers = HashSet.from(pullRequests.filter(refersToIssue).map(toNumber))
+
+      val result = issueNumbers.union(pullRequestNumbers)
+      if (useCache) Cache.writeObject(owner + name, result)
+      result
     }
-    PullRequestsAndFaults(pullRequests.toList, faults.toSet)
-  }
-
-  def processCommitResult(owner: String, name: String, number: Int, commitResult: mutable.LinkedHashMap[String, Value]): List[Commit] = {
-    def nodesToCommits(nodes: Value): mutable.ArrayBuffer[Commit] = nodes.arr.map(node => {
-      val commit = node.obj("commit").obj
-      Commit(commit("oid").str, commit("message").str)
-    })
-
-    val commits = nodesToCommits(commitResult("nodes"))
-
-    val pageInfo = commitResult("pageInfo").obj
-    var hasNextPage = pageInfo("hasNextPage").bool
-    var afterCommit = pageInfo("endCursor").strOpt.orNull
-
-    while (hasNextPage) {
-      val query = Query.queryPullRequestCommits(owner, name, number, afterCommit)
-      val commitResult = query.obj("data").obj("repository").obj("pullRequest").obj("commits").obj
-      val pageInfo = commitResult("pageInfo").obj
-      hasNextPage = pageInfo("hasNextPage").bool
-      afterCommit = pageInfo("endCursor").strOpt.orNull
-      commits ++= nodesToCommits(commitResult("nodes"))
-    }
-
-    commits.toList
-  }
 }
