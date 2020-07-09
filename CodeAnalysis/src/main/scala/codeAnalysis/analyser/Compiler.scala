@@ -1,35 +1,111 @@
 package codeAnalysis.analyser
 
-import java.io.File
+import java.io.{Closeable, File}
 
 import scala.reflect.internal.util.{BatchSourceFile, SourceFile}
 import scala.reflect.io.AbstractFile
 import scala.tools.nsc.Settings
-import scala.tools.nsc.interactive.Global
+import scala.tools.nsc.interactive.{Global, Response}
 import scala.tools.nsc.reporters.ConsoleReporter
 
 object Compiler {
-  val global: Global = {
+  private def newGlobal: Global = {
     val settings = new Settings
     settings.usejavacp.value = true
     val reporter = new ConsoleReporter(settings)
     new Global(settings, reporter)
   }
 
-  import global._
+  val global: Global = newGlobal
 
-  def treeFromFile(source: SourceFile): Tree = {
-    val response = new Response[Tree]
-    global.askLoadedTyped(source, keepLoaded = true, response)
+  def fileToSource(file: AbstractFile): SourceFile =
+    new BatchSourceFile(file)
+
+  def fileToSource(file: File): SourceFile =
+    fileToSource(AbstractFile.getFile(file))
+
+  def fileToSource(path: String): SourceFile =
+    fileToSource(AbstractFile.getFile(path))
+
+  def stringToSource(filename: String, contents: String): SourceFile =
+    new BatchSourceFile(filename, contents.toCharArray)
+}
+
+import codeAnalysis.analyser.Compiler.global
+
+class Compiler extends Closeable {
+  private val local = Compiler.newGlobal
+
+  /**
+   * Loads the source. Only one set of sources can be loaded at once.
+   *
+   * @param source the source to load
+   */
+  def loadSource(source: SourceFile): Unit = loadSources(List(source))
+
+  /**
+   * Loads the sources. Only one set of sources can be loaded at once.
+   *
+   * @param sources the list of sources to load
+   */
+  def loadSources(sources: List[SourceFile]): Unit = {
+    val response = new Response[Unit]
+    local.askReload(sources, response)
     response.get match {
-      case Left(tree) => tree
+      case Left(_) =>
       case Right(ex) => throw ex
     }
   }
 
-  def treeFromFile(file: AbstractFile): Tree = treeFromFile(new BatchSourceFile(file))
+  /**
+   * Returns the tree of a loaded source.
+   * Do not use on unloaded sources.
+   *
+   * @param source the loaded source
+   * @return the tree of the loaded source
+   */
+  def treeFromLoadedSource(source: SourceFile): global.Tree = {
+    val response = new Response[local.Tree]
+    local.askLoadedTyped(source, keepLoaded = true, response)
+    response.get match {
+      case Left(tree) => tree.asInstanceOf[global.Tree]
+      case Right(ex) => throw ex
+    }
+  }
 
-  def treeFromFile(file: File): Tree = treeFromFile(AbstractFile.getFile(file))
+  /**
+   * Returns the trees of loaded sources.
+   * Do not use on unloaded sources.
+   *
+   * @param sources the list of source
+   * @return the list of trees
+   */
+  def treesFromLoadedSources(sources: List[SourceFile]): List[global.Tree] =
+    sources.map(treeFromLoadedSource)
 
-  def treeFromFile(path: String): Tree = treeFromFile(AbstractFile.getFile(path))
+  /**
+   * Loads the source and returns the resulting tree.
+   * Only one set of sources can be loaded at once.
+   *
+   * @param source the source to load
+   * @return the resulting tree
+   */
+  def treeFromSource(source: SourceFile): global.Tree = {
+    loadSource(source)
+    treeFromLoadedSource(source)
+  }
+
+  /**
+   * Loads the sources and returns the resulting trees.
+   * Only one set of sources can be loaded at once.
+   *
+   * @param sources the list of sources to load
+   * @return the list of resulting trees
+   */
+  def treesFromSources(sources: List[SourceFile]): List[global.Tree] = {
+    loadSources(sources)
+    treesFromLoadedSources(sources)
+  }
+
+  def close(): Unit = local.close()
 }

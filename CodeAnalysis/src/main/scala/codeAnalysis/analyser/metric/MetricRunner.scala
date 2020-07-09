@@ -1,10 +1,7 @@
 package codeAnalysis.analyser.metric
 
-import java.io.File
-
 import codeAnalysis.analyser.Compiler.global._
 import codeAnalysis.analyser.traverser.ParentTraverser
-import codeAnalysis.analyser.Compiler
 
 class MetricRunner(val metrics: List[Metric]) {
   val fileMetrics: List[FileMetric] = metrics.collect { case m: FileMetric => m }
@@ -41,10 +38,7 @@ class MetricRunner(val metrics: List[Metric]) {
     addResults(result, parent, metricResults)
   }
 
-  def run(file: File): Option[Result] = {
-    val tree = Compiler.treeFromFile(file)
-    traverser.top(tree)
-  }
+  def run(tree: Tree): Option[Result] = traverser.top(tree)
 
-  def runFiles(files: List[File]): List[Result] = files.map(run).collect { case Some(result) => result }
+  def runAll(trees: List[Tree]): List[Result] = trees.map(run).collect { case Some(result) => result }
 }

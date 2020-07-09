@@ -4,21 +4,37 @@ import java.io.File
 
 import codeAnalysis.analyser.metric.{Metric, MetricRunner, Result}
 
+import scala.reflect.internal.util.SourceFile
+import scala.util.Using.resource
+
 class Analyser(path: String, metrics: List[Metric], includeTest: Boolean = false) {
-  val projectFiles: List[File] = getProjectFiles(path)
+  var sourceFiles: List[SourceFile] = getProjectFiles(path)
+  var scalaFiles: List[SourceFile] = sourceFiles.filter(!_.isJava)
   val runner = new MetricRunner(metrics)
 
-  private def getProjectFiles(path: String): List[File] = {
+  def refresh(): Unit = {
+    sourceFiles = getProjectFiles(path)
+    scalaFiles = sourceFiles.filter(!_.isJava)
+  }
+
+  private def getProjectFiles(path: String): List[SourceFile] = {
     def isTestPath(dir: File) = dir.getPath.contains(File.separator + "test" + File.separator)
 
-    def isScalaFile(filename: String) = filename.endsWith(".scala")
+    def isSourceFile(filename: String) = filename.endsWith(".scala") || filename.endsWith(".java")
 
     val file = new File(path)
     if (file.isFile)
-      List(file)
+      List(Compiler.fileToSource(file))
     else
-      file.listFiles((dir, name) => (includeTest || !isTestPath(dir)) && isScalaFile(name)).toList
+      file.listFiles((dir, name) => (includeTest || !isTestPath(dir)) && isSourceFile(name))
+        .map(Compiler.fileToSource)
+        .toList
   }
 
-  def analyse(): List[Result] = runner.runFiles(projectFiles)
+  def analyse(): List[Result] = {
+    resource(new Compiler)(compiler => {
+      compiler.loadSources(sourceFiles)
+      runner.runAll(compiler.treesFromLoadedSources(scalaFiles))
+    })
+  }
 }

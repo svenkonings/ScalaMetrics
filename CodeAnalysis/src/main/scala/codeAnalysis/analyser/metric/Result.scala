@@ -7,6 +7,7 @@ import scala.collection.mutable.ListBuffer
 abstract class Result {
   private val _results: ListBuffer[Result] = ListBuffer()
   private val _metrics: ListBuffer[MetricResult] = ListBuffer()
+  var faults: Int = 0
 
   def name: String
 

@@ -2,7 +2,7 @@ package codeAnalysis.analyser.metric
 
 import codeAnalysis.analyser.Compiler.global._
 
-trait Metric {}
+trait Metric
 
 trait FileMetric extends Metric {
   def run(tree: PackageDef): List[MetricResult]
