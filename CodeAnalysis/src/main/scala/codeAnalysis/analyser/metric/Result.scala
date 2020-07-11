@@ -1,6 +1,6 @@
 package codeAnalysis.analyser.metric
 
-import codeAnalysis.analyser.Compiler.global._
+import codeAnalysis.analyser.Global
 
 import scala.collection.mutable.ListBuffer
 
@@ -72,14 +72,14 @@ abstract class Result {
     " " * indent + (name :: metrics.map(_.toString(indent + 2)) ::: results.map(_.toString(indent + 2))).mkString("\n")
 }
 
-case class FileResult(tree: PackageDef) extends Result {
+case class FileResult(tree: Global#PackageDef) extends Result {
   override def name: String = tree.symbol.toString
 }
 
-case class ObjectResult(tree: ImplDef) extends Result {
+case class ObjectResult(tree: Global#ImplDef) extends Result {
   override def name: String = tree.symbol.toString
 }
 
-case class MethodResult(tree: DefDef) extends Result {
+case class MethodResult(tree: Global#DefDef) extends Result {
   override def name: String = tree.symbol.toString
 }

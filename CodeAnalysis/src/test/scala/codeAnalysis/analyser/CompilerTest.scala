@@ -1,8 +1,8 @@
 package codeAnalysis.analyser
 
 import codeAnalysis.UnitSpec
-import codeAnalysis.analyser.Compiler.global._
 
+import scala.tools.nsc.interactive.Global
 import scala.util.Using.resource
 
 class CompilerTest extends UnitSpec {
@@ -10,7 +10,7 @@ class CompilerTest extends UnitSpec {
     resource(new Compiler)(compiler => {
       val source = Compiler.fileToSource(resources + "analyser/Simple.scala")
       val tree = compiler.treeFromSource(source)
-      assert(tree.isInstanceOf[Tree])
+      assert(tree.isInstanceOf[Global#Tree])
     })
   }
 
@@ -18,7 +18,7 @@ class CompilerTest extends UnitSpec {
     resource(new Compiler)(compiler => {
       val source = Compiler.fileToSource(resources + "analyser/Simple.java")
       val tree = compiler.treeFromSource(source)
-      assert(tree.isInstanceOf[Tree])
+      assert(tree.isInstanceOf[Global#Tree])
     })
   }
 
@@ -40,9 +40,9 @@ class CompilerTest extends UnitSpec {
       ).map(Compiler.fileToSource)
       compiler.loadSources(sources)
       val initial = compiler.treeFromLoadedSource(sources.head)
-      val body = initial.asInstanceOf[PackageDef].stats.head.asInstanceOf[ClassDef].impl.body
-      val correct = body(1).asInstanceOf[DefDef]
-      val incorrect = body(2).asInstanceOf[DefDef]
+      val body = initial.asInstanceOf[Global#PackageDef].stats.head.asInstanceOf[Global#ClassDef].impl.body
+      val correct = body(1).asInstanceOf[Global#DefDef]
+      val incorrect = body(2).asInstanceOf[Global#DefDef]
       assert(correct.rhs.tpe.typeSymbol.nameString.equals("Int"))
       assert(incorrect.rhs.tpe.typeSymbol.nameString.equals("<none>"))
     })
@@ -78,9 +78,9 @@ class CompilerTest extends UnitSpec {
       val sources = List(correct, incorrect, initial)
       compiler.loadSources(sources)
       val tree = compiler.treeFromLoadedSource(initial)
-      val body = tree.asInstanceOf[PackageDef].stats.head.asInstanceOf[ClassDef].impl.body
-      val correctDef = body(1).asInstanceOf[DefDef]
-      val incorrectDef = body(2).asInstanceOf[DefDef]
+      val body = tree.asInstanceOf[Global#PackageDef].stats.head.asInstanceOf[Global#ClassDef].impl.body
+      val correctDef = body(1).asInstanceOf[Global#DefDef]
+      val incorrectDef = body(2).asInstanceOf[Global#DefDef]
       assert(correctDef.rhs.tpe.typeSymbol.nameString.equals("Int"))
       assert(incorrectDef.rhs.tpe.typeSymbol.nameString.equals("<none>"))
     })

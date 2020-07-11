@@ -3,8 +3,6 @@ package gitclient.git
 import java.io.File
 
 import gitclient.UnitSpec
-import org.eclipse.jgit.diff.DiffFormatter
-import org.eclipse.jgit.util.io.DisabledOutputStream
 
 class RepoTest extends UnitSpec {
   test("Log test") {

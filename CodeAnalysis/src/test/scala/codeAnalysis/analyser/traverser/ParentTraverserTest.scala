@@ -2,8 +2,9 @@ package codeAnalysis.analyser.traverser
 
 import codeAnalysis.UnitSpec
 import codeAnalysis.analyser.Compiler
-import codeAnalysis.analyser.Compiler.global._
 import codeAnalysis.analyser.metric.{FileResult, MethodResult, ObjectResult, Result}
+
+import scala.tools.nsc.interactive.Global
 
 class ParentTraverserTest extends UnitSpec {
 
@@ -30,17 +31,18 @@ class ParentTraverserTest extends UnitSpec {
 
   test("Tree traverser test") {
     val source = Compiler.fileToSource(resources + "analyser/traverser/ParentTraverserTree.scala")
-    val tree = new Compiler().treeFromSource(source)
-    val traverser = new ParentTraverser[Result](parent => {
-      case t: PackageDef =>
+    val compiler = new Compiler()
+    val tree = compiler.treeFromSource(source)
+    val traverser = new compiler.global.ParentTraverser[Result](parent => {
+      case t: compiler.global.PackageDef =>
         val result = FileResult(t)
         parent.foreach(_.addResult(result))
         result
-      case t: ImplDef =>
+      case t: compiler.global.ImplDef =>
         val result = ObjectResult(t)
         parent.foreach(_.addResult(result))
         result
-      case t: DefDef =>
+      case t: compiler.global.DefDef =>
         val result = MethodResult(t)
         parent.foreach(_.addResult(result))
         result

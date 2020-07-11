@@ -2,15 +2,15 @@ package codeAnalysis.analyser
 
 import java.io.File
 
-import codeAnalysis.analyser.metric.{Metric, MetricRunner, Result}
+import codeAnalysis.analyser.metric.{MetricProducer, MetricRunner, Result}
 
 import scala.reflect.internal.util.SourceFile
 import scala.util.Using.resource
 
-class Analyser(path: String, metrics: List[Metric], includeTest: Boolean = false) {
+class Analyser(path: String, metrics: List[MetricProducer], includeTest: Boolean = false) {
+
   var sourceFiles: List[SourceFile] = getProjectFiles(path)
   var scalaFiles: List[SourceFile] = sourceFiles.filter(!_.isJava)
-  val runner = new MetricRunner(metrics)
 
   def refresh(): Unit = {
     sourceFiles = getProjectFiles(path)
@@ -33,6 +33,8 @@ class Analyser(path: String, metrics: List[Metric], includeTest: Boolean = false
 
   def analyse(): List[Result] = {
     resource(new Compiler)(compiler => {
+      import compiler.global
+      val runner = new MetricRunner(metrics)
       compiler.loadSources(sourceFiles)
       runner.runAll(compiler.treesFromLoadedSources(scalaFiles))
     })

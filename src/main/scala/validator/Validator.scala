@@ -4,7 +4,7 @@ import java.io.File
 import java.nio.charset.StandardCharsets
 
 import codeAnalysis.analyser.Compiler
-import codeAnalysis.analyser.metric.{Metric, MetricRunner, Result}
+import codeAnalysis.analyser.metric.{MetricProducer, MetricRunner, Result}
 import gitclient.git.Repo
 import org.eclipse.jgit.diff.DiffEntry.ChangeType._
 import org.eclipse.jgit.treewalk.TreeWalk
@@ -14,11 +14,12 @@ import scala.collection.mutable
 import scala.jdk.CollectionConverters._
 import scala.util.control.Breaks._
 
-class Validator(owner: String, name: String, branch: String, dir: File, metrics: List[Metric]) {
+class Validator(owner: String, name: String, branch: String, dir: File, metrics: List[MetricProducer]) {
   val repo = new Repo(owner, name, branch, dir)
 
   def run(): Unit = {
     val compiler = new Compiler
+    import compiler.global
     val unitsToFaults = mutable.Map[String, mutable.Map[String, Int]]() // Map from filename to map of qual names and faults
     val metricRunner = new MetricRunner(List())
     val faultyCommits = repo.getFaultyCommits

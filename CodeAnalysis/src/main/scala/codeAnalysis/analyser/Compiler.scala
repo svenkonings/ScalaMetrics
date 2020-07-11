@@ -5,36 +5,16 @@ import java.io.{Closeable, File}
 import scala.reflect.internal.util.{BatchSourceFile, SourceFile}
 import scala.reflect.io.AbstractFile
 import scala.tools.nsc.Settings
-import scala.tools.nsc.interactive.{Global, Response}
+import scala.tools.nsc.interactive.Response
 import scala.tools.nsc.reporters.ConsoleReporter
 
-object Compiler {
-  private def newGlobal: Global = {
+class Compiler extends Closeable {
+  implicit val global: Global = {
     val settings = new Settings
     settings.usejavacp.value = true
     val reporter = new ConsoleReporter(settings)
     new Global(settings, reporter)
   }
-
-  val global: Global = newGlobal
-
-  def fileToSource(file: AbstractFile): SourceFile =
-    new BatchSourceFile(file)
-
-  def fileToSource(file: File): SourceFile =
-    fileToSource(AbstractFile.getFile(file))
-
-  def fileToSource(path: String): SourceFile =
-    fileToSource(AbstractFile.getFile(path))
-
-  def stringToSource(filename: String, contents: String): SourceFile =
-    new BatchSourceFile(filename, contents.toCharArray)
-}
-
-import codeAnalysis.analyser.Compiler.global
-
-class Compiler extends Closeable {
-  private val local = Compiler.newGlobal
 
   /**
    * Loads the source. Only one set of sources can be loaded at once.
@@ -50,7 +30,7 @@ class Compiler extends Closeable {
    */
   def loadSources(sources: List[SourceFile]): Unit = {
     val response = new Response[Unit]
-    local.askReload(sources, response)
+    global.askReload(sources, response)
     response.get match {
       case Left(_) =>
       case Right(ex) => throw ex
@@ -65,10 +45,10 @@ class Compiler extends Closeable {
    * @return the tree of the loaded source
    */
   def treeFromLoadedSource(source: SourceFile): global.Tree = {
-    val response = new Response[local.Tree]
-    local.askLoadedTyped(source, keepLoaded = true, response)
+    val response = new Response[global.Tree]
+    global.askLoadedTyped(source, keepLoaded = true, response)
     response.get match {
-      case Left(tree) => tree.asInstanceOf[global.Tree]
+      case Left(tree) => tree
       case Right(ex) => throw ex
     }
   }
@@ -107,5 +87,19 @@ class Compiler extends Closeable {
     treesFromLoadedSources(sources)
   }
 
-  def close(): Unit = local.close()
+  def close(): Unit = global.close()
+}
+
+object Compiler {
+  def fileToSource(file: AbstractFile): SourceFile =
+    new BatchSourceFile(file)
+
+  def fileToSource(file: File): SourceFile =
+    fileToSource(AbstractFile.getFile(file))
+
+  def fileToSource(path: String): SourceFile =
+    fileToSource(AbstractFile.getFile(path))
+
+  def stringToSource(filename: String, contents: String): SourceFile =
+    new BatchSourceFile(filename, contents.toCharArray)
 }

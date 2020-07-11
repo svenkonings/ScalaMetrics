@@ -11,7 +11,7 @@ import org.eclipse.jgit.revwalk.{RevCommit, RevTree}
 import org.eclipse.jgit.treewalk.filter.PathSuffixFilter
 import org.eclipse.jgit.util.io.DisabledOutputStream
 
-import scala.collection.immutable.{SeqMap, SortedMap, TreeSeqMap}
+import scala.collection.immutable.SortedMap
 import scala.collection.mutable
 import scala.jdk.CollectionConverters._
 
@@ -35,11 +35,11 @@ class Repo(owner: String, name: String, branch: String, dir: File) {
 
   def getFaultyCommits: SortedMap[RevCommit, Int] = SortedMap.from(
     git.log()
-    .setRevFilter(MessageRevFilter.create("""#\d+"""))
-    .call()
-    .asScala
-    .map(commit => commit -> countFaults(commit.getFullMessage))
-    .filter(_._2 > 0)
+      .setRevFilter(MessageRevFilter.create("""#\d+"""))
+      .call()
+      .asScala
+      .map(commit => commit -> countFaults(commit.getFullMessage))
+      .filter(_._2 > 0)
   )(Ordering.by(_.getCommitTime))
 
   def countFaults(message: String): Int =

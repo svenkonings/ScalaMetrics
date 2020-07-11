@@ -1,18 +1,24 @@
 package codeAnalysis.metrics
 
-import codeAnalysis.analyser.Compiler.global._
-import codeAnalysis.analyser.metric.{MethodMetric, MetricResult}
-import codeAnalysis.analyser.traverser.FractionPart._
-import codeAnalysis.util.Extensions.TreeExtensions
+import codeAnalysis.analyser.FractionPart._
+import codeAnalysis.analyser.Global
+import codeAnalysis.analyser.metric.{MethodMetric, Metric, MetricProducer, MetricResult}
+
+object ParadigmScoreFrac extends MetricProducer {
+  override def apply(implicit global: Global): Metric = new ParadigmScoreFrac
+}
 
 //noinspection DuplicatedCode
-class ParadigmScoreFrac extends MethodMetric {
+class ParadigmScoreFrac(implicit val global: Global) extends MethodMetric {
+
+  import global.TreeExtensions
+
   /**
    * F1: Checks whether the method is recursive or not
    */
-  def recursive(tree: DefDef): Int = {
+  def recursive(tree: global.DefDef): Int = {
     val isRecursive = tree.exists {
-      case apply: Apply if tree.symbol == apply.symbol => true
+      case apply: global.Apply if tree.symbol == apply.symbol => true
       case _ => false
     }
     if (isRecursive) 1 else 0
@@ -21,9 +27,9 @@ class ParadigmScoreFrac extends MethodMetric {
   /**
    * F2: Checks whether the method has nested methods or not
    */
-  def nested(tree: DefDef): Int = {
+  def nested(tree: global.DefDef): Int = {
     val hasNestedMethods = tree.exists {
-      case defdef: DefDef if tree != defdef => true
+      case defdef: global.DefDef if tree != defdef => true
       case _ => false
     }
     if (hasNestedMethods) 1 else 0
@@ -32,7 +38,7 @@ class ParadigmScoreFrac extends MethodMetric {
   /**
    * F3: Checks whether the method has higher-order parameters
    */
-  def higherOrderParams(tree: DefDef): Int = {
+  def higherOrderParams(tree: global.DefDef): Int = {
     val hasHigherOrderParameters = tree.vparamss.exists(_.exists(_.isFunction))
     if (hasHigherOrderParameters) 1 else 0
   }
@@ -40,15 +46,15 @@ class ParadigmScoreFrac extends MethodMetric {
   /**
    * F4: Checks whether the method has calls to higher order functions
    */
-  def higherOrderCalls(tree: DefDef): Double = tree.fraction {
-    case apply: Apply if apply.args.exists(_.isFunction) => Both
-    case _: Apply => Denominator
+  def higherOrderCalls(tree: global.DefDef): Double = tree.fraction {
+    case apply: global.Apply if apply.args.exists(_.isFunction) => Both
+    case _: global.Apply => Denominator
   }
 
   /**
    * F5: Checks whether the tree returns a higher order type
    */
-  def higherOrderReturn(tree: DefDef): Int = {
+  def higherOrderReturn(tree: global.DefDef): Int = {
     val hasHigherOrderReturn = tree.isFunction
     if (hasHigherOrderReturn) 1 else 0
   }
@@ -57,9 +63,9 @@ class ParadigmScoreFrac extends MethodMetric {
   /**
    * F6: Checks whether the tree has calls returning functions
    */
-  def currying(tree: DefDef): Double = tree.fraction {
-    case apply: Apply if apply.isFunction => Both
-    case _: Apply => Denominator
+  def currying(tree: global.DefDef): Double = tree.fraction {
+    case apply: global.Apply if apply.isFunction => Both
+    case _: global.Apply => Denominator
   }
 
 //  /**
@@ -73,9 +79,9 @@ class ParadigmScoreFrac extends MethodMetric {
   /**
    * F7: Checks whether the tree contains pattern matching
    */
-  def patternMatch(tree: DefDef): Int = {
+  def patternMatch(tree: global.DefDef): Int = {
     val hasPatternMatch = tree.exists {
-      case _: Match => true
+      case _: global.Match => true
       case _ => false
     }
     if (hasPatternMatch) 1 else 0
@@ -84,7 +90,7 @@ class ParadigmScoreFrac extends MethodMetric {
   /**
    * F8: Checks whether the tree uses lazy values
    */
-  def lazyValues(tree: DefDef): Int = {
+  def lazyValues(tree: global.DefDef): Int = {
     val hasLazyValues = tree.exists(_.isLazy)
     if (hasLazyValues) 1 else 0
   }
@@ -92,7 +98,7 @@ class ParadigmScoreFrac extends MethodMetric {
   /**
    * O1: Checks whether the tree uses variables
    */
-  def variables(tree: DefDef): Int = {
+  def variables(tree: global.DefDef): Int = {
     val hasVariables = tree.exists(_.isVar)
     if (hasVariables) 1 else 0
   }
@@ -100,12 +106,13 @@ class ParadigmScoreFrac extends MethodMetric {
   /**
    * O2: Checks whether the tree contains calls resulting in Unit
    */
-  def sideEffects(tree: DefDef): Int = {
+  def sideEffects(tree: global.DefDef): Int = {
     val hasSideEffects = tree.exists(_.isUnit)
     if (hasSideEffects) 1 else 0
   }
 
-  override def run(tree: DefDef): List[MetricResult] = {
+  override def run(arg: Global#DefDef): List[MetricResult] = {
+    val tree = arg.asInstanceOf[global.DefDef]
     val f1 = recursive(tree)
     val f2 = nested(tree)
     val f3 = higherOrderParams(tree)
