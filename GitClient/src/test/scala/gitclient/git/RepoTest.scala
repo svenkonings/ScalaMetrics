@@ -17,10 +17,7 @@ class RepoTest extends UnitSpec {
     val repo = new Repo("gitbucket", "gitbucket", "master", new File("../gitbucketTest"))
     val commits = repo.getFaultyCommits
     val commit = commits.keySet.iterator.next()
-    val diff = repo.diff(commit.getParent(0).getTree.getId, commit.getTree.getId)
-    val fileheader = new DiffFormatter(DisabledOutputStream.INSTANCE)
-    fileheader.setRepository(repo.git.getRepository)
-    val filediff = fileheader.toFileHeader(diff.get(0))
-    assert(!diff.isEmpty)
+    val diff = repo.diff(commit.getParent(0).getTree, commit.getTree)
+    assert(diff.nonEmpty)
   }
 }

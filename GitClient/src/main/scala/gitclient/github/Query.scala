@@ -3,18 +3,12 @@ package gitclient.github
 import ujson.Obj
 
 import scala.io.Source
+import scala.util.Using.resource
 
 object Query {
-  lazy val token: String = {
-    var source: Source = null
-    try {
-      source = Source.fromFile(".github")
-      source.getLines().find(_.startsWith("oauth=")).get.substring(6)
-    }
-    finally {
-      if (source != null) source.close()
-    }
-  }
+  lazy val token: String = resource(Source.fromFile(".github"))(
+    _.getLines().find(_.startsWith("oauth=")).get.substring(6)
+  )
 
   def queryAllPullRequestsAndIssues(owner: String, name: String): Obj = {
     val pullRequests = ujson.Arr()

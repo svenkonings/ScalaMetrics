@@ -4,18 +4,16 @@ import java.io.FileWriter
 
 import gitclient.UnitSpec
 
+import scala.util.Using.resource
+
 class QueryTest extends UnitSpec {
   test("Query all Akka pull requests and issues") {
     val t1 = System.currentTimeMillis()
     val json = Query.queryAllPullRequestsAndIssues("akka", "akka")
     val t2 = System.currentTimeMillis()
     println(t2 - t1, "msecs")
-    var writer: FileWriter = null
-    try {
-      writer = new FileWriter("target/temp.json")
+    resource(new FileWriter("target/temp.json"))(writer =>
       ujson.writeTo(json, writer)
-    } finally {
-      if (writer != null) writer.close()
-    }
+    )
   }
 }
