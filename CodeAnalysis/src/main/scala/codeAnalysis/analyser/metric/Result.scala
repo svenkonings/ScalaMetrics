@@ -7,9 +7,10 @@ import scala.collection.mutable.ListBuffer
 abstract class Result {
   private val _results: ListBuffer[Result] = ListBuffer()
   private val _metrics: ListBuffer[MetricResult] = ListBuffer()
-  var faults: Int = 0
 
-  def name: String
+  val name: String
+  val tree: Global#Tree
+  var faults: Int = 0
 
   def addResult(result: Result): Result = {
     _results += result
@@ -72,14 +73,8 @@ abstract class Result {
     " " * indent + (name :: metrics.map(_.toString(indent + 2)) ::: results.map(_.toString(indent + 2))).mkString("\n")
 }
 
-case class FileResult(tree: Global#PackageDef) extends Result {
-  override def name: String = tree.symbol.toString
-}
+case class FileResult(name: String, tree: Global#PackageDef) extends Result
 
-case class ObjectResult(tree: Global#ImplDef) extends Result {
-  override def name: String = tree.symbol.toString
-}
+case class ObjectResult(name: String, tree: Global#ImplDef) extends Result
 
-case class MethodResult(tree: Global#DefDef) extends Result {
-  override def name: String = tree.symbol.toString
-}
+case class MethodResult(name: String, tree: Global#DefDef) extends Result

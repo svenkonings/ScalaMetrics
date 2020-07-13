@@ -3,6 +3,7 @@ package codeAnalysis.analyser
 import java.io.File
 
 import codeAnalysis.analyser.metric.{MetricProducer, MetricRunner, Result}
+import codeAnalysis.util.FileUtil._
 
 import scala.reflect.internal.util.SourceFile
 import scala.util.Using.resource
@@ -18,17 +19,21 @@ class Analyser(path: String, metrics: List[MetricProducer], includeTest: Boolean
   }
 
   private def getProjectFiles(path: String): List[SourceFile] = {
-    def isTestPath(dir: File) = dir.getPath.contains(File.separator + "test" + File.separator)
-
-    def isSourceFile(filename: String) = filename.endsWith(".scala") || filename.endsWith(".java")
-
     val file = new File(path)
     if (file.isFile)
       List(Compiler.fileToSource(file))
-    else
-      file.listFiles((dir, name) => (includeTest || !isTestPath(dir)) && isSourceFile(name))
-        .map(Compiler.fileToSource)
-        .toList
+    else {
+      def listFiles(file: File): List[SourceFile] =
+        file.listFiles((dir, name) => (includeTest || !isTestPath(dir)) && (isSourceFile(name) || isDirectory(dir, name)))
+          .flatMap {
+            case file if file.isFile => List(Compiler.fileToSource(file))
+            case dir if dir.isDirectory => listFiles(dir)
+            case file => println("Not a file or directory: ", file); List()
+          }
+          .toList
+
+      listFiles(file)
+    }
   }
 
   def analyse(): List[Result] = {
@@ -36,7 +41,7 @@ class Analyser(path: String, metrics: List[MetricProducer], includeTest: Boolean
       import compiler.global
       val runner = new MetricRunner(metrics)
       compiler.loadSources(sourceFiles)
-      runner.runAll(compiler.treesFromLoadedSources(scalaFiles))
+      compiler.ask(() => runner.runAll(compiler.treesFromLoadedSources(scalaFiles)))
     })
   }
 }

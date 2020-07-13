@@ -12,8 +12,17 @@ class Compiler extends Closeable {
   implicit val global: Global = {
     val settings = new Settings
     settings.usejavacp.value = true
+    // val reporter = new NoReporter(settings)
     val reporter = new ConsoleReporter(settings)
     new Global(settings, reporter)
+  }
+
+  /**
+   * Compute the operation on the compiler thread
+   */
+  def ask[A](op: () => A): A = global.askForResponse(op).get match {
+    case Left(value) => value
+    case Right(ex) => throw ex
   }
 
   /**
@@ -49,7 +58,7 @@ class Compiler extends Closeable {
     global.askLoadedTyped(source, keepLoaded = true, response)
     response.get match {
       case Left(tree) => tree
-      case Right(ex) => throw ex
+      case Right(_) => null // Tree could not be parsed
     }
   }
 

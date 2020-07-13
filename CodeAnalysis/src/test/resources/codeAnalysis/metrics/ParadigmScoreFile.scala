@@ -15,6 +15,8 @@ class ParadigmScoreFile {
 
   def higherOrderReturn(list: List[String]): Int => List[String] = i => list.take(i)
 
+  def usesFunction: Int = (() => 3)()
+
   def currying(f: Int => Int => Int): Int = f(1)(2)
 
   def patternMatch(value: Any): Boolean = value match {

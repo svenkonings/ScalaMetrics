@@ -1,6 +1,7 @@
 package codeAnalysis.analyser
 
-import codeAnalysis.analyser.FractionPart._
+import codeAnalysis.analyser.FractionPart.FractionPart
+import codeAnalysis.util.Extensions.DoubleExtension
 
 import scala.collection.mutable
 import scala.tools.nsc.reporters.Reporter
@@ -59,7 +60,7 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
         case iff@If(_, _, _) if isSuppressed(iff.symbol) =>
         case tri@Try(_, _, _) if isSuppressed(tri.symbol) =>
         case ClassDef(_, _, _, Template(parents, _, _))
-          if parents.map(_.tpe.typeSymbol.fullName).contains("scala.reflect.api.TypeCreator") =>
+          if parents.collect { case x if x.tpe != null => x.tpe.typeSymbol.fullName }.contains("scala.reflect.api.TypeCreator") =>
         case _ if analyzer.hasMacroExpansionAttachment(tree) => //skip macros as per http://bit.ly/2uS8BrU
         case _ => inspect(tree)
       }
@@ -142,17 +143,17 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
       numerator = 0
       denominator = 0
       traverse(tree.asInstanceOf[Tree])
-      numerator.toDouble / denominator.toDouble
+      numerator.toDouble \ denominator.toDouble
     }
 
 
     override protected def inspect(tree: Tree): Unit = {
       if (f.isDefinedAt(tree)) {
         f(tree) match {
-          case Numerator => numerator += 1
-          case Denominator => denominator += 1
-          case Both => numerator += 1; denominator += 1
-          case None =>
+          case FractionPart.Numerator => numerator += 1
+          case FractionPart.Denominator => denominator += 1
+          case FractionPart.Both => numerator += 1; denominator += 1
+          case FractionPart.None =>
         }
       }
       continue(tree)
@@ -162,7 +163,8 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
   implicit class TreeExtensions(tree: Tree) {
     def getTypeSymbol: Symbol = tree match {
       case tree: ValOrDefDef => tree.tpt.symbol
-      case tree => tree.tpe.typeSymbol
+      case tree if tree.tpe != null => tree.tpe.typeSymbol
+      case _ => null
     }
 
     def isFunction: Boolean = {
@@ -181,6 +183,8 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
     def isLazy: Boolean = tree.symbol != null && tree.symbol.isLazy
 
     def isVar: Boolean = tree.symbol != null && tree.symbol.kindString.equals("variable")
+
+    def contains(f: PartialFunction[Tree, Boolean]): Boolean = tree.exists(f.orElse(_ => false))
 
     def fold[T](base: T)(f: (T, Tree) => T): T = new FoldTraverser(base)(f).fold(tree)
 

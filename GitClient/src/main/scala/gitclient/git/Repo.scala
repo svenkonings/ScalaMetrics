@@ -39,11 +39,11 @@ class Repo(owner: String, name: String, branch: String, dir: File) {
       .call()
       .asScala
       .map(commit => commit -> countFaults(commit.getFullMessage))
-      .filter(_._2 > 0)
+      .filter(_._2 > 0) // Commit has more than 0 faults
   )(Ordering.by(_.getCommitTime))
 
   def countFaults(message: String): Int =
-    Github.findIssues(message).map(issue => faults.getOrElse(issue, 0)).sum
+    Github.findReferences(message).map(issue => faults.getOrElse(issue, 0)).sum
 
   def diff(oldTree: RevTree, newTree: RevTree): mutable.Buffer[FileHeader] =
     formatter.scan(oldTree, newTree).asScala.map(formatter.toFileHeader)

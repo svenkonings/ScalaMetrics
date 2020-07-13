@@ -35,15 +35,15 @@ class ParentTraverserTest extends UnitSpec {
     val tree = compiler.treeFromSource(source)
     val traverser = new compiler.global.ParentTraverser[Result](parent => {
       case t: compiler.global.PackageDef =>
-        val result = FileResult(t)
+        val result = FileResult(null, null)
         parent.foreach(_.addResult(result))
         result
       case t: compiler.global.ImplDef =>
-        val result = ObjectResult(t)
+        val result = ObjectResult(null, null)
         parent.foreach(_.addResult(result))
         result
       case t: compiler.global.DefDef =>
-        val result = MethodResult(t)
+        val result = MethodResult(null, null)
         parent.foreach(_.addResult(result))
         result
     })

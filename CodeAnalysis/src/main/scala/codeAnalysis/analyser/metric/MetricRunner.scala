@@ -14,6 +14,14 @@ class MetricRunner(val metricProducers: List[MetricProducer])(implicit val globa
     case tree: global.DefDef => runMethodMetrics(parent, tree)
   })
 
+  private def getName(parent: Option[Result], tree: Global#Tree): String = {
+    val name = tree.symbol.toString.replace(",", " ")
+    parent match {
+      case Some(parent) => parent.name + " - " + name
+      case None => name
+    }
+  }
+
   private def addResults[T <: Result](result: T, parent: Option[Result], metricResults: List[MetricResult]): T = {
     result.addMetrics(metricResults)
     parent.foreach(_.addResult(result))
@@ -21,19 +29,22 @@ class MetricRunner(val metricProducers: List[MetricProducer])(implicit val globa
   }
 
   def runFileMetrics(parent: Option[Result], tree: Global#PackageDef): FileResult = {
-    val result = FileResult(tree)
+    val name = getName(parent, tree)
+    val result = FileResult(name, tree)
     val metricResults = fileMetrics.flatMap(_.run(tree))
     addResults(result, parent, metricResults)
   }
 
   def runObjectMetrics(parent: Option[Result], tree: Global#ImplDef): ObjectResult = {
-    val result = ObjectResult(tree)
+    val name = getName(parent, tree)
+    val result = ObjectResult(name, tree)
     val metricResults = objectMetrics.flatMap(_.run(tree))
     addResults(result, parent, metricResults)
   }
 
   def runMethodMetrics(parent: Option[Result], tree: Global#DefDef): MethodResult = {
-    val result = MethodResult(tree)
+    val name = getName(parent, tree)
+    val result = MethodResult(name, tree)
     val metricResults = methodMetrics.flatMap(_.run(tree))
     addResults(result, parent, metricResults)
   }

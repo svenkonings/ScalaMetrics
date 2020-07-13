@@ -7,9 +7,9 @@ import scala.collection.immutable.HashMap
 import scala.util.matching.Regex
 
 object Github {
-  val issuePattern: Regex = """#(\d+)""".r
+  val referencePattern: Regex = """#(\d+)""".r
 
-  def findIssues(text: String): Iterator[Int] = issuePattern.findAllIn(text).matchData.map(_.group(1).toInt)
+  def findReferences(text: String): Iterator[Int] = referencePattern.findAllIn(text).matchData.map(_.group(1).toInt)
 
   def repoToUri(owner: String, name: String): String = s"https://github.com/$owner/$name.git"
 
@@ -36,14 +36,16 @@ object Github {
       def countIssues(pullRequest: Value): Int = {
         val pullObject = pullRequest.obj
         val pullText = pullObject("title").str + pullObject("bodyText").str
-        val numbers = findIssues(pullText)
-        numbers.count(issueNumbers)
+        val referenceNumbers = findReferences(pullText)
+        referenceNumbers.count(issueNumbers)
       }
 
       // Faults of pull requests are the number of faulty issues they refer to
-      val pullRequestMap = HashMap.from(pullRequests
-        .map(pullRequest => toNumber(pullRequest) -> countIssues(pullRequest))
-        .filter(_._2 > 0)) // Only include pull requests that refer to faulty issues
+      val pullRequestMap = HashMap.from(
+        pullRequests
+          .map(pullRequest => toNumber(pullRequest) -> countIssues(pullRequest))
+          .filter(_._2 > 0) // Only include pull requests that refer to faulty issues
+      )
 
       val faultsMap = issueMap ++ pullRequestMap
       if (useCache) Cache.writeObject(owner + name, faultsMap)
