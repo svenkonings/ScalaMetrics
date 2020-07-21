@@ -92,7 +92,7 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
 
     private val stack: mutable.Stack[T] = mutable.Stack()
 
-    def top(tree: Global#Tree): Option[T] = {
+    def top(tree: Global#Tree): Option[T] = if (tree == null) None else {
       stack.clear()
       traverse(tree.asInstanceOf[Tree])
       stack.headOption

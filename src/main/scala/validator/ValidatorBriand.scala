@@ -1,14 +1,10 @@
 package validator
 
 import java.io.File
-import java.nio.charset.StandardCharsets
 
 import codeAnalysis.analyser.metric._
 import codeAnalysis.analyser.{Analyser, Compiler}
-import codeAnalysis.util.FileUtil
-import gitclient.git.Repo
 import org.eclipse.jgit.diff.DiffEntry.ChangeType._
-import org.eclipse.jgit.lib.ObjectId
 import org.eclipse.jgit.patch.FileHeader
 import org.eclipse.jgit.revwalk.RevCommit
 import org.eclipse.jgit.treewalk.TreeWalk
@@ -17,12 +13,10 @@ import org.eclipse.jgit.treewalk.filter.PathFilterGroup
 import scala.collection.mutable
 import scala.jdk.CollectionConverters._
 
-class ValidatorBriand(owner: String, name: String, branch: String, dir: File, metrics: List[MetricProducer]) {
+class ValidatorBriand(owner: String, name: String, branch: String, dir: File, metrics: List[MetricProducer]) extends ValidatorBase(owner, name, branch, dir) {
   private val compiler = new Compiler
 
   import compiler.global
-
-  private val repo = new Repo(owner, name, branch, dir)
 
   private val fileFaults = mutable.Map[String, mutable.Map[String, Int]]() // Map from filename to map of qual names and faults
   private val metricRunner = new MetricRunner(List()) // Empty metric runner since we don't require metrics
@@ -51,25 +45,9 @@ class ValidatorBriand(owner: String, name: String, branch: String, dir: File, me
     }
   }
 
-  private def getRelativePath(result: Result): String =
-    result.tree.pos.source.file.canonicalPath
-      .substring(dir.getCanonicalPath.length + 1)
-      .replace("\\", "/")
-
   private def analyseCommit(commit: RevCommit, faults: Int): Unit = {
     val diffs = getDiffs(commit)
     if (diffs.nonEmpty) analyseDiffs(commit, diffs, faults)
-  }
-
-  private def getDiffs(commit: RevCommit): Map[String, FileHeader] = {
-    repo.diff(commit.getParent(0).getTree, commit.getTree)
-      .filter(diff =>
-        !FileUtil.isTestPath(diff.getNewPath) && // Skip test files
-          diff.getChangeType != ADD && // Skip added files (didn't contain the faults)
-          diff.getChangeType != DELETE // Skip deleted files (nothing to analyse)
-      )
-      .map(diff => diff.getNewPath -> diff)
-      .toMap
   }
 
   private def analyseDiffs(commit: RevCommit, diffs: Map[String, FileHeader], faults: Int): Unit = {
@@ -84,9 +62,6 @@ class ValidatorBriand(owner: String, name: String, branch: String, dir: File, me
     }
   }
 
-  private def getContents(objectId: ObjectId): String =
-    new String(repo.git.getRepository.open(objectId).getCachedBytes, StandardCharsets.UTF_8)
-
   private def analyseDiff(diff: FileHeader, contents: String, faults: Int): Unit = {
     processChange(diff)
     val unitFaults = fileFaults.getOrElseUpdate(diff.getNewPath, mutable.Map())
@@ -96,6 +71,7 @@ class ValidatorBriand(owner: String, name: String, branch: String, dir: File, me
     def addDiffFaults(result: Result): Unit = {
       val name = result.name
       val pos = result.tree.pos
+      val source = pos.source
       val start = source.offsetToLine(pos.start)
       val end = source.offsetToLine(pos.end)
       val containsChange = editList.exists(edit => edit.getEndB >= start && edit.getBeginB <= end)

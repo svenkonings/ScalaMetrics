@@ -7,7 +7,11 @@ object FileUtil {
 
   def isTestPath(dir: File): Boolean = isTestPath(dir.getPath)
 
-  def isSourceFile(filename: String): Boolean = filename.endsWith(".scala") || filename.endsWith(".java")
+  def isSourceFile(filename: String): Boolean = isScalaFile(filename) || isJavaFile(filename)
+
+  def isScalaFile(filename: String): Boolean = filename.endsWith(".scala")
+
+  def isJavaFile(filename: String): Boolean = filename.endsWith(".java")
 
   def isDirectory(parentDir: File, name: String): Boolean = new File(parentDir, name).isDirectory
 }

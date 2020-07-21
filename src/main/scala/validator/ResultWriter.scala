@@ -52,5 +52,5 @@ object ResultWriter {
   }
 
   private def write(file: File, contents: String): Unit =
-    Files.writeString(file.toPath, contents)
+    Files.write(file.toPath, contents.getBytes())
 }
