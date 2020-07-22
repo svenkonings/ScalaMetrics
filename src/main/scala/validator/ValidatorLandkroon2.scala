@@ -25,8 +25,8 @@ class ValidatorLandkroon2(owner: String, name: String, branch: String, dir: File
     val faults = analyseFaults()
     val others = analyseOthers()
     val results = faults ::: others
-    ResultWriter.writeMethodMetrics(dir, results)
-    ResultWriter.writeObjectMetrics(dir, results)
+    ResultWriter.writeMethodMetrics(dir, "functionResultsLandkroon", results)
+    ResultWriter.writeObjectAverageMetrics(dir, "objectResultsLandkroon", results)
   }
 
   private def analyseFaults(): List[Result] = {

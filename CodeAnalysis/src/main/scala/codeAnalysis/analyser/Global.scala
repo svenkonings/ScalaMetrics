@@ -160,6 +160,30 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
     }
   }
 
+  class FindTraverser(f: PartialFunction[Tree, Boolean]) extends ScapegoatTraverser {
+    var result: Option[Tree] = None
+
+    def find(tree: Global#Tree): Option[Tree] = {
+      result = None
+      traverse(tree.asInstanceOf[Tree])
+      result
+    }
+
+    override protected def inspect(tree: Tree): Unit = {
+      if (result.isEmpty) {
+        if (f.applyOrElse(tree, (_: Tree) => false)) result = Some(tree) else continue(tree)
+      }
+    }
+  }
+
+  class ExistsTraverser(f: PartialFunction[Tree, Boolean]) extends FindTraverser(f) {
+    def exists(tree: Global#Tree): Boolean = find(tree).isDefined
+  }
+
+  class ForallTraverser(f: PartialFunction[Tree, Boolean]) extends ExistsTraverser(f.andThen(!_)) {
+    def forall(tree: Global#Tree): Boolean = !exists(tree)
+  }
+
   implicit class TreeExtensions(tree: Tree) {
     def getTypeSymbol: Symbol = tree match {
       case tree: ValOrDefDef => tree.tpt.symbol
@@ -184,7 +208,11 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
 
     def isVar: Boolean = tree.symbol != null && tree.symbol.kindString.equals("variable")
 
-    def contains(f: PartialFunction[Tree, Boolean]): Boolean = tree.exists(f.orElse(_ => false))
+    def myFind(f: PartialFunction[Tree, Boolean]): Option[Tree] = new FindTraverser(f).find(tree)
+
+    def myExists(f: PartialFunction[Tree, Boolean]): Boolean = new ExistsTraverser(f).exists(tree)
+
+    def myForall(f: PartialFunction[Tree, Boolean]): Boolean = new ForallTraverser(f).forall(tree)
 
     def fold[T](base: T)(f: (T, Tree) => T): T = new FoldTraverser(base)(f).fold(tree)
 

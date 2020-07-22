@@ -16,14 +16,14 @@ class ParadigmScoreBool(implicit val global: Global) extends MethodMetric {
   /**
    * F1: Checks whether the method is recursive or not
    */
-  def recursive(tree: global.DefDef): Int = tree.contains {
+  def recursive(tree: global.DefDef): Int = tree.myExists {
     case apply: global.Apply => tree.symbol == apply.symbol
   }.toInt
 
   /**
    * F2: Checks whether the method has nested methods or not
    */
-  def nested(tree: global.DefDef): Int = tree.contains {
+  def nested(tree: global.DefDef): Int = tree.myExists {
     case defdef: global.DefDef => tree != defdef
   }.toInt
 
@@ -36,7 +36,7 @@ class ParadigmScoreBool(implicit val global: Global) extends MethodMetric {
   /**
    * F4: Checks whether the method has calls to higher order functions
    */
-  def higherOrderCalls(tree: global.DefDef): Int = tree.contains {
+  def higherOrderCalls(tree: global.DefDef): Int = tree.myExists {
     case apply: global.Apply => apply.args.exists(_.isFunction)
   }.toInt
 
@@ -49,36 +49,36 @@ class ParadigmScoreBool(implicit val global: Global) extends MethodMetric {
   /**
    * F6: Checks whether the tree has calls returning partial functions
    */
-  def currying(tree: global.DefDef): Int = tree.contains {
+  def currying(tree: global.DefDef): Int = tree.myExists {
     case apply: global.Apply => apply.isFunction
   }.toInt
 
   /**
-   * F3-6: Checks whether the tree contains functions
+   * F3-6: Checks whether the tree myExists functions
    */
-  def functions(tree: global.DefDef): Int = tree.exists(_.isFunction).toInt
+  def functions(tree: global.DefDef): Int = tree.myExists(_.isFunction).toInt
 
   /**
-   * F7: Checks whether the tree contains pattern matching
+   * F7: Checks whether the tree myExists pattern matching
    */
-  def patternMatch(tree: global.DefDef): Int = tree.contains {
+  def patternMatch(tree: global.DefDef): Int = tree.myExists {
     case _: global.Match => true
   }.toInt
 
   /**
    * F8: Checks whether the tree uses lazy values
    */
-  def lazyValues(tree: global.DefDef): Int = tree.exists(_.isLazy).toInt
+  def lazyValues(tree: global.DefDef): Int = tree.myExists(_.isLazy).toInt
 
   /**
    * O1: Checks whether the tree uses variables
    */
-  def variables(tree: global.DefDef): Int = tree.exists(_.isVar).toInt
+  def variables(tree: global.DefDef): Int = tree.myExists(_.isVar).toInt
 
   /**
-   * O2: Checks whether the tree contains calls resulting in Unit
+   * O2: Checks whether the tree myExists calls resulting in Unit
    */
-  def sideEffects(tree: global.DefDef): Int = tree.exists(_.isUnit).toInt
+  def sideEffects(tree: global.DefDef): Int = tree.myExists(_.isUnit).toInt
 
   override def run(arg: Global#DefDef): List[MetricResult] = {
     val tree = arg.asInstanceOf[global.DefDef]
@@ -95,7 +95,7 @@ class ParadigmScoreBool(implicit val global: Global) extends MethodMetric {
     val o1 = variables(tree)
     val o2 = sideEffects(tree)
     val oScore = o1 + o2
-    val score = fScore \ 8 - oScore \ 2
+    val score = (fScore - oScore) \ (fScore + oScore)
     List(
       MetricResult("IsRecursive", f1),
       MetricResult("HasNestedMethods", f2),

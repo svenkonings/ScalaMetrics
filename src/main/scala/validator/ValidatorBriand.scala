@@ -24,8 +24,8 @@ class ValidatorBriand(owner: String, name: String, branch: String, dir: File, me
   def run(): Unit = {
     repo.getFaultyCommits.foreachEntry(analyseCommit)
     val results = analyse()
-    ResultWriter.writeMethodMetrics(dir, results)
-    ResultWriter.writeObjectMetrics(dir, results)
+    ResultWriter.writeMethodMetrics(dir, "functionResultsBriand", results)
+    ResultWriter.writeObjectAverageMetrics(dir, "objectResultsBriand", results)
   }
 
   private def analyse(): List[Result] = {

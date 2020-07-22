@@ -118,7 +118,7 @@ class ParadigmScoreFraction(implicit val global: Global) extends MethodMetric {
     val o1 = variables(tree)
     val o2 = sideEffects(tree)
     val oScore = o1 + o2
-    val score = fScore \ 8 - oScore \ 2
+    val score = (fScore - oScore) \ (fScore + oScore)
     val funcs = tree.collect {
       case tree if tree.isFunction => tree
     }
