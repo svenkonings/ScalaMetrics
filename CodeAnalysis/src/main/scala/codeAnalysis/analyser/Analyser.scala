@@ -36,12 +36,10 @@ class Analyser(path: String, metrics: List[MetricProducer], includeTest: Boolean
     }
   }
 
-  def analyse(): List[Result] = {
-    resource(new Compiler)(compiler => {
-      import compiler.global
-      val runner = new MetricRunner(metrics)
-      compiler.loadSources(sourceFiles)
-      compiler.ask(() => runner.runAll(compiler.treesFromLoadedSources(scalaFiles)))
-    })
+  def analyse(): List[Result] = resource(new Compiler) { compiler =>
+    import compiler.global
+    val runner = new MetricRunner(metrics)
+    compiler.loadSources(sourceFiles)
+    compiler.ask(() => runner.runAll(compiler.treesFromLoadedSources(scalaFiles)))
   }
 }

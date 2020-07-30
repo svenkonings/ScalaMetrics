@@ -107,7 +107,7 @@ class ParadigmScoreCount(implicit val global: Global) extends MethodMetric {
     List(
       MetricResult("CountRecursiveCalls", f1),
       MetricResult("CountNestedMethods", f2),
-      MetricResult("CountHigherOrderParams", f3),
+      MetricResult("CountHigherOrderParameters", f3),
       MetricResult("CountHigherOrderCalls", f4),
       // MetricResult("HasHigherOrderReturn", f5), // Same as ParadigmScoreBool
       MetricResult("CountCurrying", f6),

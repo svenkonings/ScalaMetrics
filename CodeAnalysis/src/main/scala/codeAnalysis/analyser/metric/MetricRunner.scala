@@ -30,21 +30,36 @@ class MetricRunner(val metricProducers: List[MetricProducer])(implicit val globa
 
   def runFileMetrics(parent: Option[Result], tree: Global#PackageDef): FileResult = {
     val name = getName(parent, tree)
-    val result = FileResult(name, tree)
+    val pos = tree.pos
+    val source = pos.source
+    val path = source.file.canonicalPath
+    val startLine = source.offsetToLine(pos.start)
+    val endLine = source.offsetToLine(pos.end)
+    val result = FileResult(name, path, startLine, endLine)
     val metricResults = fileMetrics.flatMap(_.run(tree))
     addResults(result, parent, metricResults)
   }
 
   def runObjectMetrics(parent: Option[Result], tree: Global#ImplDef): ObjectResult = {
     val name = getName(parent, tree)
-    val result = ObjectResult(name, tree)
+    val pos = tree.pos
+    val source = pos.source
+    val path = source.file.canonicalPath
+    val startLine = source.offsetToLine(pos.start)
+    val endLine = source.offsetToLine(pos.end)
+    val result = ObjectResult(name, path, startLine, endLine)
     val metricResults = objectMetrics.flatMap(_.run(tree))
     addResults(result, parent, metricResults)
   }
 
   def runMethodMetrics(parent: Option[Result], tree: Global#DefDef): MethodResult = {
     val name = getName(parent, tree)
-    val result = MethodResult(name, tree)
+    val pos = tree.pos
+    val source = pos.source
+    val path = source.file.canonicalPath
+    val startLine = source.offsetToLine(pos.start)
+    val endLine = source.offsetToLine(pos.end)
+    val result = MethodResult(name, path, startLine, endLine)
     val metricResults = methodMetrics.flatMap(_.run(tree))
     addResults(result, parent, metricResults)
   }

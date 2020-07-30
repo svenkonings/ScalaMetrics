@@ -1,7 +1,5 @@
 package codeAnalysis.analyser.metric
 
-import codeAnalysis.analyser.Global
-
 import scala.collection.mutable.ListBuffer
 
 abstract class Result {
@@ -9,7 +7,9 @@ abstract class Result {
   private val _metrics: ListBuffer[MetricResult] = ListBuffer()
 
   val name: String
-  val tree: Global#Tree
+  val path: String
+  val startLine: Int
+  val endLine: Int
   var faults: Int = 0
 
   def addResult(result: Result): Result = {
@@ -73,8 +73,8 @@ abstract class Result {
     " " * indent + (name :: metrics.map(_.toString(indent + 2)) ::: results.map(_.toString(indent + 2))).mkString("\n")
 }
 
-case class FileResult(name: String, tree: Global#PackageDef) extends Result
+case class FileResult(name: String, path: String, startLine: Int, endLine: Int) extends Result
 
-case class ObjectResult(name: String, tree: Global#ImplDef) extends Result
+case class ObjectResult(name: String, path: String, startLine: Int, endLine: Int) extends Result
 
-case class MethodResult(name: String, tree: Global#DefDef) extends Result
+case class MethodResult(name: String, path: String, startLine: Int, endLine: Int) extends Result

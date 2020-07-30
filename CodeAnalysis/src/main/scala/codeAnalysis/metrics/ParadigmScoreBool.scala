@@ -16,92 +16,99 @@ class ParadigmScoreBool(implicit val global: Global) extends MethodMetric {
   /**
    * F1: Checks whether the method is recursive or not
    */
-  def recursive(tree: global.DefDef): Int = tree.myExists {
+  def isRecursive(tree: global.DefDef): Int = tree.myExists {
     case apply: global.Apply => tree.symbol == apply.symbol
   }.toInt
 
   /**
+   * Checks whether the method is nested or not
+   */
+  def isNested(tree: global.DefDef): Int = tree.symbol.owner.isMethod.toInt
+
+  /**
    * F2: Checks whether the method has nested methods or not
    */
-  def nested(tree: global.DefDef): Int = tree.myExists {
+  def hasNestedMethods(tree: global.DefDef): Int = tree.myExists {
     case defdef: global.DefDef => tree != defdef
   }.toInt
 
   /**
    * F3: Checks whether the method has higher-order parameters
    */
-  def higherOrderParams(tree: global.DefDef): Int =
+  def hasHigherOrderParameters(tree: global.DefDef): Int =
     tree.vparamss.exists(_.exists(_.isFunction)).toInt
 
   /**
    * F4: Checks whether the method has calls to higher order functions
    */
-  def higherOrderCalls(tree: global.DefDef): Int = tree.myExists {
+  def hasHigherOrderCalls(tree: global.DefDef): Int = tree.myExists {
     case apply: global.Apply => apply.args.exists(_.isFunction)
   }.toInt
 
   /**
    * F5: Checks whether the tree returns a higher order type
    */
-  def higherOrderReturn(tree: global.DefDef): Int = tree.isFunction.toInt
+  def hasHigherOrderReturn(tree: global.DefDef): Int = tree.isFunction.toInt
 
 
   /**
    * F6: Checks whether the tree has calls returning partial functions
    */
-  def currying(tree: global.DefDef): Int = tree.myExists {
+  def hasCurrying(tree: global.DefDef): Int = tree.myExists {
     case apply: global.Apply => apply.isFunction
   }.toInt
 
   /**
    * F3-6: Checks whether the tree myExists functions
    */
-  def functions(tree: global.DefDef): Int = tree.myExists(_.isFunction).toInt
+  def hasFunctions(tree: global.DefDef): Int = tree.myExists(_.isFunction).toInt
 
   /**
    * F7: Checks whether the tree myExists pattern matching
    */
-  def patternMatch(tree: global.DefDef): Int = tree.myExists {
+  def hasPatternMatching(tree: global.DefDef): Int = tree.myExists {
     case _: global.Match => true
   }.toInt
 
   /**
    * F8: Checks whether the tree uses lazy values
    */
-  def lazyValues(tree: global.DefDef): Int = tree.myExists(_.isLazy).toInt
+  def hasLazyValues(tree: global.DefDef): Int = tree.myExists(_.isLazy).toInt
 
   /**
    * O1: Checks whether the tree uses variables
    */
-  def variables(tree: global.DefDef): Int = tree.myExists(_.isVar).toInt
+  def hasVariables(tree: global.DefDef): Int = tree.myExists(_.isVar).toInt
 
   /**
    * O2: Checks whether the tree myExists calls resulting in Unit
    */
-  def sideEffects(tree: global.DefDef): Int = tree.myExists(_.isUnit).toInt
+  def hasSideEffects(tree: global.DefDef): Int = tree.myExists(_.isUnit).toInt
 
   override def run(arg: Global#DefDef): List[MetricResult] = {
     val tree = arg.asInstanceOf[global.DefDef]
-    val f1 = recursive(tree)
-    val f2 = nested(tree)
-    val f3 = higherOrderParams(tree)
-    val f4 = higherOrderCalls(tree)
-    val f5 = higherOrderReturn(tree)
-    val f6 = currying(tree)
-    val f36 = functions(tree)
-    val f7 = patternMatch(tree)
-    val f8 = lazyValues(tree)
+    val f1 = isRecursive(tree)
+    val f2a = isNested(tree)
+    val f2 = hasNestedMethods(tree)
+    val f3 = hasHigherOrderParameters(tree)
+    val f4 = hasHigherOrderCalls(tree)
+    val f5 = hasHigherOrderReturn(tree)
+    val f6 = hasCurrying(tree)
+    val f36 = hasFunctions(tree)
+    val f7 = hasPatternMatching(tree)
+    val f8 = hasLazyValues(tree)
     val fScore = f1 + f2 + f3 + f4 + f5 + f6 + f7 + f8
-    val o1 = variables(tree)
-    val o2 = sideEffects(tree)
+    val o1 = hasVariables(tree)
+    val o2 = hasSideEffects(tree)
     val oScore = o1 + o2
     val score = (fScore - oScore) \ (fScore + oScore)
     List(
       MetricResult("IsRecursive", f1),
+      MetricResult("IsNested", f2a),
+      MetricResult("IsHigherOrderMethod", f5),
       MetricResult("HasNestedMethods", f2),
-      MetricResult("HasHigherOrderParams", f3),
+      MetricResult("HasHigherOrderParameters", f3),
       MetricResult("HasHigherOrderCalls", f4),
-      MetricResult("HasHigherOrderReturn", f5),
       MetricResult("HasCurrying", f6),
       MetricResult("HasFunctions", f36),
       MetricResult("HasPatternMatching", f7),

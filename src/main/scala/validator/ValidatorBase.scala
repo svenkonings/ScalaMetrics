@@ -19,7 +19,7 @@ abstract class ValidatorBase(owner: String, name: String, branch: String, dir: F
   protected def getDiffs(commit: RevCommit): Map[String, FileHeader] = {
     repo.diff(commit.getParent(0).getTree, commit.getTree)
       .filter(diff =>
-          !FileUtil.isTestPath(diff.getNewPath) && // Skip test files
+        !FileUtil.isTestPath(diff.getNewPath) && // Skip test files
           diff.getChangeType != ADD && // Skip added files (didn't contain the faults)
           diff.getChangeType != DELETE // Skip deleted files (nothing to analyse)
       )
@@ -31,10 +31,12 @@ abstract class ValidatorBase(owner: String, name: String, branch: String, dir: F
     new String(repo.git.getRepository.open(objectId).getCachedBytes, StandardCharsets.UTF_8)
 
   protected def getRelativePath(result: Result): String =
-    getRelativePath(result.tree.pos.source)
+    getRelativePath(result.path)
 
   protected def getRelativePath(source: SourceFile): String =
-    source.file.canonicalPath
-      .substring(dir.getCanonicalPath.length + 1)
-      .replace("\\", "/")
+    getRelativePath(source.file.canonicalPath)
+
+  protected def getRelativePath(path: String): String = path
+    .substring(dir.getCanonicalPath.length + 1)
+    .replace("\\", "/")
 }

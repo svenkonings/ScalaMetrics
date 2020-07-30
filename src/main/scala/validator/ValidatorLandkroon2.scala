@@ -67,10 +67,8 @@ class ValidatorLandkroon2(owner: String, name: String, branch: String, dir: File
     val editList = diff.toEditList.asScala.toList
 
     def addFaults(result: Result): Result = {
-      val pos = result.tree.pos
-      val source = pos.source
-      val start = source.offsetToLine(pos.start)
-      val end = source.offsetToLine(pos.end)
+      val start = result.startLine
+      val end = result.endLine
       val containsChange = editList.exists(edit => edit.getEndB >= start && edit.getBeginB <= end)
       if (containsChange) {
         result.faults = faults

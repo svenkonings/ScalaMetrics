@@ -93,9 +93,10 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
     private val stack: mutable.Stack[T] = mutable.Stack()
 
     def top(tree: Global#Tree): Option[T] = if (tree == null) None else {
-      stack.clear()
       traverse(tree.asInstanceOf[Tree])
-      stack.headOption
+      val result = stack.headOption
+      stack.clear()
+      result
     }
 
     override protected def inspect(tree: Tree): Unit = {
@@ -115,9 +116,10 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
     private var value: T = base
 
     def fold(tree: Global#Tree): T = {
-      value = base
       traverse(tree.asInstanceOf[Tree])
-      value
+      val result = value
+      value = base
+      result
     }
 
     override protected def inspect(tree: Tree): Unit = {
@@ -140,12 +142,12 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
     private var numerator, denominator = 0
 
     def fraction(tree: Global#Tree): Double = {
+      traverse(tree.asInstanceOf[Tree])
+      val result = numerator.toDouble \ denominator.toDouble
       numerator = 0
       denominator = 0
-      traverse(tree.asInstanceOf[Tree])
-      numerator.toDouble \ denominator.toDouble
+      result
     }
-
 
     override protected def inspect(tree: Tree): Unit = {
       if (f.isDefinedAt(tree)) {
@@ -161,17 +163,18 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
   }
 
   class FindTraverser(f: PartialFunction[Tree, Boolean]) extends ScapegoatTraverser {
-    var result: Option[Tree] = None
+    var value: Option[Tree] = None
 
     def find(tree: Global#Tree): Option[Tree] = {
-      result = None
       traverse(tree.asInstanceOf[Tree])
+      val result = value
+      value = None
       result
     }
 
     override protected def inspect(tree: Tree): Unit = {
-      if (result.isEmpty) {
-        if (f.applyOrElse(tree, (_: Tree) => false)) result = Some(tree) else continue(tree)
+      if (value.isEmpty) {
+        if (f.applyOrElse(tree, (_: Tree) => false)) value = Some(tree) else continue(tree)
       }
     }
   }
@@ -182,6 +185,38 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
 
   class ForallTraverser(f: PartialFunction[Tree, Boolean]) extends ExistsTraverser(f.andThen(!_)) {
     def forall(tree: Global#Tree): Boolean = !exists(tree)
+  }
+
+  class FilterTraverser(f: PartialFunction[Tree, Boolean]) extends ScapegoatTraverser {
+    var value: mutable.ListBuffer[Tree] = mutable.ListBuffer()
+
+    def filter(tree: Global#Tree): List[Tree] = {
+      traverse(tree.asInstanceOf[Tree])
+      val result = value.toList
+      value.clear()
+      result
+    }
+
+    override protected def inspect(tree: Tree): Unit = {
+      if (f.applyOrElse(tree, (_: Tree) => false)) value += tree
+      continue(tree)
+    }
+  }
+
+  class CollectTraverser[T](f: PartialFunction[Tree, T]) extends ScapegoatTraverser {
+    var value: mutable.ListBuffer[T] = mutable.ListBuffer()
+
+    def collect(tree: Global#Tree): List[T] = {
+      traverse(tree.asInstanceOf[Tree])
+      val result = value.toList
+      value.clear()
+      result
+    }
+
+    override protected def inspect(tree: Tree): Unit = {
+      if (f.isDefinedAt(tree)) value += f(tree)
+      continue(tree)
+    }
   }
 
   implicit class TreeExtensions(tree: Tree) {
@@ -207,6 +242,10 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
     def isLazy: Boolean = tree.symbol != null && tree.symbol.isLazy
 
     def isVar: Boolean = tree.symbol != null && tree.symbol.kindString.equals("variable")
+
+    def myFilter(f: PartialFunction[Tree, Boolean]): List[Tree] = new FilterTraverser(f).filter(tree)
+
+    def myCollect[T](f: PartialFunction[Tree, T]): List[T] = new CollectTraverser(f).collect(tree)
 
     def myFind(f: PartialFunction[Tree, Boolean]): Option[Tree] = new FindTraverser(f).find(tree)
 

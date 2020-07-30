@@ -83,7 +83,7 @@ class ParadigmScoreFraction(implicit val global: Global) extends MethodMetric {
    * F8: The fraction of lazy value usage to total number of value usage
    */
   def lazyValues(tree: global.DefDef): Double = tree.fraction {
-    case tree @ (_: global.ValDef | _: global.Ident | _: global.Assign | _: global.Bind | _:global.Select) =>
+    case tree @ (_: global.ValDef | _: global.Ident | _: global.Assign | _: global.Bind | _:global.Select) => // TODO: Change to tree.isVal
       if (tree.isLazy) Both else Denominator
   }
 

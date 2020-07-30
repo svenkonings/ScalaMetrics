@@ -3,7 +3,7 @@ package validator
 import java.io.File
 
 import codeAnalysis.analyser.metric._
-import codeAnalysis.analyser.{Analyser, Compiler}
+import codeAnalysis.analyser.{Analyser, Compiler, Global}
 import org.eclipse.jgit.diff.DiffEntry.ChangeType._
 import org.eclipse.jgit.patch.FileHeader
 import org.eclipse.jgit.revwalk.RevCommit
@@ -70,10 +70,8 @@ class ValidatorBriand(owner: String, name: String, branch: String, dir: File, me
 
     def addDiffFaults(result: Result): Unit = {
       val name = result.name
-      val pos = result.tree.pos
-      val source = pos.source
-      val start = source.offsetToLine(pos.start)
-      val end = source.offsetToLine(pos.end)
+      val start = result.startLine
+      val end = result.endLine
       val containsChange = editList.exists(edit => edit.getEndB >= start && edit.getBeginB <= end)
       if (containsChange) {
         if (unitFaults.contains(name))

@@ -12,14 +12,10 @@ import org.eclipse.jgit.treewalk.filter.PathSuffixFilter
 import scala.collection.mutable
 import scala.jdk.CollectionConverters._
 import scala.reflect.internal.util.SourceFile
+import scala.util.Using.resource
 
 class ValidatorLandkroon(owner: String, name: String, branch: String, dir: File, metrics: List[MetricProducer]) extends ValidatorBase(owner, name, branch, dir) {
-  private val compiler = new Compiler
-
-  import compiler.global
-
   private val analysedPaths = mutable.Set[String]()
-  private val metricRunner = new MetricRunner(metrics) // Empty metric runner since we don't require metrics
 
   def run(): Unit = {
     val faults = analyseFaults()
@@ -61,27 +57,31 @@ class ValidatorLandkroon(owner: String, name: String, branch: String, dir: File,
       sources += source
       if (diffs.contains(path)) diffSources.addOne((diffs(path), source))
     }
+    resource(new Compiler) { compiler =>
+      import compiler.global
 
-    compiler.loadSources(sources.toList)
-    diffSources.map { case (diff, source) => analyseDiff(diff, source, faults) }.toList
-  }
+      val metricRunner = new MetricRunner(metrics) // Empty metric runner since we don't require metrics
 
-  private def analyseDiff(diff: FileHeader, source: SourceFile, faults: Int): Result = {
-    val editList = diff.toEditList.asScala.toList
+      def analyseDiff(diff: FileHeader, source: SourceFile): Result = {
+        val editList = diff.toEditList.asScala.toList
 
-    def addFaults(result: Result): Result = {
-      val pos = result.tree.pos
-      val start = source.offsetToLine(pos.start)
-      val end = source.offsetToLine(pos.end)
-      val containsChange = editList.exists(edit => edit.getEndB >= start && edit.getBeginB <= end)
-      if (containsChange) {
-        result.faults = faults
-        result.results.foreach(addFaults)
+        def addFaults(result: Result): Result = {
+          val start = result.startLine
+          val end = result.endLine
+          val containsChange = editList.exists(edit => edit.getEndB >= start && edit.getBeginB <= end)
+          if (containsChange) {
+            result.faults = faults
+            result.results.foreach(addFaults)
+          }
+          result
+        }
+
+        val tree = compiler.treeFromLoadedSource(source)
+        compiler.ask(() => addFaults(metricRunner.run(tree).get))
       }
-      result
-    }
 
-    val tree = compiler.treeFromLoadedSource(source)
-    compiler.ask(() => addFaults(metricRunner.run(tree).get))
+      compiler.loadSources(sources.toList)
+      diffSources.map { case (diff, source) => analyseDiff(diff, source) }.toList
+    }
   }
 }

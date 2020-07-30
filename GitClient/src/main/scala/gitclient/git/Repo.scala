@@ -14,16 +14,11 @@ import org.eclipse.jgit.util.io.DisabledOutputStream
 import scala.collection.immutable.SortedMap
 import scala.collection.mutable
 import scala.jdk.CollectionConverters._
+import scala.util.Using.resource
 
-class Repo(owner: String, name: String, branch: String, dir: File) {
-  lazy val git: Git = Git.open(dir)
+class Repo(owner: String, name: String, branch: String, dir: File) extends AutoCloseable {
+  val git: Git = Git.open(dir)
   lazy val faults: Map[Int, Int] = Github.getFaults(owner, name)
-  lazy val formatter: DiffFormatter = {
-    val result = new DiffFormatter(DisabledOutputStream.INSTANCE)
-    result.setRepository(git.getRepository)
-    result.setPathFilter(PathSuffixFilter.create(".scala"))
-    result
-  }
 
   if (!dir.exists()) cloneRepo()
 
@@ -46,5 +41,11 @@ class Repo(owner: String, name: String, branch: String, dir: File) {
     Github.findReferences(message).map(issue => faults.getOrElse(issue, 0)).sum
 
   def diff(oldTree: RevTree, newTree: RevTree): mutable.Buffer[FileHeader] =
-    formatter.scan(oldTree, newTree).asScala.map(formatter.toFileHeader)
+    resource(new DiffFormatter(DisabledOutputStream.INSTANCE)) { formatter =>
+      formatter.setRepository(git.getRepository)
+      formatter.setPathFilter(PathSuffixFilter.create(".scala"))
+      formatter.scan(oldTree, newTree).asScala.map(formatter.toFileHeader)
+    }
+
+  override def close(): Unit = git.close()
 }

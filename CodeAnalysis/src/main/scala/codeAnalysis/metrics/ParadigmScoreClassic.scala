@@ -65,7 +65,7 @@ class ParadigmScoreClassic(implicit val global: Global) extends MethodMetric {
     List(
       // MetricResult("CountVariables", sideEffects), // Same as ParadigmScoreCount
       // MetricResult("IsRecursive", isRecursive), // Same as ParadigmScoreBool
-      MetricResult("IsNestedMethod", isNested),
+      // MetricResult("IsNested", isNested),
       MetricResult("FunctionalCalls", func),
       MetricResult("ImperativeCalls", imp),
       // MetricResult("CountHigherOrderParameters", higherOrderParamCount), // Same as ParadigmScoreCount

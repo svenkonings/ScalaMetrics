@@ -4,6 +4,10 @@ class ParadigmScoreFile {
     case (a: Int) :: tail => a + recursive(tail)
   }
 
+  case class Tree(value: Int, children: List[Tree])
+
+  def recursive2(tree: Tree): Int = tree.value + tree.children.map(recursive2).sum
+
   def nested(string: String): Unit = {
     def myPrint(string: String): Unit = println(string)
     myPrint(string)

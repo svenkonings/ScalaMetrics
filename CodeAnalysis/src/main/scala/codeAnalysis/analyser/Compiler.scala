@@ -96,7 +96,10 @@ class Compiler extends Closeable {
     treesFromLoadedSources(sources)
   }
 
-  def close(): Unit = global.close()
+  def close(): Unit = {
+    global.askShutdown()
+    global.close()
+  }
 }
 
 object Compiler {

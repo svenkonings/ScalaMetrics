@@ -19,8 +19,18 @@ class ValidatorTest extends UnitSpec {
     validator.run()
   }
 
+  test("Gitbucket Landkroon full test") {
+    val validator = new ValidatorLandkroon("gitbucket", "gitbucket", "master", new File("target/gitbucket"), List(ParadigmScoreBool, ParadigmScoreCount, ParadigmScoreFraction, ParadigmScoreClassic))
+    validator.run()
+  }
+
   test("Akka Landkroon test") {
     val validator = new ValidatorLandkroon2("akka", "akka", "master", new File("target/akka"), List(ParadigmScoreBool, ParadigmScoreCount, ParadigmScoreFraction, ParadigmScoreClassic))
+    validator.run()
+  }
+
+  test("Akka Landkroon full test") {
+    val validator = new ValidatorLandkroon("akka", "akka", "master", new File("target/akka"), List(ParadigmScoreBool, ParadigmScoreCount, ParadigmScoreFraction, ParadigmScoreClassic))
     validator.run()
   }
 }
