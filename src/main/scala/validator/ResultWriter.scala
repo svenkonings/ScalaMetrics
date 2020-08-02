@@ -6,7 +6,17 @@ import java.nio.file.Files
 import codeAnalysis.analyser.metric.{MethodResult, MetricResult, ObjectResult, Result}
 import codeAnalysis.util.Extensions.DoubleExtension
 
+import scala.collection.mutable
+
 object ResultWriter {
+
+  private def csvHeader(fields: List[String]): List[String] =
+    "commit" :: "faults" :: "path" :: fields
+
+  private def csvRow(result: Result, valueSep: String, values: List[Double]): List[String] =
+    "HEAD" :: result.faults.toString :: getName(result, valueSep) :: values.map(_.toString)
+
+  private def getName(result: Result, valueSep: String) = result.name.replace(valueSep, " ")
 
   def writeMethodMetrics(dir: File, name: String, results: List[Result], valueSep: String = ",", lineSep: String = "\n"): Unit = {
     val fields = methodMetricFields(results)
@@ -16,49 +26,42 @@ object ResultWriter {
     val toCsv = methodToCsv(fields, valueSep)(_)
     val body = methodResults.map(toCsv)
 
-    val content = header :: body
-    val csv = content.map(_.mkString(valueSep)).mkString(lineSep)
-    write(new File(dir, s"$name.csv"), csv)
+    writeCsv(header, body, dir, name, valueSep, lineSep)
+  }
+
+  private def methodToCsv(fields: List[String], valueSep: String)(result: MethodResult): List[String] = {
+    val values = result.metrics
+      .filter(metric => fields.contains(metric.name))
+      .map(_.value)
+    csvRow(result, valueSep, values)
   }
 
   def writeObjectMetrics(dir: File, name: String, results: List[Result], valueSep: String = ",", lineSep: String = "\n"): Unit = {
-    // TODO: Also sum and max
     val fields = methodMetricFields(results)
+    val objectFields = fields.map(_ + "Avr") ::: fields.map(_ + "Sum") ::: fields.map(_ + "Max")
 
-    val header = csvHeader(fields)
+    val header = csvHeader(objectFields)
     val objectResults = results.flatMap(_.allObjects).filter(_.methods.nonEmpty)
     val toCsv = objectToCsv(fields, valueSep)(_)
     val body = objectResults.map(toCsv)
 
-    val content = header :: body
-    val csv = content.map(_.mkString(valueSep)).mkString(lineSep)
-    write(new File(dir, s"$name.csv"), csv)
+    writeCsv(header, body, dir, name, valueSep, lineSep)
   }
-
-  private def csvHeader(fields: List[String]): List[String] =
-    "commit" :: "faults" :: "path" :: fields
-
-  private def methodToCsv(fields: List[String], valueSep: String)(result: MethodResult): List[String] =
-    "HEAD" :: result.faults.toString :: getName(result, valueSep) :: metricValues(fields)(result)
-
-  private def metricValues(fields: List[String])(result: Result): List[String] = result.metrics
-    .filter(metric => fields.contains(metric.name))
-    .map(_.value.toString)
 
   private def objectToCsv(fields: List[String], valueSep: String)(result: ObjectResult): List[String] = {
     val metrics = objectMetricsByName(result)
-    val averages = fields.map(field => {
+    val averages = mutable.ListBuffer[Double]()
+    val sums = mutable.ListBuffer[Double]()
+    val maximums = mutable.ListBuffer[Double]()
+    fields.foreach(field => {
       val values = metrics(field).map(_.value)
-      values.sum \ values.size
+      val sum = values.sum
+      averages += sum \ values.size
+      sums += sum
+      maximums += values.max
     })
-    "HEAD" :: result.faults.toString :: getName(result, valueSep) :: averages.map(_.toString)
+    csvRow(result, valueSep, averages.toList ::: sums.toList ::: maximums.toList)
   }
-
-  private def getName(result: Result, valueSep: String) = result.name.replace(valueSep, " ")
-
-  private def objectMetricsByName(result: ObjectResult): Map[String, List[MetricResult]] = result.methods
-    .flatMap(_.metrics)
-    .groupBy(_.name)
 
   /**
    * Returns the names of all method metrics with values
@@ -66,18 +69,16 @@ object ResultWriter {
   def methodMetricFields(results: List[Result]): List[String] = {
     val methodFields = methodMetricNames(results)
     val zeroFields = zeroMetrics(results)
-    println("Zero fields:", zeroFields)
+    println(s"Metrics without non-zero values: ${zeroFields.mkString(", ")}")
     methodFields diff zeroFields
   }
 
   /**
    * Returns the names of all method metrics
    */
-  private def methodMetricNames(results: List[Result]): List[String] = results
-    .find(_.allMethods.nonEmpty)
+  def methodMetricNames(results: List[Result]): List[String] = results
+    .collectFirst(_.allMethods match { case methods if methods.nonEmpty => methods.head })
     .get
-    .allMethods
-    .head
     .metrics
     .map(_.name)
 
@@ -91,6 +92,15 @@ object ResultWriter {
     .keys
     .toList
 
+  private def objectMetricsByName(result: ObjectResult): Map[String, List[MetricResult]] = result.methods
+    .flatMap(_.metrics)
+    .groupBy(_.name)
+
+  private def writeCsv(header: List[String], body: List[List[String]], dir: File, name: String, valueSep: String, lineSep: String): Unit = {
+    val content = header :: body
+    val csv = content.map(_.mkString(valueSep)).mkString(lineSep)
+    write(new File(dir, s"$name.csv"), csv)
+  }
 
   private def write(file: File, contents: String): Unit =
     Files.write(file.toPath, contents.getBytes())
