@@ -21,7 +21,8 @@ object ResultWriter {
     write(new File(dir, s"$name.csv"), csv)
   }
 
-  def writeObjectAverageMetrics(dir: File, name: String, results: List[Result], valueSep: String = ",", lineSep: String = "\n"): Unit = {
+  def writeObjectMetrics(dir: File, name: String, results: List[Result], valueSep: String = ",", lineSep: String = "\n"): Unit = {
+    // TODO: Also sum and max
     val fields = methodMetricFields(results)
 
     val header = csvHeader(fields)

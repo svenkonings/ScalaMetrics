@@ -3,9 +3,9 @@ package codeAnalysis.util
 import java.io.File
 
 object FileUtil {
-  def isTestPath(dir: String): Boolean = dir.contains(File.separator + "test" + File.separator)
+  def isTestPath(dir: String): Boolean = dir.contains("test/")
 
-  def isTestPath(dir: File): Boolean = isTestPath(dir.getPath)
+  def isTestPath(dir: File): Boolean = isTestPath(dir.getPath.replace("\\", "/"))
 
   def isSourceFile(filename: String): Boolean = isScalaFile(filename) || isJavaFile(filename)
 

@@ -6,14 +6,14 @@ import scala.reflect.internal.util.{BatchSourceFile, SourceFile}
 import scala.reflect.io.AbstractFile
 import scala.tools.nsc.Settings
 import scala.tools.nsc.interactive.Response
-import scala.tools.nsc.reporters.ConsoleReporter
+import scala.tools.nsc.reporters.NoReporter
 
 class Compiler extends Closeable {
   implicit val global: Global = {
     val settings = new Settings
     settings.usejavacp.value = true
-    // val reporter = new NoReporter(settings)
-    val reporter = new ConsoleReporter(settings)
+    val reporter = new NoReporter(settings)
+    // val reporter = new ConsoleReporter(settings)
     new Global(settings, reporter)
   }
 
