@@ -3,7 +3,7 @@ package codeAnalysis.analyser.metric
 import codeAnalysis.analyser.Global
 
 trait MetricProducer {
-  def apply(implicit global: Global): Metric
+  def apply(global: Global): Metric
 }
 
 trait Metric {

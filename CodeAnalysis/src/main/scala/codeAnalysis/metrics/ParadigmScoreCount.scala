@@ -5,11 +5,11 @@ import codeAnalysis.analyser.metric.{MethodMetric, Metric, MetricProducer, Metri
 import codeAnalysis.util.Extensions._
 
 object ParadigmScoreCount extends MetricProducer {
-  override def apply(implicit global: Global): Metric = new ParadigmScoreCount
+  override def apply(global: Global): Metric = new ParadigmScoreCount(global)
 }
 
 //noinspection DuplicatedCode
-class ParadigmScoreCount(implicit val global: Global) extends MethodMetric {
+class ParadigmScoreCount(val global: Global) extends MethodMetric {
 
   import global.TreeExtensions
 

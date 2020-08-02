@@ -9,7 +9,7 @@ import scala.tools.nsc.interactive.Response
 import scala.tools.nsc.reporters.NoReporter
 
 class Compiler extends Closeable {
-  implicit val global: Global = {
+  val global: Global = {
     val settings = new Settings
     settings.usejavacp.value = true
     val reporter = new NoReporter(settings)

@@ -13,7 +13,7 @@ object ResultWriter {
 
     val header = csvHeader(fields)
     val methodResults = results.flatMap(_.allMethods)
-    val toCsv = methodToCsv(fields)(_)
+    val toCsv = methodToCsv(fields, valueSep)(_)
     val body = methodResults.map(toCsv)
 
     val content = header :: body
@@ -27,7 +27,7 @@ object ResultWriter {
 
     val header = csvHeader(fields)
     val objectResults = results.flatMap(_.allObjects).filter(_.methods.nonEmpty)
-    val toCsv = objectToCsv(fields)(_)
+    val toCsv = objectToCsv(fields, valueSep)(_)
     val body = objectResults.map(toCsv)
 
     val content = header :: body
@@ -38,21 +38,23 @@ object ResultWriter {
   private def csvHeader(fields: List[String]): List[String] =
     "commit" :: "faults" :: "path" :: fields
 
-  private def methodToCsv(fields: List[String])(result: MethodResult): List[String] =
-    "HEAD" :: result.faults.toString :: result.name :: metricValues(fields)(result)
+  private def methodToCsv(fields: List[String], valueSep: String)(result: MethodResult): List[String] =
+    "HEAD" :: result.faults.toString :: getName(result, valueSep) :: metricValues(fields)(result)
 
   private def metricValues(fields: List[String])(result: Result): List[String] = result.metrics
     .filter(metric => fields.contains(metric.name))
     .map(_.value.toString)
 
-  private def objectToCsv(fields: List[String])(result: ObjectResult): List[String] = {
+  private def objectToCsv(fields: List[String], valueSep: String)(result: ObjectResult): List[String] = {
     val metrics = objectMetricsByName(result)
     val averages = fields.map(field => {
       val values = metrics(field).map(_.value)
       values.sum \ values.size
     })
-    "HEAD" :: result.faults.toString :: result.name :: averages.map(_.toString)
+    "HEAD" :: result.faults.toString :: getName(result, valueSep) :: averages.map(_.toString)
   }
+
+  private def getName(result: Result, valueSep: String) = result.name.replace(valueSep, " ")
 
   private def objectMetricsByName(result: ObjectResult): Map[String, List[MetricResult]] = result.methods
     .flatMap(_.metrics)
