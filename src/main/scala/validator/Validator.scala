@@ -42,6 +42,7 @@ class Validator(owner: String, name: String, branch: String, dir: File, metrics:
   }
 
   private def analyseLatestVersion(): Unit = {
+    println("Analysing latest version...")
     val headCommit = repo.getHeadCommit
     val sources = mutable.ListBuffer[SourceFile]()
     val metricSources = mutable.Map[String, SourceFile]()
@@ -55,8 +56,16 @@ class Validator(owner: String, name: String, branch: String, dir: File, metrics:
   }
 
   private def analyseFaultyVersions(): Unit = {
+    println("Analysing faulty versions...")
     val faultyCommits = repo.getFaultyCommits
-    faultyCommits.foreachEntry(analyseFaultyCommit)
+    val size = faultyCommits.size
+    var current = 0.0
+    faultyCommits.foreachEntry { (commit, faults) =>
+      analyseFaultyCommit(commit, faults)
+      current += 1
+      val progress = (current / size) * 100
+      println(f"$progress%3.2f%%")
+    }
   }
 
   private def analyseFaultyCommit(commit: RevCommit, faults: Int): Unit = {
