@@ -19,7 +19,8 @@ import scala.util.Using.resource
 
 class Repo(owner: String, name: String, branch: String, dir: File) extends AutoCloseable {
   val git: Git = if (dir.exists()) Git.open(dir) else cloneRepo()
-  val faults: Map[Int, Int] = Github.getFaults(owner, name)
+  val faults: Map[Int, Set[Int]] = Github.getFaults(owner, name)
+  private val pathfilter = PathSuffixFilter.create(".scala")
 
   def cloneRepo(): Git = Git.cloneRepository()
     .setURI(Github.repoToUri(owner, name))
@@ -48,12 +49,17 @@ class Repo(owner: String, name: String, branch: String, dir: File) extends AutoC
   }
 
   def countFaults(message: String): Int =
-    Github.findReferences(message).map(issue => faults.getOrElse(issue, 0)).sum
+    Github.findReferences(message).foldLeft(Set[Int]()) { (set, number) =>
+      faults.get(number) match {
+        case Some(issues) => set ++ issues
+        case None => set
+      }
+    }.size
 
   def diff(oldTree: RevTree, newTree: RevTree): mutable.Buffer[FileHeader] =
     resource(new DiffFormatter(DisabledOutputStream.INSTANCE)) { formatter =>
       formatter.setRepository(git.getRepository)
-      formatter.setPathFilter(PathSuffixFilter.create(".scala"))
+      formatter.setPathFilter(pathfilter)
       formatter.scan(oldTree, newTree).asScala.map(formatter.toFileHeader)
     }
 

@@ -17,11 +17,11 @@ object Github {
    * Get a map of faults:
    * keys - numbers referring to all issues labeled as faults
    * and all pull requests referring to those issues.
-   * values - The amount of associated issues.
+   * values - The associated faulty issues.
    */
-  def getFaults(owner: String, name: String, useCache: Boolean = true): Map[Int, Int] =
+  def getFaults(owner: String, name: String, useCache: Boolean = true): Map[Int, Set[Int]] =
     if (useCache && Cache.isCached(owner + name)) {
-      Cache.readObject(owner + name).asInstanceOf[Map[Int, Int]]
+      Cache.readObject(owner + name).asInstanceOf[Map[Int, Set[Int]]]
     } else {
       val pullRequestsAndIssues = Query.queryAllPullRequestsAndIssues(owner, name)
       val pullRequests = pullRequestsAndIssues("pullRequests").arr
@@ -29,22 +29,22 @@ object Github {
 
       def toNumber(pullOrIssue: Value): Int = pullOrIssue.obj("number").num.toInt
 
-      // Faulty issues count as a single fault
-      val issueMap = HashMap.from(issues.map(issue => toNumber(issue) -> 1))
+      // Faulty issues refer to themselves
+      val issueMap = HashMap.from(issues.map(toNumber).map(issue => issue -> Set(issue)))
       val issueNumbers = issueMap.keySet
 
-      def countIssues(pullRequest: Value): Int = {
+      def getFaultyIssues(pullRequest: Value): Set[Int] = {
         val pullObject = pullRequest.obj
         val pullText = pullObject("title").str + pullObject("bodyText").str
         val referenceNumbers = findReferences(pullText)
-        referenceNumbers.count(issueNumbers)
+        referenceNumbers.filter(issueNumbers).toSet
       }
 
-      // Faults of pull requests are the number of faulty issues they refer to
+      // Faulty pull requests refer to the faulty issues referenced in their description
       val pullRequestMap = HashMap.from(
         pullRequests
-          .map(pullRequest => toNumber(pullRequest) -> countIssues(pullRequest))
-          .filter(_._2 > 0) // Only include pull requests that refer to faulty issues
+          .map(pullRequest => toNumber(pullRequest) -> getFaultyIssues(pullRequest))
+          .filter(_._2.nonEmpty) // Only include pull requests that refer to faulty issues
       )
 
       val faultsMap = issueMap ++ pullRequestMap
