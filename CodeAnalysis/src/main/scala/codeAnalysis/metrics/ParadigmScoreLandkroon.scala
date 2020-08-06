@@ -4,11 +4,11 @@ import codeAnalysis.analyser.Global
 import codeAnalysis.analyser.metric.{MethodMetric, Metric, MetricProducer, MetricResult}
 import codeAnalysis.util.Extensions._
 
-object ParadigmScoreClassic extends MetricProducer {
-  override def apply(global: Global): Metric = new ParadigmScoreClassic(global)
+object ParadigmScoreLandkroon extends MetricProducer {
+  override def apply(global: Global): Metric = new ParadigmScoreLandkroon(global)
 }
 
-class ParadigmScoreClassic(val global: Global) extends MethodMetric {
+class ParadigmScoreLandkroon(val global: Global) extends MethodMetric {
 
   import global.TreeExtensions
 
@@ -63,15 +63,11 @@ class ParadigmScoreClassic(val global: Global) extends MethodMetric {
 
     val paradigmScore = funcPoints \ (funcPoints + impPoints)
     List(
-      // MetricResult("CountVariables", sideEffects), // Same as ParadigmScoreCount
-      // MetricResult("IsRecursive", isRecursive), // Same as ParadigmScoreBool
-      // MetricResult("IsNested", isNested),
-      MetricResult("FunctionalCalls", func),
-      MetricResult("ImperativeCalls", imp),
-      // MetricResult("CountHigherOrderParameters", higherOrderParamCount), // Same as ParadigmScoreCount
-      MetricResult("FunctionalPointsClassic", funcPoints),
-      MetricResult("ImperativePointsClassic", impPoints),
-      MetricResult("ParadigmScoreClassic", paradigmScore)
+      MetricResult("FunctionalCallsLandkroon", func),
+      MetricResult("ImperativeCallsLandkroon", imp),
+      MetricResult("FunctionalPointsLandkroon", funcPoints),
+      MetricResult("ImperativePointsLandkroon", impPoints),
+      MetricResult("ParadigmScoreLandkroon", paradigmScore)
     )
   }
 }

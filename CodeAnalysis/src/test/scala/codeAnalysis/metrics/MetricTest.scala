@@ -22,8 +22,8 @@ class MetricTest extends UnitSpec {
     print(ParadigmScoreFraction)
   }
 
-  test("Paradigm Score Classic test") {
-    print(ParadigmScoreClassic)
+  test("Paradigm Score Landkroon test") {
+    print(ParadigmScoreLandkroon)
   }
 
   test("Source Lines of Code test") {
