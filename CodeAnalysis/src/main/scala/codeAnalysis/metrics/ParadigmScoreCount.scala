@@ -20,6 +20,11 @@ class ParadigmScoreCount(val global: Global) extends MethodMetric {
   }
 
   /**
+   * BF2: Checks whether the method is nested or not
+   */
+  def isNested(tree: global.DefDef): Int = tree.symbol.owner.isMethod.toInt
+
+  /**
    * CF3: Counts the number of nested methods
    */
   def countNestedMethods(tree: global.DefDef): Int = tree.count {
@@ -32,6 +37,11 @@ class ParadigmScoreCount(val global: Global) extends MethodMetric {
   def countFunctions(tree: global.DefDef): Int = tree.count {
     case term@(_: global.TermTree | _: global.SymTree) => term.isFunction
   }
+
+  /**
+   * BF4a: Checks whether the tree returns a higher order type
+   */
+  def isFunction(tree: global.DefDef): Int = tree.isFunction.toInt
 
   /**
    * CF4b: Counts the number of higher-order parameters
@@ -78,12 +88,15 @@ class ParadigmScoreCount(val global: Global) extends MethodMetric {
   }
 
   /**
-   * CF7: Counts the number of parameter lists
+   * CF7: Counts the number of additional parameter lists
    */
-  def countParameterLists(tree: global.DefDef): Int = tree.vparamss.size
+  def countParameterLists(tree: global.DefDef): Int = {
+    val size = tree.vparamss.size
+    if (size > 1) size - 1 else 0
+  }
 
   /**
-   * O1: Counts the number of variable usage
+   * CO1: Counts the number of variable usage
    */
   def countVariables(tree: global.DefDef): Int = tree.count {
     case term@(_: global.TermTree | _: global.SymTree) => term.isVar
@@ -125,6 +138,11 @@ class ParadigmScoreCount(val global: Global) extends MethodMetric {
   }
 
   /**
+   * BO2a: Checks whether the tree returns Unit
+   */
+  def isSideEffect(tree: global.DefDef): Int = tree.isUnit.toInt
+
+  /**
    * CO2b: Count the number of calls resulting in Unit
    */
   def countSideEffectCalls(tree: global.DefDef): Int = tree.count {
@@ -142,8 +160,10 @@ class ParadigmScoreCount(val global: Global) extends MethodMetric {
   override def run(arg: Global#DefDef): List[MetricResult] = {
     val tree = arg.asInstanceOf[global.DefDef]
     val f1 = countRecursiveCalls(tree)
-    val f2 = countNestedMethods(tree)
+    val f2 = isNested(tree)
+    val f3 = countNestedMethods(tree)
     val f4 = countFunctions(tree)
+    val f4a = isFunction(tree)
     val f4b = countFunctionParameters(tree)
     val f4c = countHigherOrderCalls(tree)
     val f4d = countFunctionCalls(tree)
@@ -152,7 +172,7 @@ class ParadigmScoreCount(val global: Global) extends MethodMetric {
     val f6 = countLazyValues(tree)
     val f7 = countParameterLists(tree)
 
-    val fScore = f1 + f2 + f4 + f4b + f4c + f4d + f4e + f5 + f6 + f7
+    val fScore = f1 + f2 + f3 + f4 + f4a + f4b + f4c + f4d + f4e + f5 + f6 + f7
 
     val o1 = countVariables(tree)
     val o1a = countVariableDefinitions(tree)
@@ -160,16 +180,17 @@ class ParadigmScoreCount(val global: Global) extends MethodMetric {
     val o1c = countOuterVariableUsage(tree)
     val o1d = countOuterVariableAssignment(tree)
     val o2 = countSideEffects(tree)
+    val o2a = isSideEffect(tree)
     val o2b = countSideEffectCalls(tree)
     val o2c = countSideEffectFunctions(tree)
 
-    val oScore = o1 + o1a + o1b + o1c + o1d + o2 + o2b + o2c
+    val oScore = o1 + o1a + o1b + o1c + o1d + o2 + o2c + o2b + o2a
 
     val score = (fScore - oScore) \ (fScore + oScore)
 
     List(
       MetricResult("CountRecursiveCalls", f1),
-      MetricResult("CountNestedMethods", f2),
+      MetricResult("CountNestedMethods", f3),
       MetricResult("CountFunctions", f4),
       MetricResult("CountFunctionParameters", f4b),
       MetricResult("CountHigherOrderCalls", f4c),
@@ -188,7 +209,7 @@ class ParadigmScoreCount(val global: Global) extends MethodMetric {
       MetricResult("CountOuterVariableAssignment", o1d),
 
       MetricResult("CountSideEffects", o2),
-      MetricResult("CountSideEffectCallss", o2b),
+      MetricResult("CountSideEffectCalls", o2b),
       MetricResult("CountSideEffectFunctions", o2c),
 
       MetricResult("ImperativeScoreCount", oScore),
