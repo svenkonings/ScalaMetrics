@@ -8,116 +8,191 @@ object ParadigmScoreCount extends MetricProducer {
   override def apply(global: Global): Metric = new ParadigmScoreCount(global)
 }
 
-//noinspection DuplicatedCode
 class ParadigmScoreCount(val global: Global) extends MethodMetric {
 
   import global.TreeExtensions
 
   /**
-   * F1: Counts the number of recursive method calls
+   * CF1: Counts the number of recursive method calls
    */
-  def recursive(tree: global.DefDef): Int = tree.count {
-    case apply: global.Apply  => tree.symbol == apply.symbol
+  def countRecursiveCalls(tree: global.DefDef): Int = tree.count {
+    case apply: global.Apply => tree.symbol == apply.symbol
   }
 
   /**
-   * F2: Counts the number of nested methods
+   * CF3: Counts the number of nested methods
    */
-  def nested(tree: global.DefDef): Int = tree.count {
-    case defdef: global.DefDef  => tree != defdef
+  def countNestedMethods(tree: global.DefDef): Int = tree.count {
+    case defdef: global.DefDef => tree != defdef
   }
 
   /**
-   * F3: Counts the number of higher-order parameters
+   * CF4: Counts the number of functions
    */
-  def higherOrderParams(tree: global.DefDef): Int =
+  def countFunctions(tree: global.DefDef): Int = tree.count {
+    case term@(_: global.TermTree | _: global.SymTree) => term.isFunction
+  }
+
+  /**
+   * CF4b: Counts the number of higher-order parameters
+   */
+  def countFunctionParameters(tree: global.DefDef): Int =
     tree.vparamss.map(_.count(_.isFunction)).sum
 
   /**
-   * F4: Counts the number of calls to higher order functions
+   * CF4c: Counts the number of calls to higher order functions
    */
-  def higherOrderCalls(tree: global.DefDef): Int = tree.count {
+  def countHigherOrderCalls(tree: global.DefDef): Int = tree.count {
     case apply: global.Apply => apply.args.exists(_.isFunction)
   }
 
   /**
-   * F5: Checks whether the tree returns a higher order type
+   * CF4d: Counts the number of calls to functions
    */
-  def higherOrderReturn(tree: global.DefDef): Int = tree.isFunction.toInt
-// FIXME: Missing Function values, calls and definitions, See usesFunction
+  def countFunctionCalls(tree: global.DefDef): Int = tree.count {
+    case apply: global.Apply => apply.fun match {
+      case select: global.Select => select.qualifier.isFunction
+      case _ => false
+    }
+  }
 
   /**
-   * F6: Counts the number of calls returning partial functions
+   * CF4e: Counts the number of calls returning partial functions
    */
-  def currying(tree: global.DefDef): Int = tree.count {
+  def countCurrying(tree: global.DefDef): Int = tree.count {
     case apply: global.Apply => apply.isFunction
   }
 
   /**
-   * F3-6: Counts the number of functions
+   * CF5: Counts the number of pattern matches
    */
-  def functions(tree: global.DefDef): Int = tree.count{
-    case term @ (_: global.TermTree | _: global.SymTree) => term.isFunction
-  }
-
-  /**
-   * F7: Counts the number of pattern matches
-   */
-  def patternMatch(tree: global.DefDef): Int = tree.count {
+  def countPatternMatching(tree: global.DefDef): Int = tree.count {
     case _: global.Match => true
   }
 
   /**
-   * F8: Counts the number of lazy value usage
+   * CF6: Counts the number of lazy value usage
    */
-  def lazyValues(tree: global.DefDef): Int = tree.count{
-    case term @ (_: global.TermTree | _: global.SymTree) => term.isLazy
+  def countLazyValues(tree: global.DefDef): Int = tree.count {
+    case term@(_: global.TermTree | _: global.SymTree) => term.isLazy
   }
+
+  /**
+   * CF7: Counts the number of parameter lists
+   */
+  def countParameterLists(tree: global.DefDef): Int = tree.vparamss.size
 
   /**
    * O1: Counts the number of variable usage
    */
-  def variables(tree: global.DefDef): Int = tree.count {
-    case term @ (_: global.TermTree | _: global.SymTree) => term.isVar
+  def countVariables(tree: global.DefDef): Int = tree.count {
+    case term@(_: global.TermTree | _: global.SymTree) => term.isVar
   }
 
   /**
-   * O2: Counts the number of calls resulting in Unit
+   * CO1a: Counts the number of variable definitions
    */
-  def sideEffects(tree: global.DefDef): Int = tree.count {
-    case tree @ (_: global.TermTree | _: global.SymTree) => tree.isUnit
+  def countVariableDefinitions(tree: global.DefDef): Int = tree.count {
+    case tree: global.ValDef => tree.isVar
+  }
+
+  /**
+   * CO1b: Counts the assignesnments to inner variables
+   */
+  def countInnerVariableAssignment(tree: global.DefDef): Int = tree.count {
+    case _: global.Assign => true // Inner variable assign
+  }
+
+  /**
+   * CO1c: Counts outer variable references
+   */
+  def countOuterVariableUsage(tree: global.DefDef): Int = tree.count {
+    case tree: global.Select => tree.isVar
+  }
+
+  /**
+   * CO1d: Counts outer variable assignments
+   */
+  def countOuterVariableAssignment(tree: global.DefDef): Int = tree.count {
+    case tree: global.Select => tree.name.endsWith("_$eq") // Outer variable assign
+  }
+
+  /**
+   * CO2: Counts the number of calls resulting in Unit
+   */
+  def countSideEffects(tree: global.DefDef): Int = tree.count {
+    case tree@(_: global.TermTree | _: global.SymTree) => tree.isUnit
+  }
+
+  /**
+   * CO2b: Count the number of calls resulting in Unit
+   */
+  def countSideEffectCalls(tree: global.DefDef): Int = tree.count {
+    case apply: global.Apply => apply.isUnit
+    case _: global.Assign => true
+  }
+
+  /**
+   * CO2c: Count the number of functions resulting in Unit
+   */
+  def countSideEffectFunctions(tree: global.DefDef): Int = tree.count {
+    case function: global.Function => function.body.isUnit
   }
 
   override def run(arg: Global#DefDef): List[MetricResult] = {
     val tree = arg.asInstanceOf[global.DefDef]
-    val f1 = recursive(tree)
-    val f2 = nested(tree)
-    val f3 = higherOrderParams(tree)
-    val f4 = higherOrderCalls(tree)
-    val f5 = higherOrderReturn(tree)
-    val f6 = currying(tree)
-    val f36 = functions(tree)
-    val f7 = patternMatch(tree)
-    val f8 = lazyValues(tree)
-    val fScore = f1 + f2 + f3 + f4 + f5 + f6 + f7 + f8
-    val o1 = variables(tree)
-    val o2 = sideEffects(tree)
-    val oScore = o1 + o2
+    val f1 = countRecursiveCalls(tree)
+    val f2 = countNestedMethods(tree)
+    val f4 = countFunctions(tree)
+    val f4b = countFunctionParameters(tree)
+    val f4c = countHigherOrderCalls(tree)
+    val f4d = countFunctionCalls(tree)
+    val f4e = countCurrying(tree)
+    val f5 = countPatternMatching(tree)
+    val f6 = countLazyValues(tree)
+    val f7 = countParameterLists(tree)
+
+    val fScore = f1 + f2 + f4 + f4b + f4c + f4d + f4e + f5 + f6 + f7
+
+    val o1 = countVariables(tree)
+    val o1a = countVariableDefinitions(tree)
+    val o1b = countInnerVariableAssignment(tree)
+    val o1c = countOuterVariableUsage(tree)
+    val o1d = countOuterVariableAssignment(tree)
+    val o2 = countSideEffects(tree)
+    val o2b = countSideEffectCalls(tree)
+    val o2c = countSideEffectFunctions(tree)
+
+    val oScore = o1 + o1a + o1b + o1c + o1d + o2 + o2b + o2c
+
     val score = (fScore - oScore) \ (fScore + oScore)
+
     List(
       MetricResult("CountRecursiveCalls", f1),
       MetricResult("CountNestedMethods", f2),
-      MetricResult("CountHigherOrderParameters", f3),
-      MetricResult("CountHigherOrderCalls", f4),
-      // MetricResult("HasHigherOrderReturn", f5), // Same as ParadigmScoreBool
-      MetricResult("CountCurrying", f6),
-      MetricResult("CountFunctions", f36),
-      MetricResult("CountPatternMatching", f7),
-      MetricResult("CountLazyValues", f8),
+      MetricResult("CountFunctions", f4),
+      MetricResult("CountFunctionParameters", f4b),
+      MetricResult("CountHigherOrderCalls", f4c),
+      MetricResult("CountFunctionCalls", f4d),
+      MetricResult("CountCurrying", f4e),
+      MetricResult("CountPatternMatching", f5),
+      MetricResult("CountLazyValues", f6),
+      MetricResult("CountParameterLists", f7),
+
       MetricResult("FunctionalScoreCount", fScore),
+
       MetricResult("CountVariables", o1),
+      MetricResult("CountVariableDefinitions", o1a),
+      MetricResult("CountInnerVariableAssignment", o1b),
+      MetricResult("CountOuterVariableUsage", o1c),
+      MetricResult("CountOuterVariableAssignment", o1d),
+
       MetricResult("CountSideEffects", o2),
+      MetricResult("CountSideEffectCallss", o2b),
+      MetricResult("CountSideEffectFunctions", o2c),
+
       MetricResult("ImperativeScoreCount", oScore),
+
       MetricResult("ParadigmScoreCount", score),
     )
   }

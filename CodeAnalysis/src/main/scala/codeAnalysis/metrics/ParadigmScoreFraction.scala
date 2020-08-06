@@ -9,23 +9,22 @@ object ParadigmScoreFraction extends MetricProducer {
   override def apply(global: Global): Metric = new ParadigmScoreFraction(global)
 }
 
-//noinspection DuplicatedCode
 class ParadigmScoreFraction(val global: Global) extends MethodMetric {
 
   import global.TreeExtensions
 
   /**
-   * F1: The fraction of recursive calls to number of total calls
+   * FF1: The fraction of recursive calls to number of total calls
    */
-  def recursive(tree: global.DefDef): Double = tree.fraction {
+  def fractionRecursiveCalls(tree: global.DefDef): Double = tree.fraction {
     case apply: global.Apply if tree.symbol == apply.symbol => Both
     case _: global.Apply => Denominator
   }
 
   /**
-   * F2: The fraction of nested methods to total number of values and methods
+   * FF2: The fraction of nested methods to total number of values and methods
    */
-  def nested(tree: global.DefDef): Double = {
+  def FractionNestedMethods(tree: global.DefDef): Double = {
     tree.fraction {
       case defdef: global.DefDef if tree != defdef => Both
       case defdef: global.ValOrDefDef if tree != defdef => Denominator
@@ -33,118 +32,118 @@ class ParadigmScoreFraction(val global: Global) extends MethodMetric {
   }
 
   /**
-   * F3: The fraction of higher-order parameters to the total number of parameters
+   * FF4b: The fraction of function parameters to the total number of parameters
    */
-  def higherOrderParams(tree: global.DefDef): Double = {
+  def fractionFunctionParameters(tree: global.DefDef): Double = {
     val params = tree.vparamss.flatten
     val higherOrderParamCount = params.count(_.isFunction)
     higherOrderParamCount \ params.size
   }
 
   /**
-   * F4: The fraction of higher order functions calls to total number of calls
+   * FF4c: The fraction of higher order functions calls to total number of calls
    */
-  def higherOrderCalls(tree: global.DefDef): Double = tree.fraction {
+  def fractionHigherOrderCalls(tree: global.DefDef): Double = tree.fraction {
     case apply: global.Apply if apply.args.exists(_.isFunction) => Both
     case _: global.Apply => Denominator
   }
 
   /**
-   * F5: Checks whether the tree returns a higher order type
+   * FF4d: The fraction of functions calls to total number of calls
    */
-  def higherOrderReturn(tree: global.DefDef): Int = tree.isFunction.toInt
-
+  def fractionFunctionCalls(tree: global.DefDef): Double = tree.fraction {
+    case apply: global.Apply if (apply.fun match {
+      case select: global.Select => select.qualifier.isFunction
+      case _ => false
+    }) => Both
+    case _: global.Apply => Denominator
+  }
 
   /**
-   * F6: The fraction of calls returning partial functions to total number of calls
+   * FF4e: The fraction of calls returning partial functions to total number of calls
    */
-  def currying(tree: global.DefDef): Double = tree.fraction {
+  def fractionCurrying(tree: global.DefDef): Double = tree.fraction {
     case apply: global.Apply if apply.isFunction => Both
     case _: global.Apply => Denominator
   }
 
   /**
-   * F3-6: The fraction of terms with a function type to the total number of terms
+   * FF6: The fraction of lazy value usage to total number of value usage
    */
-  def functions(tree: global.DefDef): Double = tree.fraction {
-    case tree: global.TermTree if tree.isFunction => Both
-    case _: global.TermTree => Denominator
-  }
-
-  /**
-   * F7: The fraction of pattern matches to total number of terms
-   */
-  def patternMatch(tree: global.DefDef): Double = tree.fraction {
-    case _: global.Match => Both
-    case _: global.TermTree => Denominator
-  }
-
-  /**
-   * F8: The fraction of lazy value usage to total number of value usage
-   */
-  def lazyValues(tree: global.DefDef): Double = tree.fraction {
-    case tree @ (_: global.ValDef | _: global.Ident | _: global.Assign | _: global.Bind | _:global.Select) => // TODO: Change to tree.isVal
+  def fractionLazyValues(tree: global.DefDef): Double = tree.fraction {
+    case tree@(_: global.ValDef | _: global.Ident | _: global.Assign | _: global.Bind | _: global.Select) => // TODO: Test this: if tree.symbol.isVal
       if (tree.isLazy) Both else Denominator
   }
 
   /**
-   * O1: The fraction of variable usage to total number of value usage
+   * FO1: The fraction of variable usage to total number of value usage
    */
-  def variables(tree: global.DefDef): Double = tree.fraction {
-    case tree @ (_: global.ValDef | _: global.Ident | _: global.Assign | _: global.Bind | _:global.Select) =>
+  def fractionVariables(tree: global.DefDef): Double = tree.fraction {
+    case tree@(_: global.ValDef | _: global.Ident | _: global.Assign | _: global.Bind | _: global.Select) =>
       if (tree.isVar) Both else Denominator
   }
 
   /**
-   * O2: The fraction of calls resulting in Unit to the total number of calls
+   * FO1a: The fraction of variable usage to total number of value usage
    */
-  def sideEffects(tree: global.DefDef): Double = tree.fraction {
+  def fractionVariableDefinitions(tree: global.DefDef): Double = tree.fraction {
+    case tree: global.ValDef => if (tree.isVar) Both else Denominator
+  }
+
+  /**
+   * FO2b: The fraction of calls resulting in Unit to the total number of calls
+   */
+  def fractionSideEffectCalls(tree: global.DefDef): Double = tree.fraction {
     case tree: global.Apply if tree.isUnit => Both
     case _: global.Apply => Denominator
   }
 
+  /**
+   * FO2c: The fraction of calls resulting in Unit to the total number of calls
+   */
+  def fractionSideEffectFunctions(tree: global.DefDef): Double = tree.fraction {
+    case function: global.Function => if (function.body.isUnit) Both else Denominator
+  }
+
   override def run(arg: Global#DefDef): List[MetricResult] = {
     val tree = arg.asInstanceOf[global.DefDef]
-    val f1 = recursive(tree)
-    val f2 = nested(tree)
-    val f3 = higherOrderParams(tree)
-    val f4 = higherOrderCalls(tree)
-    val f5 = higherOrderReturn(tree)
-    val f6 = currying(tree)
-    val f36 = functions(tree)
-    val f7 = patternMatch(tree)
-    val f8 = lazyValues(tree)
-    val fScore = f1 + f2 + f3 + f4 + f5 + f6 + f7 + f8
-    val o1 = variables(tree)
-    val o2 = sideEffects(tree)
-    val oScore = o1 + o2
+    val f1 = fractionRecursiveCalls(tree)
+    val f2 = FractionNestedMethods(tree)
+    val f4b = fractionFunctionParameters(tree)
+    val f4c = fractionHigherOrderCalls(tree)
+    val f4d = fractionFunctionCalls(tree)
+    val f4e = fractionCurrying(tree)
+    val f6 = fractionLazyValues(tree)
+
+    val fScore = f1 + f2 + f4b + f4c + f4d + f4e + f6
+
+    val o1 = fractionVariables(tree)
+    val o1a = fractionVariableDefinitions(tree)
+    val o2b = fractionSideEffectCalls(tree)
+    val o2c = fractionSideEffectFunctions(tree)
+
+    val oScore = o1 + o1a + o2b + o2c
+
     val score = (fScore - oScore) \ (fScore + oScore)
-    val funcs = tree.collect {
-      case tree if tree.isFunction => tree
-    }
-    val lazys = tree.collect {
-      case tree if tree.isLazy => tree
-    }
-    val units = tree.collect {
-      case tree if tree.isUnit => tree
-    }
-    val vars = tree.collect {
-      case tree if tree.isVar => tree
-    }
+
     List(
       MetricResult("FractionRecursiveCalls", f1),
       MetricResult("FractionNestedMethods", f2),
-      MetricResult("FractionHigherOrderParams", f3),
-      MetricResult("FractionHigherOrderCalls", f4),
-      // MetricResult("HasHigherOrderReturn", f5), // Same as ParadigmScoreBool
-      MetricResult("FractionCurrying", f6),
-      MetricResult("FractionFunctions", f36),
-      MetricResult("FractionPatternMatching", f7),
-      MetricResult("FractionLazyValues", f8),
+      MetricResult("FractionFunctionParameters", f4b),
+      MetricResult("FractionHigherOrderCalls", f4c),
+      MetricResult("FractionFunctionCalls", f4d),
+      MetricResult("FractionCurrying", f4e),
+      MetricResult("FractionLazyValues", f6),
+
       MetricResult("FunctionalScoreFraction", fScore),
+
       MetricResult("FractionVariables", o1),
-      MetricResult("FractionSideEffects", o2),
+      MetricResult("FractionVariableDefinitions", o1a),
+      MetricResult("FractionSideEffectCalls", o2b),
+      MetricResult("FractionSideEffectCalls", o2c),
+
       MetricResult("ImperativeScoreFraction", oScore),
+
       MetricResult("ParadigmScoreFraction", score),
     )
   }

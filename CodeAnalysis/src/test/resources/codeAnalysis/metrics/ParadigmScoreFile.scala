@@ -31,17 +31,21 @@ class ParadigmScoreFile {
   lazy val lazyVal: String = "I'm lazy"
   def lazyValue: String = lazyVal
 
-  def variables1(): Int = {
+  def multipleParameterLists(x: Int)(y: Int): Int = x + y
+
+  def variableDefinition(): Int = {
     var count: Int = 0
     count += 1
     count
   }
 
   var classCount: Int = 0
-  def variables2(): Int = {
+  def outerVariable(): Int = {
     classCount += 1
     classCount
   }
+
+  def variableUsage: Int = classCount
 
   def sideEffects(list: List[Int]): Unit = list.foreach(println)
 
