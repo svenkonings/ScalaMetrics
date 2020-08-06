@@ -18,8 +18,8 @@ import scala.jdk.CollectionConverters._
 import scala.reflect.internal.util.SourceFile
 import scala.util.Using.{resource, resources}
 
-class Validator(owner: String, name: String, branch: String, dir: File, metrics: List[MetricProducer]) {
-  private val repo = new Repo(owner, name, branch, dir)
+class Validator(owner: String, name: String, branch: String, dir: File, labels: List[String], metrics: List[MetricProducer]) {
+  private val repo = new Repo(owner, name, branch, dir, labels)
   private val latestResults = mutable.Map[String, Result]()
   private val faultyPaths = mutable.Set[String]()
   private val faultyResults = mutable.ListBuffer[Result]()

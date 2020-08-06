@@ -19,11 +19,11 @@ object Github {
    * and all pull requests referring to those issues.
    * values - The associated faulty issues.
    */
-  def getFaults(owner: String, name: String, useCache: Boolean = true): Map[Int, Set[Int]] =
+  def getFaults(owner: String, name: String, labels: List[String], useCache: Boolean = true): Map[Int, Set[Int]] =
     if (useCache && Cache.isCached(owner + name)) {
       Cache.readObject(owner + name).asInstanceOf[Map[Int, Set[Int]]]
     } else {
-      val pullRequestsAndIssues = Query.queryAllPullRequestsAndIssues(owner, name)
+      val pullRequestsAndIssues = Query.queryAllPullRequestsAndIssues(owner, name, labels)
       val pullRequests = pullRequestsAndIssues("pullRequests").arr
       val issues = pullRequestsAndIssues("issues").arr
 

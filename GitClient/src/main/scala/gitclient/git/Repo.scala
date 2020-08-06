@@ -17,9 +17,9 @@ import scala.collection.mutable
 import scala.jdk.CollectionConverters._
 import scala.util.Using.resource
 
-class Repo(owner: String, name: String, branch: String, dir: File) extends AutoCloseable {
+class Repo(owner: String, name: String, branch: String, dir: File, labels: List[String]) extends AutoCloseable {
   val git: Git = if (dir.exists()) Git.open(dir) else cloneRepo()
-  val faults: Map[Int, Set[Int]] = Github.getFaults(owner, name)
+  val faults: Map[Int, Set[Int]] = Github.getFaults(owner, name, labels)
   private val pathfilter = PathSuffixFilter.create(".scala")
 
   def cloneRepo(): Git = Git.cloneRepository()

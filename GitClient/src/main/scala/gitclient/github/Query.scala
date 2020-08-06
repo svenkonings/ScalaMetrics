@@ -10,7 +10,7 @@ object Query {
     _.getLines().find(_.startsWith("oauth=")).get.substring(6)
   )
 
-  def queryAllPullRequestsAndIssues(owner: String, name: String): Obj = {
+  def queryAllPullRequestsAndIssues(owner: String, name: String, labels: List[String]): Obj = {
     val pullRequests = ujson.Arr()
     val issues = ujson.Arr()
 
@@ -20,7 +20,7 @@ object Query {
     var afterIssue: String = null
 
     while (withPull || withIssue) {
-      val query = Query.queryPullRequestsAndIssues(owner, name, withPull, withIssue, afterPull, afterIssue)
+      val query = Query.queryPullRequestsAndIssues(owner, name, labels, withPull, withIssue, afterPull, afterIssue)
       if (withPull) {
         val pullResult = query("pullRequests").obj
         val pullPageInfo = pullResult("pageInfo").obj
@@ -43,11 +43,11 @@ object Query {
     )
   }
 
-  def queryPullRequestsAndIssues(owner: String, name: String, withPull: Boolean, withIssue: Boolean, afterPull: String = null, afterIssue: String = null): Obj = {
+  def queryPullRequestsAndIssues(owner: String, name: String, labels: List[String], withPull: Boolean, withIssue: Boolean, afterPull: String = null, afterIssue: String = null): Obj = {
     println(s"Querying pull requests and issues (owner: $owner, name: $name, afterPull: $afterPull, afterIssue: $afterIssue)")
     val query =
       """
-        |query PullRequestsAndIssues($owner: String!, $name: String!, $withPull: Boolean!, $afterPull: String, $withIssue: Boolean!, $afterIssue: String){
+        |query PullRequestsAndIssues($owner: String!, $name: String!, $labels: [String!], $withPull: Boolean!, $afterPull: String, $withIssue: Boolean!, $afterIssue: String){
         |  repository(owner: $owner, name: $name) {
         |    pullRequests(states: MERGED, first: 100, after: $afterPull) @include(if: $withPull) {
         |      pageInfo {
@@ -60,7 +60,7 @@ object Query {
         |        bodyText
         |      }
         |    }
-        |    issues(states: CLOSED, labels: "bug", first: 100, after: $afterIssue) @include(if: $withIssue) {
+        |    issues(states: CLOSED, labels: $labels, first: 100, after: $afterIssue) @include(if: $withIssue) {
         |      pageInfo {
         |        hasNextPage
         |        endCursor
@@ -75,6 +75,7 @@ object Query {
     val variables = ujson.Obj(
       "owner" -> owner,
       "name" -> name,
+      "labels" -> ujson.Arr.from(labels),
       "withPull" -> withPull,
       "withIssue" -> withIssue
     )
