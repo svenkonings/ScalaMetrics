@@ -4,6 +4,7 @@ import codeAnalysis.analyser.FractionPart.FractionPart
 import codeAnalysis.util.Extensions.DoubleExtension
 
 import scala.collection.mutable
+import scala.reflect.internal.util.DefinedPosition
 import scala.tools.nsc.reporters.Reporter
 import scala.tools.nsc.{Settings, interactive}
 
@@ -219,6 +220,37 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
     }
   }
 
+  class LinesTraverser(f: PartialFunction[Tree, Boolean]) extends ScapegoatTraverser {
+    val lines: mutable.Set[Int] = mutable.Set()
+    var keepCount: Boolean = false
+
+    def lines(tree: Global#Tree): Int = {
+      traverse(tree.asInstanceOf[Tree])
+      val result = lines.size
+      lines.clear()
+      result
+    }
+
+    private def addLines(tree: Tree): Unit = tree.pos match {
+      case pos: DefinedPosition =>
+        lines += pos.source.offsetToLine(pos.start)
+        lines += pos.source.offsetToLine(pos.end)
+      case _ => // Do nothing
+    }
+
+    override protected def inspect(tree: Tree): Unit = if (keepCount) {
+      addLines(tree)
+      continue(tree)
+    } else if (f.applyOrElse(tree, (_: Tree) => false)) {
+      addLines(tree)
+      keepCount = true
+      continue(tree)
+      keepCount = false
+    } else {
+      continue(tree)
+    }
+  }
+
   implicit class TreeExtensions(tree: Tree) {
     def getTypeSymbol: Symbol = tree match {
       case tree: ValOrDefDef => tree.tpt.symbol
@@ -262,6 +294,8 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
     def parentTraverse[T](f: Option[T] => PartialFunction[Tree, T]): Option[T] = new ParentTraverser(f).top(tree)
 
     def fraction(f: PartialFunction[Tree, FractionPart]): Double = new FractionTraverser(f).fraction(tree)
+
+    def lines(f: PartialFunction[Tree, Boolean]): Int = new LinesTraverser(f).lines(tree)
   }
 
 }
