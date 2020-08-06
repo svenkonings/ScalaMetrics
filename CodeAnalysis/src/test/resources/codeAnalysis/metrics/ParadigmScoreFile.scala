@@ -13,6 +13,14 @@ class ParadigmScoreFile {
     myPrint(string)
   }
 
+  def tripleNested(string: String): Unit = {
+    def doubleNested(string: String): Unit = {
+      def singleNested(string: String): Unit = println(string)
+      singleNested(string)
+    }
+    doubleNested(string)
+  }
+
   def higherOrderParam(f: PartialFunction[String, Int]): Int = f("Hello World")
 
   def higherOrderCall(list: List[String]): List[String] = list.filter(!_.isEmpty)

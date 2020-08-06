@@ -20,9 +20,17 @@ class ParadigmScoreCount(val global: Global) extends MethodMetric {
   }
 
   /**
-   * BF2: Checks whether the method is nested or not
+   * CF2: Count the nesting depth of the method
    */
-  def isNested(tree: global.DefDef): Int = tree.symbol.owner.isMethod.toInt
+  def countNestedDepth(tree: global.DefDef): Int = {
+    var count = 0
+    var symbol = tree.symbol.owner
+    while (symbol.isMethod) {
+      count += 1
+      symbol = symbol.owner
+    }
+    count
+  }
 
   /**
    * CF3: Counts the number of nested methods
@@ -160,7 +168,7 @@ class ParadigmScoreCount(val global: Global) extends MethodMetric {
   override def run(arg: Global#DefDef): List[MetricResult] = {
     val tree = arg.asInstanceOf[global.DefDef]
     val f1 = countRecursiveCalls(tree)
-    val f2 = isNested(tree)
+    val f2 = countNestedDepth(tree)
     val f3 = countNestedMethods(tree)
     val f4 = countFunctions(tree)
     val f4a = isFunction(tree)
@@ -190,6 +198,7 @@ class ParadigmScoreCount(val global: Global) extends MethodMetric {
 
     List(
       MetricResult("CountRecursiveCalls", f1),
+      MetricResult("CountNestedDepth", f2),
       MetricResult("CountNestedMethods", f3),
       MetricResult("CountFunctions", f4),
       MetricResult("CountFunctionParameters", f4b),
