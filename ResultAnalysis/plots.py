@@ -1,10 +1,12 @@
 import argparse
 import os
 
-import matplotlib.colors
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from matplotlib.colors import LinearSegmentedColormap, LogNorm
+
+from main import projects
 
 
 def to_color(faults):
@@ -26,9 +28,9 @@ def scatter(df, name, x_axis, y_axis):
 
 def scatter_faults(df, name, x_axis, y_axis):
     df = df.round({x_axis: 1, y_axis: 1})
-    df['faults'] = df['faults'].apply(to_color)
-    df = df.groupby([x_axis, y_axis, 'faults']).size().reset_index(name='count')
-    df.plot.scatter(x_axis, y_axis, c=df['faults'], s=df['count'], alpha=0.5)
+    df['color'] = df['faults'].apply(to_color)
+    df = df.groupby([x_axis, y_axis, 'color']).size().reset_index(name='count')
+    df.plot.scatter(x_axis, y_axis, c=df['color'], s=df['count'], alpha=0.5)
     plt.xlabel('Functional score')
     plt.ylabel('Imperative score')
     plt.title(name)
@@ -38,7 +40,8 @@ def scatter_faults(df, name, x_axis, y_axis):
 def scatter_color(df, name, x_axis, y_axis):
     df = df.round({x_axis: 1, y_axis: 1})
     df = df.groupby([x_axis, y_axis, ]).size().reset_index(name='count')
-    df.plot.scatter(x_axis, y_axis, c=df['count'], cmap='RdYlGn_r', alpha=0.5, norm=matplotlib.colors.LogNorm(),
+    cmap = LinearSegmentedColormap.from_list('gyr', [(0, 'green'), (0.5, 'yellow'), (1, 'red')], N=256)
+    df.plot.scatter(x_axis, y_axis, c=df['count'], cmap=cmap, alpha=0.5, norm=LogNorm(),
                     edgecolors='none')
     plt.xlabel('Functional score')
     plt.ylabel('Imperative score')
@@ -63,22 +66,6 @@ def savefig(dirictory, filename, extension):
     if args.show:
         plt.show()
     plt.close()
-
-
-projects = {
-    'akka': 'Akka',
-    'coursier': 'Coursier',
-    'gitbucket': 'Gitbucket',
-    'http4s': 'Http4s',
-    'lagom': 'Lagom',
-    'quill': 'Quill',
-    'scalafmt': 'scalafmt',
-    'scala-js': 'Scala.js',
-    'scio': 'Scio',
-    'shapeless': 'Shapeless',
-    'slick': 'Slick',
-    'zio': 'ZIO',
-}
 
 
 def plot_functions(path, name):
