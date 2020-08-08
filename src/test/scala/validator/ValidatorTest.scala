@@ -2,7 +2,7 @@ package validator
 
 import java.io.File
 
-import codeAnalysis.metrics.{ParadigmScoreBool, ParadigmScoreLandkroon, ParadigmScoreCount, ParadigmScoreFraction}
+import codeAnalysis.metrics.{ParadigmScoreBool, ParadigmScoreCount, ParadigmScoreFraction, ParadigmScoreLandkroon}
 
 class ValidatorTest extends UnitSpec {
   test("Scala-JS test") {
@@ -22,11 +22,6 @@ class ValidatorTest extends UnitSpec {
 
   test("Gitbucket test") {
     val validator = new Validator("gitbucket", "gitbucket", "master", new File("target/gitbucket"), List("bug"), List(ParadigmScoreBool, ParadigmScoreCount, ParadigmScoreFraction, ParadigmScoreLandkroon))
-    validator.run()
-  }
-
-  test("Play Framework test") {
-    val validator = new Validator("playframework", "playframework", "master", new File("target/playframework"), List("type:defect"), List(ParadigmScoreBool, ParadigmScoreCount, ParadigmScoreFraction, ParadigmScoreLandkroon))
     validator.run()
   }
 
@@ -62,11 +57,6 @@ class ValidatorTest extends UnitSpec {
 
   test("Lagom test") {
     val validator = new Validator("lagom", "lagom", "master", new File("target/lagom"), List("type:defect"), List(ParadigmScoreBool, ParadigmScoreCount, ParadigmScoreFraction, ParadigmScoreLandkroon))
-    validator.run()
-  }
-
-  test("Elastic4s test") {
-    val validator = new Validator("sksamuel", "elastic4s", "master", new File("target/elastic4s"), List("bug"), List(ParadigmScoreBool, ParadigmScoreCount, ParadigmScoreFraction, ParadigmScoreLandkroon))
     validator.run()
   }
 
