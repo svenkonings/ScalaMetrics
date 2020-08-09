@@ -16,24 +16,35 @@ def faulty(faults):
 
 
 def get_columns(df):
-    columns = list(df.select_dtypes(include=['float64', 'int64', 'int', 'float']).keys())
+    columns = list(df.select_dtypes(include='number').keys())
     columns.remove('faults')
     return columns
 
 
-def univariate_regression(df, name):
+def regression(df, name):
     print(name)
-    faults = df['faults'].apply(faulty)
-    cv = StratifiedKFold(n_splits=10, shuffle=True, random_state=42)
     columns = get_columns(df)
+    df['faulty'] = df['faults'].apply(faulty)
+    estimator = LogisticRegression(class_weight='balanced', random_state=42)
+    cv = StratifiedKFold(n_splits=10, shuffle=True, random_state=42)
+    multivariate_regression(df, estimator, cv, columns)
+    univariate_regression(df, estimator, cv, columns)
+
+
+def multivariate_regression(df, estimator, cv, columns):
     print("Multivariate")
-    regression = LogisticRegression(class_weight='balanced', random_state=42, multi_class='multinomial')
-    prediction = cross_val_predict(regression, df[columns].values, faults, cv=cv)
+    faults = df['faulty']
+    data = df[columns]
+    prediction = cross_val_predict(estimator, data, faults, cv=cv)
     print_stats(faults, prediction)
+
+
+def univariate_regression(df, estimator, cv, columns):
     print('Univariate')
+    faults = df['faulty']
     for column in columns:
-        regression = LogisticRegression(class_weight='balanced', random_state=42)
-        prediction = cross_val_predict(regression, df[column].values.reshape(-1, 1), faults, cv=cv)
+        data = df[column].values.reshape(-1, 1)
+        prediction = cross_val_predict(estimator, data, faults, cv=cv)
         print(column)
         print_stats(faults, prediction)
 
@@ -53,14 +64,14 @@ def function_regression(path, name):
     path = f'../target/{path}/functionResultsBriand.csv'
     name = name + ' functions'
     df = pd.read_csv(path)
-    univariate_regression(df, name)
+    regression(df, name)
 
 
 def object_regression(path, name):
     path = f'../target/{path}/objectResultsBriand.csv'
     name = name + ' objects'
     df = pd.read_csv(path)
-    univariate_regression(df, name)
+    regression(df, name)
 
 
 def main():
