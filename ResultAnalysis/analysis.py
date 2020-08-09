@@ -3,7 +3,7 @@ import os
 
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import matthews_corrcoef, confusion_matrix, precision_score, recall_score
+from sklearn.metrics import matthews_corrcoef, confusion_matrix, precision_score, recall_score, r2_score
 from sklearn.model_selection import StratifiedKFold, cross_val_predict
 
 from main import projects
@@ -39,26 +39,48 @@ def regression(df, name):
     df['faulty'] = df['faults'].apply(to_binary)
     estimator = LogisticRegression(class_weight='balanced', random_state=42)
     cv = StratifiedKFold(n_splits=10, shuffle=True, random_state=42)
-    multivariate_regression(df, estimator, cv, columns)
-    univariate_regression(df, estimator, cv, columns)
+    multivariate_regression(df, estimator, cv, columns, name)
+    univariate_regression(df, estimator, cv, columns, name)
 
 
-def multivariate_regression(df, estimator, cv, columns):
-    print("Multivariate")
+def multivariate_regression(df, estimator, cv, columns, name):
+    print(f'Multivariate {name}')
     faults = df['faulty']
     data = df[columns]
     prediction = cross_val_predict(estimator, data, faults, cv=cv)
-    print_stats(faults, prediction)
+    add_multivariate_result(faults, prediction, name)
 
 
-def univariate_regression(df, estimator, cv, columns):
-    print('Univariate')
+def univariate_regression(df, estimator, cv, columns, name):
+    print(f'Univariate {name}')
     faults = df['faulty']
+    result = pd.DataFrame(columns=['name', 'tn', 'fp', 'fn', 'tp', 'r2', 'precision', 'recall', 'mcc'])
     for column in columns:
+        print(f'{name}: {column}')
         data = df[column].values.reshape(-1, 1)
         prediction = cross_val_predict(estimator, data, faults, cv=cv)
-        print(column)
-        print_stats(faults, prediction)
+        column_result = get_stats(faults, prediction)
+        column_result['name'] = column
+        result = result.append(column_result, ignore_index=True)
+    save_dataframe(result, 'results/univariate/', name, False)
+
+
+def get_stats(actual, predicted):
+    tn, fp, fn, tp = confusion_matrix(actual, predicted).ravel()
+    r2 = r2_score(actual, predicted)
+    precision = precision_score(actual, predicted)
+    recall = recall_score(actual, predicted)
+    mcc = matthews_corrcoef(actual, predicted)
+    return {
+        'tn': tn,
+        'fp': fp,
+        'fn': fn,
+        'tp': tp,
+        'r2': r2,
+        'precision': precision,
+        'recall': recall,
+        'mcc': mcc
+    }
 
 
 def get_columns(df):
@@ -84,16 +106,9 @@ def save_dataframe(df, directory, filename, save_index=True):
     df.to_csv(directory + filename + '.csv', index=save_index)
 
 
-def print_stats(actual, predicted):
-    cm = confusion_matrix(actual, predicted)
-    print(cm)
-    p = precision_score(actual, predicted)
-    print(f'Precision: {p}')
-    r = recall_score(actual, predicted)
-    print(f'Recall: {r}')
-    mcc = matthews_corrcoef(actual, predicted)
-    print(f'MCC: {mcc}')
-
+multivariate_regression_results = pd.DataFrame(
+    columns=['name', 'tn', 'fp', 'fn', 'tp', 'r2', 'precision', 'recall', 'mcc']
+)
 
 function_fault_statistics = pd.DataFrame(
     columns=['name', 'rows', 'faulty_rows', 'non_faulty_rows', 'percentage_faulty']
@@ -101,6 +116,13 @@ function_fault_statistics = pd.DataFrame(
 object_fault_statistics = pd.DataFrame(
     columns=['name', 'rows', 'faulty_rows', 'non_faulty_rows', 'percentage_faulty']
 )
+
+
+def add_multivariate_result(faults, prediction, name):
+    result = get_stats(faults, prediction)
+    result['name'] = name
+    global multivariate_regression_results
+    multivariate_regression_results = multivariate_regression_results.append(result, ignore_index=True)
 
 
 def add_fault_statistics(df, name, is_function):
@@ -124,6 +146,7 @@ def add_fault_statistics(df, name, is_function):
 
 
 def save_global_statistics():
+    save_dataframe(multivariate_regression_results, 'results/', 'multivariateRegressionResults', False)
     save_dataframe(function_fault_statistics, 'results/', 'functionFaultStatistics', False)
     save_dataframe(object_fault_statistics, 'results/', 'objectFaultStatistics', False)
 
