@@ -21,7 +21,7 @@ def function_regression(path, name):
     df = pd.read_csv(path)
     add_fault_statistics(df, name, True)
     name = name + ' functions'
-    regression(df, name)
+    regression(df, name, 'functions/')
 
 
 def object_regression(path, name):
@@ -29,18 +29,18 @@ def object_regression(path, name):
     df = pd.read_csv(path)
     add_fault_statistics(df, name, False)
     name = name + ' objects'
-    regression(df, name)
+    regression(df, name, 'objects/')
 
 
-def regression(df, name):
+def regression(df, name, subfolder):
     print(name)
     columns = get_columns(df)
-    save_descriptive_statistics(df[columns], name)
+    save_descriptive_statistics(df[columns], name, subfolder)
     df['faulty'] = df['faults'].apply(to_binary)
     estimator = LogisticRegression(class_weight='balanced', random_state=42)
     cv = StratifiedKFold(n_splits=10, shuffle=True, random_state=42)
     multivariate_regression(df, estimator, cv, columns, name)
-    univariate_regression(df, estimator, cv, columns, name)
+    univariate_regression(df, estimator, cv, columns, name, subfolder)
 
 
 def multivariate_regression(df, estimator, cv, columns, name):
@@ -51,7 +51,7 @@ def multivariate_regression(df, estimator, cv, columns, name):
     add_multivariate_result(faults, prediction, name)
 
 
-def univariate_regression(df, estimator, cv, columns, name):
+def univariate_regression(df, estimator, cv, columns, name, subfolder):
     print(f'Univariate {name}')
     faults = df['faulty']
     result = pd.DataFrame(columns=['name', 'tn', 'fp', 'fn', 'tp', 'r2', 'precision', 'recall', 'mcc'])
@@ -62,7 +62,7 @@ def univariate_regression(df, estimator, cv, columns, name):
         column_result = get_stats(faults, prediction)
         column_result['name'] = column
         result = result.append(column_result, ignore_index=True)
-    save_dataframe(result, 'results/univariate/', name, False)
+    save_dataframe(result, 'results/univariate/' + subfolder, name, False)
 
 
 def get_stats(actual, predicted):
@@ -96,9 +96,9 @@ def to_binary(x):
         return 1
 
 
-def save_descriptive_statistics(df, name):
+def save_descriptive_statistics(df, name, subfolder):
     statistics = df.describe().T.rename_axis('name', axis=0)
-    save_dataframe(statistics, 'results/descriptive/', name)
+    save_dataframe(statistics, 'results/descriptive/' + subfolder, name)
 
 
 def save_dataframe(df, directory, filename, save_index=True):
