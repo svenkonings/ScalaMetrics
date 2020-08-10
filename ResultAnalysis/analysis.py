@@ -1,12 +1,11 @@
 import argparse
-import os
 
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import matthews_corrcoef, confusion_matrix, precision_score, recall_score, r2_score
 from sklearn.model_selection import StratifiedKFold, cross_val_predict
 
-from main import projects
+from main import projects, save_dataframe
 
 
 def main():
@@ -67,10 +66,10 @@ def univariate_regression(df, estimator, cv, columns, name, subfolder):
 
 def get_stats(actual, predicted):
     tn, fp, fn, tp = confusion_matrix(actual, predicted).ravel()
-    r2 = r2_score(actual, predicted)
-    precision = precision_score(actual, predicted)
-    recall = recall_score(actual, predicted)
-    mcc = matthews_corrcoef(actual, predicted)
+    r2 = round(r2_score(actual, predicted), 2)
+    precision = round(precision_score(actual, predicted) * 100, 2)
+    recall = round(recall_score(actual, predicted) * 100, 2)
+    mcc = round(matthews_corrcoef(actual, predicted), 2)
     return {
         'tn': tn,
         'fp': fp,
@@ -98,12 +97,9 @@ def to_binary(x):
 
 def save_descriptive_statistics(df, name, subfolder):
     statistics = df.describe().T.rename_axis('name', axis=0)
+    statistics = statistics.round(2)
+    statistics['count'] = statistics['count'].astype(int)
     save_dataframe(statistics, 'results/descriptive/' + subfolder, name)
-
-
-def save_dataframe(df, directory, filename, save_index=True):
-    os.makedirs(directory, exist_ok=True)
-    df.to_csv(directory + filename + '.csv', index=save_index)
 
 
 multivariate_regression_results = pd.DataFrame(
