@@ -3,10 +3,9 @@ import os
 
 import matplotlib.pyplot as plt
 import numpy as np
-import pandas as pd
 from matplotlib.colors import LinearSegmentedColormap, LogNorm
 
-from main import projects
+from main import projects, get_metric_results
 
 
 def to_color(faults):
@@ -23,7 +22,7 @@ def scatter(df, subfolder, name, x_axis, y_axis):
     plt.xlabel('Functional score')
     plt.ylabel('Imperative score')
     plt.title(name)
-    savefig('fig/scatter/' + subfolder, name, '.pdf')
+    savefig('scatter/' + subfolder, name, '.pdf')
 
 
 def scatter_faults(df, subfolder, name, x_axis, y_axis):
@@ -34,7 +33,7 @@ def scatter_faults(df, subfolder, name, x_axis, y_axis):
     plt.xlabel('Functional score')
     plt.ylabel('Imperative score')
     plt.title(name)
-    savefig('fig/scatter-faults/' + subfolder, name, '.pdf')
+    savefig('scatter-faults/' + subfolder, name, '.pdf')
 
 
 def scatter_color(df, subfolder, name, x_axis, y_axis):
@@ -48,7 +47,7 @@ def scatter_color(df, subfolder, name, x_axis, y_axis):
     plt.xlabel('Functional score')
     plt.ylabel('Imperative score')
     plt.title(name)
-    savefig('fig/scatter-color/' + subfolder, name, '.pdf')
+    savefig('scatter-color/' + subfolder, name, '.pdf')
 
 
 def hist_faults(df, subfolder, name, axis):
@@ -59,10 +58,11 @@ def hist_faults(df, subfolder, name, axis):
     plt.xlabel('Paradigm score')
     plt.ylabel('Occurrences')
     plt.title(name)
-    savefig('fig/hist-faults/' + subfolder, name, '.pdf')
+    savefig('hist-faults/' + subfolder, name, '.pdf')
 
 
 def savefig(dirictory, filename, extension):
+    dirictory = f'../data/analysisResults/plots/{dirictory}'
     os.makedirs(dirictory, exist_ok=True)
     plt.savefig(dirictory + filename + extension, bbox_inches='tight')
     if args.show:
@@ -70,10 +70,9 @@ def savefig(dirictory, filename, extension):
     plt.close()
 
 
-def plot_functions(path, name):
-    path = f'../target/{path}/functionResultsBriand.csv'
+def plot_functions(project, name):
+    df = get_metric_results('paradigmScore', project, 'methodResultsBriand')
     name = name + ' functions'
-    df = pd.read_csv(path)
     subfolder = 'functions/'
     # scatter(df, subfolder, name, 'FunctionalScoreFraction', 'ImperativeScoreFraction')
     # scatter_faults(df, subfolder, name, 'FunctionalScoreFraction', 'ImperativeScoreFraction')
@@ -81,10 +80,9 @@ def plot_functions(path, name):
     hist_faults(df, subfolder, name, 'ParadigmScoreFraction')
 
 
-def plot_objects(path, name):
-    path = f'../target/{path}/objectResultsBriand.csv'
+def plot_objects(project, name):
+    df = get_metric_results('paradigmScore', project, 'objectMethodResultsBriand')
     name = name + ' objects'
-    df = pd.read_csv(path)
     subfolder = 'objects/'
     # scatter(df, subfolder, name, 'FunctionalScoreFractionAvr', 'ImperativeScoreFractionAvr')
     # scatter_faults(df, subfolder, name, 'FunctionalScoreFractionAvr', 'ImperativeScoreFractionAvr')
@@ -93,9 +91,9 @@ def plot_objects(path, name):
 
 
 def main():
-    for path, name in projects.items():
-        plot_functions(path, name)
-        plot_objects(path, name)
+    for project, name in projects.items():
+        plot_functions(project, name)
+        plot_objects(project, name)
 
 
 if __name__ == '__main__':

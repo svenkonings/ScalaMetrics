@@ -5,7 +5,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import matthews_corrcoef, confusion_matrix, precision_score, recall_score, r2_score
 from sklearn.model_selection import StratifiedKFold, cross_val_predict
 
-from main import projects, save_dataframe
+from main import projects, save_dataframe, get_metric_results
 
 
 def main():
@@ -15,20 +15,18 @@ def main():
     save_global_statistics()
 
 
-def function_regression(path, name):
-    path = f'../target/{path}/functionResultsBriand.csv'
-    df = pd.read_csv(path)
+def function_regression(project, name):
+    df = get_metric_results('paradigmScore', project, 'methodResultsBriand')
     add_fault_statistics(df, name, True)
     name = name + ' functions'
-    regression(df, name, 'functions/')
+    regression(df, name, 'functions')
 
 
-def object_regression(path, name):
-    path = f'../target/{path}/objectResultsBriand.csv'
-    df = pd.read_csv(path)
+def object_regression(project, name):
+    df = get_metric_results('paradigmScore', project, 'objectMethodResultsBriand')
     add_fault_statistics(df, name, False)
     name = name + ' objects'
-    regression(df, name, 'objects/')
+    regression(df, name, 'objects')
 
 
 def regression(df, name, subfolder):
@@ -61,7 +59,7 @@ def univariate_regression(df, estimator, cv, columns, name, subfolder):
         column_result = get_stats(faults, prediction)
         column_result['name'] = column
         result = result.append(column_result, ignore_index=True)
-    save_dataframe(result, 'results/univariate/' + subfolder, name, False)
+    save_dataframe(result, 'regression/univariate/' + subfolder, name, False)
 
 
 def get_stats(actual, predicted):
@@ -98,7 +96,7 @@ def to_binary(x):
 def save_descriptive_statistics(df, name, subfolder):
     statistics = df.describe().T.rename_axis('name', axis=0)
     statistics['count'] = statistics['count'].astype(int)
-    save_dataframe(statistics, 'results/descriptive/' + subfolder, name)
+    save_dataframe(statistics, 'regression/descriptive/' + subfolder, name)
 
 
 multivariate_regression_results = pd.DataFrame(
@@ -141,13 +139,12 @@ def add_fault_statistics(df, name, is_function):
 
 
 def save_global_statistics():
-    save_dataframe(multivariate_regression_results, 'results/', 'multivariateRegressionResults', False)
-    save_dataframe(function_fault_statistics, 'results/', 'functionFaultStatistics', False)
-    save_dataframe(object_fault_statistics, 'results/', 'objectFaultStatistics', False)
+    save_dataframe(multivariate_regression_results, 'regression', 'multivariateRegressionResults', False)
+    save_dataframe(function_fault_statistics, 'regression', 'functionFaultStatistics', False)
+    save_dataframe(object_fault_statistics, 'regression', 'objectFaultStatistics', False)
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    # parser.add_argument('--show', help='Show plots', dest='show', action="store_true")
     args = parser.parse_args()
     main()

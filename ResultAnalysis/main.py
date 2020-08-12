@@ -1,21 +1,23 @@
 import os
 
+import pandas as pd
+
 projects = {
     'akka': 'Akka',
-    # 'coursier': 'Coursier',
     'gitbucket': 'Gitbucket',
     'http4s': 'Http4s',
-    # 'lagom': 'Lagom',
     'quill': 'Quill',
-    # 'scalafmt': 'scalafmt',
-    # 'scala-js': 'Scala.js',
     'scio': 'Scio',
     'shapeless': 'Shapeless',
-    # 'slick': 'Slick',
     'zio': 'ZIO',
 }
 
 
+def get_metric_results(folder, project, file):
+    return pd.read_csv(f'../data/metricResults/{folder}/{project}/{file}.csv')
+
+
 def save_dataframe(df, directory, filename, save_index=True):
+    directory = f'../data/analysisResults/{directory}'
     os.makedirs(directory, exist_ok=True)
-    df.to_csv(directory + filename + '.csv', index=save_index)
+    df.to_csv(f'{directory}/{filename}.csv', index=save_index)

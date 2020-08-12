@@ -18,7 +18,7 @@ import scala.jdk.CollectionConverters._
 import scala.reflect.internal.util.SourceFile
 import scala.util.Using.{resource, resources}
 
-class Validator(owner: String, name: String, branch: String, dir: File, labels: List[String], metrics: List[MetricProducer]) {
+class Validator(owner: String, name: String, branch: String, dir: File, outputDir: File, labels: List[String], metrics: List[MetricProducer]) {
   private val repo = new Repo(owner, name, branch, dir, labels)
   private val latestResults = mutable.Map[String, Result]()
   private val faultyPaths = mutable.Set[String]()
@@ -35,10 +35,8 @@ class Validator(owner: String, name: String, branch: String, dir: File, labels: 
     val briandResults = latestResults.values.toList
     val landkroonResults = faultyResults.toList ::: latestResults.toMap.removedAll(faultyPaths).values.toList
 
-    ResultWriter.writeMethodMetrics(dir, "functionResultsBriand", briandResults)
-    ResultWriter.writeObjectMetrics(dir, "objectResultsBriand", briandResults)
-    ResultWriter.writeMethodMetrics(dir, "functionResultsLandkroon", landkroonResults)
-    ResultWriter.writeObjectMetrics(dir, "objectResultsLandkroon", landkroonResults)
+    ResultWriter.writeAllMetrics(outputDir, "Briand", briandResults)
+    ResultWriter.writeAllMetrics(outputDir, "Landkroon", landkroonResults)
   }
 
   private def analyseLatestVersion(): Unit = {

@@ -1,0 +1,21 @@
+[submodule "data/projects/akka"]
+	path = data/projects/akka
+	url = https://github.com/akka/akka.git
+[submodule "data/projects/gitbucket"]
+	path = data/projects/gitbucket
+	url = https://github.com/gitbucket/gitbucket.git
+[submodule "data/projects/http4s"]
+	path = data/projects/http4s
+	url = https://github.com/http4s/http4s.git
+[submodule "data/projects/quill"]
+	path = data/projects/quill
+	url = https://github.com/getquill/quill.git
+[submodule "data/projects/scio"]
+	path = data/projects/scio
+	url = https://github.com/spotify/scio.git
+[submodule "data/projects/shapeless"]
+	path = data/projects/shapeless
+	url = https://github.com/milessabin/shapeless.git
+[submodule "data/projects/zio"]
+	path = data/projects/zio
+	url = https://github.com/zio/zio.git
