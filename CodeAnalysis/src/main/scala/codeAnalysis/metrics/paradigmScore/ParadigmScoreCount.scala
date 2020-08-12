@@ -1,4 +1,4 @@
-package codeAnalysis.metrics
+package codeAnalysis.metrics.paradigmScore
 
 import codeAnalysis.analyser.Global
 import codeAnalysis.analyser.metric.{MethodMetric, Metric, MetricProducer, MetricResult}

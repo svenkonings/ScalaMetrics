@@ -56,6 +56,7 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
         case DefDef(_, _, _, _, _, _) if tree.symbol.isSynthetic ||
           // MODIFIED: Additional ignored methods
           !tree.symbol.isSourceMethod || tree.symbol.isConstructor || tree.symbol.isAccessor =>
+        case _: ImplDef if tree.symbol.isSynthetic => // MODIFIED: Ignore synthetic classes
         case member: MemberDef if isSuppressed(member.symbol) =>
         case block@Block(_, _) if isSuppressed(block.symbol) =>
         case iff@If(_, _, _) if isSuppressed(iff.symbol) =>
@@ -260,7 +261,7 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
 
     def isFunction: Boolean = {
       def isFunctionSymbol(symbol: Symbol): Boolean =
-        symbol.enclosingPackage.nameString.equals("scala") && symbol.nameString.startsWith("Function")
+        symbol.qualifiedName.startsWith("scala.Function")
 
       val symbol = tree.getTypeSymbol
       symbol != null && (isFunctionSymbol(symbol) || symbol.parentSymbols.exists(isFunctionSymbol))
@@ -268,7 +269,7 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
 
     def isUnit: Boolean = {
       val symbol = tree.getTypeSymbol
-      symbol != null && symbol.enclosingPackage.nameString.equals("scala") && symbol.nameString.equals("Unit")
+      symbol != null && symbol.qualifiedName.equals("scala.Unit")
     }
 
     def isLazy: Boolean = tree.symbol != null && tree.symbol.isLazy
@@ -296,6 +297,13 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
     def fraction(f: PartialFunction[Tree, FractionPart]): Double = new FractionTraverser(f).fraction(tree)
 
     def lines(f: PartialFunction[Tree, Boolean]): Int = new LinesTraverser(f).lines(tree)
+  }
+
+  implicit class SymbolExtensions(symbol: Symbol) {
+    def qualifiedName: String = symbol.enclosingPackage match {
+      case _: NoSymbol => symbol.nameString
+      case packageSymbol => packageSymbol.qualifiedName + "." + symbol.nameString
+    }
   }
 
 }

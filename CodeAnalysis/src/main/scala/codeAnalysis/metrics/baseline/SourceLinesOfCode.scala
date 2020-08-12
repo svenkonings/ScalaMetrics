@@ -1,4 +1,4 @@
-package codeAnalysis.metrics
+package codeAnalysis.metrics.baseline
 
 import codeAnalysis.analyser.Global
 import codeAnalysis.analyser.metric.{FileMetric, Metric, MetricProducer, MetricResult}

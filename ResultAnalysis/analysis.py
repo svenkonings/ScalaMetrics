@@ -66,10 +66,10 @@ def univariate_regression(df, estimator, cv, columns, name, subfolder):
 
 def get_stats(actual, predicted):
     tn, fp, fn, tp = confusion_matrix(actual, predicted).ravel()
-    r2 = round(r2_score(actual, predicted), 2)
-    precision = round(precision_score(actual, predicted) * 100, 2)
-    recall = round(recall_score(actual, predicted) * 100, 2)
-    mcc = round(matthews_corrcoef(actual, predicted), 2)
+    r2 = r2_score(actual, predicted)
+    precision = precision_score(actual, predicted) * 100
+    recall = recall_score(actual, predicted) * 100
+    mcc = matthews_corrcoef(actual, predicted)
     return {
         'tn': tn,
         'fp': fp,
@@ -97,7 +97,6 @@ def to_binary(x):
 
 def save_descriptive_statistics(df, name, subfolder):
     statistics = df.describe().T.rename_axis('name', axis=0)
-    statistics = statistics.round(2)
     statistics['count'] = statistics['count'].astype(int)
     save_dataframe(statistics, 'results/descriptive/' + subfolder, name)
 
@@ -125,7 +124,7 @@ def add_fault_statistics(df, name, is_function):
     total_rows = len(df)
     faulty_rows = len(df[df['faults'] > 0])
     non_faulty_rows = len(df[df['faults'] == 0])
-    percentage_faulty = round((faulty_rows / total_rows) * 100, 2)
+    percentage_faulty = (faulty_rows / total_rows) * 100
     result = {
         'name': name,
         'rows': total_rows,

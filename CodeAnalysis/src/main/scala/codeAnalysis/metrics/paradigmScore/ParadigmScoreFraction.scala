@@ -1,4 +1,4 @@
-package codeAnalysis.metrics
+package codeAnalysis.metrics.paradigmScore
 
 import codeAnalysis.analyser.Global
 import codeAnalysis.analyser.metric.{MethodMetric, Metric, MetricProducer, MetricResult}
@@ -198,7 +198,7 @@ class ParadigmScoreFraction(val global: Global) extends MethodMetric {
       MetricResult("FractionOuterVariableAssignment", o1d),
 
       MetricResult("FractionSideEffects", o2),
-      MetricResult("FractionSideEffectCallss", o2b),
+      MetricResult("FractionSideEffectCalls", o2b),
       MetricResult("FractionSideEffectFunctions", o2c),
 
       MetricResult("ImperativeScoreFraction", oScore),

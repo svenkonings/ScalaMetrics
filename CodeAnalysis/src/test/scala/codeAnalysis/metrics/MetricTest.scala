@@ -3,6 +3,8 @@ package codeAnalysis.metrics
 import codeAnalysis.UnitSpec
 import codeAnalysis.analyser.Analyser
 import codeAnalysis.analyser.metric.MetricProducer
+import codeAnalysis.metrics.baseline._
+import codeAnalysis.metrics.paradigmScore._
 
 class MetricTest extends UnitSpec {
   def print(producer: MetricProducer): Unit = {
@@ -28,5 +30,9 @@ class MetricTest extends UnitSpec {
 
   test("Source Lines of Code test") {
     print(SourceLinesOfCode)
+  }
+
+  test("Depth of Inheritance test") {
+    print(DepthOfInheritance)
   }
 }

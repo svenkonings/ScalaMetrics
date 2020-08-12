@@ -2,7 +2,8 @@ package validator
 
 import java.io.File
 
-import codeAnalysis.metrics.{ParadigmScoreBool, ParadigmScoreCount, ParadigmScoreFraction, ParadigmScoreLandkroon}
+import codeAnalysis.metrics.baseline.DepthOfInheritance
+import codeAnalysis.metrics.paradigmScore._
 
 class ValidatorTest extends UnitSpec {
   test("Scala-JS test") {
@@ -22,6 +23,11 @@ class ValidatorTest extends UnitSpec {
 
   test("Gitbucket test") {
     val validator = new Validator("gitbucket", "gitbucket", "master", new File("target/gitbucket"), List("bug"), List(ParadigmScoreBool, ParadigmScoreCount, ParadigmScoreFraction, ParadigmScoreLandkroon))
+    validator.run()
+  }
+
+  test("Baseline Gitbucket test") {
+    val validator = new Validator("gitbucket", "gitbucket", "master", new File("target/gitbucket"), List("bug"), List(DepthOfInheritance))
     validator.run()
   }
 
