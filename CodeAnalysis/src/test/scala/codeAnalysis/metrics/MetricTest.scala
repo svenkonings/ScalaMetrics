@@ -29,7 +29,7 @@ class MetricTest extends UnitSpec {
   }
 
   test("Source Lines of Code test") {
-    print(SourceLinesOfCode)
+    print(LinesOfCode)
   }
 
   test("Depth of Inheritance test") {
