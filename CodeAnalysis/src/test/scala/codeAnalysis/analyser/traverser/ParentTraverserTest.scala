@@ -4,8 +4,6 @@ import codeAnalysis.UnitSpec
 import codeAnalysis.analyser.Compiler
 import codeAnalysis.analyser.metric.{FileResult, MethodResult, ObjectResult, Result}
 
-import scala.tools.nsc.interactive.Global
-
 class ParentTraverserTest extends UnitSpec {
 
   def assertFileResult(result: Result, files: Int = 0, objects: Int = 0, methods: Int = 0): Unit = {
@@ -35,15 +33,15 @@ class ParentTraverserTest extends UnitSpec {
     val tree = compiler.treeFromSource(source)
     val traverser = new compiler.global.ParentTraverser[Result](parent => {
       case t: compiler.global.PackageDef =>
-        val result = FileResult("", "", 0 ,0)
+        val result = FileResult("", "", 0, 0)
         parent.foreach(_.addResult(result))
         result
       case t: compiler.global.ImplDef =>
-        val result = ObjectResult("", "", 0 ,0)
+        val result = ObjectResult("", "", 0, 0)
         parent.foreach(_.addResult(result))
         result
       case t: compiler.global.DefDef =>
-        val result = MethodResult("", "", 0 ,0)
+        val result = MethodResult("", "", 0, 0)
         parent.foreach(_.addResult(result))
         result
     })

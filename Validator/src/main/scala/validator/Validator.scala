@@ -135,7 +135,7 @@ class Validator(owner: String, name: String, branch: String, dir: File, outputDi
                 (f: (String, Result) => Unit): Unit = {
     resource(new Compiler) { compiler =>
       compiler.loadSources(sources.toList)
-      val metricRunner = compiler.ask(() => new MetricRunner(metrics)(compiler.global))
+      val metricRunner = compiler.ask(() => new MetricRunner(metrics)(compiler))
       metricSources.foreachEntry { (path, source) =>
         val tree = compiler.treeFromLoadedSource(source)
         if (tree != null) {

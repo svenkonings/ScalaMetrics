@@ -1,9 +1,10 @@
 package codeAnalysis.analyser.metric
 
-import codeAnalysis.analyser.Global
+import codeAnalysis.analyser.{Compiler, Global}
 
-class MetricRunner(val metricProducers: List[MetricProducer])(val global: Global) {
-  val metrics: List[Metric] = metricProducers.map(_ (global))
+class MetricRunner(val metricProducers: List[MetricProducer])(val compiler: Compiler) {
+  val global: Global = compiler.global
+  val metrics: List[Metric] = metricProducers.map(_ (compiler))
   val fileMetrics: List[FileMetric] = metrics.collect { case m: FileMetric => m }
   val objectMetrics: List[ObjectMetric] = metrics.collect { case m: ObjectMetric => m }
   val methodMetrics: List[MethodMetric] = metrics.collect { case m: MethodMetric => m }

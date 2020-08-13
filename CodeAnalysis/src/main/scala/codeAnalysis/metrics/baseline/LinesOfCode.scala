@@ -1,14 +1,14 @@
 package codeAnalysis.metrics.baseline
 
-import codeAnalysis.analyser.Global
+import codeAnalysis.analyser.Compiler
 import codeAnalysis.analyser.metric._
 import codeAnalysis.util.Extensions.DoubleExtension
 
 object LinesOfCode extends MetricProducer {
-  override def apply(global: Global): Metric = new LinesOfCode(global)
+  override def apply(compiler: Compiler): Metric = new LinesOfCode(compiler)
 }
 
-class LinesOfCode(val global: Global) extends FileMetric with ObjectMetric with MethodMetric {
+class LinesOfCode(override val compiler: Compiler) extends FileMetric with ObjectMetric with MethodMetric {
 
   import global.TreeExtensions
 

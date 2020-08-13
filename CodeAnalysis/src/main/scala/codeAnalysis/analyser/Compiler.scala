@@ -16,6 +16,7 @@ class Compiler extends Closeable {
     // val reporter = new ConsoleReporter(settings)
     new Global(settings, reporter)
   }
+  var loadedSources: List[SourceFile] = List()
 
   /**
    * Compute the operation on the compiler thread
@@ -41,7 +42,7 @@ class Compiler extends Closeable {
     val response = new Response[Unit]
     global.askReload(sources, response)
     response.get match {
-      case Left(_) =>
+      case Left(_) => loadedSources = sources
       case Right(ex) => throw ex
     }
   }

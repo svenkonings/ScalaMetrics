@@ -1,13 +1,14 @@
 package codeAnalysis.analyser.metric
 
-import codeAnalysis.analyser.Global
+import codeAnalysis.analyser.{Compiler, Global}
 
 trait MetricProducer {
-  def apply(global: Global): Metric
+  def apply(compiler: Compiler): Metric
 }
 
 trait Metric {
-  val global: Global
+  val compiler: Compiler
+  val global: Global = compiler.global
 }
 
 trait FileMetric extends Metric {

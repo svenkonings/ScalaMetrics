@@ -1,14 +1,14 @@
 package codeAnalysis.metrics.paradigmScore
 
-import codeAnalysis.analyser.Global
+import codeAnalysis.analyser.Compiler
 import codeAnalysis.analyser.metric.{MethodMetric, Metric, MetricProducer, MetricResult}
 import codeAnalysis.util.Extensions._
 
 object ParadigmScoreCount extends MetricProducer {
-  override def apply(global: Global): Metric = new ParadigmScoreCount(global)
+  override def apply(compiler: Compiler): Metric = new ParadigmScoreCount(compiler)
 }
 
-class ParadigmScoreCount(val global: Global) extends MethodMetric {
+class ParadigmScoreCount(override val compiler: Compiler) extends MethodMetric {
 
   import global.TreeExtensions
 

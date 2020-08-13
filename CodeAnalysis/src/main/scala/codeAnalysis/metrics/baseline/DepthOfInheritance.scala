@@ -1,13 +1,13 @@
 package codeAnalysis.metrics.baseline
 
-import codeAnalysis.analyser.Global
+import codeAnalysis.analyser.Compiler
 import codeAnalysis.analyser.metric.{Metric, MetricProducer, MetricResult, ObjectMetric}
 
 object DepthOfInheritance extends MetricProducer {
-  override def apply(global: Global): Metric = new DepthOfInheritance(global)
+  override def apply(compiler: Compiler): Metric = new DepthOfInheritance(compiler)
 }
 
-class DepthOfInheritance(val global: Global) extends ObjectMetric {
+class DepthOfInheritance(override val compiler: Compiler) extends ObjectMetric {
 
   import global.SymbolExtensions
 
