@@ -165,8 +165,7 @@ class ParadigmScoreCount(val global: Global) extends MethodMetric {
     case function: global.Function => function.body.isUnit
   }
 
-  override def run(arg: Global#DefDef): List[MetricResult] = {
-    val tree = arg.asInstanceOf[global.DefDef]
+  override def run(tree: global.DefDef): List[MetricResult] = {
     val f1 = countRecursiveCalls(tree)
     val f2 = countNestedDepth(tree)
     val f3 = countNestedMethods(tree)

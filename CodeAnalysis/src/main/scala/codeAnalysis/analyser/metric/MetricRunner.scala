@@ -40,19 +40,19 @@ class MetricRunner(val metricProducers: List[MetricProducer])(val global: Global
 
   def runFileMetrics(parent: Option[Result], tree: Global#PackageDef): FileResult = {
     val result = FileResult.tupled(getInfo(parent, tree))
-    val metricResults = fileMetrics.flatMap(_.run(tree))
+    val metricResults = fileMetrics.flatMap(_ (tree))
     addResults(result, parent, metricResults)
   }
 
   def runObjectMetrics(parent: Option[Result], tree: Global#ImplDef): ObjectResult = {
     val result = ObjectResult.tupled(getInfo(parent, tree))
-    val metricResults = objectMetrics.flatMap(_.run(tree))
+    val metricResults = objectMetrics.flatMap(_ (tree))
     addResults(result, parent, metricResults)
   }
 
   def runMethodMetrics(parent: Option[Result], tree: Global#DefDef): MethodResult = {
     val result = MethodResult.tupled(getInfo(parent, tree))
-    val metricResults = methodMetrics.flatMap(_.run(tree))
+    val metricResults = methodMetrics.flatMap(_ (tree))
     addResults(result, parent, metricResults)
   }
 

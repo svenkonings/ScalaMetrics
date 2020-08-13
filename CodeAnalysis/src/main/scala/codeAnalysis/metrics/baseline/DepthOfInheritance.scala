@@ -23,8 +23,7 @@ class DepthOfInheritance(val global: Global) extends ObjectMetric {
     recursiveDepth(symbol) - 1
   }
 
-  override def run(arg: Global#ImplDef): List[MetricResult] = {
-    val tree = arg.asInstanceOf[global.ImplDef]
+  override def run(tree: global.ImplDef): List[MetricResult] = {
     List(MetricResult("DepthOfInheritance", depthOfInheritance(tree.symbol)))
   }
 }

@@ -146,8 +146,7 @@ class ParadigmScoreBool(val global: Global) extends MethodMetric {
     case function: global.Function => function.body.isUnit
   }.toInt
 
-  override def run(arg: Global#DefDef): List[MetricResult] = {
-    val tree = arg.asInstanceOf[global.DefDef]
+  override def run(tree: global.DefDef): List[MetricResult] = {
     val f1 = isRecursive(tree)
     val f2 = isNested(tree)
     val f3 = hasNestedMethods(tree)

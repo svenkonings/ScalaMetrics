@@ -11,13 +11,22 @@ trait Metric {
 }
 
 trait FileMetric extends Metric {
-  def run(tree: Global#PackageDef): List[MetricResult]
+  def apply(tree: Global#PackageDef): List[MetricResult] =
+    run(tree.asInstanceOf[global.PackageDef])
+
+  def run(tree: global.PackageDef): List[MetricResult]
 }
 
 trait ObjectMetric extends Metric {
-  def run(tree: Global#ImplDef): List[MetricResult]
+  def apply(tree: Global#ImplDef): List[MetricResult] =
+    run(tree.asInstanceOf[global.ImplDef])
+
+  def run(tree: global.ImplDef): List[MetricResult]
 }
 
 trait MethodMetric extends Metric {
-  def run(tree: Global#DefDef): List[MetricResult]
+  def apply(tree: Global#DefDef): List[MetricResult] =
+    run(tree.asInstanceOf[global.DefDef])
+
+  def run(tree: global.DefDef): List[MetricResult]
 }

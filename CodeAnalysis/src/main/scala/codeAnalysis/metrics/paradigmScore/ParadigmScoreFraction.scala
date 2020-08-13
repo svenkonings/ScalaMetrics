@@ -146,8 +146,7 @@ class ParadigmScoreFraction(val global: Global) extends MethodMetric {
     case function: global.Function => function.body.isUnit
   }
 
-  override def run(arg: Global#DefDef): List[MetricResult] = {
-    val tree = arg.asInstanceOf[global.DefDef]
+  override def run(tree: global.DefDef): List[MetricResult] = {
     val total = tree.lines(_ => true)
 
     val f1 = fractionRecursiveCalls(tree) \ total

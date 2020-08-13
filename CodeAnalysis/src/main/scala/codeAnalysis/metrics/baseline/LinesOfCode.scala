@@ -12,8 +12,7 @@ class LinesOfCode(val global: Global) extends FileMetric with ObjectMetric with 
 
   import global.TreeExtensions
 
-  def runMetrics(arg: Global#Tree): List[MetricResult] = {
-    val tree = arg.asInstanceOf[global.Tree]
+  def linesOfCode(tree: global.Tree): List[MetricResult] = {
     val pos = tree.pos
     val source = pos.source
     val startLine = source.offsetToLine(pos.start)
@@ -32,19 +31,19 @@ class LinesOfCode(val global: Global) extends FileMetric with ObjectMetric with 
       .flatMap(_.split('\n'))
       .size
     List(
-      MetricResult("LOC", lineCount),
-      MetricResult("SLOC", codeLineCount),
-      MetricResult("CLOC", commentLineCount),
-      MetricResult("CD", commentLineCount \ lineCount)
+      MetricResult("LinesOfCode", lineCount),
+      MetricResult("SourceLinesOfCode", codeLineCount),
+      MetricResult("CommentLinesOfCode", commentLineCount),
+      MetricResult("CommentDensity", commentLineCount \ lineCount)
     )
   }
 
-  override def run(tree: Global#PackageDef): List[MetricResult] =
-    runMetrics(tree)
+  override def run(tree: global.PackageDef): List[MetricResult] =
+    linesOfCode(tree)
 
-  override def run(tree: Global#ImplDef): List[MetricResult] =
-    runMetrics(tree)
+  override def run(tree: global.ImplDef): List[MetricResult] =
+    linesOfCode(tree)
 
-  override def run(tree: Global#DefDef): List[MetricResult] =
-    runMetrics(tree)
+  override def run(tree: global.DefDef): List[MetricResult] =
+    linesOfCode(tree)
 }

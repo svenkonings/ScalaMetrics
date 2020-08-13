@@ -50,8 +50,7 @@ class ParadigmScoreLandkroon(val global: Global) extends MethodMetric {
    */
   def higherOrderParams(tree: global.DefDef): Int = tree.vparamss.map(_.count(_.isFunction)).sum
 
-  override def run(arg: Global#DefDef): List[MetricResult] = {
-    val tree = arg.asInstanceOf[global.DefDef]
+  override def run(tree: global.DefDef): List[MetricResult] = {
     val sideEffects = variables(tree)
     val isRecursive = recursive(tree)
     val isNested = nested(tree)
