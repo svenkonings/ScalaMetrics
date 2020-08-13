@@ -28,11 +28,15 @@ class MetricTest extends UnitSpec {
     print(ParadigmScoreLandkroon)
   }
 
-  test("Source Lines of Code test") {
+  test("Lines of Code test") {
     print(LinesOfCode)
   }
 
   test("Depth of Inheritance test") {
     print(DepthOfInheritance)
+  }
+
+  test("Number of Children test") {
+    print(NumberOfChildren)
   }
 }

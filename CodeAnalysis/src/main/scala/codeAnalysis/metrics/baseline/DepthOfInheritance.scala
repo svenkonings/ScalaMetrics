@@ -14,7 +14,7 @@ class DepthOfInheritance(override val compiler: Compiler) extends ObjectMetric {
   def depthOfInheritance(symbol: global.Symbol): Int = {
     def recursiveDepth(symbol: global.Symbol): Int = {
       val name = symbol.qualifiedName
-      if (name.equals("java.lang.Object") || name.equals("scala.Any"))
+      if (name == "java.lang.Object" || name == "scala.Any")
         0
       else
         1 + symbol.parentSymbols.map(recursiveDepth).maxOption.getOrElse(0)
@@ -23,7 +23,6 @@ class DepthOfInheritance(override val compiler: Compiler) extends ObjectMetric {
     recursiveDepth(symbol) - 1
   }
 
-  override def run(tree: global.ImplDef): List[MetricResult] = {
+  override def run(tree: global.ImplDef): List[MetricResult] =
     List(MetricResult("DepthOfInheritance", depthOfInheritance(tree.symbol)))
-  }
 }

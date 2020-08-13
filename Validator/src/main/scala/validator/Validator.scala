@@ -98,7 +98,7 @@ class Validator(owner: String, name: String, branch: String, dir: File, outputDi
         result.faults += faults
 
         def addFaultsToLatest(latestResult: Result): Boolean = {
-          if (result.name.equals(latestResult.name)) {
+          if (result.name == latestResult.name) {
             latestResult.faults += faults
             true
           } else {

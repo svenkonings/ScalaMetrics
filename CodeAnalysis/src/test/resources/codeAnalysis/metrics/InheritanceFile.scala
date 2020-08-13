@@ -1,0 +1,2 @@
+class SingleInheritance extends CommentFile
+class DoubleInheritance extends SingleInheritance

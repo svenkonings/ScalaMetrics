@@ -269,12 +269,12 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
 
     def isUnit: Boolean = {
       val symbol = tree.getTypeSymbol
-      symbol != null && symbol.qualifiedName.equals("scala.Unit")
+      symbol != null && symbol.qualifiedName == "scala.Unit"
     }
 
     def isLazy: Boolean = tree.symbol != null && tree.symbol.isLazy
 
-    def isVar: Boolean = tree.symbol != null && tree.symbol.kindString.equals("variable")
+    def isVar: Boolean = tree.symbol != null && tree.symbol.kindString == "variable"
 
     def myFilter(f: PartialFunction[Tree, Boolean]): List[Tree] = new FilterTraverser(f).filter(tree)
 

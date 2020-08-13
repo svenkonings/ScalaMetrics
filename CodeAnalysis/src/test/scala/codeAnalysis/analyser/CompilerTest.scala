@@ -43,8 +43,8 @@ class CompilerTest extends UnitSpec {
       val body = initial.asInstanceOf[Global#PackageDef].stats.head.asInstanceOf[Global#ClassDef].impl.body
       val correct = body(1).asInstanceOf[Global#DefDef]
       val incorrect = body(2).asInstanceOf[Global#DefDef]
-      assert(correct.rhs.tpe.typeSymbol.nameString.equals("Int"))
-      assert(incorrect.rhs.tpe.typeSymbol.nameString.equals("<none>"))
+      assert(correct.rhs.tpe.typeSymbol.nameString == "Int")
+      assert(incorrect.rhs.tpe.typeSymbol.nameString == "<none>")
     }
   }
 
@@ -81,8 +81,8 @@ class CompilerTest extends UnitSpec {
       val body = tree.asInstanceOf[Global#PackageDef].stats.head.asInstanceOf[Global#ClassDef].impl.body
       val correctDef = body(1).asInstanceOf[Global#DefDef]
       val incorrectDef = body(2).asInstanceOf[Global#DefDef]
-      assert(correctDef.rhs.tpe.typeSymbol.nameString.equals("Int"))
-      assert(incorrectDef.rhs.tpe.typeSymbol.nameString.equals("<none>"))
+      assert(correctDef.rhs.tpe.typeSymbol.nameString == "Int")
+      assert(incorrectDef.rhs.tpe.typeSymbol.nameString == "<none>")
     }
   }
 }

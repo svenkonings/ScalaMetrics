@@ -1,0 +1,30 @@
+package codeAnalysis.metrics.baseline
+
+import codeAnalysis.analyser.Compiler
+import codeAnalysis.analyser.metric.{Metric, MetricProducer, MetricResult, ObjectMetric}
+
+object NumberOfChildren extends MetricProducer {
+  override def apply(compiler: Compiler): Metric = new NumberOfChildren(compiler)
+}
+
+class NumberOfChildren(override val compiler: Compiler) extends ObjectMetric {
+
+  import global.{SymbolExtensions, TreeExtensions}
+
+  def numberOfChildren(tree: global.ImplDef): Int = {
+    val name = tree.symbol.nameString
+    val qualifiedName = tree.symbol.qualifiedName
+    val nameFilter = s"(extends|with)\\s+$name".r
+    compiler.loadedSources
+      .filter(source => nameFilter.findFirstIn(source.lines().mkString(" ")).isDefined)
+      .map(source => compiler
+        .treeFromLoadedSource(source)
+        .asInstanceOf[global.Tree]
+        .count { case tree: global.ImplDef => tree.symbol.parentSymbols.exists(_.qualifiedName == qualifiedName) }
+      )
+      .sum
+  }
+
+  override def run(tree: global.ImplDef): List[MetricResult] =
+    List(MetricResult("NumberOfChildren", numberOfChildren(tree)))
+}
