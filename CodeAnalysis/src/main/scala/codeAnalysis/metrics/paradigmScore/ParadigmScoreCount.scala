@@ -194,6 +194,7 @@ class ParadigmScoreCount(val global: Global) extends MethodMetric {
 
     val oScore = o1 + o1a + o1b + o1c + o1d + o2 + o2c + o2b + o2a
 
+    val hasPoints = (fScore != 0 || oScore != 0).toInt
     val score = (fScore - oScore) \ (fScore + oScore)
 
     List(
@@ -223,6 +224,7 @@ class ParadigmScoreCount(val global: Global) extends MethodMetric {
 
       MetricResult("ImperativeScoreCount", oScore),
 
+      MetricResult("HasPointsCount", hasPoints),
       MetricResult("ParadigmScoreCount", score),
     )
   }

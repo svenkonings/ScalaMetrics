@@ -79,6 +79,12 @@ def plot_functions(project, name):
     scatter_color(df, subfolder, name, 'FunctionalScoreFraction', 'ImperativeScoreFraction')
     hist_faults(df, subfolder, name, 'ParadigmScoreFraction')
 
+    df = df[df['HasPointsFraction'] == 1]
+    subfolder = 'functions_with_points/'
+    scatter_color(df, subfolder, name, 'FunctionalScoreFraction', 'ImperativeScoreFraction')
+    hist_faults(df, subfolder, name, 'ParadigmScoreFraction')
+
+
 
 def plot_objects(project, name):
     df = get_metric_results('paradigmScore', project, 'objectMethodResultsBriand')
@@ -86,6 +92,11 @@ def plot_objects(project, name):
     subfolder = 'objects/'
     # scatter(df, subfolder, name, 'FunctionalScoreFractionAvr', 'ImperativeScoreFractionAvr')
     # scatter_faults(df, subfolder, name, 'FunctionalScoreFractionAvr', 'ImperativeScoreFractionAvr')
+    scatter_color(df, subfolder, name, 'FunctionalScoreFractionAvr', 'ImperativeScoreFractionAvr')
+    hist_faults(df, subfolder, name, 'ParadigmScoreFractionAvr')
+
+    df = df[df['HasPointsFractionMax'] == 1]
+    subfolder = 'objects_with_points/'
     scatter_color(df, subfolder, name, 'FunctionalScoreFractionAvr', 'ImperativeScoreFractionAvr')
     hist_faults(df, subfolder, name, 'ParadigmScoreFractionAvr')
 

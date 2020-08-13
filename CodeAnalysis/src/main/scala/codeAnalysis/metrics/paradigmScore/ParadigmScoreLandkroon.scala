@@ -61,12 +61,14 @@ class ParadigmScoreLandkroon(val global: Global) extends MethodMetric {
     val funcPoints = isRecursive + isNested + func + higherOrderParamCount
     val impPoints = imp + sideEffects
 
+    val hasPoints = (funcPoints != 0 || impPoints != 0).toInt
     val paradigmScore = funcPoints \ (funcPoints + impPoints)
     List(
       MetricResult("FunctionalCallsLandkroon", func),
       MetricResult("ImperativeCallsLandkroon", imp),
       MetricResult("FunctionalPointsLandkroon", funcPoints),
       MetricResult("ImperativePointsLandkroon", impPoints),
+      MetricResult("HasPointsLandkroon", hasPoints),
       MetricResult("ParadigmScoreLandkroon", paradigmScore)
     )
   }
