@@ -10,16 +10,16 @@ from main import projects, save_dataframe, get_metric_results
 
 def main():
     for path, name in projects.items():
-        function_regression(path, name)
+        method_regression(path, name)
         object_regression(path, name)
     save_global_statistics()
 
 
-def function_regression(project, name):
+def method_regression(project, name):
     df = get_metric_results('paradigmScore', project, 'methodResultsBriand')
     add_fault_statistics(df, name, True)
-    name = name + ' functions'
-    regression(df, name, 'functions')
+    name = name + ' methods'
+    regression(df, name, 'methods')
 
 
 def object_regression(project, name):
@@ -103,7 +103,7 @@ multivariate_regression_results = pd.DataFrame(
     columns=['name', 'tn', 'fp', 'fn', 'tp', 'r2', 'precision', 'recall', 'mcc']
 )
 
-function_fault_statistics = pd.DataFrame(
+method_fault_statistics = pd.DataFrame(
     columns=['name', 'rows', 'faulty_rows', 'non_faulty_rows', 'percentage_faulty']
 )
 object_fault_statistics = pd.DataFrame(
@@ -118,7 +118,7 @@ def add_multivariate_result(faults, prediction, name):
     multivariate_regression_results = multivariate_regression_results.append(result, ignore_index=True)
 
 
-def add_fault_statistics(df, name, is_function):
+def add_fault_statistics(df, name, is_method):
     total_rows = len(df)
     faulty_rows = len(df[df['faults'] > 0])
     non_faulty_rows = len(df[df['faults'] == 0])
@@ -130,9 +130,9 @@ def add_fault_statistics(df, name, is_function):
         'non_faulty_rows': non_faulty_rows,
         'percentage_faulty': percentage_faulty
     }
-    if is_function:
-        global function_fault_statistics
-        function_fault_statistics = function_fault_statistics.append(result, ignore_index=True)
+    if is_method:
+        global method_fault_statistics
+        method_fault_statistics = method_fault_statistics.append(result, ignore_index=True)
     else:
         global object_fault_statistics
         object_fault_statistics = object_fault_statistics.append(result, ignore_index=True)
@@ -140,7 +140,7 @@ def add_fault_statistics(df, name, is_function):
 
 def save_global_statistics():
     save_dataframe(multivariate_regression_results, 'regression', 'multivariateRegressionResults', False)
-    save_dataframe(function_fault_statistics, 'regression', 'functionFaultStatistics', False)
+    save_dataframe(method_fault_statistics, 'regression', 'methodFaultStatistics', False)
     save_dataframe(object_fault_statistics, 'regression', 'objectFaultStatistics', False)
 
 

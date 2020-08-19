@@ -23,5 +23,5 @@ def read_all(path, suffix, columns):
 
 
 if __name__ == '__main__':
-    summarise_univariate('regression/univariate/functions/', 'functions.csv')
+    summarise_univariate('regression/univariate/methods/', 'methods.csv')
     summarise_univariate('regression/univariate/objects/', 'objects.csv')

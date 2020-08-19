@@ -76,7 +76,7 @@ def hist_faults(df, subfolder, name, score_axis, has_points_axis):
     )
     no_points_label = plt.gca().xaxis.get_majorticklabels()[6]
     no_points_label.set_rotation(90)
-    no_points_label.set_y(0.21)
+    no_points_label.set_y(0.22)
     plt.xlabel('Paradigm score')
     plt.ylabel('Occurrences')
     plt.title(name)
@@ -97,10 +97,10 @@ def savefig(dirictory, filename, extension):
     plt.close()
 
 
-def plot_functions(project, name):
+def plot_methods(project, name):
     df = get_metric_results('paradigmScore', project, 'methodResultsBriand')
-    name = name + ' functions'
-    subfolder = 'functions/'
+    name = name + ' methods'
+    subfolder = 'methods/'
     if args.scatter:
         scatter(df, subfolder, name, 'FunctionalScoreFraction', 'ImperativeScoreFraction')
     if args.scatter_faults:
@@ -128,8 +128,8 @@ def plot_objects(project, name):
 def main():
     for project, name in projects.items():
         if project in args.projects:
-            if not args.skip_functions:
-                plot_functions(project, name)
+            if not args.skip_methods:
+                plot_methods(project, name)
             if not args.skip_objects:
                 plot_objects(project, name)
 
@@ -137,7 +137,7 @@ def main():
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--projects', help='Select projects', dest='projects', nargs='+', default=projects.keys())
-    parser.add_argument('--skip-functions', help='Skip Functions', dest='skip_functions', action="store_true")
+    parser.add_argument('--skip-methods', help='Skip Methods', dest='skip_methods', action="store_true")
     parser.add_argument('--skip-objects', help='Skip objects', dest='skip_objects', action="store_true")
     parser.add_argument('--show', help='Show plots', dest='show', action="store_true")
     parser.add_argument('--write', help='Write plots', dest='write', action="store_true")
