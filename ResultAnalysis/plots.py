@@ -8,13 +8,6 @@ from matplotlib.colors import LinearSegmentedColormap, LogNorm
 from main import projects, get_metric_results
 
 
-def to_color(faults):
-    if faults == 0:
-        return 'blue'
-    else:
-        return 'red'
-
-
 def scatter(df, subfolder, name, x_axis, y_axis):
     df = df.round({x_axis: 1, y_axis: 1})
     df = df.groupby([x_axis, y_axis, ]).size().reset_index(name='count')
@@ -26,6 +19,12 @@ def scatter(df, subfolder, name, x_axis, y_axis):
 
 
 def scatter_faults(df, subfolder, name, x_axis, y_axis):
+    def to_color(faults):
+        if faults == 0:
+            return 'blue'
+        else:
+            return 'red'
+
     df = df.round({x_axis: 1, y_axis: 1})
     df['color'] = df['faults'].apply(to_color)
     df = df.groupby([x_axis, y_axis, 'color']).size().reset_index(name='count')
@@ -50,11 +49,34 @@ def scatter_color(df, subfolder, name, x_axis, y_axis):
     savefig('scatter-color/' + subfolder, name, '.pdf')
 
 
-def hist_faults(df, subfolder, name, axis):
+def hist_faults(df, subfolder, name, score_axis, has_points_axis):
+    def calc_bin_points(row):
+        # Shift scores with points to create gap
+        if row[has_points_axis] == 0:
+            return row[score_axis]
+        elif row[score_axis] >= 0:
+            return row[score_axis] + 0.1
+        else:
+            return row[score_axis] - 0.1
+
+    bin_axis = 'binPoints'
+    df[bin_axis] = df.apply(calc_bin_points, axis=1)
     non_faulty = df[df['faults'] == 0]
     faulty = df[df['faults'] > 0]
-    plt.hist(np.array([faulty[axis], non_faulty[axis]], dtype=object), bins=10, stacked=True,
-             color=['lightcoral', 'darkseagreen'])
+    plt.hist(
+        np.array([faulty[bin_axis], non_faulty[bin_axis]], dtype=object),
+        bins=[-1.1, -0.9, -0.7, -0.5, -0.3, -0.09, 0.09, 0.3, 0.5, 0.7, 0.9, 1.1],
+        stacked=True,
+        color=['lightcoral', 'darkseagreen'],
+        edgecolor='white'
+    )
+    plt.xticks(
+        ticks=[-1.1, -0.9, -0.7, -0.5, -0.3, -0.1, 0.0, 0.1, 0.3, 0.5, 0.7, 0.9, 1.1],
+        labels=['-1.0', '-0.8', '-0.6', '-0.4', '-0.2', '0.0', 'No points', '0.0', '0.2', '0.4', '0.6', '0.8', '1.0']
+    )
+    no_points_label = plt.gca().xaxis.get_majorticklabels()[6]
+    no_points_label.set_rotation(90)
+    no_points_label.set_y(0.21)
     plt.xlabel('Paradigm score')
     plt.ylabel('Occurrences')
     plt.title(name)
@@ -62,9 +84,14 @@ def hist_faults(df, subfolder, name, axis):
 
 
 def savefig(dirictory, filename, extension):
-    dirictory = f'../data/analysisResults/plots/{dirictory}'
-    os.makedirs(dirictory, exist_ok=True)
-    plt.savefig(dirictory + filename + extension, bbox_inches='tight')
+    if args.write:
+        dirictory = f'../data/analysisResults/plots/{dirictory}'
+        os.makedirs(dirictory, exist_ok=True)
+        plt.savefig(
+            dirictory + filename + extension,
+            bbox_inches='tight',
+            metadata={'Creator': None, 'Producer': None, 'CreationDate': None}
+        )
     if args.show:
         plt.show()
     plt.close()
@@ -74,41 +101,51 @@ def plot_functions(project, name):
     df = get_metric_results('paradigmScore', project, 'methodResultsBriand')
     name = name + ' functions'
     subfolder = 'functions/'
-    # scatter(df, subfolder, name, 'FunctionalScoreFraction', 'ImperativeScoreFraction')
-    # scatter_faults(df, subfolder, name, 'FunctionalScoreFraction', 'ImperativeScoreFraction')
-    scatter_color(df, subfolder, name, 'FunctionalScoreFraction', 'ImperativeScoreFraction')
-    hist_faults(df, subfolder, name, 'ParadigmScoreFraction')
-
-    df = df[df['HasPointsFraction'] == 1]
-    subfolder = 'functions_with_points/'
-    scatter_color(df, subfolder, name, 'FunctionalScoreFraction', 'ImperativeScoreFraction')
-    hist_faults(df, subfolder, name, 'ParadigmScoreFraction')
-
+    if args.scatter:
+        scatter(df, subfolder, name, 'FunctionalScoreFraction', 'ImperativeScoreFraction')
+    if args.scatter_faults:
+        scatter_faults(df, subfolder, name, 'FunctionalScoreFraction', 'ImperativeScoreFraction')
+    if args.scatter_color:
+        scatter_color(df, subfolder, name, 'FunctionalScoreFraction', 'ImperativeScoreFraction')
+    if args.hist:
+        hist_faults(df, subfolder, name, 'ParadigmScoreFraction', 'HasPointsFraction')
 
 
 def plot_objects(project, name):
     df = get_metric_results('paradigmScore', project, 'objectMethodResultsBriand')
     name = name + ' objects'
     subfolder = 'objects/'
-    # scatter(df, subfolder, name, 'FunctionalScoreFractionAvr', 'ImperativeScoreFractionAvr')
-    # scatter_faults(df, subfolder, name, 'FunctionalScoreFractionAvr', 'ImperativeScoreFractionAvr')
-    scatter_color(df, subfolder, name, 'FunctionalScoreFractionAvr', 'ImperativeScoreFractionAvr')
-    hist_faults(df, subfolder, name, 'ParadigmScoreFractionAvr')
-
-    df = df[df['HasPointsFractionMax'] == 1]
-    subfolder = 'objects_with_points/'
-    scatter_color(df, subfolder, name, 'FunctionalScoreFractionAvr', 'ImperativeScoreFractionAvr')
-    hist_faults(df, subfolder, name, 'ParadigmScoreFractionAvr')
+    if args.scatter:
+        scatter(df, subfolder, name, 'FunctionalScoreFractionAvr', 'ImperativeScoreFractionAvr')
+    if args.scatter_faults:
+        scatter_faults(df, subfolder, name, 'FunctionalScoreFractionAvr', 'ImperativeScoreFractionAvr')
+    if args.scatter_color:
+        scatter_color(df, subfolder, name, 'FunctionalScoreFractionAvr', 'ImperativeScoreFractionAvr')
+    if args.hist:
+        hist_faults(df, subfolder, name, 'ParadigmScoreFractionAvr', 'HasPointsFractionMax')
 
 
 def main():
     for project, name in projects.items():
-        plot_functions(project, name)
-        plot_objects(project, name)
+        if project in args.projects:
+            if not args.skip_functions:
+                plot_functions(project, name)
+            if not args.skip_objects:
+                plot_objects(project, name)
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
+    parser.add_argument('--projects', help='Select projects', dest='projects', nargs='+', default=projects.keys())
+    parser.add_argument('--skip-functions', help='Skip Functions', dest='skip_functions', action="store_true")
+    parser.add_argument('--skip-objects', help='Skip objects', dest='skip_objects', action="store_true")
     parser.add_argument('--show', help='Show plots', dest='show', action="store_true")
+    parser.add_argument('--write', help='Write plots', dest='write', action="store_true")
+    parser.add_argument('--scatter', help='Create paradigm score scatter plots', dest='scatter', action="store_true")
+    parser.add_argument('--scatter-faults', help='Create paradigm score scatter plots showing faulty scores',
+                        dest='scatter_faults', action="store_true")
+    parser.add_argument('--scatter-color', help='Create colored paradigm score scatter plots', dest='scatter_color',
+                        action="store_true")
+    parser.add_argument('--hist', help='Show plots', dest='hist', action="store_true")
     args = parser.parse_args()
     main()

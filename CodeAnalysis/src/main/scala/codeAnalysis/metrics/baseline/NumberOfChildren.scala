@@ -16,7 +16,7 @@ class NumberOfChildren(override val compiler: Compiler) extends ObjectMetric {
     val qualifiedName = tree.symbol.qualifiedName
     val nameFilter = s"(extends|with)\\s+$name".r
     compiler.loadedSources
-      .filter(source => nameFilter.findFirstIn(source.lines().mkString(" ")).isDefined)
+      .filter(source => nameFilter.findFirstIn(new String(source.content)).isDefined)
       .map(source => compiler
         .treeFromLoadedSource(source)
         .asInstanceOf[global.Tree]

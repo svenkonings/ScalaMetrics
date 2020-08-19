@@ -145,6 +145,4 @@ def save_global_statistics():
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    args = parser.parse_args()
     main()

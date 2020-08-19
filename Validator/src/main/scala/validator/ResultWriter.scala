@@ -66,8 +66,8 @@ object ResultWriter {
       val fields = childFields.map(_ + "Avr") ::: childFields.map(_ + "Sum") ::: childFields.map(_ + "Max")
 
       val header = csvHeader(fields)
-      val toCsv = resultChildrenToCsv(childFields, valueSep)(_, _)
-      val body = results.map(toCsv.tupled).toList
+      val toCsv = (resultChildrenToCsv(childFields, valueSep)(_, _)).tupled
+      val body = results.map(toCsv).toList
 
       writeCsv(header, body, dir, name, valueSep, lineSep)
     }
