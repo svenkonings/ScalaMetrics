@@ -11,19 +11,19 @@ from main import projects, save_dataframe, get_metric_results
 def main():
     for path, name in projects.items():
         method_regression(path, name)
-        object_regression(path, name)
+        object_method_regression(path, name)
     save_global_statistics()
 
 
 def method_regression(project, name):
-    df = get_metric_results('paradigmScore', project, 'methodResultsBriand')
+    df = get_metric_results(args.folder, project, 'methodResultsBriand')
     add_fault_statistics(df, name, True)
     name = name + ' methods'
     regression(df, name, 'methods')
 
 
-def object_regression(project, name):
-    df = get_metric_results('paradigmScore', project, 'objectMethodResultsBriand')
+def object_method_regression(project, name):
+    df = get_metric_results(args.folder, project, 'objectMethodResultsBriand')
     add_fault_statistics(df, name, False)
     name = name + ' objects'
     regression(df, name, 'objects')
@@ -59,7 +59,7 @@ def univariate_regression(df, estimator, cv, columns, name, subfolder):
         column_result = get_stats(faults, prediction)
         column_result['name'] = column
         result = result.append(column_result, ignore_index=True)
-    save_dataframe(result, 'regression/univariate/' + subfolder, name, False)
+    save_dataframe(result, f'{args.folder}/regression/univariate/' + subfolder, name, False)
 
 
 def get_stats(actual, predicted):
@@ -96,7 +96,7 @@ def to_binary(x):
 def save_descriptive_statistics(df, name, subfolder):
     statistics = df.describe().T.rename_axis('name', axis=0)
     statistics['count'] = statistics['count'].astype(int)
-    save_dataframe(statistics, 'regression/descriptive/' + subfolder, name)
+    save_dataframe(statistics, f'{args.folder}/regression/descriptive/' + subfolder, name)
 
 
 multivariate_regression_results = pd.DataFrame(
@@ -139,10 +139,14 @@ def add_fault_statistics(df, name, is_method):
 
 
 def save_global_statistics():
-    save_dataframe(multivariate_regression_results, 'regression', 'multivariateRegressionResults', False)
-    save_dataframe(method_fault_statistics, 'regression', 'methodFaultStatistics', False)
-    save_dataframe(object_fault_statistics, 'regression', 'objectFaultStatistics', False)
+    folder = args.folder + '/regression'
+    save_dataframe(multivariate_regression_results, folder, 'multivariateRegressionResults', False)
+    save_dataframe(method_fault_statistics, folder, 'methodFaultStatistics', False)
+    save_dataframe(object_fault_statistics, folder, 'objectFaultStatistics', False)
 
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--folder', help='Select folder to analyse', dest='folder', required=True)
+    args = parser.parse_args()
     main()

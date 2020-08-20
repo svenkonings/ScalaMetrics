@@ -83,12 +83,12 @@ def hist_faults(df, subfolder, name, score_axis, has_points_axis):
     savefig('hist-faults/' + subfolder, name, '.pdf')
 
 
-def savefig(dirictory, filename, extension):
+def savefig(directory, filename, extension):
     if args.write:
-        dirictory = f'../data/analysisResults/plots/{dirictory}'
-        os.makedirs(dirictory, exist_ok=True)
+        directory = f'../data/analysisResults/paradigmScore/plots/{directory}'
+        os.makedirs(directory, exist_ok=True)
         plt.savefig(
-            dirictory + filename + extension,
+            directory + filename + extension,
             bbox_inches='tight',
             metadata={'Creator': None, 'Producer': None, 'CreationDate': None}
         )
