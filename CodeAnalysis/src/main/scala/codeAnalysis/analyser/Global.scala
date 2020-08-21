@@ -274,7 +274,13 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
 
     def isLazy: Boolean = tree.symbol != null && tree.symbol.isLazy
 
-    def isVar: Boolean = tree.symbol != null && tree.symbol.kindString == "variable"
+    def isVal: Boolean = tree.symbol != null && tree.symbol.kindString.contains("value")
+
+    def isVar: Boolean = tree.symbol != null && tree.symbol.kindString.contains("variable")
+
+    def isValOrVar: Boolean = tree.isVal || tree.isVar
+
+    def isMethod: Boolean = tree.symbol != null && tree.symbol.kindString.contains("method")
 
     def myFilter(f: PartialFunction[Tree, Boolean]): List[Tree] = new FilterTraverser(f).filter(tree)
 
@@ -304,6 +310,8 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
       case _: NoSymbol => symbol.nameString
       case packageSymbol => packageSymbol.qualifiedName + "." + symbol.nameString
     }
+
+    def pathString: String = symbol.ownerChain.init.reverse.mkString(" - ")
   }
 
 }

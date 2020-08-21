@@ -39,4 +39,8 @@ class MetricTest extends UnitSpec {
   test("Number of Children test") {
     print(NumberOfChildren)
   }
+
+  test("Lack Of Cohesion In Methods test") {
+    print(LackOfCohesionInMethods)
+  }
 }
