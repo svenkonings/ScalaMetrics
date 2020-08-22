@@ -10,14 +10,17 @@ class ParadigmScoreFile {
 
   def nested(string: String): Unit = {
     def myPrint(string: String): Unit = println(string)
+
     myPrint(string)
   }
 
   def tripleNested(string: String): Unit = {
     def doubleNested(string: String): Unit = {
       def singleNested(string: String): Unit = println(string)
+
       singleNested(string)
     }
+
     doubleNested(string)
   }
 
@@ -27,7 +30,7 @@ class ParadigmScoreFile {
 
   def higherOrderReturn(list: List[String]): Int => List[String] = i => list.take(i)
 
-  def usesFunction: Int = (() => 3)()
+  def usesFunction: Int = (() => 3) ()
 
   def currying(f: Int => Int => Int): Int = f(1)(2)
 
@@ -37,6 +40,7 @@ class ParadigmScoreFile {
   }
 
   lazy val lazyVal: String = "I'm lazy"
+
   def lazyValue: String = lazyVal
 
   def multipleParameterLists(x: Int)(y: Int): Int = x + y
@@ -48,6 +52,7 @@ class ParadigmScoreFile {
   }
 
   var classCount: Int = 0
+
   def outerVariable(): Int = {
     classCount += 1
     classCount
@@ -69,4 +74,6 @@ class ParadigmScoreFile {
       i -= 1
     } while (i >= 0)
   }
+
+  def rangeTest: Unit = for (i <- 1 to 10 if i < 5) println(i)
 }

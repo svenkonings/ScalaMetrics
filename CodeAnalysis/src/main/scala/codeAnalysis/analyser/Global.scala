@@ -165,7 +165,7 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
   }
 
   class FindTraverser(f: PartialFunction[Tree, Boolean]) extends ScapegoatTraverser {
-    var value: Option[Tree] = None
+    private var value: Option[Tree] = None
 
     def find(tree: Global#Tree): Option[Tree] = {
       traverse(tree.asInstanceOf[Tree])
@@ -190,7 +190,7 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
   }
 
   class FilterTraverser(f: PartialFunction[Tree, Boolean]) extends ScapegoatTraverser {
-    var value: mutable.ListBuffer[Tree] = mutable.ListBuffer()
+    private var value: mutable.ListBuffer[Tree] = mutable.ListBuffer()
 
     def filter(tree: Global#Tree): List[Tree] = {
       traverse(tree.asInstanceOf[Tree])
@@ -206,7 +206,7 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
   }
 
   class CollectTraverser[T](f: PartialFunction[Tree, T]) extends ScapegoatTraverser {
-    var value: mutable.ListBuffer[T] = mutable.ListBuffer()
+    private var value: mutable.ListBuffer[T] = mutable.ListBuffer()
 
     def collect(tree: Global#Tree): List[T] = {
       traverse(tree.asInstanceOf[Tree])
@@ -222,8 +222,8 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
   }
 
   class LinesTraverser(f: PartialFunction[Tree, Boolean]) extends ScapegoatTraverser {
-    val lines: mutable.Set[Int] = mutable.Set()
-    var keepCount: Boolean = false
+    private val lines: mutable.Set[Int] = mutable.Set()
+    private var keepCount: Boolean = false
 
     def lines(tree: Global#Tree): Int = {
       traverse(tree.asInstanceOf[Tree])
@@ -249,6 +249,24 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
       keepCount = false
     } else {
       continue(tree)
+    }
+  }
+
+  class CyclomaticComplexityTraverser extends ScapegoatTraverser {
+    private var value = 1
+
+    def complexity(tree: Tree): Int = {
+      traverse(tree)
+      val result = value
+      value = 1
+      result
+    }
+
+    override protected def inspect(tree: Tree): Unit = tree match {
+      case _: If | _: CaseDef => // While and do while are translated to use if statements and recursion
+        value += 1
+        continue(tree)
+      case _ => continue(tree)
     }
   }
 
@@ -303,6 +321,8 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
     def fraction(f: PartialFunction[Tree, FractionPart]): Double = new FractionTraverser(f).fraction(tree)
 
     def lines(f: PartialFunction[Tree, Boolean]): Int = new LinesTraverser(f).lines(tree)
+
+    def cyclomaticComplexity: Int = new CyclomaticComplexityTraverser().complexity(tree)
   }
 
   implicit class SymbolExtensions(symbol: Symbol) {

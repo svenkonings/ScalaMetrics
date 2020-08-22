@@ -43,4 +43,16 @@ class MetricTest extends UnitSpec {
   test("Lack Of Cohesion In Methods test") {
     print(LackOfCohesionInMethods)
   }
+
+  test("Response for Class test") {
+    print(ResponseForClass)
+  }
+
+  test("Cyclomatic Complexity test") {
+    print(CyclomaticComplexity)
+  }
+
+  test("Coupling Between Objects test") {
+    print(CouplingBetweenObjects)
+  }
 }
