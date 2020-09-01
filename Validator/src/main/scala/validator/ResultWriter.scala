@@ -7,31 +7,31 @@ import codeAnalysis.analyser.metric.{MetricResult, Result}
 import codeAnalysis.util.Extensions.DoubleExtension
 
 import scala.collection.immutable.SeqMap
-import scala.collection.mutable
 
 object ResultWriter {
 
-  def writeAllMetrics(dir: File, name: String, results: List[Result], valueSep: String = ",", lineSep: String = "\n"): Unit = {
-    writeMetrics(dir, "fileResults" + name, results, valueSep, lineSep)
+  def writeAllMetrics(dir: File, methodology: String, results: List[Result], valueSep: String = ",", lineSep: String = "\n"): Unit = {
+    writeMetrics(dir, "file", methodology, results, valueSep, lineSep)
 
     val objectResults = results.flatMap(_.allObjects)
-    writeMetrics(dir, "objectResults" + name, objectResults, valueSep, lineSep)
+    writeMetrics(dir, "object", methodology, objectResults, valueSep, lineSep)
 
     val methodResults = results.flatMap(_.allMethods)
-    writeMetrics(dir, "methodResults" + name, methodResults, valueSep, lineSep)
+    writeMetrics(dir, "method", methodology, methodResults, valueSep, lineSep)
 
     val objectMethodResults = SeqMap.from[Result, List[Result]](
       objectResults.map(result => result -> result.methods).filter(_._2.nonEmpty)
     )
-    writeChildMetrics(dir, "objectMethodResults" + name, objectMethodResults, valueSep, lineSep)
+    writeChildMetrics(dir, "object", "method", methodology, objectMethodResults, valueSep, lineSep)
   }
 
-  def writeMetrics(dir: File, name: String, results: List[Result], valueSep: String, lineSep: String): Unit = {
+  def writeMetrics(dir: File, metricKind: String, methodology: String, results: List[Result], valueSep: String, lineSep: String): Unit = {
     val fields = metricFields(results.headOption)
     if (fields.nonEmpty) {
       val header = csvHeader(fields)
       val toCsv = resultToCsv(valueSep)(_)
       val body = results.map(toCsv)
+      val name = s"${metricKind}Results${methodology}"
 
       writeCsv(header, body, dir, name, valueSep, lineSep)
     }
@@ -60,32 +60,48 @@ object ResultWriter {
 
   private def getName(result: Result, valueSep: String) = result.name.replace(valueSep, " ")
 
-  def writeChildMetrics(dir: File, name: String, results: SeqMap[Result, List[Result]], valueSep: String = ",", lineSep: String = "\n"): Unit = {
+  def writeChildMetrics(dir: File, parentKind: String, childKind: String, methodology: String, results: SeqMap[Result, List[Result]], valueSep: String, lineSep: String): Unit = {
+    val metricKind = s"${parentKind}${childKind.capitalize}"
     val childFields = metricFields(results.values.flatten.headOption)
     if (childFields.nonEmpty) {
-      val fields = childFields.map(_ + "Avr") ::: childFields.map(_ + "Sum") ::: childFields.map(_ + "Max")
+      val header = csvHeader(childFields)
 
-      val header = csvHeader(fields)
-      val toCsv = (resultChildrenToCsv(childFields, valueSep)(_, _)).tupled
-      val body = results.map(toCsv).toList
+      val toAvrCsv = (resultAvrToCsv(childFields, valueSep)(_, _)).tupled
+      val avrBody = results.map(toAvrCsv).toList
+      val avrName = s"${metricKind}AvrResults${methodology}"
+      writeCsv(header, avrBody, dir, avrName, valueSep, lineSep)
 
-      writeCsv(header, body, dir, name, valueSep, lineSep)
+      val toSumCsv = (resultSumToCsv(childFields, valueSep)(_, _)).tupled
+      val sumBody = results.map(toSumCsv).toList
+      val sumName = s"${metricKind}SumResults${methodology}"
+      writeCsv(header, sumBody, dir, sumName, valueSep, lineSep)
+
+      val toMaxCsv = (resultMaxToCsv(childFields, valueSep)(_, _)).tupled
+      val maxBody = results.map(toMaxCsv).toList
+      val maxName = s"${metricKind}MaxResults${methodology}"
+      writeCsv(header, maxBody, dir, maxName, valueSep, lineSep)
     }
   }
 
-  private def resultChildrenToCsv(childFields: List[String], valueSep: String)(result: Result, children: List[Result]): List[String] = {
-    val averages = mutable.ListBuffer[Double]()
-    val sums = mutable.ListBuffer[Double]()
-    val maximums = mutable.ListBuffer[Double]()
+  private def resultAvrToCsv(childFields: List[String], valueSep: String)(result: Result, children: List[Result]): List[String] = {
     val childMetrics = metricsByName(children)
-    childFields.foreach { field =>
+    val averages = childFields.map { field =>
       val values = childMetrics(field).map(_.value)
-      val sum = values.sum
-      averages += sum \ values.size
-      sums += values.sum
-      maximums += values.max
+      values.sum \ values.size
     }
-    csvRow(result, valueSep, averages.toList ::: sums.toList ::: maximums.toList)
+    csvRow(result, valueSep, averages)
+  }
+
+  private def resultSumToCsv(childFields: List[String], valueSep: String)(result: Result, children: List[Result]): List[String] = {
+    val childMetrics = metricsByName(children)
+    val sums = childFields.map { field => childMetrics(field).map(_.value).sum }
+    csvRow(result, valueSep, sums)
+  }
+
+  private def resultMaxToCsv(childFields: List[String], valueSep: String)(result: Result, children: List[Result]): List[String] = {
+    val childMetrics = metricsByName(children)
+    val maxs = childFields.map { field => childMetrics(field).map(_.value).max }
+    csvRow(result, valueSep, maxs)
   }
 
   private def metricsByName(results: List[Result]): Map[String, List[MetricResult]] = results
