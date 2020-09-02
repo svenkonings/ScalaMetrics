@@ -55,4 +55,12 @@ class MetricTest extends UnitSpec {
   test("Coupling Between Objects test") {
     print(CouplingBetweenObjects)
   }
+
+  test("Pattern Size test") {
+    print(PatternSize)
+  }
+
+  test("Out Degree test") {
+    print(OutDegree)
+  }
 }
