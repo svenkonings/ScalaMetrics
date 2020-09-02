@@ -7,12 +7,13 @@ def main(args):
     folder = f'{args.folder}/regression/descriptive/'
     for category in categories:
         for path, name in projects.items():
-            print(f'[{category}] Descriptive: {name}')
             df = get_metric_results(args.folder, path, category)
-            columns = get_columns(df)
-            statistics = df[columns].describe().T.rename_axis('name', axis=0)
-            statistics['count'] = statistics['count'].astype(int)
-            save_dataframe(statistics, folder + category, name)
+            if df is not None:
+                print(f'[{category}] Descriptive: {name}')
+                columns = get_columns(df)
+                statistics = df[columns].describe().T.rename_axis('name', axis=0)
+                statistics['count'] = statistics['count'].astype(int)
+                save_dataframe(statistics, folder + category, name)
 
 
 if __name__ == '__main__':

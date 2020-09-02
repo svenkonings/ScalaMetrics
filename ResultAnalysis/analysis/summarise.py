@@ -9,25 +9,27 @@ from analysis import save_dataframe, categories
 def main(args):
     folder = f'{args.folder}/regression/univariate/'
     for category in categories:
-        print(f'Summarise {category}')
-        summarise_univariate(folder + category)
-
-
-def summarise_univariate(path):
-    df = read_all(path, ['name', 'precision', 'recall', 'mcc'])
-    means = df.groupby('name').agg(['mean', 'std'])
-    means.columns = means.columns.map(' '.join)
-    save_dataframe(means, path, 'means')
-    medians = df.groupby('name').median()
-    save_dataframe(medians, path, 'medians')
+        path = folder + category
+        df = read_all(path, ['name', 'precision', 'recall', 'mcc'])
+        if df is not None:
+            print(f'Summarise {category}')
+            means = df.groupby('name').agg(['mean', 'std'])
+            means.columns = means.columns.map(' '.join)
+            save_dataframe(means, path, 'means')
+            medians = df.groupby('name').median()
+            save_dataframe(medians, path, 'medians')
 
 
 def read_all(path, columns):
-    all_df = pd.DataFrame(columns=columns)
-    for file in glob('../data/analysisResults/' + path + '/[!m]*.csv'):
-        df = pd.read_csv(file)[columns]
-        all_df = all_df.append(df, ignore_index=True)
-    return all_df
+    files = glob('../data/analysisResults/' + path + '/[!m]*.csv')
+    if files:
+        all_df = pd.DataFrame(columns=columns)
+        for file in files:
+            df = pd.read_csv(file)[columns]
+            all_df = all_df.append(df, ignore_index=True)
+        return all_df
+    else:
+        return None
 
 
 if __name__ == '__main__':

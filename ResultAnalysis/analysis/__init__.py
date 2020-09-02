@@ -6,6 +6,10 @@ from sklearn.metrics import confusion_matrix, r2_score, precision_score, recall_
 categories = [
     'methodResultsBriand',
     'methodResultsLandkroon',
+    'objectResultsBriand',
+    'objectResultsLandkroon',
+    'fileResultsBriand',
+    'fileResultsLandkroon',
     'objectMethodAvrResultsBriand',
     'objectMethodSumResultsBriand',
     'objectMethodMaxResultsBriand',
@@ -41,8 +45,8 @@ def to_binary(x):
 def get_stats(actual, predicted):
     tn, fp, fn, tp = confusion_matrix(actual, predicted).ravel()
     r2 = r2_score(actual, predicted)
-    precision = precision_score(actual, predicted) * 100
-    recall = recall_score(actual, predicted) * 100
+    precision = precision_score(actual, predicted, zero_division=0) * 100
+    recall = recall_score(actual, predicted, zero_division=0) * 100
     mcc = matthews_corrcoef(actual, predicted)
     return {
         'tn': tn,
@@ -52,12 +56,15 @@ def get_stats(actual, predicted):
         'r2': r2,
         'precision': precision,
         'recall': recall,
-        'mcc': mcc
+        'mcc': mcc,
     }
 
 
 def get_metric_results(folder, project, file):
-    return pd.read_csv(f'../data/metricResults/{folder}/{project}/{file}.csv')
+    try:
+        return pd.read_csv(f'../data/metricResults/{folder}/{project}/{file}.csv')
+    except FileNotFoundError:
+        return None
 
 
 def save_dataframe(df, directory, filename, save_index=True):
