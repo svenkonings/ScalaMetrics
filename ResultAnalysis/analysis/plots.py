@@ -51,32 +51,41 @@ def scatter_color(df, subfolder, name, x_axis, y_axis):
 
 def hist_faults(df, subfolder, name, score_axis, has_points_axis):
     def calc_bin_points(row):
-        # Shift scores with points to create gap
+        # Separate scores without points to the left
         if row[has_points_axis] == 0:
-            return row[score_axis]
-        elif row[score_axis] >= 0:
-            return row[score_axis] + 0.1
+            return -1.4
         else:
-            return row[score_axis] - 0.1
+            return row[score_axis]
+
+    def to_percentage(row):
+        total = row[0] + row[1]
+        return (row[1] / total) * 100 if total else 0
 
     bin_axis = 'binPoints'
     df[bin_axis] = df.apply(calc_bin_points, axis=1)
     non_faulty = df[df['faults'] == 0]
     faulty = df[df['faults'] > 0]
-    plt.hist(
+    n, bins, patches = plt.hist(
         np.array([faulty[bin_axis], non_faulty[bin_axis]], dtype=object),
-        bins=[-1.1, -0.9, -0.7, -0.5, -0.3, -0.09, 0.09, 0.3, 0.5, 0.7, 0.9, 1.1],
+        bins=[-1.4, -1.2, -1, -0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4, 0.6, 0.8, 1],
         stacked=True,
         color=['lightcoral', 'darkseagreen'],
         edgecolor='white'
     )
+    percentages = np.apply_along_axis(to_percentage, 0, n)
+    bars = patches[1]
+    for i in range(len(percentages)):
+        if percentages[i]:
+            percentage = '{:.0f}%'.format(percentages[i])
+            bar = bars[i]
+            x = bar.get_x() + bar.get_width() / 2
+            y = bar.get_y() + bar.get_height()
+            plt.annotate(percentage, (x, y), ha='center', va='bottom', size=9)
+
     plt.xticks(
-        ticks=[-1.1, -0.9, -0.7, -0.5, -0.3, -0.1, 0.0, 0.1, 0.3, 0.5, 0.7, 0.9, 1.1],
-        labels=['-1.0', '-0.8', '-0.6', '-0.4', '-0.2', '0.0', 'No points', '0.0', '0.2', '0.4', '0.6', '0.8', '1.0']
+        ticks=[-1.3, -1, -0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4, 0.6, 0.8, 1],
+        labels=['No points', '-1.0', '-0.8', '-0.6', '-0.4', '-0.2', '0.0', '0.2', '0.4', '0.6', '0.8', '1.0']
     )
-    no_points_label = plt.gca().xaxis.get_majorticklabels()[6]
-    no_points_label.set_rotation(90)
-    no_points_label.set_y(0.22)
     plt.xlabel('Paradigm score')
     plt.ylabel('Occurrences')
     plt.title(name)
