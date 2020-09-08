@@ -63,10 +63,14 @@ class ParadigmScoreLandkroon(override val compiler: Compiler) extends MethodMetr
     val hasPoints = (funcPoints != 0 || impPoints != 0).toInt
     val paradigmScore = funcPoints \ (funcPoints + impPoints)
     List(
-      MetricResult("FunctionalCallsLandkroon", func),
-      MetricResult("ImperativeCallsLandkroon", imp),
-      MetricResult("FunctionalPointsLandkroon", funcPoints),
-      MetricResult("ImperativePointsLandkroon", impPoints),
+      MetricResult("Recursive", isRecursive),
+      MetricResult("Nested", isNested),
+      MetricResult("HigherOrder", higherOrderParamCount),
+      MetricResult("FunctionalCalls", func),
+      MetricResult("SideEffects", sideEffects),
+      MetricResult("ImperativeCalls", imp),
+      MetricResult("FunctionalScoreLandkroon", funcPoints),
+      MetricResult("ImperativeScoreLandkroon", impPoints),
       MetricResult("HasPointsLandkroon", hasPoints),
       MetricResult("ParadigmScoreLandkroon", paradigmScore)
     )

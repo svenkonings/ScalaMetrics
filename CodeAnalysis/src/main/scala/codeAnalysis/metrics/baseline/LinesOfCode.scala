@@ -34,7 +34,7 @@ class LinesOfCode(override val compiler: Compiler) extends FileMetric with Objec
       MetricResult("LinesOfCode", lineCount),
       MetricResult("SourceLinesOfCode", codeLineCount),
       MetricResult("CommentLinesOfCode", commentLineCount),
-      MetricResult("CommentDensity", commentLineCount \ lineCount)
+      MetricResult("CommentDensity", commentLineCount \ (commentLineCount + codeLineCount))
     )
   }
 

@@ -181,13 +181,17 @@ class ParadigmScoreFraction(override val compiler: Compiler) extends MethodMetri
 
     List(
       MetricResult("FractionRecursiveCalls", f1),
+      MetricResult("IsNested", f2),
       MetricResult("FractionNestedMethods", f3),
       MetricResult("FractionFunctions", f4),
+      MetricResult("IsFunction", f4a),
+      MetricResult("HasFunctionParameters", f4b),
       MetricResult("FractionHigherOrderCalls", f4c),
       MetricResult("FractionFunctionCalls", f4d),
       MetricResult("FractionCurrying", f4e),
       MetricResult("FractionPatternMatching", f5),
       MetricResult("FractionLazyValues", f6),
+      MetricResult("HasMultipleParameterLists", f7),
 
       MetricResult("FunctionalScoreFraction", fScore),
 
@@ -196,8 +200,8 @@ class ParadigmScoreFraction(override val compiler: Compiler) extends MethodMetri
       MetricResult("FractionInnerVariableAssignment", o1b),
       MetricResult("FractionOuterVariableUsage", o1c),
       MetricResult("FractionOuterVariableAssignment", o1d),
-
       MetricResult("FractionSideEffects", o2),
+      MetricResult("IsSideEffect", o2a),
       MetricResult("FractionSideEffectCalls", o2b),
       MetricResult("FractionSideEffectFunctions", o2c),
 

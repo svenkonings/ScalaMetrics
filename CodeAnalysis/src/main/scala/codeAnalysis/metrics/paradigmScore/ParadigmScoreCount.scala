@@ -201,6 +201,7 @@ class ParadigmScoreCount(override val compiler: Compiler) extends MethodMetric {
       MetricResult("CountNestedDepth", f2),
       MetricResult("CountNestedMethods", f3),
       MetricResult("CountFunctions", f4),
+      MetricResult("IsFunction", f4a),
       MetricResult("CountFunctionParameters", f4b),
       MetricResult("CountHigherOrderCalls", f4c),
       MetricResult("CountFunctionCalls", f4d),
@@ -216,8 +217,8 @@ class ParadigmScoreCount(override val compiler: Compiler) extends MethodMetric {
       MetricResult("CountInnerVariableAssignment", o1b),
       MetricResult("CountOuterVariableUsage", o1c),
       MetricResult("CountOuterVariableAssignment", o1d),
-
       MetricResult("CountSideEffects", o2),
+      MetricResult("IsSideEffect", o2a),
       MetricResult("CountSideEffectCalls", o2b),
       MetricResult("CountSideEffectFunctions", o2c),
 

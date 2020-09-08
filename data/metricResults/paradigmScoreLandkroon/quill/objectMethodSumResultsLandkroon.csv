@@ -1,0 +1,826 @@
+commit,faults,path,Recursive,Nested,HigherOrder,FunctionalCalls,SideEffects,ImperativeCalls,FunctionalScoreLandkroon,ImperativeScoreLandkroon,HasPointsLandkroon,ParadigmScoreLandkroon
+HEAD,0,package spark - object SparkDialectRecursor,0.0,0.0,0.0,4.0,0.0,0.0,4.0,0.0,1.0,1.0
+HEAD,0,package spark - object SparkDialectRecursor - method runSuperAstParser - <$anon: io.getquill.idiom.StatementInterpolator.Tokenizer[io.getquill.ast.Ast]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package spark - object SparkDialectRecursor - method runCaseClassWithMultipleSelect - <$anon: io.getquill.idiom.StatementInterpolator.Tokenizer[io.getquill.ast.Ast]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package spark - trait SparkIdiom,0.0,0.0,0.0,10.0,0.0,0.0,10.0,0.0,8.0,8.0
+HEAD,0,package spark - trait SparkIdiom - method sqlQueryTokenizer - <$anon: io.getquill.context.spark.SparkIdiom>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package spark - trait SparkIdiom - method valueTokenizer - <$anon: io.getquill.context.spark.SparkIdiom>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package quotation - trait Parsing,1.0,0.0,2.0,14.0,0.0,0.0,17.0,0.0,10.0,10.0
+HEAD,1,package quotation - trait Parsing - class Parser,1.0,0.0,0.0,1.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package quotation - trait Parsing - method operationParser - object operator,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package getquill - trait QuillSparkContext,0.0,0.0,5.0,5.0,3.0,0.0,10.0,3.0,4.0,3.571428571428571
+HEAD,0,package getquill - trait QuillSparkContext - class StructElement,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package getquill - trait QuillSparkContext - object CaseAccessors,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,5,package spark - class SparkDialect,0.0,0.0,0.0,10.0,0.0,0.0,10.0,0.0,7.0,7.0
+HEAD,5,package getquill - trait QuillSparkContext,0.0,0.0,5.0,5.0,3.0,0.0,10.0,3.0,4.0,3.571428571428571
+HEAD,0,package getquill - trait QuillSparkContext - class StructElement,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,1,package spark - class SparkDialect,0.0,0.0,0.0,10.0,0.0,0.0,10.0,0.0,7.0,7.0
+HEAD,1,package spark - trait Encoders,0.0,0.0,3.0,1.0,0.0,0.0,4.0,0.0,3.0,3.0
+HEAD,1,package spark - class SparkDialect,0.0,0.0,0.0,9.0,0.0,0.0,9.0,0.0,6.0,6.0
+HEAD,1,package encoding - trait Encoders,0.0,0.0,4.0,1.0,0.0,0.0,5.0,0.0,4.0,4.0
+HEAD,0,package encoding - trait Encoders - class OrientDBEncoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package encoding - trait Decoders,0.0,0.0,4.0,1.0,0.0,0.0,5.0,0.0,4.0,4.0
+HEAD,0,package encoding - trait Decoders - class OrientDBDecoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package cassandra - trait CassandraContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package encoding - trait Decoders,0.0,0.0,1.0,2.0,0.0,0.0,3.0,0.0,2.0,2.0
+HEAD,0,package encoding - trait Decoders - class CassandraDecoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package encoding - trait Encoders,0.0,0.0,4.0,1.0,0.0,0.0,5.0,0.0,4.0,4.0
+HEAD,0,package encoding - trait Encoders - class CassandraEncoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package getquill - class CassandraAsyncContext,0.0,0.0,5.0,8.0,0.0,0.0,13.0,0.0,4.0,4.0
+HEAD,1,package dsl - class MetaDslMacro,1.0,0.0,0.0,29.0,3.0,0.0,30.0,3.0,4.0,3.8
+HEAD,1,package quotation - trait Parsing,0.0,0.0,2.0,6.0,0.0,0.0,8.0,0.0,3.0,3.0
+HEAD,0,package quotation - trait Parsing - class Parser,1.0,0.0,0.0,1.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package quotation - trait Parsing - method operationParser - object operator,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package quotation - trait Unliftables,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package quotation - trait Parsing,0.0,0.0,2.0,6.0,0.0,0.0,8.0,0.0,3.0,3.0
+HEAD,0,package quotation - trait Parsing - method operationParser - object operator,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package quotation - trait Parsing,0.0,0.0,2.0,6.0,0.0,0.0,8.0,0.0,3.0,3.0
+HEAD,0,package quotation - trait Parsing - method operationParser - object operator,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package dsl - class EncodingDslMacro,0.0,0.0,1.0,4.0,0.0,0.0,5.0,0.0,2.0,2.0
+HEAD,1,package quotation - object Rebind,0.0,0.0,1.0,3.0,0.0,0.0,4.0,0.0,1.0,1.0
+HEAD,1,package quotation - trait Parsing,0.0,0.0,2.0,6.0,0.0,0.0,8.0,0.0,3.0,3.0
+HEAD,1,package getquill - class CassandraAsyncContext,0.0,0.0,5.0,8.0,0.0,0.0,13.0,0.0,4.0,4.0
+HEAD,1,package quotation - trait Parsing,0.0,0.0,2.0,6.0,0.0,0.0,8.0,0.0,3.0,3.0
+HEAD,0,package quotation - trait Parsing - class Parser,1.0,0.0,0.0,1.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package quotation - trait Parsing - method operationParser - object operator,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package dsl - class EncodingDslMacro,0.0,0.0,1.0,4.0,0.0,0.0,5.0,0.0,2.0,2.0
+HEAD,1,package dsl - trait LowPriorityImplicits,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package dsl - trait EncodingDsl,0.0,0.0,2.0,0.0,0.0,0.0,2.0,0.0,2.0,2.0
+HEAD,1,package quotation - trait ReifyLiftings,0.0,0.0,0.0,6.0,0.0,0.0,6.0,0.0,1.0,1.0
+HEAD,1,package quotation - trait ReifyLiftings - class ReifyLiftings,1.0,0.0,0.0,4.0,0.0,0.0,5.0,0.0,2.0,2.0
+HEAD,1,package quotation - trait Quotation,0.0,0.0,0.0,8.0,0.0,0.0,8.0,0.0,5.0,5.0
+HEAD,2,package cassandra - trait CqlIdiom,1.0,0.0,0.0,22.0,0.0,0.0,23.0,0.0,12.0,12.0
+HEAD,2,package context - trait ContextMacro,0.0,0.0,0.0,9.0,0.0,0.0,9.0,0.0,6.0,6.0
+HEAD,1,package quotation - trait Parsing,0.0,0.0,2.0,6.0,0.0,0.0,8.0,0.0,3.0,3.0
+HEAD,0,package quotation - trait Parsing - method operationParser - object operator,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package context - class ActionMacro,0.0,0.0,1.0,6.0,0.0,0.0,7.0,0.0,3.0,3.0
+HEAD,1,package quotation - trait Unliftables,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package mysql - trait FinagleMysqlDecoders,0.0,0.0,3.0,1.0,0.0,0.0,4.0,0.0,3.0,3.0
+HEAD,0,package mysql - trait FinagleMysqlDecoders - class FinangleMysqlDecoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package getquill - class MysqlAsyncContext,0.0,0.0,1.0,1.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,1,package mysql - trait FinagleMysqlEncoders,0.0,0.0,3.0,1.0,0.0,0.0,4.0,0.0,3.0,3.0
+HEAD,0,package mysql - trait FinagleMysqlEncoders - class FinangleMySqlEncoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package async - trait Encoders,0.0,0.0,3.0,1.0,0.0,0.0,4.0,0.0,3.0,3.0
+HEAD,0,package async - trait Encoders - class AsyncEncoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package async - trait Encoders - method encoder - <$anon: (Encoders.this.Index  T  Encoders.this.PrepareRow) => Encoders.this.PrepareRow>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package async - trait Encoders - method mappedEncoder - <$anon: (Encoders.this.Index  I  Encoders.this.PrepareRow) => Encoders.this.PrepareRow>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package async - trait Encoders - method optionEncoder - <$anon: (Encoders.this.Index  Option[T]  Encoders.this.PrepareRow) => Encoders.this.PrepareRow>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,1,package getquill - class PostgresAsyncContext,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,1,package sql - trait SqlContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package async - trait Decoders,0.0,0.0,3.0,2.0,0.0,0.0,5.0,0.0,3.0,3.0
+HEAD,0,package async - trait Decoders - class AsyncDecoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package async - trait Decoders - method decoder - <$anon: (Decoders.this.Index  Decoders.this.ResultRow) => T>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package async - trait Decoders - method mappedDecoder - <$anon: (Decoders.this.Index  Decoders.this.ResultRow) => O>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package async - trait Decoders - trait NumericDecoder,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,1,package async - trait Decoders - method optionDecoder - <$anon: (Decoders.this.Index  Decoders.this.ResultRow) => Option[T]>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package async - trait Decoders - <$anon: (Decoders.this.Index  Decoders.this.ResultRow) => BigDecimal>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package async - trait Decoders - <$anon: (Decoders.this.Index  Decoders.this.ResultRow) => Int>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package async - trait Decoders - <$anon: (Decoders.this.Index  Decoders.this.ResultRow) => Long>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package async - trait Decoders - <$anon: (Decoders.this.Index  Decoders.this.ResultRow) => Float>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package async - trait Decoders - <$anon: (Decoders.this.Index  Decoders.this.ResultRow) => Double>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package async - trait Decoders - <$anon: (Decoders.this.Index  Decoders.this.ResultRow) => java.util.UUID>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,1,package mirror - trait MirrorDecoders,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,1,package mirror - trait MirrorDecoders - method decoder - <$anon: MirrorDecoders.this.Decoder[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package mirror - trait MirrorDecoders - method optionDecoder - <$anon: MirrorDecoders.this.Decoder[Option[T]]>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,1,package mysql - trait FinagleMysqlEncoders,0.0,0.0,1.0,1.0,0.0,0.0,2.0,0.0,2.0,2.0
+HEAD,1,package mysql - trait FinagleMysqlEncoders - method encoder - <$anon: FinagleMysqlEncoders.this.Encoder[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package mysql - trait FinagleMysqlEncoders - method optionEncoder - <$anon: FinagleMysqlEncoders.this.Encoder[Option[T]]>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,1,package dsl - trait LowPriorityImplicits,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package dsl - trait EncodingDsl,0.0,0.0,2.0,0.0,0.0,0.0,2.0,0.0,2.0,2.0
+HEAD,1,package dsl - trait EncodingDsl - trait Decoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package dsl - trait EncodingDsl - method Decoder - <$anon: EncodingDsl.this.Decoder[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package dsl - trait EncodingDsl - trait Encoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package dsl - trait EncodingDsl - method Encoder - <$anon: EncodingDsl.this.Encoder[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package dsl - trait EncodingDsl - method mappedDecoderImpl - <$anon: EncodingDsl.this.Decoder[O]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package dsl - trait EncodingDsl - method mappedEncoderImpl - <$anon: EncodingDsl.this.Encoder[I]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package postgres - trait FinaglePostgresEncoders,0.0,0.0,1.0,2.0,0.0,0.0,3.0,0.0,3.0,3.0
+HEAD,1,package postgres - trait FinaglePostgresEncoders - class ValueEncoderEncoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package postgres - trait FinaglePostgresDecoders,0.0,0.0,1.0,1.0,0.0,0.0,2.0,0.0,2.0,2.0
+HEAD,1,package postgres - trait FinaglePostgresDecoders - method decoder - <$anon: FinaglePostgresDecoders.this.Decoder[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package postgres - trait FinaglePostgresDecoders - method decoderDirectly - <$anon: FinaglePostgresDecoders.this.Decoder[T]>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,1,package postgres - trait FinaglePostgresDecoders - method optionDecoder - <$anon: FinaglePostgresDecoders.this.Decoder[Option[T]]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package mysql - trait FinagleMysqlDecoders,0.0,0.0,1.0,1.0,0.0,0.0,2.0,0.0,2.0,2.0
+HEAD,1,package mysql - trait FinagleMysqlDecoders - method decoder - <$anon: FinagleMysqlDecoders.this.Decoder[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package mysql - trait FinagleMysqlDecoders - method optionDecoder - <$anon: FinagleMysqlDecoders.this.Decoder[Option[T]]>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,1,package mirror - trait MirrorEncoders,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,1,package mirror - trait MirrorEncoders - method encoder - <$anon: MirrorEncoders.this.Encoder[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package mirror - trait MirrorEncoders - method optionEncoder - <$anon: MirrorEncoders.this.Encoder[Option[T]]>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,1,package async - trait Encoders,0.0,0.0,1.0,2.0,0.0,0.0,3.0,0.0,3.0,3.0
+HEAD,1,package async - trait Encoders - class AsyncEncoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package async - trait Encoders - method encoder - <$anon: Encoders.this.Encoder[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package async - trait Encoders - method mappedEncoderImpl - <$anon: Encoders.this.Encoder[I]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package async - trait Encoders - method optionEncoder - <$anon: Encoders.this.Encoder[Option[T]]>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,1,package dsl - class MetaDslMacro,1.0,0.0,0.0,37.0,3.0,0.0,38.0,3.0,5.0,4.8125
+HEAD,1,package encoding - trait Decoders - method decoder - <$anon: Decoders.this.Decoder[T]>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,1,package encoding - trait Decoders - method optionDecoder - <$anon: Decoders.this.Decoder[Option[T]]>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,1,package encoding - trait Decoders - <$anon: Decoders.this.Decoder[BigDecimal]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package encoding - trait Decoders - <$anon: Decoders.this.Decoder[Array[Byte]]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package encoding - trait Decoders - <$anon: Decoders.this.Decoder[java.util.UUID]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package getquill - class MirrorContext,0.0,0.0,8.0,6.0,0.0,0.0,14.0,0.0,6.0,6.0
+HEAD,1,package encoding - trait Encoders,0.0,0.0,1.0,1.0,0.0,0.0,2.0,0.0,2.0,2.0
+HEAD,1,package encoding - trait Encoders - method encoder - <$anon: Encoders.this.Encoder[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package encoding - trait Encoders - method optionEncoder - <$anon: Encoders.this.Encoder[Option[T]]>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,1,package async - trait Decoders,0.0,0.0,1.0,3.0,0.0,0.0,4.0,0.0,3.0,3.0
+HEAD,1,package async - trait Decoders - class AsyncDecoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package async - trait Decoders - method decoder - <$anon: Decoders.this.Decoder[T]>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,1,package async - trait Decoders - method mappedDecoderImpl - <$anon: Decoders.this.Decoder[O]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package async - trait Decoders - trait NumericDecoder,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,1,package async - trait Decoders - method optionDecoder - <$anon: Decoders.this.Decoder[Option[T]]>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,1,package async - trait Decoders - <$anon: Decoders.this.NumericDecoder[BigDecimal]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package async - trait Decoders - <$anon: Decoders.this.NumericDecoder[Int]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package async - trait Decoders - <$anon: Decoders.this.NumericDecoder[Long]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package async - trait Decoders - <$anon: Decoders.this.NumericDecoder[Float]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package async - trait Decoders - <$anon: Decoders.this.NumericDecoder[Double]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package async - trait Decoders - <$anon: Decoders.this.Decoder[java.util.UUID]>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,1,package quotation - trait Unliftables,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package quotation - trait Parsing,0.0,0.0,2.0,6.0,0.0,0.0,8.0,0.0,3.0,3.0
+HEAD,0,package quotation - trait Parsing - method operationParser - object operator,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package quotation - trait Quotation,0.0,0.0,0.0,8.0,0.0,0.0,8.0,0.0,5.0,5.0
+HEAD,1,package quotation - trait ReifyLiftings,0.0,0.0,0.0,6.0,0.0,0.0,6.0,0.0,1.0,1.0
+HEAD,1,package quotation - trait ReifyLiftings - class ReifyLiftings,1.0,0.0,0.0,4.0,0.0,0.0,5.0,0.0,2.0,2.0
+HEAD,1,package context - class QueryMacro,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,1,package context - class ActionMacro,0.0,0.0,1.0,6.0,0.0,0.0,7.0,0.0,3.0,3.0
+HEAD,1,package cassandra - object CqlNormalize,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package getquill - class FinagleMysqlContext,0.0,0.0,9.0,7.0,0.0,0.0,16.0,0.0,8.0,8.0
+HEAD,1,package cassandra - trait CqlIdiom,1.0,0.0,0.0,22.0,0.0,0.0,23.0,0.0,12.0,12.0
+HEAD,6,package getquill - class CassandraAsyncContext,0.0,0.0,8.0,3.0,0.0,0.0,11.0,0.0,4.0,4.0
+HEAD,6,package getquill - object CassandraAsyncContext - class ActionApply,0.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,6,package mirror - trait MirrorDecoders,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,6,package mirror - trait MirrorDecoders - method decoder - <$anon: MirrorDecoders.this.Decoder[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package mirror - trait MirrorDecoders - method optionDecoder - <$anon: MirrorDecoders.this.Decoder[Option[T]]>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,6,package quotation - trait Unliftables,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,6,package mysql - trait FinagleMysqlEncoders,0.0,0.0,1.0,1.0,0.0,0.0,2.0,0.0,2.0,2.0
+HEAD,6,package mysql - trait FinagleMysqlEncoders - method encoder - <$anon: FinagleMysqlEncoders.this.Encoder[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,6,package mysql - trait FinagleMysqlEncoders - method encoder - <$anon: FinagleMysqlEncoders.this.Encoder[T]> - method apply - <$anon: io.getquill.context.Encoder[List[<error>] T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,6,package mysql - trait FinagleMysqlEncoders - method traversableEncoder - <$anon: FinagleMysqlEncoders.this.Encoder[Traversable[T]]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,6,package mysql - trait FinagleMysqlEncoders - method optionEncoder - <$anon: FinagleMysqlEncoders.this.Encoder[Option[T]]>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,6,package context - class Context,0.0,0.0,1.0,1.0,0.0,0.0,2.0,0.0,2.0,2.0
+HEAD,6,package context - class Context - method mappedDecoder - <$anon: Context.this.Decoder[O]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,6,package context - class Context - method mappedEncoder - <$anon: Context.this.Encoder[I]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package cassandra - trait Ops - class Options,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package cassandra - trait Ops - class QueryOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,6,package cassandra - trait Ops - class InsertOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,6,package cassandra - trait Ops - class DeleteOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,6,package cassandra - trait Ops - class ActionOps,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,6,package quotation - trait Quotation,0.0,0.0,0.0,7.0,0.0,0.0,7.0,0.0,5.0,5.0
+HEAD,6,package cassandra - object CqlIdiom,1.0,0.0,0.0,19.0,0.0,0.0,20.0,0.0,10.0,10.0
+HEAD,6,package dsl - trait QueryDsl,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,6,package dsl - trait QueryDsl - trait Query,0.0,0.0,9.0,0.0,0.0,0.0,9.0,0.0,9.0,9.0
+HEAD,0,package dsl - trait QueryDsl - trait JoinQuery,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,6,package dsl - trait QueryDsl - trait EntityQuery,0.0,0.0,6.0,0.0,0.0,0.0,6.0,0.0,6.0,6.0
+HEAD,6,package dsl - trait QueryDsl - class InsertUnassignedAction,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,6,package dsl - trait QueryDsl - class InsertAssignedAction,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package dsl - trait QueryDsl - trait Schema,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,6,package context - trait QueryMacro,0.0,0.0,0.0,10.0,0.0,0.0,10.0,0.0,2.0,2.0
+HEAD,6,package getquill - class FinagleMysqlContext,0.0,0.0,9.0,5.0,0.0,0.0,14.0,0.0,6.0,6.0
+HEAD,6,package async - trait Encoders,0.0,0.0,1.0,1.0,0.0,0.0,2.0,0.0,2.0,2.0
+HEAD,6,package async - trait Encoders - method encoder - <$anon: Encoders.this.Encoder[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,6,package async - trait Encoders - method encoder - <$anon: Encoders.this.Encoder[T]> - method apply - <$anon: io.getquill.context.Encoder[List[Any] T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,6,package async - trait Encoders - method traversableEncoder - <$anon: Encoders.this.Encoder[Traversable[T]]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,6,package async - trait Encoders - method optionEncoder - <$anon: Encoders.this.Encoder[Option[T]]>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,6,package encoding - trait Decoders,0.0,0.0,1.0,2.0,0.0,0.0,3.0,0.0,2.0,2.0
+HEAD,0,package encoding - trait Decoders - method decoder - <$anon: Decoders.this.Decoder[T]>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package encoding - trait Decoders - method optionDecoder - <$anon: Decoders.this.Decoder[Option[T]]>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package encoding - trait Decoders - <$anon: Decoders.this.Decoder[BigDecimal]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package encoding - trait Decoders - <$anon: Decoders.this.Decoder[Array[Byte]]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package encoding - trait Decoders - <$anon: Decoders.this.Decoder[java.util.UUID]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,6,package getquill - class MirrorContext,0.0,0.0,9.0,2.0,0.0,0.0,11.0,0.0,5.0,5.0
+HEAD,6,package dsl - trait QuotationDsl,0.0,0.0,10.0,0.0,0.0,0.0,10.0,0.0,10.0,10.0
+HEAD,0,package dsl - trait QuotationDsl - trait Quoted,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,6,package getquill - class SqlMirrorContext,0.0,0.0,8.0,2.0,0.0,0.0,10.0,0.0,4.0,4.0
+HEAD,6,package getquill - class SqlMirrorContext - class ActionApply,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,6,package cassandra - trait CassandraContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dsl - trait SqlDsl - class Like,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,6,package context - trait ActionMacro,2.0,0.0,0.0,17.0,0.0,0.0,19.0,0.0,4.0,4.0
+HEAD,6,package async - class AsyncContext,0.0,0.0,11.0,14.0,0.0,0.0,25.0,0.0,7.0,7.0
+HEAD,6,package getquill - class CassandraSyncContext,0.0,0.0,8.0,1.0,0.0,0.0,9.0,0.0,4.0,4.0
+HEAD,6,package getquill - object CassandraSyncContext - class ActionApply,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,6,package quotation - trait Parsing,0.0,0.0,2.0,5.0,0.0,0.0,7.0,0.0,2.0,2.0
+HEAD,0,package quotation - trait Parsing - class Parser,1.0,0.0,0.0,1.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package quotation - trait Parsing - method operationParser - object operator,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,6,package context - trait ContextMacro,0.0,0.0,0.0,6.0,0.0,0.0,6.0,0.0,3.0,3.0
+HEAD,6,package mirror - trait MirrorEncoders,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,6,package mirror - trait MirrorEncoders - method encoder - <$anon: MirrorEncoders.this.Encoder[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package mirror - trait MirrorEncoders - method optionEncoder - <$anon: MirrorEncoders.this.Encoder[Option[T]]>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,6,package mirror - trait MirrorEncoders - method traversableEncoder - <$anon: MirrorEncoders.this.Encoder[Traversable[T]]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,6,package getquill - class CassandraMirrorContext,0.0,0.0,8.0,2.0,0.0,0.0,10.0,0.0,4.0,4.0
+HEAD,6,package getquill - class CassandraMirrorContext - class ActionApply,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,6,package cassandra - object CqlQuery,2.0,0.0,0.0,9.0,0.0,0.0,11.0,0.0,8.0,8.0
+HEAD,6,package quotation - object Rebind,0.0,0.0,1.0,3.0,0.0,0.0,4.0,0.0,1.0,1.0
+HEAD,6,package sql - class SqlContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,6,package encoding - trait Encoders,0.0,0.0,1.0,1.0,0.0,0.0,2.0,0.0,2.0,2.0
+HEAD,6,package encoding - trait Encoders - method encoder - <$anon: Encoders.this.Encoder[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,6,package encoding - trait Encoders - method encoder - <$anon: Encoders.this.Encoder[T]> - method apply - <$anon: io.getquill.context.Encoder[<error> T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,6,package encoding - trait Encoders - method traversableEncoder - <$anon: Encoders.this.Encoder[Traversable[T]]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,6,package encoding - trait Encoders - method optionEncoder - <$anon: Encoders.this.Encoder[Option[T]]>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,1,package encoding - trait Decoders,0.0,0.0,1.0,1.0,0.0,0.0,2.0,0.0,2.0,2.0
+HEAD,1,package encoding - trait Decoders - method decoder - <$anon: Decoders.this.Decoder[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package encoding - trait Decoders - method optionDecoder - <$anon: Decoders.this.Decoder[Option[T]]>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package encoding - trait Decoders - <$anon: Decoders.this.Decoder[BigDecimal]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package encoding - trait Decoders - <$anon: Decoders.this.Decoder[Array[Byte]]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package encoding - trait Decoders - <$anon: Decoders.this.Decoder[java.util.UUID]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package quotation - trait Unliftables,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package quotation - trait Parsing,0.0,0.0,2.0,5.0,0.0,0.0,7.0,0.0,2.0,2.0
+HEAD,0,package quotation - trait Parsing - class Parser,1.0,0.0,0.0,1.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package quotation - trait Parsing - method operationParser - object operator,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package quotation - trait Parsing,0.0,0.0,2.0,5.0,0.0,0.0,7.0,0.0,2.0,2.0
+HEAD,0,package quotation - trait Parsing - method operationParser - object operator,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package quotation - trait Quoted,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package quotation - trait Quotation,0.0,0.0,0.0,7.0,0.0,0.0,7.0,0.0,5.0,5.0
+HEAD,0,package quotation - trait Unliftables,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package getquill - object ImplicitQuery,0.0,0.0,22.0,0.0,0.0,0.0,22.0,0.0,22.0,22.0
+HEAD,1,package getquill - class ImplicitQueryMacro,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package quotation - object IsDynamic,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package quotation - object Rebind,0.0,0.0,1.0,3.0,0.0,0.0,4.0,0.0,1.0,1.0
+HEAD,1,package quotation - trait Quotation,0.0,0.0,0.0,6.0,0.0,0.0,6.0,0.0,4.0,4.0
+HEAD,1,package quotation - trait Unliftables,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package quotation - trait Parsing,0.0,0.0,2.0,5.0,0.0,0.0,7.0,0.0,2.0,2.0
+HEAD,0,package quotation - trait Parsing - method operationParser - object operator,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package quotation - trait Quoted,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package quotation - trait Quotation,0.0,0.0,0.0,6.0,0.0,0.0,6.0,0.0,4.0,4.0
+HEAD,1,package quotation - trait Parsing,0.0,0.0,2.0,5.0,0.0,0.0,7.0,0.0,2.0,2.0
+HEAD,0,package quotation - trait Parsing - method operationParser - object operator,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package quotation - trait Unliftables,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package quotation - trait Parsing,0.0,0.0,2.0,5.0,0.0,0.0,7.0,0.0,2.0,2.0
+HEAD,0,package quotation - trait Parsing - method operationParser - object operator,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package quotation - trait Parsing,0.0,0.0,2.0,5.0,0.0,0.0,7.0,0.0,2.0,2.0
+HEAD,1,package quotation - trait Quotation,0.0,0.0,0.0,6.0,0.0,0.0,6.0,0.0,4.0,4.0
+HEAD,1,package quotation - trait Parsing,0.0,0.0,2.0,0.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package quotation - trait Parsing - method operationParser - object operator,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package quotation - trait Quotation,0.0,0.0,0.0,5.0,0.0,0.0,5.0,0.0,3.0,3.0
+HEAD,1,package quotation - trait Parsing,0.0,0.0,2.0,0.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package quotation - trait Parsing - method operationParser - object operator,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package quotation - trait Unliftables,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package quotation - trait Parsing,0.0,0.0,2.0,0.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package quotation - trait Parsing - method operationParser - object operator,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package quotation - trait Parsing,0.0,0.0,2.0,0.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package quotation - trait Parsing - method operationParser - object operator,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dsl - class QueryDslMacro,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package jasync - trait Decoders,0.0,0.0,3.0,2.0,0.0,0.0,5.0,0.0,3.0,3.0
+HEAD,0,package jasync - trait Decoders - class AsyncDecoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jasync - trait Decoders - method decoder - <$anon: (Decoders.this.Index  Decoders.this.ResultRow) => T>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package jasync - trait Decoders - method mappedDecoder - <$anon: (Decoders.this.Index  Decoders.this.ResultRow) => O>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jasync - trait Decoders - trait NumericDecoder,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package jasync - trait Decoders - method optionDecoder - <$anon: (Decoders.this.Index  Decoders.this.ResultRow) => Option[T]>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package jasync - trait Decoders - <$anon: (Decoders.this.Index  Decoders.this.ResultRow) => BigDecimal>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jasync - trait Decoders - <$anon: (Decoders.this.Index  Decoders.this.ResultRow) => Int>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jasync - trait Decoders - <$anon: (Decoders.this.Index  Decoders.this.ResultRow) => Long>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jasync - trait Decoders - <$anon: (Decoders.this.Index  Decoders.this.ResultRow) => Float>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jasync - trait Decoders - <$anon: (Decoders.this.Index  Decoders.this.ResultRow) => Double>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object ClassTagConversions,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - class FinaglePostgresContext,0.0,0.0,11.0,13.0,0.0,0.0,24.0,0.0,11.0,11.0
+HEAD,0,package getquill - object FinaglePostgresContext - class EncodeParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package idiom - trait SqlIdiom,2.0,0.0,0.0,62.0,0.0,0.0,64.0,0.0,22.0,22.0
+HEAD,0,package idiom - trait SqlIdiom - method defaultTokenizer - <$anon: io.getquill.idiom.StatementInterpolator.Tokenizer[io.getquill.ast.Ast]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package idiom - trait SqlIdiom - class FlattenSqlQueryTokenizerHelper,0.0,0.0,0.0,8.0,0.0,0.0,8.0,0.0,5.0,5.0
+HEAD,0,package idiom - object SqlIdiom,0.0,0.0,0.0,3.0,0.0,0.0,3.0,0.0,1.0,1.0
+HEAD,0,package idiom - object SqlIdiom - method copyIdiom - <$anon: io.getquill.context.sql.idiom.SqlIdiom>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package idiom - object SqlIdiom - method withActionAlias - <$anon: io.getquill.idiom.StatementInterpolator.Tokenizer[io.getquill.ast.Ast]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - class OrientDBSyncContext,0.0,0.0,5.0,3.0,0.0,2.0,8.0,2.0,4.0,3.3333333333333335
+HEAD,0,package context - object ProbeStatement,0.0,0.0,0.0,4.0,0.0,1.0,4.0,1.0,1.0,0.8
+HEAD,0,package idiom - object StatementInterpolator,0.0,0.0,0.0,5.0,0.0,0.0,5.0,0.0,5.0,5.0
+HEAD,0,package idiom - object StatementInterpolator - trait Tokenizer,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package idiom - object StatementInterpolator - object Tokenizer,0.0,0.0,3.0,0.0,0.0,0.0,3.0,0.0,2.0,2.0
+HEAD,0,package idiom - object StatementInterpolator - object Tokenizer - method apply - <$anon: io.getquill.idiom.StatementInterpolator.Tokenizer[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package idiom - object StatementInterpolator - object Tokenizer - method withFallback - <$anon: io.getquill.idiom.StatementInterpolator.Tokenizer[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package idiom - object StatementInterpolator - class TokenImplicit,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package idiom - object StatementInterpolator - class TokenList,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package idiom - object StatementInterpolator - class Impl,0.0,0.0,0.0,5.0,0.0,1.0,5.0,1.0,2.0,1.0
+HEAD,0,package getquill - trait OracleDialect,0.0,0.0,0.0,5.0,0.0,0.0,5.0,0.0,5.0,5.0
+HEAD,0,package getquill - trait OracleDialect - class OracleFlattenSqlQueryTokenizerHelper,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package nested - object Elements - class OrderedSelect,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package nested - object Elements - object OrderedSelect,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package mysql - class SingleValueRow,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package capture - class Dealias,0.0,0.0,1.0,15.0,0.0,0.0,16.0,0.0,2.0,2.0
+HEAD,0,package capture - object Dealias,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package norm - object ExpandDistinct,1.0,0.0,0.0,1.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package monad - class IOMonadMacro,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package context - trait StreamingContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package gen - class StereotypePackager,0.0,0.0,3.0,13.0,0.0,0.0,16.0,0.0,3.0,3.0
+HEAD,0,package gen - class StereotypePackager - method packageIntoEmitters - class OptionSeqExtentions,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package monix - class MonixJdbcContext,0.0,0.0,19.0,8.0,0.0,1.0,27.0,1.0,17.0,16.0
+HEAD,0,package monix - class MonixJdbcContext - class ResultSetIterator,0.0,0.0,0.0,0.0,11.0,0.0,0.0,11.0,5.0,0.0
+HEAD,0,package jdbc - object DatabaseTypes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jdbc - object DatabaseTypes - object DatabaseType,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package jdbc - object DatabaseTypes - trait DatabaseType,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jdbc - object DatabaseTypes - object H2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jdbc - object DatabaseTypes - object MySql,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jdbc - object DatabaseTypes - object SqlServer,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jdbc - object DatabaseTypes - object Postgres,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jdbc - object DatabaseTypes - object Sqlite,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jdbc - object DatabaseTypes - object Oracle,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object JdbcTypeInfo,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package encoding - trait ArrayEncoding,0.0,0.0,0.0,3.0,0.0,0.0,3.0,0.0,2.0,2.0
+HEAD,0,package getquill - class AsyncMirrorContext,0.0,0.0,9.0,8.0,0.0,0.0,17.0,0.0,8.0,8.0
+HEAD,0,package getquill - class AsyncMirrorContext - class TransactionalExecutionContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - object MySparkExample,0.0,0.0,0.0,3.0,0.0,0.0,3.0,0.0,1.0,1.0
+HEAD,0,package norm - class SelectPropertyProtractor,0.0,0.0,0.0,12.0,0.0,0.0,12.0,0.0,3.0,3.0
+HEAD,0,package norm - class SelectPropertyProtractor - class ProtractQuat,1.0,0.0,0.0,4.0,0.0,0.0,5.0,0.0,1.0,1.0
+HEAD,0,package ndbc - object Default,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ndbc - trait PostgresDecoders,0.0,0.0,4.0,3.0,0.0,0.0,7.0,0.0,3.0,3.0
+HEAD,0,package model - object PackagingStrategy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object PackagingStrategy - object ByPackageObject,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object PackagingStrategy - object ByPackageHeader,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class PackageHeaderByNamespace,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class PackageObjectByNamespace,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class SimpleObjectByNamespace,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object NoPackage,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package norm - object ExpandMappedInfix,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package quotation - object Bindings,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - class MysqlJAsyncContext,0.0,0.0,1.0,1.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package ndbc - class NdbcContext,1.0,0.0,11.0,9.0,0.0,0.0,21.0,0.0,9.0,9.0
+HEAD,0,package ndbc - class NdbcContext - method supplier - <$anon: java.util.function.Supplier[<error>]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package norm - object AddDropToNestedOrderBy,2.0,0.0,0.0,5.0,0.0,0.0,7.0,0.0,3.0,3.0
+HEAD,0,package getquill - trait NamingStrategy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - trait CompositeNamingStrategy,0.0,0.0,0.0,6.0,0.0,0.0,6.0,0.0,3.0,3.0
+HEAD,0,package getquill - object NamingStrategy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - trait Literal,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - trait Escape,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - trait UpperCase,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - trait LowerCase,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - trait SnakeCase,1.0,0.0,0.0,2.0,0.0,0.0,3.0,0.0,2.0,2.0
+HEAD,0,package getquill - trait CamelCase,1.0,0.0,0.0,1.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package getquill - trait PluralizedTableNames,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - trait PostgresEscape,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - trait MysqlEscape,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package async - class AsyncContextConfig,0.0,0.0,0.0,2.0,16.0,3.0,2.0,19.0,2.0,1.05
+HEAD,0,package util - class Interpolator - class InterpolatorExt,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - class Interpolator - class Traceable,0.0,0.0,0.0,13.0,0.0,3.0,13.0,3.0,7.0,4.8
+HEAD,0,package getquill - class NdbcPostgresContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - trait MySQLDialect,0.0,0.0,0.0,8.0,0.0,0.0,8.0,0.0,5.0,5.0
+HEAD,0,package norm - object NormalizeNestedStructures,0.0,0.0,2.0,5.0,0.0,0.0,7.0,0.0,3.0,3.0
+HEAD,0,package monad - trait IOMonad - object IO,0.0,0.0,3.0,7.0,0.0,0.0,10.0,0.0,4.0,4.0
+HEAD,0,package monad - trait IOMonad - trait IO,0.0,0.0,10.0,7.0,0.0,0.0,17.0,0.0,11.0,11.0
+HEAD,0,package norm - object SymbolicReduction,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package getquill - trait PostgresDialect,0.0,0.0,0.0,2.0,3.0,0.0,2.0,3.0,3.0,2.0
+HEAD,0,package capture - object TemporaryIdent,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package cassandra - class UdtMetaDslMacro,0.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package util - object DiscoverDatabaseType,0.0,0.0,1.0,1.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package util - object IndentUtil,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package util - object IndentUtil - class StringOpsExt,0.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package util - object IndentUtil - class IndentOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package norm - class SimplifyNullChecks,1.0,0.0,0.0,1.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package norm - class SimplifyNullChecks - object == or !=,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package norm - class SimplifyNullChecks - object Optional,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package gen - trait Generator,0.0,0.0,0.0,6.0,0.0,0.0,6.0,0.0,2.0,2.0
+HEAD,0,package gen - trait Generator - method generatorMaker - <$anon: io.getquill.codegen.gen.EmitterSettings[Generator.this.TableMeta Generator.this.ColumnMeta] => Generator.this.CodeEmitter>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package gen - trait Generator - class MultiGeneratorFactory,0.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package gen - trait Generator - class CodeEmitter,0.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,2.0,2.0
+HEAD,0,package gen - trait Generator - class CodeEmitter - class CaseClassGen,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package gen - trait Generator - class CodeEmitter - class CaseClassGen - class MemberGen,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package gen - trait Generator - class CodeEmitter - class CombinedTableSchemasGen,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package gen - trait Generator - class CodeEmitter - class CombinedTableSchemasGen - class QuerySchemaGen,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package gen - trait Generator - class CodeEmitter - class CombinedTableSchemasGen - class QuerySchemaGen - class QuerySchemaMappingGen,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - class OrientDBContextConfig,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - class CassandraLagomAsyncContext,0.0,0.0,6.0,9.0,0.0,0.0,15.0,0.0,6.0,6.0
+HEAD,0,package context - object VerifyFreeVariables,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package model - trait Stereotyper,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package norm - trait StatelessQueryTransformer,2.0,0.0,0.0,2.0,0.0,0.0,4.0,0.0,2.0,2.0
+HEAD,0,package mirror - class Row,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package util - object Interleave,1.0,0.0,0.0,1.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package getquill - class CassandraLagomStreamContext,0.0,0.0,5.0,4.0,0.0,0.0,9.0,0.0,4.0,4.0
+HEAD,0,package norm - class ExpandSelection,1.0,0.0,0.0,6.0,0.0,0.0,7.0,0.0,1.0,1.0
+HEAD,0,package norm - class ExpandSelection - class AliasOp,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package norm - object ExpandNestedQueries,0.0,0.0,0.0,11.0,0.0,0.0,11.0,0.0,2.0,2.0
+HEAD,0,package norm - object OrderTerms,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package getquill - trait H2Dialect,0.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,2.0,2.0
+HEAD,0,package getquill - trait SqliteDialect,0.0,0.0,0.0,3.0,0.0,0.0,3.0,0.0,3.0,3.0
+HEAD,0,package monad - trait SyncIOMonad,1.0,0.0,0.0,6.0,0.0,0.0,7.0,0.0,1.0,1.0
+HEAD,0,package ndbc - class NdbcContextConfig,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package norm - object NormalizeReturning,2.0,0.0,0.0,4.0,0.0,0.0,6.0,0.0,4.0,4.0
+HEAD,0,package norm - object NormalizeReturning - object NestedProperty,1.0,0.0,0.0,2.0,0.0,0.0,3.0,0.0,2.0,2.0
+HEAD,0,package norm - object NormalizeReturning - object SomeIdent,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package jasync - class TransactionalExecutionContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package mirror - trait ArrayMirrorEncoding,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jasync - class JAsyncContext,0.0,0.0,13.0,36.0,0.0,0.0,49.0,0.0,12.0,12.0
+HEAD,0,package jasync - class JAsyncContext - method toKotlinFunction - <$anon: T => R>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - trait SQLServerDialect,0.0,0.0,0.0,4.0,0.0,0.0,4.0,0.0,4.0,4.0
+HEAD,0,package sql - trait FromContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - class TableContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - class QueryContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - class InfixContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - class JoinContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - class FlatJoinContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - trait SqlQuery,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - class SetOperationSqlQuery,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - class UnaryOperationSqlQuery,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - class SelectValue,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - class FlattenSqlQuery,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object TakeDropFlatten,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package sql - object SqlQuery,6.0,0.0,0.0,18.0,0.0,0.0,24.0,0.0,8.0,8.0
+HEAD,0,package idiom - class StringToken,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package idiom - class ScalarTagToken,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package idiom - class QuotationTagToken,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package idiom - class ScalarLiftToken,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package idiom - class Statement,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package idiom - class SetContainsToken,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object ScalaLangUtil,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class JdbcExpresser,0.0,0.0,0.0,5.0,0.0,0.0,5.0,0.0,1.0,1.0
+HEAD,0,package encoding - trait CollectionDecoders,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - package quat - package object quat,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - object Ord,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object CollectTry,0.0,0.0,0.0,4.0,0.0,0.0,4.0,0.0,1.0,1.0
+HEAD,0,package jdbc - trait Encoders,0.0,0.0,4.0,1.0,0.0,0.0,5.0,0.0,4.0,4.0
+HEAD,0,package jdbc - trait Encoders - class JdbcEncoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package quotation - object NonQuotedException,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package encoding - trait UdtEncoding,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package quat - object LinkedHashMapOps,0.0,0.0,1.0,1.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package quat - object LinkedHashMapOps - class LinkedHashMapExt,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package quat - trait Quat,1.0,0.0,0.0,10.0,0.0,0.0,11.0,0.0,6.0,6.0
+HEAD,0,package quat - object Quat,0.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,2.0,2.0
+HEAD,0,package quat - object Quat - object BottomType,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package quat - object Quat - object TupleIndex,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package quat - object Quat - class Product,1.0,0.0,0.0,12.0,0.0,0.0,13.0,0.0,2.0,2.0
+HEAD,0,package quat - object Quat - object Product,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package quat - object Quat - object Product - object WithRenames,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package quat - object Quat - object Product - object WithRenames - method apply - <$anon: io.getquill.quat.Quat.Product>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package quat - object Quat - object Tuple,0.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package quat - object Quat - object Null,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package quat - object Quat - object Generic,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package quat - object Quat - object Value,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package jdbc - class SimpleJdbcCodegen,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class CollectAst,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package ast - object CollectAst,0.0,0.0,1.0,1.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package idiom - trait OnConflictSupport,0.0,0.0,0.0,5.0,0.0,0.0,5.0,0.0,1.0,1.0
+HEAD,0,package quat - class QuatMacro,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object MapExtensions,0.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,2.0,2.0
+HEAD,0,package util - object MapExtensions - class MapOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - trait Query,0.0,0.0,13.0,0.0,0.0,0.0,13.0,0.0,11.0,11.0
+HEAD,0,package getquill - trait JoinQuery,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package getquill - trait EntityQueryModel,0.0,0.0,5.0,0.0,0.0,0.0,5.0,0.0,5.0,5.0
+HEAD,0,package getquill - trait Insert,0.0,0.0,6.0,0.0,0.0,0.0,6.0,0.0,5.0,5.0
+HEAD,0,package getquill - trait Update,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package getquill - trait Delete,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package getquill - object AstPrinter - object Implicits - class FansiStrExt,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - class AstPrinter,0.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,2.0,2.0
+HEAD,0,package async - class TransactionalExecutionContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package norm - object AttachToEntity,1.0,0.0,1.0,1.0,0.0,0.0,3.0,0.0,1.0,1.0
+HEAD,0,package norm - object AttachToEntity - object IsEntity,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package dsl - trait ValueComputation,1.0,0.0,0.0,15.0,0.0,0.0,16.0,0.0,2.0,2.0
+HEAD,0,package dsl - trait ValueComputation - trait Value,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dsl - trait ValueComputation - class Nested,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dsl - trait ValueComputation - class Scalar,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object OptionalTypecheck,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package jdbc - object ResultSetExtractor,1.0,0.0,2.0,0.0,0.0,0.0,3.0,0.0,2.0,2.0
+HEAD,0,package ndbc - trait NdbcContextEffect,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package context - trait TranslateContext - <$anon: io.getquill.context.ContextEffect[TranslateContext.this.TranslateResult]>,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package context - trait TranslateContextBase,1.0,0.0,3.0,5.0,0.0,0.0,9.0,0.0,4.0,4.0
+HEAD,0,package util - object LoadObject,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - trait StatefulTransformer,1.0,0.0,1.0,112.0,0.0,0.0,114.0,0.0,12.0,12.0
+HEAD,0,package dsl - trait MetaDslLowPriorityImplicits,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dsl - trait MetaDsl,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package dsl - trait MetaDsl - trait SchemaMeta,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dsl - trait MetaDsl - trait QueryMeta,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dsl - trait MetaDsl - trait UpdateMeta,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dsl - trait MetaDsl - trait InsertMeta,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jdbc - class ComposeableTraitsJdbcCodegen,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jdbc - class ComposeableTraitsJdbcCodegen - method generatorMaker - <$anon: io.getquill.codegen.gen.EmitterSettings[ComposeableTraitsJdbcCodegen.this.TableMeta ComposeableTraitsJdbcCodegen.this.ColumnMeta] => ComposeableTraitsJdbcCodegen.this.ContextifiedUnitGenerator>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jdbc - class ComposeableTraitsJdbcCodegen - class ContextifiedUnitGenerator,0.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,2.0,2.0
+HEAD,0,package jdbc - class ComposeableTraitsJdbcCodegen - class ContextifiedUnitGenerator - method CombinedTableSchemas - <$anon: ContextifiedUnitGenerator.this.CombinedTableSchemasGen>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package encoding - trait CollectionEncoders,0.0,0.0,0.0,3.0,0.0,0.0,3.0,0.0,3.0,3.0
+HEAD,0,package getquill - class CassandraLagomSessionContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait NameParser,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait LiteralNames,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait SnakeCaseNames,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class CustomNames,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class SnakeCaseCustomTable,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package encoding - trait CollectionDecoders,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dsl - trait OrientDBDsl - class Like,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Messages,0.0,0.0,0.0,3.0,0.0,0.0,3.0,0.0,2.0,2.0
+HEAD,0,package util - object Messages - trait TraceType,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Messages - object TraceType,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Messages - class StringExt,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package ast - class Transform,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package ast - object Transform,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package norm - object ExpandReturning,0.0,0.0,1.0,10.0,0.0,0.0,11.0,0.0,2.0,2.0
+HEAD,0,package norm - object RepropagateQuats,1.0,0.0,1.0,9.0,0.0,0.0,11.0,0.0,4.0,4.0
+HEAD,0,package norm - object RepropagateQuats - class IdentExt,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package monix - trait MonixTranslateContext - <$anon: io.getquill.context.ContextEffect[<error>]>,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package util - object Show,0.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package util - object Show - trait Show,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Show - object Show,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package util - object Show - object Show - method apply - <$anon: io.getquill.util.Show.Show[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Show - class Shower,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jdbc - class JdbcContext,0.0,0.0,13.0,4.0,0.0,0.0,17.0,0.0,11.0,11.0
+HEAD,0,package jdbc - class JdbcContext - <$anon: io.getquill.context.ContextEffect[JdbcContext.this.Result]>,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package jdbc - trait ArrayEncoders,0.0,0.0,1.0,2.0,0.0,0.0,3.0,0.0,1.0,1.0
+HEAD,0,package idiom - trait ConcatSupport,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package idiom - trait NoConcatSupport,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package monad - trait ScalaFutureIOMonad,1.0,0.0,0.0,9.0,0.0,0.0,10.0,0.0,2.0,2.0
+HEAD,0,package nested - class FindUnexpressedInfixes,0.0,0.0,0.0,9.0,0.0,0.0,9.0,0.0,1.0,1.0
+HEAD,0,package norm - object AdHocReduction,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package norm - object NormalizeStringConcat,1.0,0.0,0.0,1.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package monad - trait TwitterFutureIOMonad,0.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package idiom - trait QuestionMarkBindVariables,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package gen - trait QuerySchemaNaming - object "query",0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package gen - trait QuerySchemaNaming - object [namespace][Table],0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object UdtMetaUtils,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package cassandra - object ExpandMappedInfix,0.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package norm - object RenameProperties,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package norm - object CompleteRenames,0.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,2.0,2.0
+HEAD,0,package norm - object ApplyRenamesToProps,0.0,0.0,0.0,4.0,0.0,0.0,4.0,0.0,2.0,2.0
+HEAD,0,package norm - object SeedRenames,1.0,0.0,0.0,7.0,0.0,0.0,8.0,0.0,2.0,2.0
+HEAD,0,package norm - object PropertyMatroshka,1.0,0.0,0.0,4.0,0.0,0.0,5.0,0.0,2.0,2.0
+HEAD,0,package idiom - trait Idiom,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package norm - class InfixExtractor,0.0,0.0,0.0,9.0,0.0,0.0,9.0,0.0,5.0,5.0
+HEAD,0,package norm - object InfixExtractor,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jasync - trait ArrayDecoders,0.0,0.0,1.0,2.0,0.0,0.0,3.0,0.0,1.0,1.0
+HEAD,0,package jasync - trait ArrayDecoders - method arrayDecoder - <$anon: (ArrayDecoders.this.Index  ArrayDecoders.this.ResultRow) => Col>,0.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package gen - trait CodeGeneratorComponents,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jdbc - trait PostgresJdbcContextBase,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package jdbc - trait SqlServerJdbcContextBase,0.0,0.0,2.0,1.0,0.0,0.0,3.0,0.0,1.0,1.0
+HEAD,0,package encoding - class UdtEncodingMacro,0.0,0.0,0.0,13.0,0.0,0.0,13.0,0.0,7.0,7.0
+HEAD,0,package norm - class RemoveExtraAlias,0.0,0.0,0.0,4.0,0.0,0.0,4.0,0.0,2.0,2.0
+HEAD,0,package encoding - trait CassandraMapperConversions,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package encoding - trait CassandraMapperConversionsLowPriorityImplicits,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - class FinaglePostgresContextConfig,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package cassandra - trait UdtMetaDsl,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package cassandra - trait UdtMetaDsl - trait UdtMeta,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - class CassandraStreamContext,0.0,0.0,6.0,2.0,0.0,0.0,8.0,0.0,5.0,5.0
+HEAD,0,package orientdb - class OrientDBSessionContext,0.0,0.0,3.0,0.0,0.0,0.0,3.0,0.0,2.0,2.0
+HEAD,0,package util - object StringUtil,0.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package util - object StringUtil - class StringExtensions,0.0,0.0,0.0,10.0,0.0,0.0,10.0,0.0,4.0,4.0
+HEAD,0,package util - object StringUtil - class OptionStringExtensions,0.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package idiom - object LoadNaming,0.0,0.0,0.0,3.0,0.0,0.0,3.0,0.0,2.0,2.0
+HEAD,0,package util - object FutureConversions - class ListenableFutureConverter,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dsl - class DynamicQueryDslMacro,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dsl - trait DynamicQueryDsl,0.0,0.0,5.0,3.0,0.0,0.0,8.0,0.0,6.0,6.0
+HEAD,0,package dsl - trait DynamicQueryDsl - class ToDynamicQuery,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dsl - trait DynamicQueryDsl - class ToDynamicEntityQuery,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dsl - trait DynamicQueryDsl - class ToDynamicAction,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dsl - trait DynamicQueryDsl - class ToDynamicInsert,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dsl - trait DynamicQueryDsl - class ToDynamicUpdate,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dsl - trait DynamicQueryDsl - class ToDynamicActionReturning,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dsl - trait DynamicQueryDsl - method splice - <$anon: DynamicQueryDsl.this.Quoted[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dsl - trait DynamicQueryDsl - object DynamicQuery,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dsl - trait DynamicQueryDsl - object DynamicQuery - method apply - <$anon: DynamicQueryDsl.this.DynamicQuery[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dsl - trait DynamicQueryDsl - trait DynamicQuery,0.0,0.0,19.0,6.0,0.0,0.0,25.0,0.0,17.0,17.0
+HEAD,0,package dsl - trait DynamicQueryDsl - class DynamicJoinQuery,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package dsl - trait DynamicQueryDsl - class DynamicEntityQuery,0.0,0.0,4.0,2.0,0.0,0.0,6.0,0.0,4.0,4.0
+HEAD,0,package dsl - trait DynamicQueryDsl - object DynamicAction,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dsl - trait DynamicQueryDsl - trait DynamicAction,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dsl - trait DynamicQueryDsl - object DynamicInsert,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dsl - trait DynamicQueryDsl - trait DynamicInsert,0.0,0.0,2.0,2.0,0.0,0.0,4.0,0.0,3.0,3.0
+HEAD,0,package util - class Cache,0.0,0.0,0.0,4.0,11.0,1.0,4.0,12.0,2.0,0.5
+HEAD,0,package async - trait ArrayDecoders,0.0,0.0,1.0,2.0,0.0,0.0,3.0,0.0,1.0,1.0
+HEAD,0,package async - trait ArrayDecoders - method arrayDecoder - <$anon: (ArrayDecoders.this.Index  ArrayDecoders.this.ResultRow) => Col>,0.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package cluster - object ClusterBuilder,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - class CassandraMonixContext,0.0,0.0,8.0,3.0,0.0,0.0,11.0,0.0,6.0,6.0
+HEAD,0,package getquill - class JdbcContextConfig,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jdbc - trait ArrayDecoders,0.0,0.0,1.0,3.0,0.0,0.0,4.0,0.0,1.0,1.0
+HEAD,0,package model - trait JdbcStereotyper,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait JdbcStereotyper - class JdbcStereotypingHelper,0.0,0.0,0.0,3.0,0.0,0.0,3.0,0.0,1.0,1.0
+HEAD,0,package util - object MacroContextExt - class RichContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package monix - object Runner,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package monix - object Runner - method using - <$anon: io.getquill.context.monix.Runner>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package monix - trait Runner,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package jasync - trait Encoders,0.0,0.0,3.0,1.0,0.0,0.0,4.0,0.0,3.0,3.0
+HEAD,0,package jasync - trait Encoders - class AsyncEncoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jasync - trait Encoders - method encoder - <$anon: (Encoders.this.Index  T  Encoders.this.PrepareRow) => Encoders.this.PrepareRow>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jasync - trait Encoders - method mappedEncoder - <$anon: (Encoders.this.Index  I  Encoders.this.PrepareRow) => Encoders.this.PrepareRow>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jasync - trait Encoders - method optionEncoder - <$anon: (Encoders.this.Index  Option[T]  Encoders.this.PrepareRow) => Encoders.this.PrepareRow>,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package quat - object QuatOps,0.0,0.0,0.0,4.0,0.0,0.0,4.0,0.0,1.0,1.0
+HEAD,0,package quat - object QuatOps - object Implicits - class QuatOpsExt,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package norm - class BetaReduction,1.0,0.0,0.0,13.0,0.0,0.0,14.0,0.0,4.0,4.0
+HEAD,0,package norm - object BetaReduction,1.0,0.0,0.0,4.0,0.0,1.0,5.0,1.0,3.0,2.5
+HEAD,0,package spark - object AliasNestedQueryColumns,2.0,0.0,0.0,8.0,0.0,0.0,10.0,0.0,2.0,2.0
+HEAD,0,package spark - object AliasNestedQueryColumns - object ZipMatch,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package norm - object QuestionMarkEscaper,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jasync - trait ArrayEncoders,0.0,0.0,1.0,1.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package quat - trait QuatMaking,0.0,0.0,0.0,3.0,0.0,0.0,3.0,0.0,2.0,2.0
+HEAD,0,package quat - object RuntimeEntityQuat,1.0,0.0,0.0,5.0,0.0,0.0,6.0,0.0,2.0,2.0
+HEAD,0,package quat - object RuntimeEntityQuat - object Final,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package quat - object RuntimeEntityQuat - object Embedded,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package quat - object RuntimeEntityQuat - object CaseClass,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package quat - object RuntimeEntityQuat - object Tuple,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package quat - trait QuatMakingBase,2.0,0.0,0.0,13.0,0.0,0.0,15.0,0.0,3.0,3.0
+HEAD,0,package quat - trait QuatMakingBase - method inferQuat - object ArbitraryBaseType,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package quat - trait QuatMakingBase - method inferQuat - object CaseClassBaseType,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package quat - trait QuatMakingBase - method inferQuat - object Signature,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package quat - trait QuatMakingBase - method inferQuat - object Deoption,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package quat - trait QuatMakingBase - method inferQuat - object Param,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package quat - trait QuatMakingBase - method inferQuat - object RealTypeBounds,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package quat - trait QuatMakingBase - method inferQuat - object DefiniteValue,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package quat - trait QuatMakingBase - object QuotedType,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package quat - trait QuatMakingBase - object QueryType,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package quat - trait QuatMakingBase - object TypeSigParam,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package norm - object ApplyMap,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package norm - object ApplyMap - object InfixedTailOperation,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package norm - object ApplyMap - object MapWithoutInfixes,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package norm - object ApplyMap - object DetachableMap,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package gen - class AbstractCodeEmitter,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package gen - class AbstractCodeEmitter - class AbstractCaseClassGen,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package gen - class AbstractCodeEmitter - class AbstractCaseClassGen - class AbstractMemberGen,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package gen - class AbstractCodeEmitter - class AbstractCombinedTableSchemasGen,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package gen - class AbstractCodeEmitter - class AbstractCombinedTableSchemasGen - class AbstractQuerySchemaGen,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package gen - class AbstractCodeEmitter - class AbstractCombinedTableSchemasGen - class AbstractQuerySchemaGen - class AbstractQuerySchemaMappingGen,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package gen - trait ObjectGen,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package gen - trait PackageGen,0.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,2.0,2.0
+HEAD,0,package ndbc - trait LowPriorityPostgresImplicits,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package ndbc - trait PostgresEncoders,0.0,0.0,6.0,2.0,0.0,0.0,8.0,0.0,4.0,4.0
+HEAD,0,package monix - trait MonixContext,0.0,0.0,4.0,0.0,0.0,0.0,4.0,0.0,2.0,2.0
+HEAD,0,package dag - trait NodeCatalog,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dag - object DefaultNodeCatalog,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package dag - class CatalogBasedAncestry,0.0,0.0,0.0,3.0,0.0,0.0,3.0,0.0,1.0,1.0
+HEAD,0,package getquill - class CassandraContextConfig,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object StringSeqUtil - class StringSeqExt,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package quotation - object QuatException,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package quotation - object QuatExceptionOps - class QuatExceptionOpsExt,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - class OrientDBMirrorContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package norm - object Normalize,1.0,0.0,0.0,1.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package monad - trait TwitterFutureIOMonad,0.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package getquill - class PostgresJAsyncContext,0.0,0.0,1.0,1.0,0.0,0.0,2.0,0.0,2.0,2.0
+HEAD,0,package idiom - trait PositionalBindVariables,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait ByName,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait CaseClassNaming,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait FieldNaming,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package norm - object ExpandJoin,1.0,0.0,0.0,6.0,0.0,0.0,7.0,0.0,2.0,2.0
+HEAD,0,package util - object LoadConfig,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package norm - object SqlNormalize,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package norm - class SqlNormalize,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait BasicTableMeta,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait BasicColumnMeta,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object JdbcTableMeta,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object JdbcColumnMeta,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package capture - object AvoidCapture,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - object MirrorIdiomPrinting,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - trait MirrorIdiomBase,1.0,0.0,0.0,27.0,0.0,0.0,28.0,0.0,18.0,18.0
+HEAD,0,package encoding - object CassandraType,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package gen - trait JdbcGenerator,0.0,0.0,0.0,4.0,0.0,0.0,4.0,0.0,2.0,2.0
+HEAD,0,package idiom - object ReifyStatement,0.0,0.0,4.0,10.0,0.0,0.0,14.0,0.0,3.0,3.0
+HEAD,0,package ast - trait Ast,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - trait Terminal,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - object Terminal,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package ast - object BottomTypedTerminal,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package ast - class Entity,0.0,0.0,0.0,8.0,0.0,0.0,8.0,0.0,2.0,2.0
+HEAD,0,package ast - object Entity,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - object Entity - object Opinionated,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - object Entity - object Opinionated - method apply - <$anon: io.getquill.ast.Entity>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class Filter,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class Map,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class FlatMap,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class ConcatMap,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class SortBy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - trait Ordering,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class GroupBy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class Aggregation,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class Take,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class Drop,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class Union,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class UnionAll,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class Join,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class FlatJoin,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class Distinct,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class Nested,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class Function,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class Ident,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package ast - object Ident,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - object Ident - object Opinionated,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - object Ident - object Opinionated - method apply - <$anon: io.getquill.ast.Ident>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class ExternalIdent,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package ast - object ExternalIdent,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - object ExternalIdent - object Opinionated,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - object ExternalIdent - object Opinionated - method apply - <$anon: io.getquill.ast.ExternalIdent>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - trait OpinionValues,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - object Visibility,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - trait Renameable,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package ast - object Renameable,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class Property,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - object Property,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - object Property - object Opinionated,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - object Property - object Opinionated - method apply - <$anon: io.getquill.ast.Property>,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class OptionFlatten,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class OptionGetOrElse,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class OptionFlatMap,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class OptionMap,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class OptionForall,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class OptionExists,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class OptionContains,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class OptionIsEmpty,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class OptionNonEmpty,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class OptionIsDefined,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class OptionTableFlatMap,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class OptionTableMap,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class OptionTableExists,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class OptionTableForall,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class OptionNone,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package ast - class OptionSome,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class OptionApply,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class OptionOrNull,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class OptionGetOrNull,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class MapContains,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class SetContains,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class ListContains,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class If,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class Assignment,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class UnaryOperation,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class BinaryOperation,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class FunctionApply,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class Constant,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - object NullValue,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class Tuple,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package ast - class CaseClass,0.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package ast - class Block,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class Val,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class Update,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class Insert,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class Delete,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - trait ReturningAction,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - object ReturningAction,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package ast - class Returning,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class ReturningGenerated,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class Foreach,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class OnConflict,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - object OnConflict - class Excluded,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package ast - object OnConflict - class Existing,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package ast - class Dynamic,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class QuotedReference,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - class ScalarValueLift,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package ast - class ScalarQueryLift,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package ast - class CaseClassValueLift,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package ast - class CaseClassQueryLift,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package ast - class ScalarTag,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package ast - class QuotationTag,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package quotation - class FreeVariables,1.0,0.0,0.0,14.0,0.0,0.0,15.0,0.0,6.0,6.0
+HEAD,0,package quotation - object FreeVariables,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package cassandra - class CassandraSessionContext,0.0,0.0,4.0,5.0,0.0,0.0,9.0,0.0,3.0,3.0
+HEAD,0,package norm - object RemoveUnusedSelects,2.0,0.0,0.0,14.0,0.0,0.0,16.0,0.0,5.0,5.0
+HEAD,0,package norm - class References,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package norm - class References - object reference,1.0,0.0,0.0,1.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package gen - trait JdbcCodeGeneratorComponents,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package norm - class FlattenGroupByAggregation,1.0,0.0,0.0,3.0,0.0,0.0,4.0,0.0,2.0,2.0
+HEAD,0,package encoding - class UdtValueOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package encoding - object UdtValueOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dsl - object UnlimitedTuple,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - trait EntityQuery,0.0,0.0,5.0,0.0,0.0,0.0,5.0,0.0,5.0,5.0
+HEAD,0,package model - class DefaultJdbcTyper,0.0,0.0,0.0,4.0,0.0,0.0,4.0,0.0,2.0,2.0
+HEAD,0,package jasync - class JAsyncContextConfig,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package norm - trait SearchState,0.0,0.0,0.0,3.0,0.0,0.0,3.0,0.0,3.0,3.0
+HEAD,0,package norm - object FoundEntityIds,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package norm - object EntityId,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package capture - class DemarcateExternalAliases,1.0,0.0,0.0,1.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package capture - object DemarcateExternalAliases,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package cassandra - class PrepareStatementCache,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package norm - class FlattenOptionOperation,1.0,0.0,0.0,1.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package util - object Using,0.0,0.0,5.0,1.0,6.0,0.0,6.0,6.0,6.0,5.142857142857142
+HEAD,0,package util - object Using - class Manager,0.0,0.0,1.0,0.0,20.0,1.0,1.0,21.0,2.0,0.05263157894736842
+HEAD,0,package util - object Using - object Manager,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package util - object Using - object Manager - class Resource,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Using - trait Releasable,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Using - object Releasable - object AutoCloseableIsReleasable,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package norm - object NestImpureMappedInfix,1.0,0.0,0.0,5.0,0.0,0.0,6.0,0.0,1.0,1.0
+HEAD,0,package dsl - trait OrdDsl,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package norm - object EscapeQuestionMarks,0.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package jdbc - trait JdbcContextBase,0.0,0.0,15.0,15.0,0.0,2.0,30.0,2.0,14.0,13.55
+HEAD,0,package context - trait Capabilities,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package context - trait CanReturnClause,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package context - trait CanOutputClause,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package context - trait CanReturnField,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package context - trait CanReturnMultiField,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package context - trait CannotReturn,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package orientdb - trait OrientDBIdiom,1.0,0.0,0.0,40.0,0.0,0.0,41.0,0.0,16.0,16.0
+HEAD,0,package jdbc - trait Decoders,0.0,0.0,4.0,0.0,0.0,0.0,4.0,0.0,4.0,4.0
+HEAD,0,package jdbc - trait Decoders - class JdbcDecoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - class ContextLogger,1.0,0.0,0.0,2.0,0.0,0.0,3.0,0.0,2.0,2.0
+HEAD,0,package util - object ContextLogger,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package spark - trait Decoders,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package util - object EnableReflectiveCalls,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package idiom - class InvalidSqlQuery,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package idiom - object VerifySqlQuery,2.0,0.0,0.0,18.0,0.0,0.0,20.0,0.0,5.0,5.0
+HEAD,0,package ast - trait StatelessTransformer,1.0,0.0,0.0,21.0,0.0,0.0,22.0,0.0,11.0,11.0
+HEAD,0,package model - trait FuserBase,0.0,0.0,0.0,5.0,0.0,0.0,5.0,0.0,2.0,2.0
+HEAD,0,package model - class DefaultFuser,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package orientdb - trait OrientDBContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dsl - trait InfixDsl - trait InfixValue,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dsl - trait InfixDsl - class InfixInterpolator,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - object MirrorSqlDialect,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - object MirrorSqlDialect - trait StrategizeElements,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - object MirrorSqlDialectWithReturnMulti,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - object MirrorSqlDialectWithReturnClause,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - object MirrorSqlDialectWithOutputClause,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package getquill - object MirrorSqlDialectWithNoReturn,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - object Implicits - class IdentOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - object Implicits - class AstOpsExt,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - object +||+,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package ast - object +&&+,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package ast - object +==+,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package ast - object +!=+,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package ast - object IsNotNullCheck,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package ast - object IsNullCheck,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package ast - object IfExistElseNull,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package ast - object IfExist,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package ast - object PropertyOrCore,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ast - object Core,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package encoding - trait CollectionEncoders,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package gen - class DefaultJdbcSchemaReader,1.0,0.0,4.0,8.0,0.0,0.0,13.0,0.0,5.0,5.0
+HEAD,0,package spark - object TopLevelExpansion,0.0,0.0,0.0,3.0,0.0,0.0,3.0,0.0,1.0,1.0
+HEAD,0,package spark - object TopLevelExpansion - class AliasOp,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package spark - object SimpleNestedExpansion,0.0,0.0,0.0,3.0,0.0,0.0,3.0,0.0,2.0,2.0
+HEAD,0,package getquill - class CassandraClusterSessionContext,0.0,0.0,0.0,4.0,0.0,0.0,4.0,0.0,2.0,2.0
+HEAD,0,package getquill - class FinagleMysqlContextConfig,0.0,0.0,0.0,0.0,4.0,0.0,0.0,4.0,1.0,0.0
+HEAD,0,package capture - class AvoidAliasConflict,0.0,0.0,3.0,16.0,0.0,0.0,19.0,0.0,6.0,6.0
+HEAD,0,package capture - class AvoidAliasConflict - object Unaliased,1.0,0.0,0.0,2.0,0.0,0.0,3.0,0.0,2.0,2.0
+HEAD,0,package capture - class AvoidAliasConflict - object CanRealias,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+HEAD,0,package capture - object AvoidAliasConflict,0.0,0.0,0.0,3.0,0.0,0.0,3.0,0.0,3.0,3.0
+HEAD,0,package async - trait ArrayEncoders,0.0,0.0,1.0,1.0,0.0,0.0,2.0,0.0,1.0,1.0
+HEAD,0,package context - trait ContextEffect,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0
