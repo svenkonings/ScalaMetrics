@@ -17,4 +17,8 @@ object Extensions {
     def +(p: (A, B)): (A, B) = (p._1 + t._1, p._2 + t._2)
   }
 
+  implicit class ListExtension[A](iterable: List[A]) {
+    def zipWith[B, C](other: List[B])(f: (A, B) => C): List[C] = iterable.zip(other).map(f.tupled)
+  }
+
 }
