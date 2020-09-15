@@ -38,20 +38,20 @@ object ResultWriter {
       val toCsv = resultToCsv(valueSep)(_)
       val objectBody = results.map(toCsv)
       if (methodFields.nonEmpty) {
-        val toAvrCsv = resultAvrToCsv(methodFields, valueSep)(_, _)
-        var avrBody = results.map(result => toAvrCsv(result, result.methods))
+        val toAvrCsv = resultAvrToCsv(methodFields)(_)
+        var avrBody = results.map(result => toAvrCsv(result.methods))
         avrBody = objectBody.zipWith(avrBody)(_ ::: _)
         val avrName = s"${metricKind}AvrResults${methodology}"
         writeCsv(header, avrBody, dir, avrName, valueSep, lineSep)
 
-        val toSumCsv = resultSumToCsv(methodFields, valueSep)(_, _)
-        var sumBody = results.map(result => toSumCsv(result, result.methods))
+        val toSumCsv = resultSumToCsv(methodFields)(_)
+        var sumBody = results.map(result => toSumCsv(result.methods))
         sumBody = objectBody.zipWith(sumBody)(_ ::: _)
         val sumName = s"${metricKind}SumResults${methodology}"
         writeCsv(header, sumBody, dir, sumName, valueSep, lineSep)
 
-        val toMaxCsv = resultMaxToCsv(methodFields, valueSep)(_, _)
-        var maxBody = results.map(result => toMaxCsv(result, result.methods))
+        val toMaxCsv = resultMaxToCsv(methodFields)(_)
+        var maxBody = results.map(result => toMaxCsv(result.methods))
         maxBody = objectBody.zipWith(maxBody)(_ ::: _)
         val maxName = s"${metricKind}MaxResults${methodology}"
         writeCsv(header, maxBody, dir, maxName, valueSep, lineSep)
@@ -73,25 +73,25 @@ object ResultWriter {
     csvRow(result, valueSep, values)
   }
 
-  private def resultAvrToCsv(childFields: List[String], valueSep: String)(result: Result, children: List[Result]): List[String] = {
+  private def resultAvrToCsv(childFields: List[String])(children: List[Result]): List[String] = {
     val childMetrics = metricsByName(children)
     val averages = childFields.map { field =>
-      val values = childMetrics(field).map(_.value)
+      val values = childMetrics.getOrElse(field, List()).map(_.value)
       values.sum \ values.size
     }
-    csvRow(result, valueSep, averages)
+    averages.map(_.toString)
   }
 
-  private def resultSumToCsv(childFields: List[String], valueSep: String)(result: Result, children: List[Result]): List[String] = {
+  private def resultSumToCsv(childFields: List[String])(children: List[Result]): List[String] = {
     val childMetrics = metricsByName(children)
-    val sums = childFields.map { field => childMetrics(field).map(_.value).sum }
-    csvRow(result, valueSep, sums)
+    val sums = childFields.map { field => childMetrics.getOrElse(field, List()).map(_.value).sum }
+    sums.map(_.toString)
   }
 
-  private def resultMaxToCsv(childFields: List[String], valueSep: String)(result: Result, children: List[Result]): List[String] = {
+  private def resultMaxToCsv(childFields: List[String])(children: List[Result]): List[String] = {
     val childMetrics = metricsByName(children)
-    val maxs = childFields.map { field => childMetrics(field).map(_.value).maxOption.getOrElse(0.0) }
-    csvRow(result, valueSep, maxs)
+    val maxs = childFields.map { field => childMetrics.getOrElse(field, List()).map(_.value).maxOption.getOrElse(0.0) }
+    maxs.map(_.toString)
   }
 
   private def writeCsv(header: List[String], body: List[List[String]], dir: File, name: String, valueSep: String, lineSep: String): Unit = {
