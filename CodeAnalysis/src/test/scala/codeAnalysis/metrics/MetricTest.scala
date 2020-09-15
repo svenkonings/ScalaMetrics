@@ -63,4 +63,8 @@ class MetricTest extends UnitSpec {
   test("Out Degree test") {
     print(OutDegree)
   }
+
+  test("Depth of Nesting test") {
+    print(DepthOfNesting)
+  }
 }

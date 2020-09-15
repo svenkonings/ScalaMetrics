@@ -15,16 +15,14 @@ class CouplingBetweenObjects(override val compiler: Compiler) extends ObjectMetr
   import global.{SymbolExtensions, TreeExtensions}
 
   def fanOut(tree: global.ImplDef): Set[global.Symbol] = filterSymbols(tree)(tree.myCollect {
-    case tree if tree.getTypeSymbol != null =>
-      tree.getTypeSymbol
+    case tree if tree.getTypeSymbol != null => tree.getTypeSymbol
   })
 
   def fanIn(tree: global.ImplDef): Set[global.Symbol] = {
     val name = tree.symbol.nameString
     val qualifiedName = tree.symbol.qualifiedName
     val nameFilter = Regex.quote(name).r
-    filterSymbols(tree)(compiler.treesFromFilteredSources(nameFilter)
-      .flatMap(_.asInstanceOf[global.Tree].myCollect {
+    filterSymbols(tree)(compiler.treesFromFilteredSources(nameFilter).flatMap(_.asInstanceOf[global.Tree].myCollect {
         case tree: global.ImplDef if tree.myExists {
           case tree if tree.symbol != null => tree.symbol.qualifiedName == qualifiedName
         } => tree.symbol
