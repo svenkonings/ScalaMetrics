@@ -7,6 +7,8 @@ import scala.reflect.io.AbstractFile
 import scala.tools.nsc.Settings
 import scala.tools.nsc.interactive.Response
 import scala.tools.nsc.reporters.NoReporter
+import scala.util.matching.Regex
+import codeAnalysis.util.Extensions.SourceFileExtension
 
 class Compiler extends Closeable {
   val global: Global = {
@@ -64,14 +66,23 @@ class Compiler extends Closeable {
   }
 
   /**
-   * Returns the trees of loaded sources.
+   * Returns the trees of the list of loaded sources.
    * Do not use on unloaded sources.
    *
    * @param sources the list of source
    * @return the list of trees
    */
   def treesFromLoadedSources(sources: List[SourceFile]): List[global.Tree] =
-    sources.map(treeFromLoadedSource)
+    sources.map(treeFromLoadedSource).filter(_ != null)
+
+  /**
+   * Returns the trees of loaded sources after they have been filtered.
+   *
+   * @param filter the regex filter
+   * @return the list of trees
+   */
+  def treesFromFilteredSources(filter: Regex): List[global.Tree] =
+    treesFromLoadedSources(loadedSources.filter(source => filter.findFirstIn(source.text).isDefined))
 
   /**
    * Loads the source and returns the resulting tree.

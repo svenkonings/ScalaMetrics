@@ -272,6 +272,7 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
 
   implicit class TreeExtensions(tree: Tree) {
     def getTypeSymbol: Symbol = tree match {
+      case tree: ImplDef => tree.symbol
       case tree: ValOrDefDef => tree.tpt.symbol
       case tree if tree.tpe != null => tree.tpe.typeSymbol
       case _ => null

@@ -17,12 +17,11 @@ class NumberOfChildren(override val compiler: Compiler) extends ObjectMetric {
     val name = tree.symbol.nameString
     val qualifiedName = tree.symbol.qualifiedName
     val nameFilter = s"(extends|with)\\s+${Regex.quote(name)}".r
-    compiler.loadedSources
-      .filter(source => nameFilter.findFirstIn(new String(source.content)).isDefined)
-      .map(source => compiler.treeFromLoadedSource(source).asInstanceOf[global.Tree])
-      .filter(_ != null)
-      .map(_.count { case tree: global.ImplDef => tree.symbol.parentSymbols.exists(_.qualifiedName == qualifiedName) })
-      .sum
+    compiler.treesFromFilteredSources(nameFilter)
+      .map(_.asInstanceOf[global.Tree])
+      .map(_.count {
+        case tree: global.ImplDef => tree.symbol.parentSymbols.exists(_.qualifiedName == qualifiedName)
+      }).sum
   }
 
   override def run(tree: global.ImplDef): List[MetricResult] =

@@ -1,5 +1,7 @@
 package codeAnalysis.util
 
+import scala.reflect.internal.util.SourceFile
+
 object Extensions {
 
   implicit class DoubleExtension(double: Double) {
@@ -21,4 +23,7 @@ object Extensions {
     def zipWith[B, C](other: List[B])(f: (A, B) => C): List[C] = iterable.zip(other).map(f.tupled)
   }
 
+  implicit class SourceFileExtension(sourceFile: SourceFile) {
+    def text = new String(sourceFile.content)
+  }
 }
