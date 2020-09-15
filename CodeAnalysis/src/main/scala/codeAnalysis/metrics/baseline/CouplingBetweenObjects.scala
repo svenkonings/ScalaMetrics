@@ -2,6 +2,7 @@ package codeAnalysis.metrics.baseline
 
 import codeAnalysis.analyser.Compiler
 import codeAnalysis.analyser.metric.{Metric, MetricProducer, MetricResult, ObjectMetric}
+import codeAnalysis.util.Constants.basicTypes
 
 import scala.util.matching.Regex
 
@@ -12,8 +13,6 @@ object CouplingBetweenObjects extends MetricProducer {
 class CouplingBetweenObjects(override val compiler: Compiler) extends ObjectMetric {
 
   import global.{SymbolExtensions, TreeExtensions}
-
-  val basicTypes = Set("scala.Any", "scala.AnyVal", "java.lang.Object")
 
   def fanOut(tree: global.ImplDef): Set[global.Symbol] = filterSymbols(tree)(tree.myCollect {
     case tree if tree.getTypeSymbol != null =>

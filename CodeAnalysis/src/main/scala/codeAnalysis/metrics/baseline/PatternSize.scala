@@ -16,7 +16,7 @@ class PatternSize(override val compiler: Compiler) extends MethodMetric {
   }
 
   def patternVariables(tree: global.DefDef): Int = tree.count {
-    case tree: global.Bind => true
+    case _: global.Bind => true
   }
 
   override def run(tree: global.DefDef): List[MetricResult] = List(

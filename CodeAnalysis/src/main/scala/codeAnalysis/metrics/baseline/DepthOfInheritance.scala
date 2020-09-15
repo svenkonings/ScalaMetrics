@@ -2,6 +2,7 @@ package codeAnalysis.metrics.baseline
 
 import codeAnalysis.analyser.Compiler
 import codeAnalysis.analyser.metric.{Metric, MetricProducer, MetricResult, ObjectMetric}
+import codeAnalysis.util.Constants.basicTypes
 
 object DepthOfInheritance extends MetricProducer {
   override def apply(compiler: Compiler): Metric = new DepthOfInheritance(compiler)
@@ -14,7 +15,7 @@ class DepthOfInheritance(override val compiler: Compiler) extends ObjectMetric {
   def depthOfInheritance(symbol: global.Symbol): Int = {
     def recursiveDepth(symbol: global.Symbol): Int = {
       val name = symbol.qualifiedName
-      if (name == "java.lang.Object" || name == "scala.Any")
+      if (basicTypes(name))
         0
       else
         1 + symbol.parentSymbols.map(recursiveDepth).maxOption.getOrElse(0)
