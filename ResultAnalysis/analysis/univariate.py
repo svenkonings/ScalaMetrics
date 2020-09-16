@@ -17,20 +17,24 @@ def main(args):
         for path, name in projects.items():
             df = get_metric_results(args.folder, path, category)
             if df is not None:
-                print(f'[{category}] Univariate: {name}')
-                columns = get_columns(df, args)
-                faults = df['faults'].apply(to_binary)
-                result = pd.DataFrame(
-                    columns=['name', 'tn', 'fp', 'fn', 'tp', 'r2', 'precision', 'recall', 'mcc']
-                )
-                for column in columns:
-                    print(f'[{category}] {name}: {column}')
-                    data = df[column].values.reshape(-1, 1)
-                    prediction = cross_val_predict(estimator, data, faults, cv=cv)
-                    column_result = get_stats(faults, prediction)
-                    column_result['name'] = column
-                    result = result.append(column_result, ignore_index=True)
-                save_dataframe(result, folder + category, name, False)
+                univariate(df, folder, category, name, estimator, cv, args)
+
+
+def univariate(df, folder, category, name, estimator, cv, args):
+    print(f'[{category}] Univariate: {name}')
+    columns = get_columns(df, args)
+    faults = df['faults'].apply(to_binary)
+    result = pd.DataFrame(
+        columns=['name', 'tn', 'fp', 'fn', 'tp', 'r2', 'precision', 'recall', 'mcc']
+    )
+    for column in columns:
+        print(f'[{category}] {name}: {column}')
+        data = df[column].values.reshape(-1, 1)
+        prediction = cross_val_predict(estimator, data, faults, cv=cv)
+        column_result = get_stats(faults, prediction)
+        column_result['name'] = column
+        result = result.append(column_result, ignore_index=True)
+    save_dataframe(result, folder + category, name, False)
 
 
 if __name__ == '__main__':

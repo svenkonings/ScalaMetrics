@@ -11,12 +11,16 @@ def main(args):
         path = folder + category
         df = read_all(path, ['name', 'precision', 'recall', 'mcc'])
         if df is not None:
-            print(f'Summarise {category}')
-            means = df.groupby('name').agg(['mean', 'std'])
-            means.columns = means.columns.map(' '.join)
-            save_dataframe(means, path, 'means')
-            medians = df.groupby('name').median()
-            save_dataframe(medians, path, 'medians')
+            summarise(df, path, category)
+
+
+def summarise(df, path, category):
+    print(f'Summarise {category}')
+    means = df.groupby('name').agg(['mean', 'std'])
+    means.columns = means.columns.map(' '.join)
+    save_dataframe(means, path, 'means')
+    medians = df.groupby('name').median()
+    save_dataframe(medians, path, 'medians')
 
 
 def read_all(path, columns):

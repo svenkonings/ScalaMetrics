@@ -29,13 +29,10 @@ projects = {
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--folder', help='Select folder to analyse', dest='folder', required=True)
-    parser.add_argument(
-        '--exclude-columns',
-        help="Select metrics to exclude from analysis",
-        dest='exclude_columns',
-        nargs='+',
-        default=list()
-    )
+    parser.add_argument('--exclude-columns', help="Select metrics to exclude from analysis", dest='exclude_columns',
+                        nargs='+', default=list())
+    parser.add_argument('--split-paradigm-score', help='Split analysis by paradigm score', dest='split_paradigm_score',
+                        action="store_true")
     return parser.parse_args()
 
 
