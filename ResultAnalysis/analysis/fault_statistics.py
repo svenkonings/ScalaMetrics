@@ -1,8 +1,6 @@
-import argparse
-
 import pandas as pd
 
-from analysis import categories, projects, save_dataframe, get_metric_results
+from analysis import categories, projects, save_dataframe, get_metric_results, parse_args
 
 
 def main(args):
@@ -32,6 +30,4 @@ def main(args):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--folder', help='Select folder to analyse', dest='folder', required=True)
-    main(parser.parse_args())
+    main(parse_args())

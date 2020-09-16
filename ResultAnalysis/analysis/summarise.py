@@ -1,9 +1,8 @@
-import argparse
 from glob import glob
 
 import pandas as pd
 
-from analysis import save_dataframe, categories
+from analysis import save_dataframe, categories, parse_args
 
 
 def main(args):
@@ -33,6 +32,4 @@ def read_all(path, columns):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--folder', help='Select folder to analyse', dest='folder', required=True)
-    main(parser.parse_args())
+    main(parse_args())

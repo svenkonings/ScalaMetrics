@@ -1,11 +1,11 @@
-import argparse
 import warnings
 
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import StratifiedKFold, cross_val_predict
 
-from analysis import categories, projects, save_dataframe, get_metric_results, get_columns, to_binary, get_stats
+from analysis import categories, projects, save_dataframe, get_metric_results, get_columns, to_binary, get_stats, \
+    parse_args
 
 
 def main(args):
@@ -18,7 +18,7 @@ def main(args):
             df = get_metric_results(args.folder, path, category)
             if df is not None:
                 print(f'[{category}] Univariate: {name}')
-                columns = get_columns(df)
+                columns = get_columns(df, args)
                 faults = df['faults'].apply(to_binary)
                 result = pd.DataFrame(
                     columns=['name', 'tn', 'fp', 'fn', 'tp', 'r2', 'precision', 'recall', 'mcc']
@@ -34,6 +34,4 @@ def main(args):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--folder', help='Select folder to analyse', dest='folder', required=True)
-    main(parser.parse_args())
+    main(parse_args())

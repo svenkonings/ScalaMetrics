@@ -1,4 +1,3 @@
-import argparse
 import warnings
 
 import pandas as pd
@@ -6,7 +5,8 @@ from sklearn.exceptions import ConvergenceWarning
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import StratifiedKFold, cross_val_predict
 
-from analysis import categories, projects, save_dataframe, get_metric_results, to_binary, get_columns, get_stats
+from analysis import categories, projects, save_dataframe, get_metric_results, to_binary, get_columns, get_stats, \
+    parse_args
 
 
 def main(args):
@@ -22,7 +22,7 @@ def main(args):
             df = get_metric_results(args.folder, path, category)
             if df is not None:
                 print(f'[{category}] Multivariate: {name}')
-                columns = get_columns(df)
+                columns = get_columns(df, args)
                 faults = df['faults'].apply(to_binary)
                 data = df[columns]
                 prediction = cross_val_predict(estimator, data, faults, cv=cv)
@@ -34,6 +34,4 @@ def main(args):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--folder', help='Select folder to analyse', dest='folder', required=True)
-    main(parser.parse_args())
+    main(parse_args())

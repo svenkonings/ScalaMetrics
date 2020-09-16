@@ -1,3 +1,4 @@
+import argparse
 import os
 
 import pandas as pd
@@ -6,16 +7,12 @@ from sklearn.metrics import confusion_matrix, r2_score, precision_score, recall_
 categories = [
     'methodResultsBriand',
     'methodResultsLandkroon',
-    'objectResultsBriand',
-    'objectResultsLandkroon',
-    'fileResultsBriand',
-    'fileResultsLandkroon',
-    'objectMethodAvrResultsBriand',
-    'objectMethodSumResultsBriand',
-    'objectMethodMaxResultsBriand',
-    'objectMethodAvrResultsLandkroon',
-    'objectMethodSumResultsLandkroon',
-    'objectMethodMaxResultsLandkroon',
+    'objectAvrResultsBriand',
+    'objectSumResultsBriand',
+    'objectMaxResultsBriand',
+    'objectAvrResultsLandkroon',
+    'objectSumResultsLandkroon',
+    'objectMaxResultsLandkroon',
 ]
 
 projects = {
@@ -29,9 +26,24 @@ projects = {
 }
 
 
-def get_columns(df):
+def parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--folder', help='Select folder to analyse', dest='folder', required=True)
+    parser.add_argument(
+        '--exclude-columns',
+        help="Select metrics to exclude from analysis",
+        dest='exclude_columns',
+        nargs='+',
+        default=list()
+    )
+    return parser.parse_args()
+
+
+def get_columns(df, args):
     columns = list(df.select_dtypes(include='number').keys())
     columns.remove('faults')
+    for column in args.exclude_columns:
+        columns.remove(column)
     return columns
 
 
