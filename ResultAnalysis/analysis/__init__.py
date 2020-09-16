@@ -51,6 +51,20 @@ def to_binary(x):
         return 1
 
 
+def split_paradigm_score(df):
+    neutral = df[df['HasPointsFraction'] == 0]
+    df = df[df['HasPointsFraction'] != 0]
+    oop = df[df['ParadigmScoreFraction'] <= -0.9]
+    fp = df[df['ParadigmScoreFraction'] >= 0.9]
+    mix = df.query('ParadigmScoreFraction > -0.9 & ParadigmScoreFraction < 0.9')
+    return {
+        'Neutral': neutral,
+        'OOP': oop,
+        'FP': fp,
+        'Mix': mix
+    }.items()
+
+
 def get_stats(actual, predicted):
     tn, fp, fn, tp = confusion_matrix(actual, predicted).ravel()
     r2 = r2_score(actual, predicted)

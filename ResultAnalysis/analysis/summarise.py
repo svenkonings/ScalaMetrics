@@ -8,7 +8,11 @@ from analysis import save_dataframe, categories, parse_args
 def main(args):
     folder = f'{args.folder}/regression/univariate/'
     for category in categories:
-        path = folder + category
+        if args.split_paradigm_score:
+            for paradigm in ['Neutral', 'OOP', 'FP', 'Mix']:
+                path = folder + category + paradigm
+        else:
+            path = folder + category
         df = read_all(path, ['name', 'precision', 'recall', 'mcc'])
         if df is not None:
             summarise(df, path, category)

@@ -5,7 +5,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import StratifiedKFold, cross_val_predict
 
 from analysis import categories, projects, save_dataframe, get_metric_results, get_columns, to_binary, get_stats, \
-    parse_args
+    parse_args, split_paradigm_score
 
 
 def main(args):
@@ -17,13 +17,23 @@ def main(args):
         for path, name in projects.items():
             df = get_metric_results(args.folder, path, category)
             if df is not None:
-                univariate(df, folder, category, name, estimator, cv, args)
+                if args.split_paradigm_score:
+                    for paradigm, scores in split_paradigm_score(df):
+                        univariate(scores, folder, category + paradigm, name, estimator, cv, args)
+                else:
+                    univariate(df, folder, category, name, estimator, cv, args)
 
 
 def univariate(df, folder, category, name, estimator, cv, args):
     print(f'[{category}] Univariate: {name}')
+    if len(df) < 50:
+        print('Less than 50 entries -- skipping!')
+        return
     columns = get_columns(df, args)
     faults = df['faults'].apply(to_binary)
+    if faults.min() == faults.max():
+        print('Single category -- skipping!')
+        return
     result = pd.DataFrame(
         columns=['name', 'tn', 'fp', 'fn', 'tp', 'r2', 'precision', 'recall', 'mcc']
     )

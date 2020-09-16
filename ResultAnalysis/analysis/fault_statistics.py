@@ -1,18 +1,24 @@
 import pandas as pd
 
-from analysis import categories, projects, save_dataframe, get_metric_results, parse_args
+from analysis import categories, projects, save_dataframe, get_metric_results, parse_args, split_paradigm_score
 
 
 def main(args):
     folder = f'{args.folder}/regression/fault-statistics/'
     for category in categories:
+        if args.split_paradigm_score:
+            category += "ParadigmSplit"
         statistics = pd.DataFrame(
             columns=['name', 'rows', 'faulty_rows', 'non_faulty_rows', 'percentage_faulty']
         )
         for path, name in projects.items():
             df = get_metric_results(args.folder, path, category)
             if df is not None:
-                statistics = fault_statistics(df, statistics, category, name)
+                if args.split_paradigm_score:
+                    for paradigm, scores in split_paradigm_score(df):
+                        statistics = fault_statistics(scores, statistics, category, name + paradigm)
+                else:
+                    statistics = fault_statistics(df, statistics, category, name)
         if not statistics.empty:
             save_dataframe(statistics, folder, category, False)
 

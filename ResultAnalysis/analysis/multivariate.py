@@ -6,7 +6,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import StratifiedKFold, cross_val_predict
 
 from analysis import categories, projects, save_dataframe, get_metric_results, to_binary, get_columns, get_stats, \
-    parse_args
+    parse_args, split_paradigm_score
 
 
 def main(args):
@@ -15,21 +15,34 @@ def main(args):
     estimator = LogisticRegression(class_weight='balanced', random_state=42)
     cv = StratifiedKFold(n_splits=10, shuffle=True, random_state=42)
     for category in categories:
+        if args.split_paradigm_score:
+            category += "ParadigmSplit"
         regression_results = pd.DataFrame(
             columns=['name', 'tn', 'fp', 'fn', 'tp', 'r2', 'precision', 'recall', 'mcc']
         )
         for path, name in projects.items():
             df = get_metric_results(args.folder, path, category)
             if df is not None:
-                regression_results = multivatiate(df, regression_results, category, name, estimator, cv, args)
+                if args.split_paradigm_score:
+                    for paradigm, scores in split_paradigm_score(df):
+                        regression_results = multivatiate(scores, regression_results, category, name + paradigm,
+                                                          estimator, cv, args)
+                else:
+                    regression_results = multivatiate(df, regression_results, category, name, estimator, cv, args)
         if not regression_results.empty:
             save_dataframe(regression_results, folder, category, False)
 
 
 def multivatiate(df, regression_results, category, name, estimator, cv, args):
     print(f'[{category}] Multivariate: {name}')
+    if len(df) < 50:
+        print('Less than 50 entries -- skipping!')
+        return regression_results
     columns = get_columns(df, args)
     faults = df['faults'].apply(to_binary)
+    if faults.min() == faults.max():
+        print('Single category -- skipping!')
+        return regression_results
     data = df[columns]
     prediction = cross_val_predict(estimator, data, faults, cv=cv)
     result = get_stats(faults, prediction)

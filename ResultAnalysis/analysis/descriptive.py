@@ -1,4 +1,5 @@
-from analysis import categories, projects, save_dataframe, get_metric_results, get_columns, parse_args
+from analysis import categories, projects, save_dataframe, get_metric_results, get_columns, parse_args, \
+    split_paradigm_score
 
 
 def main(args):
@@ -7,7 +8,11 @@ def main(args):
         for path, name in projects.items():
             df = get_metric_results(args.folder, path, category)
             if df is not None:
-                descriptive(df, folder, category, name, args)
+                if args.split_paradigm_score:
+                    for paradigm, scores in split_paradigm_score(df):
+                        descriptive(scores, folder, category + paradigm, name, args)
+                else:
+                    descriptive(df, folder, category, name, args)
 
 
 def descriptive(df, folder, category, name, args):
