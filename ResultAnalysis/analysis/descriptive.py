@@ -3,14 +3,17 @@ from analysis import categories, projects, save_dataframe, get_metric_results, g
 
 
 def main(args):
-    folder = f'{args.folder}/regression/descriptive/'
+    if args.split_paradigm_score:
+        folder = f'{args.folder}/split-regression/descriptive/'
+    else:
+        folder = f'{args.folder}/regression/descriptive/'
     for category in categories:
         for path, name in projects.items():
             df = get_metric_results(args.folder, path, category)
             if df is not None:
                 if args.split_paradigm_score:
                     for paradigm, scores in split_paradigm_score(df):
-                        descriptive(scores, folder, category + paradigm, name, args)
+                        descriptive(scores, folder, category, name + paradigm, args)
                 else:
                     descriptive(df, folder, category, name, args)
 

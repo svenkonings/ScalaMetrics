@@ -10,7 +10,10 @@ from analysis import categories, projects, save_dataframe, get_metric_results, g
 
 def main(args):
     warnings.filterwarnings("ignore", category=RuntimeWarning, module="sklearn")
-    folder = f'{args.folder}/regression/univariate/'
+    if args.split_paradigm_score:
+        folder = f'{args.folder}/split-regression/univariate/'
+    else:
+        folder = f'{args.folder}/regression/univariate/'
     estimator = LogisticRegression(class_weight='balanced', random_state=42)
     cv = StratifiedKFold(n_splits=10, shuffle=True, random_state=42)
     for category in categories:
@@ -19,20 +22,20 @@ def main(args):
             if df is not None:
                 if args.split_paradigm_score:
                     for paradigm, scores in split_paradigm_score(df):
-                        univariate(scores, folder, category + paradigm, name, estimator, cv, args)
+                        univariate(scores, folder, category, name + paradigm, estimator, cv, args)
                 else:
                     univariate(df, folder, category, name, estimator, cv, args)
 
 
 def univariate(df, folder, category, name, estimator, cv, args):
     print(f'[{category}] Univariate: {name}')
-    if len(df) < 50:
-        print('Less than 50 entries -- skipping!')
-        return
     columns = get_columns(df, args)
     faults = df['faults'].apply(to_binary)
-    if faults.min() == faults.max():
-        print('Single category -- skipping!')
+    if len(faults[faults == 0]) < 10:
+        print('Less than 10 non-faulty results -- skipping!')
+        return
+    if len(faults[faults == 1]) < 10:
+        print('Less than 10 faulty results -- skipping!')
         return
     result = pd.DataFrame(
         columns=['name', 'tn', 'fp', 'fn', 'tp', 'r2', 'precision', 'recall', 'mcc']

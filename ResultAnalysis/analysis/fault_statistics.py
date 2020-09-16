@@ -4,10 +4,11 @@ from analysis import categories, projects, save_dataframe, get_metric_results, p
 
 
 def main(args):
-    folder = f'{args.folder}/regression/fault-statistics/'
+    if args.split_paradigm_score:
+        folder = f'{args.folder}/split-regression/fault-statistics/'
+    else:
+        folder = f'{args.folder}/regression/fault-statistics/'
     for category in categories:
-        if args.split_paradigm_score:
-            category += "ParadigmSplit"
         statistics = pd.DataFrame(
             columns=['name', 'rows', 'faulty_rows', 'non_faulty_rows', 'percentage_faulty']
         )

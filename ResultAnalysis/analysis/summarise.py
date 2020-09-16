@@ -6,29 +6,37 @@ from analysis import save_dataframe, categories, parse_args
 
 
 def main(args):
-    folder = f'{args.folder}/regression/univariate/'
+    if args.split_paradigm_score:
+        folder = f'{args.folder}/split-regression/univariate/'
+    else:
+        folder = f'{args.folder}/regression/univariate/'
     for category in categories:
+        path = folder + category
         if args.split_paradigm_score:
             for paradigm in ['Neutral', 'OOP', 'FP', 'Mix']:
-                path = folder + category + paradigm
+                df = read_all(path, ['name', 'precision', 'recall', 'mcc'], paradigm)
+                if df is not None:
+                    summarise(df, path, category, paradigm)
         else:
-            path = folder + category
-        df = read_all(path, ['name', 'precision', 'recall', 'mcc'])
-        if df is not None:
-            summarise(df, path, category)
+            df = read_all(path, ['name', 'precision', 'recall', 'mcc'])
+            if df is not None:
+                summarise(df, path, category)
 
 
-def summarise(df, path, category):
+def summarise(df, path, category, suffix=''):
     print(f'Summarise {category}')
     means = df.groupby('name').agg(['mean', 'std'])
     means.columns = means.columns.map(' '.join)
-    save_dataframe(means, path, 'means')
+    save_dataframe(means, path, 'means' + suffix)
     medians = df.groupby('name').median()
-    save_dataframe(medians, path, 'medians')
+    save_dataframe(medians, path, 'medians' + suffix)
 
 
-def read_all(path, columns):
-    files = glob('../data/analysisResults/' + path + '/[!m]*.csv')
+def read_all(path, columns, paradigm=None):
+    if paradigm:
+        files = glob('../data/analysisResults/' + path + '/[!m]*' + paradigm + '.csv')
+    else:
+        files = glob('../data/analysisResults/' + path + '/[!m]*.csv')
     if files:
         all_df = pd.DataFrame(columns=columns)
         for file in files:

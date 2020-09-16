@@ -11,12 +11,13 @@ from analysis import categories, projects, save_dataframe, get_metric_results, t
 
 def main(args):
     warnings.filterwarnings("ignore", category=ConvergenceWarning, module="sklearn")
-    folder = f'{args.folder}/regression/multivariate/'
+    if args.split_paradigm_score:
+        folder = f'{args.folder}/split-regression/multivariate/'
+    else:
+        folder = f'{args.folder}/regression/multivariate/'
     estimator = LogisticRegression(class_weight='balanced', random_state=42)
     cv = StratifiedKFold(n_splits=10, shuffle=True, random_state=42)
     for category in categories:
-        if args.split_paradigm_score:
-            category += "ParadigmSplit"
         regression_results = pd.DataFrame(
             columns=['name', 'tn', 'fp', 'fn', 'tp', 'r2', 'precision', 'recall', 'mcc']
         )
@@ -35,13 +36,13 @@ def main(args):
 
 def multivatiate(df, regression_results, category, name, estimator, cv, args):
     print(f'[{category}] Multivariate: {name}')
-    if len(df) < 50:
-        print('Less than 50 entries -- skipping!')
-        return regression_results
     columns = get_columns(df, args)
     faults = df['faults'].apply(to_binary)
-    if faults.min() == faults.max():
-        print('Single category -- skipping!')
+    if len(faults[faults == 0]) < 10:
+        print('Less than 10 non-faulty results -- skipping!')
+        return regression_results
+    if len(faults[faults == 1]) < 10:
+        print('Less than 10 faulty results -- skipping!')
         return regression_results
     data = df[columns]
     prediction = cross_val_predict(estimator, data, faults, cv=cv)
