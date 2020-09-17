@@ -21,7 +21,7 @@ def main(args):
             df = get_metric_results(args.folder, path, category)
             if df is not None:
                 if args.split_paradigm_score:
-                    for paradigm, scores in split_paradigm_score(df):
+                    for paradigm, scores in split_paradigm_score(df, args.folder, path, category):
                         univariate(scores, folder, category, name + paradigm, estimator, cv, args)
                 else:
                     univariate(df, folder, category, name, estimator, cv, args)

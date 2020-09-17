@@ -16,7 +16,7 @@ def main(args):
             for paradigm in ['Neutral', 'OOP', 'FP', 'Mix']:
                 df = read_all(path, ['name', 'precision', 'recall', 'mcc'], paradigm)
                 if df is not None:
-                    summarise(df, path, category, paradigm)
+                    summarise(df, path, category + paradigm, paradigm)
         else:
             df = read_all(path, ['name', 'precision', 'recall', 'mcc'])
             if df is not None:

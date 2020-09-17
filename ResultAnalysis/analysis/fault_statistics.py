@@ -16,7 +16,7 @@ def main(args):
             df = get_metric_results(args.folder, path, category)
             if df is not None:
                 if args.split_paradigm_score:
-                    for paradigm, scores in split_paradigm_score(df):
+                    for paradigm, scores in split_paradigm_score(df, args.folder, path, category):
                         statistics = fault_statistics(scores, statistics, category, name + paradigm)
                 else:
                     statistics = fault_statistics(df, statistics, category, name)

@@ -51,12 +51,20 @@ def to_binary(x):
         return 1
 
 
-def split_paradigm_score(df):
-    neutral = df[df['HasPointsFraction'] == 0]
-    df = df[df['HasPointsFraction'] != 0]
-    oop = df[df['ParadigmScoreFraction'] <= -0.9]
-    fp = df[df['ParadigmScoreFraction'] >= 0.9]
-    mix = df.query('ParadigmScoreFraction > -0.9 & ParadigmScoreFraction < 0.9')
+def split_paradigm_score(df, folder, project, category):
+    if 'object' in category:
+        suffix = 'Briand' if 'Briand' in category else 'Landkroon'
+        # Use maximum has points
+        has_points = get_metric_results(folder, project, f'objectMaxResults{suffix}')['HasPointsFraction']
+        # Use average paradigm score
+        paradigm_score = get_metric_results(folder, project, f'objectAvrResults{suffix}')['ParadigmScoreFraction']
+    else:
+        has_points = df['HasPointsFraction']
+        paradigm_score = df['ParadigmScoreFraction']
+    neutral = df[(has_points == 0)]
+    oop = df[(has_points != 0) & (paradigm_score <= -0.8)]
+    fp = df[(has_points != 0) & (paradigm_score >= 0.8)]
+    mix = df[(has_points != 0) & (paradigm_score > -0.8) & (paradigm_score < 0.8)]
     return {
         'Neutral': neutral,
         'OOP': oop,
@@ -83,9 +91,9 @@ def get_stats(actual, predicted):
     }
 
 
-def get_metric_results(folder, project, file):
+def get_metric_results(folder, project, category):
     try:
-        return pd.read_csv(f'../data/metricResults/{folder}/{project}/{file}.csv')
+        return pd.read_csv(f'../data/metricResults/{folder}/{project}/{category}.csv')
     except FileNotFoundError:
         return None
 
