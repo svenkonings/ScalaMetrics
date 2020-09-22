@@ -1,11 +1,11 @@
 import argparse
-import os
 
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.colors import LinearSegmentedColormap, LogNorm
 
 from analysis import projects, get_metric_results
+from plots import savefig
 
 
 def scatter(df, subfolder, name, x_axis, y_axis):
@@ -15,7 +15,7 @@ def scatter(df, subfolder, name, x_axis, y_axis):
     plt.xlabel('Functional score')
     plt.ylabel('Imperative score')
     plt.title(name)
-    savefig('scatter/' + subfolder, name, '.pdf')
+    savefig('paradigmScore', 'scatter' + subfolder, name, '.pdf', args)
 
 
 def scatter_faults(df, subfolder, name, x_axis, y_axis):
@@ -32,7 +32,7 @@ def scatter_faults(df, subfolder, name, x_axis, y_axis):
     plt.xlabel('Functional score')
     plt.ylabel('Imperative score')
     plt.title(name)
-    savefig('scatter-faults/' + subfolder, name, '.pdf')
+    savefig('paradigmScore', 'scatter-faults' + subfolder, name, '.pdf', args)
 
 
 def scatter_color(df, subfolder, name, x_axis, y_axis):
@@ -46,7 +46,7 @@ def scatter_color(df, subfolder, name, x_axis, y_axis):
     plt.xlabel('Functional score')
     plt.ylabel('Imperative score')
     plt.title(name)
-    savefig('scatter-color/' + subfolder, name, '.pdf')
+    savefig('paradigmScore', 'scatter-color' + subfolder, name, '.pdf', args)
 
 
 def hist_faults(df, subfolder, name, score_axis, has_points_axis):
@@ -89,21 +89,7 @@ def hist_faults(df, subfolder, name, score_axis, has_points_axis):
     plt.xlabel('Paradigm score')
     plt.ylabel('Occurrences')
     plt.title(name)
-    savefig('hist-faults/' + subfolder, name, '.pdf')
-
-
-def savefig(directory, filename, extension):
-    if args.write:
-        directory = f'../data/analysisResults/paradigmScore/plots/{directory}'
-        os.makedirs(directory, exist_ok=True)
-        plt.savefig(
-            directory + filename + extension,
-            bbox_inches='tight',
-            metadata={'Creator': None, 'Producer': None, 'CreationDate': None}
-        )
-    if args.show:
-        plt.show()
-    plt.close()
+    savefig('paradigmScore', 'hist-faults' + subfolder, name, '.pdf', args)
 
 
 def plot_methods(project, name):
