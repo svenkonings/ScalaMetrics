@@ -7,11 +7,13 @@ from sklearn.metrics import confusion_matrix, r2_score, precision_score, recall_
 categories = [
     'methodResultsBriand',
     'methodResultsLandkroon',
+    'objectResultsBriand',
+    'objectResultsLandkroon',
     'objectAvrResultsBriand',
-    'objectSumResultsBriand',
-    'objectMaxResultsBriand',
     'objectAvrResultsLandkroon',
+    'objectSumResultsBriand',
     'objectSumResultsLandkroon',
+    'objectMaxResultsBriand',
     'objectMaxResultsLandkroon',
 ]
 
@@ -33,6 +35,8 @@ def parse_args():
                         nargs='+', default=list())
     parser.add_argument('--split-paradigm-score', help='Split analysis by paradigm score', dest='split_paradigm_score',
                         action="store_true")
+    parser.add_argument('--multivariate-baseline', help='Enable multivariate baseline regression',
+                        dest='multivariate_baseline', action="store_true")
     return parser.parse_args()
 
 

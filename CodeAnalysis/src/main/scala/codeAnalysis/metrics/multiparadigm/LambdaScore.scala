@@ -21,6 +21,6 @@ class LambdaScore(override val compiler: Compiler) extends ObjectMetric {
   }
 
   override def run(tree: global.ImplDef): List[MetricResult] = List(
-    MetricResult("SourceLinesOfLambda", lambdaScore(tree))
+    MetricResult("LambdaScore", lambdaScore(tree))
   )
 }

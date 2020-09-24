@@ -1,0 +1,8 @@
+name,count,mean,std,min,25%,50%,75%,max
+NumberOfLambdaFunctions,4492,0.49888691006233304,3.176364030026629,0.0,0.0,0.0,0.0,73.0
+SourceLinesOfLambda,4492,0.7764915405164737,6.113736764254409,0.0,0.0,0.0,0.0,136.0
+LambdaScore,4492,0.020917821925714158,0.07220360205611961,0.0,0.0,0.0,0.0,0.7
+LambdaFunctionsUsingOuterVariables,4492,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+LambdaFunctionsUsingInnerVariables,4492,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+LambdaFunctionsWithSideEffects,4492,0.0024487978628673196,0.04943020518349034,0.0,0.0,0.0,0.0,1.0
+LambdaFunctionsWithAssignment,4492,0.0,0.0,0.0,0.0,0.0,0.0,0.0

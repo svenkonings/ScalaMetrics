@@ -1,0 +1,1395 @@
+commit,faults,path,NumberOfLambdaFunctions,SourceLinesOfLambda,LambdaScore,LambdaFunctionsUsingOuterVariables,LambdaFunctionsUsingInnerVariables,LambdaFunctionsWithSideEffects,LambdaFunctionsWithAssignment
+HEAD,0,package values - class SideSet,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package client - class BigQuery,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - object BigQuery,3.0,3.0,0.046875,0.0,0.0,0.0,0.0
+HEAD,0,package client - object BigQuery - class Client,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - object BigQuery - class Client - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,3,package io - package dynamic - package object dynamic,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package <empty> - object SoccoIndex,16.0,39.0,0.4482758620689655,0.0,1.0,1.0,1.0
+HEAD,0,package <empty> - object SoccoIndex - class Source,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package extra - package json - package object json,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - package json - package object json - class DecodeError,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package extra - package json - package object json - class JsonScioContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - package json - package object json - class JsonScioContext - method jsonFile - <$anon: com.spotify.scio.extra.json.package.Encoder[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - package json - package object json - class JsonSCollection,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package compat - object extra,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - object ScioMetrics,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package kryo - class KVSerializer,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - object FileStorage,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - class FileStorage,10.0,15.0,0.1875,0.0,0.0,0.0,0.0
+HEAD,0,package io - class FileStorage - method getAvroSeekableInput - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_7_0 - object AddMissingImports,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class DynamicBigQueryOps,1.0,1.0,0.02127659574468085,0.0,0.0,1.0,0.0
+HEAD,0,package syntax - class DynamicTableRowBigQueryOps,1.0,1.0,0.07142857142857142,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class DynamicTypedBigQueryOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait SCollectionSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object FunctionsWithSideOutput,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object FunctionsWithSideOutput - trait SideOutputFn,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object FunctionsWithSideOutput - method mapFn - <$anon: com.spotify.scio.util.NamedDoFn[T U] with com.spotify.scio.util.FunctionsWithSideOutput.SideOutputFn[T U]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object FunctionsWithSideOutput - method flatMapFn - <$anon: com.spotify.scio.util.NamedDoFn[T U] with com.spotify.scio.util.FunctionsWithSideOutput.SideOutputFn[T U]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object JMapWrapper,6.0,8.0,0.26666666666666666,0.0,0.0,0.0,0.0
+HEAD,0,package util - object JMapWrapper - method ofMultiMap - <$anon: A => Iterable[B]>,5.0,7.0,0.3888888888888889,0.0,0.0,0.0,0.0
+HEAD,0,package util - object JMapWrapper - method of - <$anon: K => V>,1.0,1.0,0.125,0.0,0.0,0.0,0.0
+HEAD,0,package io - trait TapT,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - object TapT,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - class EmptyTapOf,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - object EmptyTapOf,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - class TapOf,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - object TapOf,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - trait ScioIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - object ScioIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - object ScioIO - method ro - <$anon: com.spotify.scio.io.ScioIO[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - trait TestIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - class CustomIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - class ReadIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package complete - object TrafficMaxLaneFlow,4.0,30.0,0.32967032967032966,0.0,0.0,0.0,0.0
+HEAD,0,package complete - object TrafficMaxLaneFlow - class LaneInfo,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package complete - object TrafficMaxLaneFlow - class Record,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object TemplateExample,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object TemplateExample - trait Options,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - object ScioContextOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class ScioContextOps,1.0,1.0,0.0053475935828877,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait ScioContextSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package compat - object extra,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object WriteDynamicExample,2.0,6.0,0.3333333333333333,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object WriteDynamicExample - class LinesPerCharacter,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package bigquery - trait ToTableRow,2.0,14.0,0.2,0.0,0.0,1.0,0.0
+HEAD,0,package extra - object Iterators,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object Iterators - class FixedIterator,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object Iterators - class SessionIterator,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object Iterators - class SlidingIterator,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object Iterators - class TimeSeriesIterator,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object Iterators - class RichIterator,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - object TableOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,3,package client - class TableOps,10.0,31.0,0.1497584541062802,0.0,0.0,2.0,1.0
+HEAD,2,package parquet - package avro - package object avro,2.0,2.0,0.03333333333333333,0.0,0.0,0.0,0.0
+HEAD,1,package parquet - package avro - package object avro - class ParquetAvroScioContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package parquet - package avro - package object avro - class ParquetAvroFile,2.0,2.0,0.07407407407407407,0.0,0.0,0.0,0.0
+HEAD,0,package parquet - package avro - package object avro - object ParquetAvroFile,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package parquet - package avro - package object avro - class ParquetAvroSCollection,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class ScioContextOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait ScioContextSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package cookbook - class Record,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package cookbook - object FilterExamples,5.0,11.0,0.3055555555555556,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_8_0 - class ValidateInvoicePaymentsJobTest,4.0,12.0,0.375,0.0,0.0,2.0,0.0
+HEAD,0,package bigquery - object MockBigQuery,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - class MockBigQuery,1.0,4.0,0.09302325581395349,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - class MockTable,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jdbc - trait JdbcIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jdbc - object JdbcIO,1.0,1.0,0.03225806451612903,0.0,0.0,0.0,0.0
+HEAD,0,package jdbc - object JdbcIO - method apply - <$anon: com.spotify.scio.jdbc.JdbcIO[T] with com.spotify.scio.io.TestIO[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jdbc - class JdbcSelect,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jdbc - class JdbcSelect - method read - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jdbc - class JdbcSelect - method read - <none>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jdbc - class JdbcWrite,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jdbc - class JdbcWrite - method write - <none>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package examples - object MinimalWordCount,4.0,3.0,0.21428571428571427,0.0,0.0,0.0,0.0
+HEAD,0,package codecs - object compat,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package codecs - object compat - class ResourceIteratorCompatOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object TapsExample,5.0,11.0,0.55,0.0,0.0,0.0,0.0
+HEAD,0,package kryo - class JTraversableSerializer,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package kryo - class JWrapperCBF,1.0,1.0,0.05263157894736842,0.0,0.0,0.0,0.0
+HEAD,0,package kryo - class JWrapperCBF - class JIterableWrapperBuilder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package kryo - class JIterableWrapperCBF,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package kryo - class JCollectionWrapperCBF,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class PredictSCollectionOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - object PredictSCollectionOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class ExampleSCollectionOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - object SeqExampleSCollectionOps,2.0,1.0,0.2,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class SeqExampleSCollectionOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class TFRecordSCollectionOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class SequenceExampleSCollectionOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait SCollectionSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object StatefulExample,2.0,3.0,0.1111111111111111,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object StatefulExample - class StatefulDoFn,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object WordCountScioIO,6.0,11.0,0.3333333333333333,0.0,0.0,0.0,0.0
+HEAD,7,package repl - class ScioILoop,5.0,5.0,0.04132231404958678,0.0,0.0,0.0,0.0
+HEAD,0,package scio - object JavaConverters,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - object JavaConverters - class RichString,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - object JavaConverters - class FilenamePolicy,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - object JavaConverters - class RichAny,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - trait Implicits,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - class Query1,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package sql - object Query1,3.0,3.0,0.06521739130434782,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object Query1 - method typedImplDefaultTag - <$anon: com.spotify.scio.schemas.SchemaMacroHelpers>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object Query1 - method typedImpl - <$anon: com.spotify.scio.schemas.SchemaMacroHelpers>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - class SqlSCollection1,3.0,2.0,0.09090909090909091,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class RowOps,14.0,19.0,0.4418604651162791,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait RowSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package transforms - class ScalaAsyncDoFn,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package cookbook - object CombinePerKeyExamples,5.0,7.0,0.28,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_7_0 - class FixAvroIO,2.0,7.0,0.1206896551724138,0.0,0.0,0.0,0.0
+HEAD,1,package bigquery - object Reads,2.0,3.0,0.05660377358490566,0.0,0.0,2.0,0.0
+HEAD,0,package bigquery - object Reads - method client - <$anon: java.util.function.Function[com.spotify.scio.ScioContext com.spotify.scio.bigquery.client.BigQuery]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object Writes,2.0,4.0,0.26666666666666666,0.0,0.0,2.0,0.0
+HEAD,0,package bigquery - object Writes - trait WriteParamDefauls,2.0,4.0,0.3076923076923077,0.0,0.0,2.0,0.0
+HEAD,0,package bigquery - trait BigQueryIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryIO - method apply - <$anon: com.spotify.scio.bigquery.BigQueryIO[T] with com.spotify.scio.io.TestIO[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryIO - method apply - <$anon: com.spotify.scio.bigquery.BigQueryIO[T] with com.spotify.scio.io.TestIO[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTypedSelect,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTypedSelect - object ReadParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTypedSelect - class ReadParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - class BigQueryTypedSelect,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - class BigQuerySelect,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQuerySelect,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTypedTable,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTypedTable - trait WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTypedTable - object WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTypedTable - object WriteParam - method apply - <$anon: com.spotify.scio.bigquery.BigQueryTypedTable.WriteParam>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTypedTable - method apply - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTypedTable - method apply - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - class BigQueryTypedTable,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - class BigQueryTable,1.0,1.0,0.037037037037037035,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTable,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package bigquery - class BigQueryStorage,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package bigquery - object BigQueryStorage,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package bigquery - object BigQueryStorage - class ReadParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryStorage - object ReadParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - class BigQueryStorageSelect,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - class TableRowJsonIO,2.0,2.0,0.125,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object TableRowJsonIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object TableRowJsonIO - object WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object TableRowJsonIO - class WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package bigquery - object BigQueryTyped,4.0,11.0,0.041044776119402986,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTyped - trait IO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTyped - object IO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTyped - object IO - method tableIO - <$anon: com.spotify.scio.bigquery.BigQueryTyped.IO[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTyped - object IO - method queryIO - <$anon: com.spotify.scio.bigquery.BigQueryTyped.IO[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTyped - object IO - method storageIO - <$anon: com.spotify.scio.bigquery.BigQueryTyped.IO[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTyped - class Select,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTyped - class Select - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTyped - object Select,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTyped - class Table,1.0,1.0,0.027777777777777776,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTyped - object Table,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTyped - object Table - trait WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTyped - object Table - object WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTyped - object Table - object WriteParam - method apply - <$anon: com.spotify.scio.bigquery.BigQueryTyped.Table.WriteParam>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTyped - object BeamSchema,1.0,8.0,0.17391304347826086,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTyped - object BeamSchema - trait WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTyped - object BeamSchema - object WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTyped - object BeamSchema - object WriteParam - method apply - <$anon: com.spotify.scio.bigquery.BigQueryTyped.BeamSchema.WriteParam>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTyped - class BeamSchema,2.0,2.0,0.058823529411764705,0.0,0.0,0.0,0.0
+HEAD,1,package bigquery - object BigQueryTyped - class Storage,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTyped - class Storage - method read - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTyped - class StorageQuery,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTyped - class StorageQuery - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryTyped - object Storage,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - class DatastoreIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - object DatastoreIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - object DatastoreIO - class ReadParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - package checkpoint - package object checkpoint,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - package checkpoint - package object checkpoint - class CheckpointScioContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - class TypeProviderIT,1.0,1.0,0.04,0.0,0.0,0.0,0.0
+HEAD,0,package types - class TypeProviderIT - class FromResourceMultiLine,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - class TypeProviderIT - class FromResource,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - class TypeProviderIT - class Annotation1,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - class TypeProviderIT - class Annotation2,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - class TypeProviderIT - class FromResourceWithSurroundingAnnotations,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - class TypeProviderIT - class FromResourceWithSequentialAnnotations,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - object FixBigQueryDeprecationsExample,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - class Query8,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package sql - object Query8,3.0,6.0,0.04477611940298507,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object Query8 - method typed8Impl - <$anon: com.spotify.scio.schemas.SchemaMacroHelpers>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package sql - class SqlSCollection8,3.0,2.0,0.02631578947368421,0.0,0.0,0.0,0.0
+HEAD,1,package complete - object StreamingWordExtract,4.0,3.0,0.17647058823529413,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait SCollectionSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object DistCacheExample,4.0,11.0,0.5,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object MagnolifyTensorFlowExample,1.0,1.0,0.14285714285714285,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object MagnolifyTensorFlowExample - class WordCount,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object MagnolifyTensorFlowWriteExample,3.0,2.0,0.14285714285714285,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object Magnolify,2.0,3.0,0.21428571428571427,0.0,0.0,0.0,0.0
+HEAD,0,package io - class TextIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - object TextIO,2.0,2.0,0.05128205128205128,0.0,0.0,0.0,0.0
+HEAD,0,package io - object TextIO - class ReadParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - object TextIO - object WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - object TextIO - class WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class GenericRecordSCollectionOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class ObjectFileSCollectionOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class SpecificRecordSCollectionOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class TypedAvroSCollectionOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class ProtobufSCollectionOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait SCollectionSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package repl - package compat - package object compat,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package validation - class SampleOverrideTypeProvider,3.0,7.0,0.109375,0.0,0.0,0.0,0.0
+HEAD,0,package validation - class Country,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package validation - object Country,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package validation - object Index,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package sql - package object sql,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - class StatCounter,1.0,1.0,0.013513513513513514,0.0,0.0,0.0,0.0
+HEAD,0,package util - object StatCounter,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - package sorter - package object sorter,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object DoFnExample,2.0,1.0,0.08333333333333333,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object DoFnExample - method main - <none>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package cookbook - object TriggerExample,4.0,44.0,0.3013698630136986,0.0,1.0,0.0,0.0
+HEAD,0,package cookbook - object TriggerExample - class Record,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQuerySysProps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - object BigQueryConfig,6.0,8.0,0.21621621621621623,0.0,0.0,0.0,0.0
+HEAD,0,package scio - trait RunnerContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - object NoOpContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package scio - object DirectContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,3,package scio - object RunnerContext,2.0,7.0,0.12280701754385964,0.0,0.0,0.0,0.0
+HEAD,4,package scio - object ContextAndArgs,7.0,22.0,0.16417910447761194,0.0,0.0,1.0,0.0
+HEAD,0,package scio - object ContextAndArgs - trait ArgsParser,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - object ContextAndArgs - class DefaultParser,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - object ContextAndArgs - object TypedParser,1.0,1.0,0.08333333333333333,0.0,0.0,0.0,0.0
+HEAD,3,package scio - object ContextAndArgs - class TypedParser,5.0,10.0,0.22727272727272727,0.0,0.0,0.0,0.0
+HEAD,0,package scio - object ContextAndArgs - class PipelineOptionsParser,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - object ContextAndArgs - trait TypedArgsParser,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - object ContextAndArgs - trait LowPrioTypedArgsParser,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - object ContextAndArgs - trait LowPrioTypedArgsParser - method caseApp - <$anon: com.spotify.scio.ContextAndArgs.TypedArgsParser[T scala.util.Try]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - object ContextAndArgs - object TypedArgsParser,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - object ContextAndArgs - object TypedArgsParser - method pipelineOptions - <$anon: com.spotify.scio.ContextAndArgs.TypedArgsParser[T scala.util.Try]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - object ContextAndArgs - class UsageOrHelpException,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - object ContextAndArgs - object UsageOrHelpException,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - object ContextAndArgs - object UsageOrHelpException - method attachUncaughtExceptionHandler - <$anon: Thread.UncaughtExceptionHandler>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - trait ScioExecutionContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,3,package scio - object ScioContext,9.0,15.0,0.1724137931034483,0.0,0.0,0.0,0.0
+HEAD,12,package scio - class ScioContext,12.0,17.0,0.05862068965517241,0.0,0.0,3.0,0.0
+HEAD,1,package scio - class ScioContext - method execute - <$anon: com.spotify.scio.ScioExecutionContext>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - class ScioContext - method execute - <$anon: com.spotify.scio.ScioExecutionContext> - method waitUntilFinish - <$anon: com.spotify.scio.ScioResult>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - class DistCacheScioContext,1.0,1.0,0.05555555555555555,0.0,0.0,0.0,0.0
+HEAD,0,package pubsub - object PubSubAdmin,4.0,12.0,0.23076923076923078,0.0,0.0,0.0,0.0
+HEAD,0,package pubsub - object PubSubAdmin - object GrpcClient,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_7_0 - class InputClass,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_7_0 - class OutputClass,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_7_0 - object TestJob,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_7_0 - class ValidationJobTest,2.0,4.0,0.23529411764705882,0.0,0.0,1.0,0.0
+HEAD,1,package transforms - trait ScalaFutureHandlers,3.0,1.0,0.058823529411764705,0.0,0.0,0.0,0.0
+HEAD,0,package transforms - trait ScalaFutureHandlers - <$anon: scala.concurrent.ExecutionContext>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package complete - object TrafficRoutes,6.0,36.0,0.4931506849315068,0.0,0.0,0.0,0.0
+HEAD,0,package complete - object TrafficRoutes - class StationSpeed,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package complete - object TrafficRoutes - class RouteInfo,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package complete - object TrafficRoutes - class Record,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package nn - object NearestNeighbor,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package nn - trait NearestNeighborBuilder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package nn - trait NearestNeighbor,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package nn - class MatrixNNBuilder,1.0,1.0,0.05555555555555555,0.0,0.0,0.0,0.0
+HEAD,0,package nn - class MatrixNN,1.0,1.0,0.030303030303030304,0.0,0.0,0.0,0.0
+HEAD,0,package nn - class LSHNNBuilder,1.0,1.0,0.043478260869565216,0.0,0.0,0.0,0.0
+HEAD,0,package nn - class LSHNN,1.0,1.0,0.022727272727272728,0.0,0.0,0.0,0.0
+HEAD,0,package extra - package csv - package object csv,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package scio - package bigtable - package object bigtable,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigtable - object TableAdmin,10.0,57.0,0.3392857142857143,0.0,0.0,0.0,0.0
+HEAD,0,package bigtable - object TableAdmin - trait CreateDisposition,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigtable - object TableAdmin - object CreateDisposition,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigtable - object TableAdmin - object CreateDisposition - object Never,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigtable - object TableAdmin - object CreateDisposition - object CreateIfNeeded,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - trait ScalaInstances,28.0,14.0,0.25,0.0,0.0,0.0,0.0
+HEAD,0,package instances - object ScalaInstances,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package examples - object BeamSqlInterpolatorWordCount,3.0,2.0,0.14285714285714285,0.0,0.0,0.0,0.0
+HEAD,0,package validation - object OverrideTypeProviderFinder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - trait NamedFn,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - trait NamedProcessFn,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - trait NamedSerializableFn,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - trait NamedPartitionFn,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - class NamedDoFn,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - class NamedSimpleFn,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class SCollectionMutationOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait SCollectionSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait SCollectionSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class AvroToBigQuerySCollectionOps,1.0,1.0,0.038461538461538464,0.0,0.0,0.0,0.0
+HEAD,0,package values - trait TransformNameable,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - trait TransformNameProvider,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - object CallSiteNameProvider,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - class ConstNameProvider,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package flink - object FlinkContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - object AvroSysProps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object AvroConverters,2.0,4.0,0.21052631578947367,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object AvroConverters - class AvroConversionException,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object Collections,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object Collections - class TopArray,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object Collections - class TopIterable,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object Collections - class TopByKeyArray,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object Collections - class TopByKeyIterable,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package repl - class IoCommands,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,3,package types - object BigQueryType,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object BigQueryType - trait HasTable,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object BigQueryType - trait Table,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package types - object BigQueryType - trait HasSchema,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package types - object BigQueryType - trait HasStorageOptions,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object BigQueryType - trait StorageOptions,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object BigQueryType - trait HasQuery,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object BigQueryType - trait Query,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object BigQueryType - trait HasTableDescription,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object BigQueryType - trait HasAnnotation,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object BigQueryType - class fromTable,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object BigQueryType - class fromSchema,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package types - object BigQueryType - class fromStorage,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object BigQueryType - class fromQuery,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object BigQueryType - class toTable,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,3,package types - class BigQueryType,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object JavaConvertersExample,1.0,1.0,0.05,0.0,0.0,0.0,0.0
+HEAD,0,package util - object DefaultBucket,3.0,2.0,0.027777777777777776,0.0,0.0,0.0,0.0
+HEAD,1,package game - object LeaderBoard,4.0,8.0,0.0975609756097561,0.0,0.0,0.0,0.0
+HEAD,0,package game - object LeaderBoard - class TeamScoreSums,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package game - object LeaderBoard - class UserScoreSums,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object BeamExample,2.0,2.0,0.046511627906976744,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object MetricsExample,6.0,22.0,0.34375,0.0,0.0,2.0,0.0
+HEAD,0,package instances - trait JodaCoders,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - object JodaCoders,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - class JodaDateTimeCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - class JodaLocalDateTimeCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - class JodaLocalDateCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - class JodaLocalTimeCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package game - object HourlyTeamScore,3.0,3.0,0.07894736842105263,0.0,0.0,0.0,0.0
+HEAD,0,package game - object HourlyTeamScore - class TeamScoreSums,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package repl - package object repl,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package repl - package object repl - class ReplSCollection,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package tensorflow - object TFRecordCodec,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package repl - object ReplScioContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package repl - class ReplScioContext,1.0,11.0,0.2894736842105263,0.0,0.0,1.0,0.0
+HEAD,0,package fix - package v0_7_0 - object RewriteSysProp,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - object FixBigQueryDeprecationsExample,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package cookbook - object DistinctExample,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package bigquery - object StorageUtil,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,3,package bigquery - class BigQueryClientIT,11.0,23.0,0.13218390804597702,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - class BigQueryClientIT - object GcsUtils,1.0,1.0,0.06666666666666667,0.0,0.0,0.0,0.0
+HEAD,0,package util - object ProtobufUtil,1.0,1.0,0.0625,0.0,0.0,0.0,0.0
+HEAD,0,package bigtable - object BigtableIT,1.0,1.0,0.02631578947368421,0.0,0.0,0.0,0.0
+HEAD,0,package bigtable - class BigtableIT,4.0,12.0,0.16901408450704225,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object AnnoyExamples,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object AnnoyIndexSaveExample,1.0,1.0,0.09090909090909091,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object AnnoySideInputExample,2.0,7.0,0.3181818181818182,0.0,0.0,0.0,0.0
+HEAD,0,package cassandra - class CassandraIT,4.0,4.0,0.058823529411764705,0.0,0.0,0.0,0.0
+HEAD,0,package cassandra - object CassandraIT,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package json - class JsonIO,3.0,3.0,0.14285714285714285,0.0,0.0,0.0,0.0
+HEAD,0,package json - class JsonIO - method tap - <$anon: com.spotify.scio.io.Tap[T]>,1.0,1.0,0.16666666666666666,0.0,0.0,0.0,0.0
+HEAD,0,package json - object JsonIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package json - object JsonIO - class ReadParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package json - object JsonIO - class WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - class registerSysProps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - object registerSysPropsMacro,1.0,1.0,0.0625,0.0,0.0,0.0,0.0
+HEAD,0,package transforms - class ScalaAsyncLookupDoFn,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package syntax - class TableRowOps,17.0,17.0,0.34,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait TableRowSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - class JdbcShardedSource,2.0,3.0,0.02857142857142857,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - class JdbcShardedSource - class JdbcShardedReader,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - trait IsJavaBean,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - object IsJavaBean,1.0,20.0,0.4166666666666667,0.0,0.0,1.0,0.0
+HEAD,2,package types - object MacroUtil,6.0,11.0,0.25,0.0,0.0,0.0,0.0
+HEAD,2,package util - object ArtisanJoin,12.0,11.0,0.11827956989247312,0.0,0.0,1.0,0.0
+HEAD,0,package util - object ArtisanJoin - method cogroupImpl - <none>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package complete - object TfIdf,10.0,18.0,0.3103448275862069,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryUtil,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object SideInOutExample,5.0,8.0,0.17777777777777778,0.0,0.0,0.0,0.0
+HEAD,0,package tensorflow - class ParquetExampleIO,1.0,1.0,0.02,0.0,0.0,0.0,0.0
+HEAD,0,package tensorflow - class ParquetExampleIO - method read - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package tensorflow - object ParquetExampleIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package tensorflow - object ParquetExampleIO - class ReadParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package tensorflow - object ParquetExampleIO - object WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package tensorflow - object ParquetExampleIO - class WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package tensorflow - class ParquetExapmleTap,1.0,5.0,0.38461538461538464,0.0,0.0,0.0,0.0
+HEAD,0,package tensorflow - class ParquetExapmleTap - method value - <none>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object ProtobufExample,1.0,1.0,0.1,0.0,0.0,0.0,0.0
+HEAD,0,package fix - object FixJoinNames,2.0,2.0,0.03571428571428571,0.0,0.0,0.0,0.0
+HEAD,0,package spanner - object SpannerIOIT,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package spanner - object SpannerIOIT - class FakeSpannerData,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package spanner - class SpannerIOIT,1.0,1.0,0.014492753623188406,0.0,0.0,0.0,0.0
+HEAD,0,package spanner - class SpannerIOIT - class PopulatedSpannerTable,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package spanner - class SpannerIOIT - class ReadableSpannerTable,1.0,1.0,0.1,0.0,0.0,0.0,0.0
+HEAD,0,package spanner - class SpannerIOIT - <$anon: SpannerIOIT.this.ReadableSpannerTable>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package spanner - class SpannerIOIT - <$anon: SpannerIOIT.this.PopulatedSpannerTable>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package spanner - class SpannerIOIT - <$anon: SpannerIOIT.this.PopulatedSpannerTable>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - trait BigQueryJob,1.0,1.0,0.14285714285714285,0.0,0.0,0.0,0.0
+HEAD,0,package client - class ExtractJob,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - class LoadJob,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - class QueryJob,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package values - class SCollectionWithHotKeyFanout,2.0,10.0,0.1282051282051282,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait Syntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package annoy - class AnnoyIT,8.0,35.0,0.7954545454545454,0.0,0.0,0.0,0.0
+HEAD,1,package schemas - object SchemaMaterializer,15.0,15.0,0.09036144578313253,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - object SchemaMaterializer - method decode - <$anon: java.util.function.BiConsumer[schema.keySchema.Repr schema.valueSchema.Repr]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - object SchemaMaterializer - method encode - <$anon: java.util.function.BiConsumer[A B]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - object SchemaMaterializer - method materialize - method fromRow - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - object SchemaMaterializer - method materialize - method toRow - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - object SchemaMaterializer - method materialize - method fromRow - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - object SchemaMaterializer - method materialize - method toRow - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object TapOutputExample,2.0,2.0,0.08695652173913043,0.0,0.0,0.0,0.0
+HEAD,0,package <empty> - object BuildCredentials,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jdbc - class JdbcConnectionOptions,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jdbc - object JdbcIoOptions,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jdbc - trait JdbcIoOptions,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jdbc - class JdbcReadOptions,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package jdbc - class JdbcWriteOptions,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,3,package coders - object Derived,1.0,4.0,0.0851063829787234,0.0,0.0,0.0,0.0
+HEAD,1,package coders - trait LowPriorityCoderDerivation,8.0,8.0,0.27586206896551724,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_8_0 - object Ops,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_7_0 - class AddMissingImports,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_7_0 - class AddMissingImports - object Avro,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_7_0 - class AddMissingImports - object BQ,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object SortMergeBucketExample,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object SortMergeBucketWriteExample,2.0,9.0,0.1956521739130435,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object SortMergeBucketJoinExample,1.0,4.0,0.13793103448275862,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object SortMergeBucketJoinExample - class UserAccountData,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package extra - object SortMergeBucketTransformExample,2.0,10.0,0.2857142857142857,0.0,0.0,0.0,0.0
+HEAD,0,package types - object BeamSchemaIT,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object BeamSchemaIT - class Shakespeare,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package types - class BeamSchemaIT,3.0,11.0,0.1896551724137931,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait ScioContextSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait ScioContextSyntax - class CsvScioContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryIT,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryIT - class Account,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - class BigQueryIT,2.0,6.0,0.1935483870967742,0.0,0.0,0.0,0.0
+HEAD,0,package values - class DoubleSCollectionFunctions,21.0,36.0,0.391304347826087,0.0,0.0,1.0,0.0
+HEAD,0,package values - object BucketFunctions,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package cookbook - object StorageBigQueryTornadoes,2.0,2.0,0.09090909090909091,0.0,0.0,0.0,0.0
+HEAD,3,package scio - object MagnoliaMacros,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - object MagnoliaMacros - method genWithoutAnnotations - <$anon: c.universe.Transformer>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - trait AlgebirdCoders,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - trait AvroInstances,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - trait AvroInstances - method avroSchema - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - trait AvroInstances - method fromAvroSchema - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - trait AvroInstances - method fromAvroSchema - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - object AvroInstances,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - object AvroInstances - class SerializableSchema,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - object PairSCollectionFunctions,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,4,package values - class PairSCollectionFunctions,52.0,163.0,0.31898238747553814,0.0,0.0,8.0,0.0
+HEAD,0,package values - class PairSCollectionFunctions - method asMapSideInput - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - class PairSCollectionFunctions - method asMultiMapSideInput - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package cassandra - package object cassandra,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package cassandra - package object cassandra - class CassandraOptions,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package cassandra - package object cassandra - class CassandraSCollection,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object Breeze,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object Breeze - method breezeSemigroup - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object AvroExample,5.0,19.0,0.2289156626506024,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object AvroExample - class AccountFromSchema,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object AvroExample - class AccountToSchema,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package elasticsearch - object IndexAdmin,4.0,6.0,0.0759493670886076,0.0,0.0,0.0,0.0
+HEAD,0,package repl - object ScioReplSysProps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - class SysProp,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - trait SysProps,1.0,1.0,0.125,0.0,0.0,0.0,0.0
+HEAD,0,package scio - object SysProps,2.0,11.0,0.44,0.0,0.0,0.0,0.0
+HEAD,0,package scio - object CoreSysProps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - object ExtractOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - trait CompressionT,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - trait CompressionT - class Compression,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - trait GzipT,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - trait GzipT - class Gzip,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - trait DeflateT,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - trait DeflateT - class Deflate,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - trait SnappyT,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - trait SnappyT - class Snappy,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - trait NoCompressionT,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - trait NoCompressionT - class NoCompression,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - object CsvCompression,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - object AvroCompression,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - object JsonCompression,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - class ExtractOps,1.0,1.0,0.015384615384615385,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object BigtableExample,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object BigtableWriteExample,3.0,2.0,0.08333333333333333,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object BigtableReadExample,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package repl - package compat - package object compat,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object TableRowJsonInOut,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - object InMemorySink,3.0,5.0,0.3125,0.0,0.0,3.0,0.0
+HEAD,0,package examples - object DebuggingWordCount,2.0,1.0,0.03125,0.0,0.0,0.0,0.0
+HEAD,0,package coders - class KryoRegistrar,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package coders - object KryoRegistrarMacro,2.0,2.0,0.1111111111111111,0.0,0.0,0.0,0.0
+HEAD,0,package coders - trait AnnotatedKryoRegistrar,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - object FixContextCloseExample,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - object Cache,3.0,3.0,0.046153846153846156,0.0,0.0,0.0,0.0
+HEAD,0,package client - object Cache - trait Show,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - object Cache - object Show,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - object Cache - object Show - <$anon: com.spotify.scio.bigquery.client.Cache.Show[<error>]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - object Cache - object Show - <$anon: com.spotify.scio.bigquery.client.Cache.Show[<error>]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - object Cache - object Show - <$anon: com.spotify.scio.bigquery.client.Cache.Show[<error>]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - object Cache - trait Read,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - object Cache - object Read,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - object Cache - object Read - <$anon: com.spotify.scio.bigquery.client.Cache.Read[<error>]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - object Cache - object Read - <$anon: com.spotify.scio.bigquery.client.Cache.Read[<error>]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - object Cache - object Read - <$anon: com.spotify.scio.bigquery.client.Cache.Read[<error>]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object JMapWrapper,4.0,4.0,0.2,0.0,0.0,0.0,0.0
+HEAD,0,package util - object JMapWrapper - method ofMultiMap - <$anon: A => Iterable[B]>,4.0,4.0,0.4,0.0,0.0,0.0,0.0
+HEAD,0,package util - object JMapWrapper - method of - <$anon: K => V>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_7_0 - class InputClass,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_7_0 - class OutputClass,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_7_0 - object TestJob,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_7_0 - class ValidationJobTest,2.0,4.0,0.23529411764705882,0.0,0.0,1.0,0.0
+HEAD,0,package extra - package bigquery - package object bigquery,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package bigquery - object BigQueryPartitionUtil,7.0,10.0,0.15151515151515152,0.0,0.0,0.0,0.0
+HEAD,1,package avro - class ObjectFileIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - class ObjectFileIO - method read - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - class ObjectFileIO - method write - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - object ObjectFileIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - class ProtobufIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - object ProtobufIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - trait AvroIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - class SpecificRecordIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - class GenericRecordIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - class GenericRecordParseIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - object AvroIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - object AvroIO - object WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - object AvroIO - class WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - object AvroIO - method apply - <$anon: com.spotify.scio.avro.AvroIO[T] with com.spotify.scio.io.TestIO[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - object AvroTyped,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - object AvroTyped - class AvroIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - object AvroTyped - class AvroIO - method write - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_8_0 - object Ops,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,3,package types - object SchemaUtil,4.0,6.0,0.057692307692307696,0.0,0.0,0.0,0.0
+HEAD,0,package kryo - object GrpcSerializers,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package kryo - object GrpcSerializers - class StatusSerializer,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package kryo - object GrpcSerializers - class StatusRuntimeExceptionSerializer,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package tensorflow - class TFRecordFileTap,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package transforms - package object transforms,1.0,1.0,0.006535947712418301,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package transforms - package object transforms - object AsyncLookupDoFn,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package transforms - package object transforms - class URISCollection,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package transforms - package object transforms - class CustomParallelismSCollection,1.0,1.0,0.020833333333333332,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package transforms - package object transforms - class CustomParallelismSCollection - method parallelCollectFn - <$anon: com.spotify.scio.util.ParallelLimitedFn[T U]>,1.0,1.0,0.125,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package transforms - package object transforms - class CustomParallelismSCollection - method parallelFilterFn - <$anon: com.spotify.scio.util.ParallelLimitedFn[T T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package transforms - package object transforms - class CustomParallelismSCollection - method parallelMapFn - <$anon: com.spotify.scio.util.ParallelLimitedFn[T U]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package transforms - package object transforms - class CustomParallelismSCollection - method parallelFlatMapFn - <$anon: com.spotify.scio.util.ParallelLimitedFn[T U]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package transforms - package object transforms - class PipeSCollection,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package transforms - package object transforms - class SpecializedFlatMapSCollection,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package transforms - package object transforms - class SpecializedFlatMapSCollection - method safeFlatMap - <$anon: com.spotify.scio.util.NamedDoFn[T U]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package transforms - package object transforms - class RichAsyncLookupDoFnTry,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_8_0 - object FixTensorflowExample,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package scio - package elasticsearch - package object elasticsearch,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package scio - package elasticsearch - package object elasticsearch - class ElasticsearchOptions,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package elasticsearch - package object elasticsearch - class ElasticsearchSCollection,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dynamic - object DynamicBigQueryIT,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dynamic - object DynamicBigQueryIT - class Record,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dynamic - class DynamicBigQueryIT,6.0,10.0,0.25,0.0,0.0,0.0,0.0
+HEAD,0,package cookbook - object JoinUtil,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package cookbook - object JoinExamples,1.0,4.0,0.19047619047619047,0.0,0.0,0.0,0.0
+HEAD,0,package cookbook - object SideInputJoinExamples,1.0,5.0,0.2,0.0,0.0,0.0,0.0
+HEAD,0,package cookbook - object HashJoinExamples,1.0,4.0,0.2,0.0,0.0,0.0,0.0
+HEAD,1,package dataflow - object DataflowContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object CheckpointExample,5.0,4.0,0.2222222222222222,0.0,0.0,0.0,0.0
+HEAD,0,package avro - class ParquetAvroIO,2.0,2.0,0.038461538461538464,0.0,0.0,0.0,0.0
+HEAD,0,package avro - object ParquetAvroIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - object ParquetAvroIO - class ReadParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - object ParquetAvroIO - class ReadParam - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - object ParquetAvroIO - class ReadParam - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - object ParquetAvroIO - object WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - object ParquetAvroIO - class WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - class ParquetAvroTap,1.0,5.0,0.3125,0.0,0.0,0.0,0.0
+HEAD,0,package avro - class ParquetAvroTap - method value - <none>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_7_0 - class RewriteSysProp,1.0,1.0,0.013157894736842105,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_7_0 - class RewriteSysProp - object NamedSysProp,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_7_0 - class RewriteSysProp - object StringSysProp,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait AllSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object MagnolifyAvroExample,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object MagnolifyAvroExample - class WordCount,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object MagnolifyAvroWriteExample,3.0,2.0,0.13333333333333333,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object MagnolifyAvroReadExample,2.0,2.0,0.15384615384615385,0.0,0.0,0.0,0.0
+HEAD,0,package coders - trait Coder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package coders - class Ref,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package coders - object Ref,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package coders - class RawBeam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package coders - class Beam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package coders - class Fallback,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package coders - class Transform,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package coders - class Disjunction,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package coders - class Record,1.0,3.0,0.25,0.0,0.0,0.0,0.0
+HEAD,0,package coders - class KVCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package coders - class DisjunctionCoder,4.0,4.0,0.0851063829787234,0.0,0.0,0.0,0.0
+HEAD,0,package coders - class LazyCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package coders - class WrappedBCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package coders - object WrappedBCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package coders - class RecordCoder,1.0,1.0,0.009900990099009901,0.0,0.0,0.0,0.0
+HEAD,0,package coders - trait CoderGrammar,1.0,1.0,0.023809523809523808,0.0,0.0,0.0,0.0
+HEAD,0,package coders - trait CoderGrammar - method xmap - method toB - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package coders - object Coder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package coders - object CoderStackTrace,2.0,3.0,0.1111111111111111,0.0,0.0,0.0,0.0
+HEAD,3,package types - object BigQueryTypeIT,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object BigQueryTypeIT - class LegacyT,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object BigQueryTypeIT - class SqlT,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object BigQueryTypeIT - class FromTableT,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object BigQueryTypeIT - class ToTableT,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object BigQueryTypeIT - class LegacyLatestT,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object BigQueryTypeIT - class SqlLatestT,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package types - object BigQueryTypeIT - class SqlLatestTWithMultiArgs,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object BigQueryTypeIT - class FromTableLatestT,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object BigQueryTypeIT - class Annotation1,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object BigQueryTypeIT - class Annotation2,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object BigQueryTypeIT - class ShakespeareWithSurroundingAnnotations,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object BigQueryTypeIT - class ShakespeareWithSequentialAnnotations,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,3,package types - class BigQueryTypeIT,15.0,14.0,0.1320754716981132,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - class TableRowJsonTap,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - class BigQueryTypedTap,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - class BigQueryTap,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package bigquery - class BigQueryStorageTap,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package bigquery - class BigQueryTaps,11.0,24.0,0.3,0.0,0.0,2.0,0.0
+HEAD,0,package bigquery - object BigQueryTaps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait SCollectionSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait SCollectionSyntax - class WritableCsvSCollection,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait SCollectionSyntax - class ReadableCsvFileSCollection,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class ScioContextOps,2.0,4.0,0.10810810810810811,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait ScioContextSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object AvroType,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object AvroType - class fromSchema,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object AvroType - class fromPath,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object AvroType - class fromSchemaFile,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object AvroType - class toSchema,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object AvroType - trait HasAvroSchema,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object AvroType - trait HasAvroDoc,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object AvroType - trait HasAvroAnnotation,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package types - class AvroType,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object TupleFunctions,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object TupleFunctions - method kvListToTuple - <$anon: Iterable[V]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package examples - object WindowedWordCount,6.0,10.0,0.2127659574468085,0.0,0.0,0.0,0.0
+HEAD,1,package types - class AvroTapIT,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - class SCollectionWithSideOutput,2.0,6.0,0.2222222222222222,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait AllSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package complete - object AutoComplete,13.0,20.0,0.19801980198019803,0.0,0.0,0.0,0.0
+HEAD,0,package complete - object AutoComplete - class Tag,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package complete - object AutoComplete - class Record,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_7_0 - class BQClientRefactoring,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_7_0 - class BQClientRefactoring - object BQDef,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package common - object ExampleData,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package sql - object SQLBuilders,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object SQLBuilders - method from - <$anon: com.spotify.scio.sql.SQLBuilder>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object SQLBuilders - method from - <$anon: com.spotify.scio.sql.SQLBuilder>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object SQLBuilders - method from - <$anon: com.spotify.scio.sql.SQLBuilder>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object SQLBuilders - method from - <$anon: com.spotify.scio.sql.SQLBuilder>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object SQLBuilders - method from - <$anon: com.spotify.scio.sql.SQLBuilder>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object SQLBuilders - method from - <$anon: com.spotify.scio.sql.SQLBuilder>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object SQLBuilders - method from - <$anon: com.spotify.scio.sql.SQLBuilder>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object SQLBuilders - method from - <$anon: com.spotify.scio.sql.SQLBuilder>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object SQLBuilders - method from - <$anon: com.spotify.scio.sql.SQLBuilder>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object SQLBuilders - method from - <$anon: com.spotify.scio.sql.SQLBuilder>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package extra - object TypedBigQueryTornadoes,2.0,2.0,0.10526315789473684,0.0,0.0,0.0,0.0
+HEAD,1,package extra - object TypedBigQueryTornadoes - class Row,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object TypedBigQueryTornadoes - class Result,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object AvroInOut,1.0,8.0,0.4444444444444444,0.0,0.0,0.0,0.0
+HEAD,1,package io - trait PubsubIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package io - object PubsubIO,4.0,4.0,0.039603960396039604,0.0,0.0,0.0,0.0
+HEAD,0,package io - object PubsubIO - trait ReadType,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - object PubsubIO - object Subscription,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - object PubsubIO - object Topic,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - object PubsubIO - class ReadParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - object PubsubIO - object ReadParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - object PubsubIO - class WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - trait PubsubIOWithoutAttributes,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - class StringPubsubIOWithoutAttributes,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - class AvroPubsubIOWithoutAttributes,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - class MessagePubsubIOWithoutAttributes,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - class PubSubMessagePubsubIOWithoutAttributes,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - class FallbackPubsubIOWithoutAttributes,2.0,4.0,0.14285714285714285,0.0,0.0,0.0,0.0
+HEAD,1,package io - class PubsubIOWithAttributes,4.0,9.0,0.16363636363636364,0.0,0.0,0.0,0.0
+HEAD,0,package io - class PubsubIOWithAttributes - method write - <$anon: <error>>,1.0,4.0,0.2857142857142857,0.0,0.0,0.0,0.0
+HEAD,2,package values - trait PCollectionWrapper,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package testing - trait JobInputSource,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package testing - class TestStreamInputSource,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package testing - class IterableInputSource,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package testing - class TestInput,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package testing - class TestOutput,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package testing - class TestDistCache,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package testing - object TestDataManager,3.0,3.0,0.06521739130434782,0.0,0.0,3.0,0.0
+HEAD,0,package testing - class DistCacheIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package testing - object DistCacheIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - class StringSparkeyReader,1.0,1.0,0.1,0.0,0.0,0.0,0.0
+HEAD,1,package cookbook - object MaxPerKeyExamples,2.0,2.0,0.10526315789473684,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_7_0 - object RewriteSysProp,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait AllSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package elasticsearch - object IndexAdmin,5.0,9.0,0.10465116279069768,0.0,0.0,0.0,0.0
+HEAD,0,package util - object CallSites,7.0,7.0,0.1320754716981132,0.0,0.0,0.0,0.0
+HEAD,0,package util - object CallSites - method getCurrent - <$anon: java.util.function.BiFunction[Int Int Int]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - trait SparkeyReaderInstances,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,5,package values - trait SideInput,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - object SideInput,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - class SingletonSideInput,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package values - class ListSideInput,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - class IterableSideInput,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package values - class MapSideInput,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package values - class MultiMapSideInput,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - class DelegatingSideInput,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package values - class SideInputContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sparkey - trait SparkeyUri,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sparkey - object SparkeyUri,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package sparkey - class LocalSparkeyUri,2.0,1.0,0.16666666666666666,0.0,0.0,0.0,0.0
+HEAD,0,package sparkey - object RemoteSparkeyUri,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package sparkey - class RemoteSparkeyUri,2.0,2.0,0.2,0.0,0.0,0.0,0.0
+HEAD,0,package sparkey - class SparkeyWriter,1.0,4.0,0.12903225806451613,0.0,0.0,1.0,0.0
+HEAD,0,package instances - trait AllInstances,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - object all,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - object DynamicSCollectionOps,1.0,2.0,0.1111111111111111,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class DynamicSpecificRecordSCollectionOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class DynamicGenericRecordSCollectionOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class DynamicGenericRecordSCollectionOps - method saveAsDynamicAvroFile - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class DynamicSCollectionOps,1.0,1.0,0.04,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class DynamicProtobufSCollectionOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class DynamicProtobufSCollectionOps - method saveAsDynamicProtobufFile - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait SCollectionSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dataflow - class DataflowResult,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dataflow - class DataflowResult - class DataflowScioResult,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dataflow - object DataflowResult,2.0,7.0,0.10606060606060606,0.0,0.0,0.0,0.0
+HEAD,0,package dataflow - object DataflowResult - class EmptyPTransform,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dataflow - object DataflowResult - class EmptyPipeline,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package elasticsearch - class ElasticsearchIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package elasticsearch - class ElasticsearchIO - method write - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package elasticsearch - class ElasticsearchIO - method write - <$anon: org.apache.beam.sdk.io.elasticsearch.ThrowingConsumer[org.apache.beam.sdk.io.elasticsearch.ElasticsearchIO.Write.BulkExecutionException]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package elasticsearch - object ElasticsearchIO,1.0,1.0,0.041666666666666664,0.0,0.0,0.0,0.0
+HEAD,0,package elasticsearch - object ElasticsearchIO - object WriteParam,1.0,1.0,0.07142857142857142,0.0,0.0,0.0,0.0
+HEAD,0,package elasticsearch - object ElasticsearchIO - class WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package elasticsearch - object ElasticsearchIO - class RetryConfig,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,8,package types - object TypeProvider,31.0,67.0,0.16341463414634147,0.0,0.0,2.0,0.0
+HEAD,0,package types - object NameProvider,2.0,2.0,0.15384615384615385,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object WordCountOrchestration,9.0,8.0,0.2222222222222222,0.0,0.0,1.0,0.0
+HEAD,0,package scio - trait FeatureFlag,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - object FeatureFlag,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - object FeatureFlag - object Enable,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - object FeatureFlag - object Disable,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - object MacroSettings,3.0,16.0,0.5517241379310345,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait AllSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object CloudSqlExample,3.0,6.0,0.15,0.0,0.0,1.0,0.0
+HEAD,2,package values - class PairHashSCollectionFunctions,15.0,43.0,0.32575757575757575,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_7_0 - object AddMissingImports,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - class Query7,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package sql - object Query7,3.0,6.0,0.056074766355140186,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object Query7 - method typed7Impl - <$anon: com.spotify.scio.schemas.SchemaMacroHelpers>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package sql - class SqlSCollection7,3.0,2.0,0.02857142857142857,0.0,0.0,0.0,0.0
+HEAD,0,package kryo - class ByteStringSerializer,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_8_0 - class ValidateInvoicePaymentsJobTest,4.0,12.0,0.375,0.0,0.0,2.0,0.0
+HEAD,0,package io - class TapNotAvailableException,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package io - trait Taps,2.0,1.0,0.09090909090909091,0.0,0.0,0.0,0.0
+HEAD,0,package io - class ImmediateTaps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - object PollingTaps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - object PollingTaps - class Poll,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - class PollingTaps,3.0,5.0,0.11904761904761904,0.0,0.0,1.0,0.0
+HEAD,0,package io - object Taps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - object TapsSysProps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait AllSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object SchemaProvider,5.0,9.0,0.10227272727272728,0.0,0.0,0.0,0.0
+HEAD,0,package util - trait Cache,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - trait CacheT,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Cache,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Cache - method noOp - <$anon: com.spotify.scio.util.CacheT[K V Nothing]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Cache - method concurrentHashMap - <$anon: com.spotify.scio.util.CacheT[K V java.util.concurrent.ConcurrentHashMap[K V]]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Cache - method concurrentHashMap - <$anon: com.spotify.scio.util.CacheT[K V java.util.concurrent.ConcurrentHashMap[K V]]> - method get - <$anon: java.util.function.Function[K V]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Cache - method caffeine - <$anon: com.spotify.scio.util.CacheT[K V <error>]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Cache - method caffeine - <$anon: com.spotify.scio.util.CacheT[K V <error>]> - method get - <none>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Cache - method guava - <$anon: com.spotify.scio.util.CacheT[K V <error>]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Cache - method guava - <$anon: com.spotify.scio.util.CacheT[K V <error>]> - method get - <none>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_8_0 - class SpecializedScioIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_8_0 - class OtherScioIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class SpannerSCollectionOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait SCollectionSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_8_0 - class SpecializedScioIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_8_0 - class OtherScioIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package smb - package object smb,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class TableReferenceOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait TableReferenceSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package sql - trait SqlSCollections,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - class TypedSparkeyReader,1.0,4.0,0.13333333333333333,0.0,0.0,0.0,0.0
+HEAD,0,package instances - class TypedSparkeyReader,1.0,4.0,0.13333333333333333,0.0,0.0,0.0,0.0
+HEAD,0,package instances - trait ProtobufCoders,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - class Range,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package examples - object MinimalWordCounCaseAppExample,4.0,3.0,0.14285714285714285,0.0,0.0,0.0,0.0
+HEAD,0,package examples - object MinimalWordCounCaseAppExample - class Arguments,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package examples - object MinimalWordCounPipelineOptionsExample,4.0,3.0,0.15,0.0,0.0,0.0,0.0
+HEAD,0,package examples - object MinimalWordCounPipelineOptionsExample - trait Arguments,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,4,package types - object ConverterProvider,6.0,11.0,0.03806228373702422,0.0,0.0,0.0,0.0
+HEAD,0,package types - object ConverterUtil,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait SortMergeBucketSCollectionSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class SortedBucketSCollection,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class SortedBucketPairSCollection,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - object Spanner,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package syntax - class SCollectionTableRowOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package syntax - class SCollectionBeamSchemaOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package syntax - class SCollectionTypedOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait SCollectionSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,3,package extra - package sparkey - package object sparkey,14.0,53.0,0.22844827586206898,0.0,0.0,0.0,0.0
+HEAD,0,package extra - package sparkey - package object sparkey - class SparkeyScioContext,2.0,2.0,0.07142857142857142,0.0,0.0,0.0,0.0
+HEAD,2,package extra - package sparkey - package object sparkey - class SparkeyPairSCollection,6.0,46.0,0.42201834862385323,0.0,0.0,0.0,0.0
+HEAD,0,package extra - package sparkey - package object sparkey - class SparkeySCollection,3.0,3.0,0.15789473684210525,0.0,0.0,0.0,0.0
+HEAD,0,package extra - package sparkey - package object sparkey - class ShardedSparkeyReader,3.0,2.0,0.05405405405405406,0.0,0.0,0.0,0.0
+HEAD,1,package extra - package sparkey - package object sparkey - class SparkeySideInput,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - package sparkey - package object sparkey - trait SparkeyWritable,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - package sparkey - package object sparkey - <$anon: com.spotify.scio.extra.sparkey.package.SparkeyWritable[String String]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - package sparkey - package object sparkey - <$anon: com.spotify.scio.extra.sparkey.package.SparkeyWritable[Array[Byte] Array[Byte]]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object MagnolifyBigtableExample,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object MagnolifyBigtableExample - class WordCount,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object MagnolifyBigtableWriteExample,2.0,1.0,0.045454545454545456,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object MagnolifyBigtableReadExample,1.0,2.0,0.125,0.0,0.0,0.0,0.0
+HEAD,0,package values - trait SideOutput,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - object SideOutput,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - object SideOutput - method apply - <$anon: com.spotify.scio.values.SideOutput[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - class SideOutputContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - class SideOutputCollections,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class SorterOps,4.0,30.0,0.7692307692307693,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class SorterOps - method sortValues - <$anon: Iterable[(K2  V)]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class SorterOps - method sortValues - <$anon: Iterable[(K2  V)]> - method iterator - <$anon: scala.collection.AbstractIterator[(K2  V)]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait SCollectionSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object SchemaUtil,6.0,9.0,0.06870229007633588,0.0,0.0,0.0,0.0
+HEAD,0,package instances - trait TupleCoders,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - class SideMap,1.0,1.0,0.25,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - trait ShardString,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - object ShardString,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - object ShardString - class HexUpperString,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - object ShardString - class HexLowerString,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - object ShardString - class Base64String,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - trait RangeShardStringCodec,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - object RangeShardStringCodec,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - object RangeShardStringCodec - <$anon: com.spotify.scio.jdbc.sharded.RangeShardStringCodec[com.spotify.scio.jdbc.sharded.ShardString.HexUpperString]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - object RangeShardStringCodec - <$anon: com.spotify.scio.jdbc.sharded.RangeShardStringCodec[com.spotify.scio.jdbc.sharded.ShardString.HexLowerString]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - object RangeShardStringCodec - <$anon: com.spotify.scio.jdbc.sharded.RangeShardStringCodec[com.spotify.scio.jdbc.sharded.ShardString.Base64String]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - class Query10,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package sql - object Query10,3.0,6.0,0.03592814371257485,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object Query10 - method typed10Impl - <$anon: com.spotify.scio.schemas.SchemaMacroHelpers>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package sql - class SqlSCollection10,3.0,2.0,0.02,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_7_0 - object BQClientRefactoring,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - package libsvm - package object libsvm,6.0,10.0,0.15873015873015872,0.0,0.0,0.0,0.0
+HEAD,0,package extra - package libsvm - package object libsvm - class SVMReader,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package <empty> - object Scalac,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package validation - trait OverrideTypeProvider,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package elasticsearch - trait CoderInstances,3.0,3.0,0.05660377358490566,0.0,0.0,0.0,0.0
+HEAD,0,package elasticsearch - trait CoderInstances - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package elasticsearch - trait CoderInstances - method writableBCoder - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,4,package types - object TypeProvider,21.0,27.0,0.08206686930091185,0.0,0.0,0.0,0.0
+HEAD,0,package complete - object TopWikipediaSessions,7.0,18.0,0.4186046511627907,0.0,0.0,0.0,0.0
+HEAD,0,package sql - class Query2,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package sql - object Query2,3.0,3.0,0.058823529411764705,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object Query2 - method typed2Impl - <$anon: com.spotify.scio.schemas.SchemaMacroHelpers>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package sql - class SqlSCollection2,3.0,2.0,0.06896551724137931,0.0,0.0,0.0,0.0
+HEAD,0,package cassandra - class CassandraIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package cassandra - object CassandraIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package cassandra - object CassandraIO - object WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package cassandra - object CassandraIO - class WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_8_0 - class FixRunWithContext,4.0,3.0,0.10344827586206896,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_8_0 - class FixScioIO,1.0,1.0,0.05263157894736842,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_8_0 - class FixSyntaxImports,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_8_0 - class FixSyntaxImports - object JDBC,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_8_0 - class FixSyntaxImports - object BQ,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_8_0 - class FixContextClose,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_8_0 - class FixTensorflow,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_8_0 - class FixBigQueryDeprecations,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_8_0 - class ConsistenceJoinNames,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object RefreshingSideInputExample,2.0,2.0,0.03225806451612903,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object RefreshingSideInputExample - class LotteryTicket,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object RefreshingSideInputExample - class LotteryResult,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package examples - object WordCount,9.0,14.0,0.4117647058823529,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait AllSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package random - object RandomSampler,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package random - class RandomSampler,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package random - class BernoulliSampler,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package random - class PoissonSampler,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package random - class RandomValueSampler,1.0,3.0,0.14285714285714285,0.0,0.0,0.0,0.0
+HEAD,0,package random - class BernoulliValueSampler,1.0,2.0,0.09090909090909091,0.0,0.0,0.0,0.0
+HEAD,0,package random - class PoissonValueSampler,1.0,1.0,0.06666666666666667,0.0,0.0,0.0,0.0
+HEAD,0,package hash - trait ApproxFilter,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package hash - trait ApproxFilterCompanion,4.0,6.0,0.05555555555555555,0.0,0.0,2.0,0.0
+HEAD,0,package hash - trait ApproxFilterCompanion - class PartitionSettings,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package hash - class BloomFilter,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package hash - object BloomFilter,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package hash - object BloomFilter - class BloomFilterCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait AllSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,3,package syntax - class ScioContextOps,1.0,1.0,0.010869565217391304,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait ScioContextSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,4,package values - class SCollectionWithFanout,2.0,2.0,0.034482758620689655,0.0,0.0,0.0,0.0
+HEAD,0,package client - object LoadOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - class LoadOps,5.0,5.0,0.04065040650406504,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - package dynamic - package object dynamic,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - trait Shard,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - trait RangeShard,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - object Shard,10.0,10.0,0.2857142857142857,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - class NumericRangeShard,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - object NumericRangeShard,2.0,22.0,0.41509433962264153,0.0,0.0,1.0,0.0
+HEAD,0,package sharded - class RangeStringShard,2.0,9.0,0.36,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - class PrefixShard,1.0,1.0,0.1111111111111111,0.0,0.0,0.0,0.0
+HEAD,1,package cookbook - object DistinctByKeyExample,2.0,5.0,0.20833333333333334,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait AllSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - trait DistCache,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - class FileDistCache,1.0,1.0,0.07692307692307693,0.0,0.0,0.0,0.0
+HEAD,0,package values - class MockDistCache,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - class MockDistCacheFunc,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - object MockDistCache,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - class DistCacheSingle,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - class DistCacheMulti,1.0,1.0,0.125,0.0,0.0,1.0,0.0
+HEAD,0,package fix - package v0_8_0 - object FixTensorflowExample,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - class CachedStringSparkeyReader,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - trait RunnerResult,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,3,package scio - class ScioResult,8.0,25.0,0.18115942028985507,0.0,0.0,0.0,0.0
+HEAD,0,package util - object FunctionsWithWindowedValue,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object FunctionsWithWindowedValue - method filterFn - <$anon: com.spotify.scio.util.NamedDoFn[T T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object FunctionsWithWindowedValue - method flatMapFn - <$anon: com.spotify.scio.util.NamedDoFn[T U]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object FunctionsWithWindowedValue - method mapFn - <$anon: com.spotify.scio.util.NamedDoFn[T U]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - object FixJoinNames,2.0,2.0,0.03571428571428571,0.0,0.0,0.0,0.0
+HEAD,0,package validation - class DummyOverrideTypeProvider,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object MacroUtil,3.0,3.0,0.13636363636363635,0.0,0.0,0.0,0.0
+HEAD,1,package instances - trait BeamTypeCoders,2.0,2.0,0.1,0.0,0.0,0.0,0.0
+HEAD,1,package instances - object BeamTypeCoders,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package sparkey - class SparkeyIT,11.0,65.0,0.8552631578947368,0.0,0.0,1.0,0.0
+HEAD,0,package syntax - class JdbcScioContextOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait SCollectionSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package <empty> - object CheckBeamDependencies,5.0,5.0,0.1282051282051282,0.0,0.0,0.0,0.0
+HEAD,0,package <empty> - object CheckBeamDependencies - object autoImport,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package <empty> - object CheckBeamDependencies - method resolveBeamDependencies - <none>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - object UnitCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - object NothingCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - class PairCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package instances - class BaseSeqLikeCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,3,package instances - class SeqLikeCoder,2.0,2.0,0.06666666666666667,0.0,0.0,0.0,0.0
+HEAD,0,package instances - class BufferedSeqLikeCoder,2.0,4.0,0.13793103448275862,0.0,0.0,0.0,0.0
+HEAD,0,package instances - class OptionCoder,1.0,1.0,0.0625,0.0,0.0,0.0,0.0
+HEAD,0,package instances - class SeqCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - class ListCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package instances - class TraversableOnceCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package instances - class IterableCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - class VectorCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,3,package instances - class ArrayCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - class ArrayBufferCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - class BufferCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package instances - class SetCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - class MutableSetCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package instances - class SortedSetCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - class BitSetCoder,2.0,2.0,0.14285714285714285,0.0,0.0,0.0,0.0
+HEAD,0,package instances - class MapCoder,2.0,9.0,0.15517241379310345,0.0,0.0,0.0,0.0
+HEAD,0,package instances - class MutableMapCoder,3.0,14.0,0.24561403508771928,0.0,0.0,0.0,0.0
+HEAD,0,package instances - object SFloatCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - object SDoubleCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package instances - trait ScalaCoders,25.0,23.0,0.2839506172839506,0.0,0.0,0.0,0.0
+HEAD,0,package instances - object ScalaCoders,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package kryo - class GenericAvroSerializer,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package kryo - class SpecificAvroSerializer,1.0,1.0,0.07142857142857142,0.0,0.0,0.0,0.0
+HEAD,1,package scio - package elasticsearch - package object elasticsearch,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package scio - package elasticsearch - package object elasticsearch - class ElasticsearchOptions,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package elasticsearch - package object elasticsearch - class ElasticsearchSCollection,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - package annoy - package object annoy,2.0,24.0,0.2962962962962963,0.0,0.0,2.0,0.0
+HEAD,0,package extra - package annoy - package object annoy - class AnnoyMetric,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - package annoy - package object annoy - object Angular,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - package annoy - package object annoy - object Euclidean,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - package annoy - package object annoy - class AnnoyReader,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - package annoy - package object annoy - class AnnoyScioContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - package annoy - package object annoy - class AnnoyPairSCollection,2.0,24.0,0.5853658536585366,0.0,0.0,2.0,0.0
+HEAD,0,package extra - package annoy - package object annoy - class AnnoySCollection,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - package annoy - package object annoy - class AnnoySideInput,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package elasticsearch - class ElasticsearchIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package elasticsearch - class ElasticsearchIO - method write - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package elasticsearch - class ElasticsearchIO - method write - <$anon: org.apache.beam.sdk.io.elasticsearch.ThrowingConsumer[org.apache.beam.sdk.io.elasticsearch.ElasticsearchIO.Write.BulkExecutionException]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package elasticsearch - object ElasticsearchIO,1.0,1.0,0.041666666666666664,0.0,0.0,0.0,0.0
+HEAD,0,package elasticsearch - object ElasticsearchIO - object WriteParam,1.0,1.0,0.07142857142857142,0.0,0.0,0.0,0.0
+HEAD,0,package elasticsearch - object ElasticsearchIO - class WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package elasticsearch - object ElasticsearchIO - class RetryConfig,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - trait Source,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - class Query,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - trait Table,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object Table,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object Table - class Ref,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object Table - class Spec,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - trait ExtendedErrorInfo,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object ExtendedErrorInfo,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object ExtendedErrorInfo - object Enabled,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object ExtendedErrorInfo - object Disabled,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object TableRow,1.0,1.0,0.2,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object Timestamp,1.0,1.0,0.029411764705882353,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object Date,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object Time,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object DateTime,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - class TimePartitioning,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object Numeric,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package elasticsearch - trait CoderInstances,3.0,3.0,0.05357142857142857,0.0,0.0,0.0,0.0
+HEAD,0,package elasticsearch - trait CoderInstances - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package elasticsearch - trait CoderInstances - method writableBCoder - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - package types - package object types,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - package types - package object types - class description,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - package types - package object types - class Geography,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package values - class SCollectionWithSideInput,7.0,10.0,0.13513513513513514,0.0,0.0,0.0,0.0
+HEAD,1,package values - class SCollectionWithSideInput - method transformWithSideOutputs - method transformWithSideOutputsFn - <$anon: com.spotify.scio.util.NamedDoFn[T T] with com.spotify.scio.util.FunctionsWithSideInput.SideInputDoFn[T T]>,2.0,2.0,0.16666666666666666,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object Sql,1.0,4.0,0.16666666666666666,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object Queries,2.0,16.0,0.18604651162790697,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object Queries - method parseQuery - <none>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object QueryMacros,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package tensorflow - class TFRecordIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package tensorflow - object TFRecordIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package tensorflow - object TFRecordIO - object ReadParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package tensorflow - object TFRecordIO - class ReadParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package tensorflow - object TFRecordIO - object WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package tensorflow - object TFRecordIO - class WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package tensorflow - class TFExampleIO,1.0,1.0,0.07142857142857142,0.0,0.0,0.0,0.0
+HEAD,0,package tensorflow - object TFExampleIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package tensorflow - class TFSequenceExampleIO,1.0,1.0,0.058823529411764705,0.0,0.0,0.0,0.0
+HEAD,0,package tensorflow - object TFRecordMethods,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package util - object ScioUtil,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - trait JodaInstances,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class FileStorageOps,1.0,1.0,0.0625,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class FileStorageOps - method tfRecordFile - <$anon: Iterator[Array[Byte]]>,1.0,1.0,0.07692307692307693,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait FileStorageSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - class GenericRecordTap,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - class SpecificRecordTap,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - class GenericRecordParseTap,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - class ObjectFileTap,1.0,2.0,0.2222222222222222,0.0,0.0,0.0,0.0
+HEAD,0,package avro - class AvroTaps,9.0,6.0,0.2727272727272727,0.0,0.0,0.0,0.0
+HEAD,2,package types - object ConverterProvider,3.0,6.0,0.05084745762711865,0.0,0.0,0.0,0.0
+HEAD,0,package types - object ConverterUtil,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - class StringSparkeyReader,1.0,1.0,0.1,0.0,0.0,0.0,0.0
+HEAD,1,package io - trait Tap,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package io - trait Tap - method map - <$anon: com.spotify.scio.io.Tap[U]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - object EmptyTap,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - class UnsupportedTap,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - class TextTap,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - class InMemoryTap,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - class MaterializeTap,1.0,1.0,0.04,0.0,0.0,0.0,0.0
+HEAD,0,package io - class MaterializeTap - method dofn - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - object MaterializeTap,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - class ClosedTap,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package types - object SchemaProvider,7.0,14.0,0.1794871794871795,0.0,0.0,0.0,0.0
+HEAD,0,package types - object SchemaProvider - method schemaOf - <$anon: java.util.function.Function[reflect.runtime.universe.Type <error>]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package cassandra - object DataTypeExternalizer,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package cassandra - class DataTypeExternalizer,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package cassandra - class DataTypeKryoInstantiator,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package cassandra - trait ImmutableCollectionSerializer,2.0,2.0,0.16666666666666666,0.0,0.0,0.0,0.0
+HEAD,0,package cassandra - class ImmutableListSerializer,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package cassandra - class ImmutableSetSerializer,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sparkey - trait ShardedSparkeyUri,3.0,3.0,0.07894736842105263,0.0,0.0,0.0,0.0
+HEAD,0,package sparkey - trait ShardedSparkeyUri - class InvalidShards,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sparkey - object ShardedSparkeyUri,1.0,4.0,0.2,0.0,0.0,0.0,0.0
+HEAD,0,package sparkey - class LocalShardedSparkeyUri,3.0,1.0,0.09090909090909091,0.0,0.0,0.0,0.0
+HEAD,0,package sparkey - class RemoteShardedSparkeyUri,5.0,4.0,0.16,0.0,0.0,0.0,0.0
+HEAD,0,package instances - trait AllInstances,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object SingleGZipFileExample,3.0,2.0,0.16666666666666666,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - object JdbcUtils,1.0,1.0,0.045454545454545456,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - object JdbcUtils - method getIndexedColumns - <$anon: Iterator[String]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - class BinaryIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - object BinaryIO,4.0,3.0,0.047619047619047616,0.0,0.0,0.0,0.0
+HEAD,0,package io - object BinaryIO - object WriteParam,2.0,2.0,0.16666666666666666,0.0,0.0,0.0,0.0
+HEAD,0,package io - object BinaryIO - class WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package io - object BinaryIO - class BytesSink,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package compat - class CsvReaderOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigtable - object Rows,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait AllSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - package types - package object types,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package avro - package types - package object types - class doc,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package coders - object AvroCoderMacros,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package avro - object AvroUtils,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package validation - object SetProperty,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package validation - object SetProperty - class setProperty,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package parquet - object GcsConnectorUtil,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - class Partitions,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package values - class PairSkewedSCollectionFunctions,9.0,79.0,0.4030612244897959,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait SortMergeBucketScioContextSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class SortedBucketScioContext,7.0,43.0,0.17063492063492064,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class SortedBucketScioContext - method sortMergeJoin - <none>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class SortedBucketScioContext - class SortMergeTransformReadBuilder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class SortedBucketScioContext - class SortMergeTransformWriteBuilder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class SortedBucketScioContext - class SortMergeTransformWriteBuilder - method via - <$anon: org.apache.beam.sdk.extensions.smb.SortedBucketTransform.TransformFn[K W]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sorter - class SortingKey,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sorter - object SortingKey,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sorter - object SortingKey - object StringKey,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sorter - object SortingKey - object ByteArrayKey,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigtable - object Mutations,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,5,package util - object Functions,8.0,17.0,0.06513409961685823,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Functions - object Fns,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Functions - class CombineContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Functions - object CombineContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package util - object Functions - class CombineFn,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package util - object Functions - method aggregateFn - <$anon: com.spotify.scio.util.Functions.CombineFn[T (U  java.util.List[T]) U]>,1.0,1.0,0.037037037037037035,0.0,0.0,0.0,0.0
+HEAD,2,package util - object Functions - method combineFn - <$anon: com.spotify.scio.util.Functions.CombineFn[T (Option[C]  java.util.List[T]) C]>,1.0,11.0,0.16923076923076924,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Functions - method flatMapFn - <$anon: com.spotify.scio.util.NamedDoFn[T U]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Functions - method processFn - <$anon: com.spotify.scio.util.NamedProcessFn[T U]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Functions - method serializableFn - <$anon: com.spotify.scio.util.NamedSerializableFn[T U]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Functions - method simpleFn - <$anon: com.spotify.scio.util.NamedSimpleFn[T U]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Functions - method mapFn - <$anon: com.spotify.scio.util.NamedDoFn[T U]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Functions - method partitionFn - <$anon: com.spotify.scio.util.NamedPartitionFn[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package util - object Functions - class ReduceFn,2.0,2.0,0.0625,0.0,0.0,0.0,0.0
+HEAD,4,package util - object Functions - method reduceFn - <$anon: com.spotify.scio.util.Functions.ReduceFn[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Functions - method reduceFn - <$anon: com.spotify.scio.util.Functions.ReduceFn[T]>,3.0,2.0,0.10526315789473684,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Functions - method reduceFn - <$anon: com.spotify.scio.util.Functions.ReduceFn[T]>,1.0,1.0,0.1111111111111111,0.0,0.0,0.0,0.0
+HEAD,0,package random - class XORShiftRandom,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package random - object XORShiftRandom,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package kryo - class JodaLocalDateTimeSerializer,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package kryo - class JodaLocalTimeSerializer,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package kryo - class JodaLocalDateSerializer,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package kryo - class JodaDateTimeSerializer,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - trait Udf,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - class UdfFromSerializableFn,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - class UdfFromClass,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - class UdafFromCombineFn,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object Udf,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package annotations - class experimental,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - class Query4,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package sql - object Query4,3.0,6.0,0.07792207792207792,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object Query4 - method typed4Impl - <$anon: com.spotify.scio.schemas.SchemaMacroHelpers>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package sql - class SqlSCollection4,3.0,2.0,0.041666666666666664,0.0,0.0,0.0,0.0
+HEAD,0,package instances - object VoidCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,3,package instances - trait JavaCoders,18.0,16.0,0.32653061224489793,0.0,0.0,0.0,0.0
+HEAD,0,package instances - trait JavaBeanCoders,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - object JavaCoders,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package elasticsearch - object IndexAdmin,5.0,9.0,0.1,0.0,0.0,0.0,0.0
+HEAD,6,package coders - object CoderMaterializer,1.0,1.0,0.015625,0.0,0.0,0.0,0.0
+HEAD,0,package coders - object CoderMaterializer - class CoderOptions,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package coders - object CoderMaterializer - object CoderOptions,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package game - object GameStats,3.0,6.0,0.075,0.0,0.0,0.0,0.0
+HEAD,0,package game - object GameStats - class TeamScoreSums,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package game - object GameStats - class AvgSessionLength,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object TsvExampleWrite,3.0,2.0,0.08695652173913043,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object TsvExampleRead,4.0,5.0,0.3125,0.0,0.0,0.0,0.0
+HEAD,0,package coders - object CoderMacros,6.0,6.0,0.08333333333333333,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - object PrettyPrint,1.0,18.0,0.5806451612903226,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object MagnolifyDatastoreExample,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object MagnolifyDatastoreExample - class WordCount,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object MagnolifyDatastoreWriteExample,3.0,6.0,0.3157894736842105,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object MagnolifyDatastoreReadExample,2.0,2.0,0.16666666666666666,0.0,0.0,0.0,0.0
+HEAD,0,package bigtable - trait BigtableIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigtable - object BigtableIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigtable - object BigtableIO - method apply - <$anon: com.spotify.scio.bigtable.BigtableIO[T] with com.spotify.scio.io.TestIO[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigtable - class BigtableRead,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigtable - class BigtableRead - method read - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigtable - object BigtableRead,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigtable - object BigtableRead - object ReadParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigtable - object BigtableRead - class ReadParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigtable - class BigtableWrite,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigtable - class BigtableWrite - method write - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigtable - object BigtableWrite,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigtable - object BigtableWrite - trait WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigtable - object BigtableWrite - object Default,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigtable - object BigtableWrite - object Bulk,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigtable - object BigtableWrite - class Bulk,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - class ShardedSparkeyReader,3.0,2.0,0.05714285714285714,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object ElasticsearchMinimalExample,5.0,18.0,0.5,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - trait ShardQuery,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - class RangeShardQuery,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - class PrefixShardQuery,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - object ShardQuery,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package repl - trait ScioGenericRunner,4.0,5.0,0.2631578947368421,0.0,0.0,2.0,0.0
+HEAD,0,package instances - trait LowPriorityFallbackCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package codecs - object compat,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package csv - object CsvIO,1.0,1.0,0.008849557522123894,0.0,0.0,0.0,0.0
+HEAD,0,package csv - object CsvIO - class ReadParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package csv - object CsvIO - class WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package csv - object CsvIO - class Read,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package csv - object CsvIO - class Write,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package csv - object CsvIO - class ReadWrite,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package csv - object CsvIO - class CsvTap,1.0,1.0,0.125,0.0,0.0,0.0,0.0
+HEAD,0,package csv - object CsvIO - class ReadDoFn,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package csv - object CsvIO - class CsvSink,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - trait CoderInstances,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - object coders,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package tensorflow - trait PredictDoFn,4.0,22.0,0.3793103448275862,0.0,0.0,1.0,1.0
+HEAD,0,package tensorflow - trait PredictDoFn - method setup - <$anon: java.util.function.Function[String (java.util.concurrent.atomic.AtomicInteger  M)]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package tensorflow - object PredictDoFn,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package tensorflow - class SavedBundlePredictDoFn,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package tensorflow - object SavedBundlePredictDoFn,7.0,15.0,0.19230769230769232,0.0,0.0,0.0,0.0
+HEAD,0,package tensorflow - object SavedBundlePredictDoFn - method forRaw - <$anon: com.spotify.scio.tensorflow.SavedBundlePredictDoFn[T V]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package tensorflow - object SavedBundlePredictDoFn - method forInput - <$anon: com.spotify.scio.tensorflow.SavedBundlePredictDoFn[T V]>,4.0,10.0,0.38461538461538464,0.0,0.0,0.0,0.0
+HEAD,0,package tensorflow - object SavedBundlePredictDoFn - method forTensorFlowExample - <$anon: com.spotify.scio.tensorflow.SavedBundlePredictDoFn[T V]>,3.0,5.0,0.22727272727272727,0.0,0.0,0.0,0.0
+HEAD,1,package scio - package hash - package object hash,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package hash - package object hash - class ApproxFilterIterable,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package scio - package hash - package object hash - class ApproxFilterSCollection,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - class Query9,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package sql - object Query9,3.0,6.0,0.03870967741935484,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object Query9 - method typed9Impl - <$anon: com.spotify.scio.schemas.SchemaMacroHelpers>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package sql - class SqlSCollection9,3.0,2.0,0.021505376344086023,0.0,0.0,0.0,0.0
+HEAD,0,package examples - object BeamSqlWordCount,3.0,2.0,0.14285714285714285,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class SpannerScioContextOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait ScioContextSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryIT,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryIT - class Shakespeare,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - object BigQueryIT - class WordCount,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - class BigQueryIT,1.0,5.0,0.06329113924050633,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package tensorflow - package object tensorflow,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package types - object AvroTypeIT,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object AvroTypeIT - class FromPath,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object AvroTypeIT - class FromPath1,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object AvroTypeIT - class FromPath2,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object AvroTypeIT - class FromGlob1,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object AvroTypeIT - class FromGlob2,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object AvroTypeIT - class FromGlob3,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object AvroTypeIT - class FromPathMultiLine,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object AvroTypeIT - class FromFile,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object AvroTypeIT - class Annotation1,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object AvroTypeIT - class Annotation2,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object AvroTypeIT - class FromPathWithSurroundingAnnotations,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object AvroTypeIT - class FromPathWithSequentialAnnotations,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package types - class AvroTypeIT,3.0,2.0,0.044444444444444446,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - object Schema,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - trait Schema,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - trait LogicalType,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - object LogicalType,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - object LogicalType - method apply - <$anon: com.spotify.scio.schemas.LogicalType[T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - class Record,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - object Record,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - class RawRecord,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - object RawRecord,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - class Type,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - class OptionType,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - class ArrayType,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - class MapType,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - class ScalarWrapper,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - object ScalarWrapper,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - object SchemaTypes,2.0,2.0,0.1,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - trait SchemaMacroHelpers,1.0,1.0,0.030303030303030304,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - trait To,1.0,1.0,0.16666666666666666,0.0,0.0,0.0,0.0
+HEAD,1,package schemas - object To,10.0,31.0,0.2421875,0.0,0.0,1.0,0.0
+HEAD,0,package schemas - object To - class Location,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - object To - class Positional,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - object To - trait Nullable,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - object To - object NOT NULLABLE,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - object To - object NULLABLE,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - object To - object NullableBuilder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - object To - trait Error,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - object To - class NullableError,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - object To - class TypeError,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - object To - object FieldNotFound,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - object To - method unsafe - <$anon: com.spotify.scio.values.SCollection[I] => com.spotify.scio.values.SCollection[O]>,2.0,1.0,0.125,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - object To - method unchecked - <$anon: com.spotify.scio.values.SCollection[I] => com.spotify.scio.values.SCollection[O]>,1.0,3.0,0.3333333333333333,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - object To - method unchecked - <$anon: com.spotify.scio.values.SCollection[I] => com.spotify.scio.values.SCollection[O]>,1.0,1.0,0.16666666666666666,0.0,0.0,0.0,0.0
+HEAD,1,package schemas - object ToMacro,2.0,1.0,0.05263157894736842,0.0,0.0,0.0,0.0
+HEAD,0,package schemas - object ToMacro - method safeImpl - <$anon: com.spotify.scio.schemas.SchemaMacroHelpers>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package spanner - trait SpannerIO,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package spanner - object SpannerRead,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package spanner - object SpannerRead - object ReadParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package spanner - object SpannerRead - trait ReadMethod,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package spanner - object SpannerRead - class FromTable,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package spanner - object SpannerRead - class FromQuery,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package spanner - object SpannerRead - class ReadParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package spanner - class SpannerRead,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package spanner - object SpannerWrite,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package spanner - object SpannerWrite - object WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package spanner - object SpannerWrite - class WriteParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package spanner - class SpannerWrite,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package scio - object Args,7.0,14.0,0.4827586206896552,0.0,0.0,1.0,0.0
+HEAD,0,package scio - class Args,12.0,21.0,0.3230769230769231,0.0,0.0,0.0,0.0
+HEAD,0,package compat - class ILoop,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package cookbook - object BigQueryTornadoes,2.0,2.0,0.10526315789473684,0.0,0.0,0.0,0.0
+HEAD,0,package instances - trait JavaInstances,6.0,3.0,0.06521739130434782,0.0,0.0,0.0,0.0
+HEAD,0,package instances - trait JavaInstances - method javaEnumSchema - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - object JavaInstances,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package bigquery - trait ToTableSchema,4.0,9.0,0.09278350515463918,0.0,0.0,0.0,0.0
+HEAD,2,package extra - object TypedStorageBigQueryTornadoes,2.0,2.0,0.10526315789473684,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object TypedStorageBigQueryTornadoes - class Row,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object TypedStorageBigQueryTornadoes - class Result,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package cassandra - class BulkOperations,15.0,33.0,0.3626373626373626,0.0,0.0,2.0,0.0
+HEAD,0,package cassandra - class BulkOperations - class BulkConfig,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package cassandra - object CassandraUtil,2.0,2.0,0.2,0.0,0.0,1.0,0.0
+HEAD,2,package scio - package spanner - package object spanner,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package annoy - trait AnnoyUri,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package annoy - object AnnoyUri,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package annoy - class LocalAnnoyUri,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package annoy - class RemoteAnnoyUri,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package annoy - class AnnoyWriter,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package kryo - class JPathSerializer,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - class Query3,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package sql - object Query3,3.0,6.0,0.0967741935483871,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object Query3 - method typed3Impl - <$anon: com.spotify.scio.schemas.SchemaMacroHelpers>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package sql - class SqlSCollection3,3.0,2.0,0.05128205128205128,0.0,0.0,0.0,0.0
+HEAD,0,package fix - object FixContextCloseExample,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package kryo - class CoderSerializer,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package elasticsearch - trait CoderInstances,3.0,3.0,0.05357142857142857,0.0,0.0,0.0,0.0
+HEAD,0,package elasticsearch - trait CoderInstances - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package elasticsearch - trait CoderInstances - method writableBCoder - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package kryo - class JTraversableSerializer,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package kryo - class JWrapperCBF,1.0,1.0,0.05555555555555555,0.0,0.0,0.0,0.0
+HEAD,0,package kryo - class JWrapperCBF - class JIterableWrapperBuilder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package kryo - class JIterableWrapperCBF,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package kryo - class JCollectionWrapperCBF,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package dynamic - object DynamicDestinationsUtil,1.0,1.0,0.04,0.0,0.0,0.0,0.0
+HEAD,0,package dynamic - object DynamicDestinationsUtil - method tableFn - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - class JdbcShardedReadOptions,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - object JdbcShardedReadOptions,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - class JdbcShardedSelect,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sharded - object JdbcShardedSelect,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - class WindowOptions,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - class WindowedValue,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - class WindowedSCollection,1.0,1.0,0.05,0.0,0.0,0.0,0.0
+HEAD,0,package sql - class Query6,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package sql - object Query6,3.0,6.0,0.06593406593406594,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object Query6 - method typed6Impl - <$anon: com.spotify.scio.schemas.SchemaMacroHelpers>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package sql - class SqlSCollection6,3.0,2.0,0.03125,0.0,0.0,0.0,0.0
+HEAD,0,package smb - class SortMergeBucketParityIT,21.0,117.0,0.7134146341463414,0.0,0.0,0.0,0.0
+HEAD,0,package util - class ParallelLimitedFn,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package avro - package object avro,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package scio - package elasticsearch - package object elasticsearch,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package scio - package elasticsearch - package object elasticsearch - class ElasticsearchOptions,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package elasticsearch - package object elasticsearch - class ElasticsearchSCollection,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package <empty> - object Scio,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package coders - object KryoRegistrarLoader,3.0,14.0,0.45161290322580644,0.0,0.0,0.0,0.0
+HEAD,0,package coders - object ScioKryoRegistrar,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,3,package coders - class ScioKryoRegistrar,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package coders - class KryoAtomicCoder,3.0,35.0,0.3804347826086957,0.0,0.0,1.0,0.0
+HEAD,1,package coders - class KryoState,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,3,package coders - object KryoAtomicCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package coders - object KryoAtomicCoder - <$anon: ThreadLocal[scala.collection.mutable.HashMap[Integer com.spotify.scio.coders.KryoState]]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package coders - class KryoOptions,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package coders - object KryoOptions,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package testing - object TestUtil,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - class Query5,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package sql - object Query5,3.0,6.0,0.07142857142857142,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object Query5 - method typed5Impl - <$anon: com.spotify.scio.schemas.SchemaMacroHelpers>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package sql - class SqlSCollection5,3.0,2.0,0.037037037037037035,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - class JdbcSCollectionOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait ScioContextSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package extra - object SafeFlatMapExample,3.0,3.0,0.15789473684210525,0.0,0.0,0.0,0.0
+HEAD,1,package scio - package jdbc - package object jdbc,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package fix - package v0_7_0 - object BQClientRefactoring,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package client - object QueryOps,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package client - object QueryOps - class QueryJobConfig,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package client - class QueryOps,18.0,37.0,0.1608695652173913,0.0,0.0,3.0,0.0
+HEAD,1,package repl - object ScioReplClassLoader,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package repl - class ScioReplClassLoader,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package streaming - package object streaming,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package bigquery - package object bigquery,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - trait SQLBuilder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - trait SqlParam,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - class SCollectionRef,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - class UdfRef,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - class SqlInterpolator,3.0,6.0,0.18181818181818182,0.0,0.0,0.0,0.0
+HEAD,0,package sql - trait SqlInterpolatorMacroHelpers,2.0,8.0,0.2857142857142857,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object SqlInterpolatorMacro,13.0,21.0,0.25609756097560976,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object SqlInterpolatorMacro - class SqlParts,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object SqlInterpolatorMacro - method builder - <$anon: com.spotify.scio.sql.SqlInterpolatorMacroHelpers>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package sql - object SqlInterpolatorMacro - method tsqlImpl - <$anon: com.spotify.scio.sql.SqlInterpolatorMacroHelpers with com.spotify.scio.schemas.SchemaMacroHelpers>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package client - object JobOps,1.0,1.0,0.02564102564102564,0.0,0.0,0.0,0.0
+HEAD,0,package client - class JobOps,1.0,5.0,0.1111111111111111,0.0,0.0,0.0,0.0
+HEAD,1,package util - trait MultiJoin,841.0,1072.0,0.41437959025898724,0.0,0.0,0.0,0.0
+HEAD,2,package util - object MultiJoin,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - class NamedMultiJoin,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package util - object FunctionsWithSideInput,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package util - object FunctionsWithSideInput - trait SideInputDoFn,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package util - object FunctionsWithSideInput - method filterFn - <$anon: com.spotify.scio.util.NamedDoFn[T T] with com.spotify.scio.util.FunctionsWithSideInput.SideInputDoFn[T T]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package util - object FunctionsWithSideInput - method flatMapFn - <$anon: com.spotify.scio.util.NamedDoFn[T U] with com.spotify.scio.util.FunctionsWithSideInput.SideInputDoFn[T U]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package util - object FunctionsWithSideInput - method mapFn - <$anon: com.spotify.scio.util.NamedDoFn[T U] with com.spotify.scio.util.FunctionsWithSideInput.SideInputDoFn[T U]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - class SlowGenericRecordCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - class SpecificFixedCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - object SpecificFixedCoder,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - trait AvroCoders,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait Syntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package types - class StorageIT,15.0,91.0,0.3939393939393939,0.0,0.0,0.0,0.0
+HEAD,2,package types - object StorageIT,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object StorageIT - class Required,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object StorageIT - class Optional,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object StorageIT - class Repeated,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object StorageIT - class NestedWithFields,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object StorageIT - class NestedWithRestriction,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object StorageIT - class NestedWithAll,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object StorageIT - class StorageLatest,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object StorageIT - class StorageEnvProject,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object StorageIT - class FromTable,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object StorageIT - class FromQuery,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - object StorageIT - class ToTableRequired,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package bigquery - class BigQueryPartitionUtilIT,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package repl - trait ScioGenericRunner,6.0,7.0,0.25925925925925924,0.0,0.0,2.0,0.0
+HEAD,1,package game - object UserScore,1.0,1.0,0.047619047619047616,0.0,0.0,0.0,0.0
+HEAD,0,package game - object UserScore - class GameActionInfo,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package game - object UserScore - class UserScoreSums,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object ItUtils,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package syntax - trait SqlInterpolatorSyntax,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package types - class BigQueryTag,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package coders - object AvroBytesUtil,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package metrics - package object metrics,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package metrics - package object metrics - class MetricValue,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package metrics - package object metrics - class Metrics,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package metrics - package object metrics - class BeamMetrics,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package metrics - package object metrics - class BeamMetric,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package metrics - package object metrics - class BeamDistribution,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - package metrics - package object metrics - class BeamGauge,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package compat - class ILoop,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package repl - object ScioShell,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,3,package scio - object VersionUtil,8.0,14.0,0.18421052631578946,0.0,0.0,1.0,0.0
+HEAD,1,package scio - object VersionUtil - class SemVer,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package scio - object VersionUtil - <none>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package instances - object Derived,1.0,1.0,0.058823529411764705,0.0,0.0,0.0,0.0
+HEAD,0,package instances - trait LowPrioritySchemaDerivation,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package spark - object SparkContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package values - object SCollection,1.0,1.0,0.04,0.0,0.0,0.0,0.0
+HEAD,0,package values - object SCollection - class State,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,17,package values - trait SCollection,61.0,79.0,0.12248062015503876,0.0,0.0,8.0,0.0
+HEAD,0,package values - trait SCollection - method transform - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - trait SCollection - method withPaneInfo - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - trait SCollection - method withTimestamp - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - trait SCollection - method withWindow - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - trait SCollection - method readFiles - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package values - class SCollectionImpl,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package parquet - package tensorflow - package object tensorflow,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package parquet - package tensorflow - package object tensorflow - class ParquetExampleScioContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package parquet - package tensorflow - package object tensorflow - class ParquetExampleSCollection,0.0,0.0,0.0,0.0,0.0,0.0,0.0

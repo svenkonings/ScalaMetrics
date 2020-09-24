@@ -6,6 +6,12 @@ from analysis import save_dataframe, categories, parse_args
 
 
 def main(args):
+    summarise_univariate(args)
+    if args.multivariate_baseline:
+        summarise_multivariate(args)
+
+
+def summarise_univariate(args):
     if args.split_paradigm_score:
         folder = f'{args.folder}/split-regression/univariate/'
     else:
@@ -21,6 +27,15 @@ def main(args):
             df = read_all(path, ['name', 'precision', 'recall', 'mcc'])
             if df is not None:
                 summarise(df, path, category)
+
+
+def summarise_multivariate(args):
+    folder = f'{args.folder}/regression/mulitvariate-baseline/'
+    for category in categories:
+        path = folder + category
+        df = read_all(path, ['name', 'precision', 'recall', 'mcc'])
+        if df is not None:
+            summarise(df, path, category)
 
 
 def summarise(df, path, category, suffix=''):

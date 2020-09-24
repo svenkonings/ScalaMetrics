@@ -36,7 +36,6 @@ def main(args):
 
 def multivatiate(df, regression_results, category, name, estimator, cv, args):
     print(f'[{category}] Multivariate: {name}')
-    columns = get_columns(df, args)
     faults = df['faults'].apply(to_binary)
     if len(faults[faults == 0]) < 10:
         print('Less than 10 non-faulty results -- skipping!')
@@ -44,6 +43,7 @@ def multivatiate(df, regression_results, category, name, estimator, cv, args):
     if len(faults[faults == 1]) < 10:
         print('Less than 10 faulty results -- skipping!')
         return regression_results
+    columns = get_columns(df, args)
     data = df[columns]
     prediction = cross_val_predict(estimator, data, faults, cv=cv)
     result = get_stats(faults, prediction)

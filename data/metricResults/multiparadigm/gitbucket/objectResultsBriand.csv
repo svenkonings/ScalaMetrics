@@ -1,0 +1,596 @@
+commit,faults,path,NumberOfLambdaFunctions,SourceLinesOfLambda,LambdaScore,LambdaFunctionsUsingOuterVariables,LambdaFunctionsUsingInnerVariables,LambdaFunctionsWithSideEffects,LambdaFunctionsWithAssignment
+HEAD,0,package util - object HttpClientUtil,3.0,10.0,0.29411764705882354,0.0,0.0,2.0,0.0
+HEAD,2,package api - class ApiPullRequest,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package api - object ApiPullRequest,2.0,2.0,0.058823529411764705,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiPullRequest - class Commit,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait GpgKeyComponent,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait GpgKeyComponent - class GpgKeys,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class GpgKey,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - object Sessions,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package controller - class IssuesController,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,4,package controller - trait IssuesControllerBase,67.0,302.0,0.8096514745308311,0.0,0.0,0.0,4.0
+HEAD,0,package controller - trait IssuesControllerBase - class IssueCreateForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait IssuesControllerBase - class CommentForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait IssuesControllerBase - class IssueStateForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - class CreateAUser,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,9,package util - object JGitUtil,91.0,500.0,0.5235602094240838,0.0,2.0,23.0,6.0
+HEAD,0,package util - object JGitUtil - <$anon: util.Using.Releasable[org.eclipse.jgit.lib.ObjectDatabase]>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object JGitUtil - class RepositoryInfo,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object JGitUtil - class FileInfo,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object JGitUtil - class GpgSignInfo,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object JGitUtil - class GpgVerifyInfo,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object JGitUtil - class CommitInfo,1.0,4.0,0.19047619047619047,0.0,0.0,0.0,0.0
+HEAD,0,package util - object JGitUtil - class DiffInfo,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object JGitUtil - class ContentInfo,1.0,1.0,0.3333333333333333,0.0,0.0,0.0,0.0
+HEAD,0,package util - object JGitUtil - class TagInfo,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object JGitUtil - class SubmoduleInfo,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object JGitUtil - class BranchMergeInfo,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object JGitUtil - class BranchInfo,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object JGitUtil - class BlameInfo,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object JGitUtil - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object JGitUtil - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package core - package model - package object model,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object AuthUtil,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package service - trait MilestonesService,11.0,17.0,0.29310344827586204,0.0,0.0,0.0,0.0
+HEAD,3,package servlet - class GitRepositoryServlet,3.0,35.0,0.35,0.0,0.0,0.0,0.0
+HEAD,1,package servlet - class GitBucketRepositoryResolver,1.0,5.0,0.35714285714285715,0.0,0.0,0.0,0.0
+HEAD,0,package servlet - class GitBucketReceivePackFactory,4.0,23.0,0.6388888888888888,0.0,0.0,0.0,0.0
+HEAD,6,package servlet - class CommitLogHook,23.0,146.0,0.8538011695906432,0.0,0.0,0.0,2.0
+HEAD,1,package servlet - class WikiCommitHook,7.0,45.0,0.8035714285714286,0.0,0.0,0.0,0.0
+HEAD,0,package servlet - object GitLfs,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package servlet - object GitLfs - class BatchRequest,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package servlet - object GitLfs - class BatchRequestObject,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package servlet - object GitLfs - class BatchUploadResponse,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package servlet - object GitLfs - class BatchResponseObject,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package servlet - object GitLfs - class Actions,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package servlet - object GitLfs - class Action,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package servlet - object GitLfs - class Error,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package ssh - object GitCommand,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,3,package ssh - class GitCommand,1.0,20.0,0.40816326530612246,1.0,0.0,1.0,0.0
+HEAD,0,package ssh - class DefaultGitCommand,2.0,2.0,0.044444444444444446,0.0,0.0,0.0,0.0
+HEAD,2,package ssh - class DefaultGitUploadPack,3.0,10.0,0.47619047619047616,1.0,0.0,1.0,0.0
+HEAD,2,package ssh - class DefaultGitReceivePack,3.0,15.0,0.5769230769230769,1.0,0.0,1.0,0.0
+HEAD,2,package ssh - class PluginGitUploadPack,2.0,6.0,0.375,1.0,0.0,1.0,0.0
+HEAD,2,package ssh - class PluginGitReceivePack,2.0,6.0,0.375,1.0,0.0,1.0,0.0
+HEAD,0,package ssh - class GitCommandFactory,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ssh - object PublicKeyAuthenticator,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ssh - object PublicKeyAuthenticator - trait AuthType,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ssh - object PublicKeyAuthenticator - object AuthType,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ssh - object PublicKeyAuthenticator - object AuthType - class UserAuthType,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ssh - object PublicKeyAuthenticator - object AuthType - class DeployKeyType,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ssh - class PublicKeyAuthenticator,6.0,15.0,0.2542372881355932,0.0,0.0,0.0,0.0
+HEAD,0,package api - class ApiCombinedCommitStatus,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiCombinedCommitStatus,2.0,2.0,0.14285714285714285,0.0,0.0,0.0,0.0
+HEAD,0,package api - trait ApiRepositoryBranchControllerBase,17.0,57.0,0.890625,0.0,0.0,0.0,0.0
+HEAD,2,package api - trait ApiPullRequestControllerBase,28.0,160.0,0.9302325581395349,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait AccountExtraMailAddressComponent,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait AccountExtraMailAddressComponent - class AccountExtraMailAddresses,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class AccountExtraMailAddress,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait ValidationSupport,16.0,8.0,0.12903225806451613,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - class Plugin,25.0,62.0,0.29245283018867924,0.0,0.0,24.0,0.0
+HEAD,0,package controller - class AccountController,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,13,package controller - trait AccountControllerBase,56.0,266.0,0.4256,0.0,0.0,0.0,2.0
+HEAD,0,package controller - trait AccountControllerBase - class AccountNewForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait AccountControllerBase - class AccountEditForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait AccountControllerBase - class SshKeyForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait AccountControllerBase - class GpgKeyForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait AccountControllerBase - class PersonalTokenForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait AccountControllerBase - class NewGroupForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait AccountControllerBase - class EditGroupForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait AccountControllerBase - class RepositoryCreationForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait AccountControllerBase - class ForkRepositoryForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait AccountControllerBase - class AccountForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait AccountControllerBase - class AccountWebHookForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait AccountControllerBase - method accountWebHook - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait AccountControllerBase - method accountWebhookEvents - <$anon: <error>>,2.0,2.0,0.16666666666666666,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait AccountControllerBase - method existsAccount - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait AccountControllerBase - method uniqueRepository - <$anon: <error>>,3.0,3.0,0.23076923076923078,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait AccountControllerBase - method members - <$anon: <error>>,1.0,1.0,0.125,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait AccountControllerBase - method validPublicKey - <$anon: <error>>,1.0,1.0,0.14285714285714285,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait AccountControllerBase - method validGpgPublicKey - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait AccountControllerBase - method validAccountName - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - trait ApiOrganizationControllerBase,9.0,15.0,0.5,0.0,0.0,0.0,0.0
+HEAD,2,package model - trait MilestoneComponent,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package model - trait MilestoneComponent - class Milestones,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class Milestone,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package servlet - class InitializeListener,4.0,44.0,0.44,0.0,0.0,1.0,0.0
+HEAD,0,package servlet - class DeleteOldActivityActor,3.0,11.0,0.7857142857142857,0.0,0.0,0.0,0.0
+HEAD,0,package service - trait MergeService,28.0,204.0,0.6476190476190476,0.0,0.0,4.0,0.0
+HEAD,1,package service - object MergeService,13.0,32.0,0.2,0.0,2.0,5.0,2.0
+HEAD,0,package service - object MergeService - object Util,2.0,5.0,0.13157894736842105,0.0,0.0,2.0,0.0
+HEAD,1,package service - object MergeService - class MergeCacheInfo,10.0,26.0,0.22413793103448276,0.0,2.0,3.0,2.0
+HEAD,1,package service - trait RepositoryCommitFileService,13.0,92.0,0.5476190476190477,0.0,0.0,4.0,0.0
+HEAD,0,package service - object RepositoryCommitFileService,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object RepositoryCommitFileService - class CommitFile,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - class LabelsController,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package controller - trait LabelsControllerBase,11.0,35.0,0.4666666666666667,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait LabelsControllerBase - class LabelForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait LabelsControllerBase - method labelName - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package controller - trait LabelsControllerBase - method uniqueLabelName - <$anon: <error>>,4.0,3.0,0.15789473684210525,0.0,0.0,0.0,0.0
+HEAD,0,package service - trait SystemSettingsService,32.0,160.0,0.9411764705882353,0.0,0.0,7.0,0.0
+HEAD,0,package service - object SystemSettingsService,6.0,17.0,0.09289617486338798,0.0,0.0,0.0,0.0
+HEAD,0,package service - object SystemSettingsService - class SystemSettings,3.0,2.0,0.05,0.0,0.0,0.0,0.0
+HEAD,0,package service - object SystemSettingsService - class RepositoryOperation,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object SystemSettingsService - class Ssh,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object SystemSettingsService - class Ldap,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object SystemSettingsService - class OIDC,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object SystemSettingsService - object OIDC,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object SystemSettingsService - class Smtp,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object SystemSettingsService - class Proxy,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object SystemSettingsService - class SshAddress,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object SystemSettingsService - class WebHook,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object SystemSettingsService - class Upload,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - trait OneselfAuthenticator,1.0,1.0,0.08333333333333333,0.0,0.0,0.0,0.0
+HEAD,0,package util - trait OwnerAuthenticator,4.0,13.0,0.5909090909090909,0.0,0.0,0.0,0.0
+HEAD,0,package util - trait UsersAuthenticator,1.0,1.0,0.09090909090909091,0.0,0.0,0.0,0.0
+HEAD,0,package util - trait AdminAuthenticator,1.0,1.0,0.09090909090909091,0.0,0.0,0.0,0.0
+HEAD,1,package util - trait ReferrerAuthenticator,3.0,6.0,0.4,0.0,0.0,0.0,0.0
+HEAD,0,package util - trait ReadableUsersAuthenticator,4.0,12.0,0.5714285714285714,0.0,0.0,0.0,0.0
+HEAD,0,package util - trait WritableUsersAuthenticator,4.0,14.0,0.6086956521739131,0.0,0.0,0.0,0.0
+HEAD,2,package util - trait GroupManagerAuthenticator,2.0,3.0,0.2,0.0,0.0,0.0,0.0
+HEAD,0,package api - class ApiPersonIdent,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiPersonIdent,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - class SystemSettingsController,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - class Table,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - class Column,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,3,package controller - trait SystemSettingsControllerBase,33.0,166.0,0.36644591611479027,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait SystemSettingsControllerBase - class SendMailForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait SystemSettingsControllerBase - class DataExportForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait SystemSettingsControllerBase - class NewUserForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait SystemSettingsControllerBase - class EditUserForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait SystemSettingsControllerBase - class NewGroupForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait SystemSettingsControllerBase - class EditGroupForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait SystemSettingsControllerBase - method multiLineText - <$anon: <error>>,1.0,1.0,0.125,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait SystemSettingsControllerBase - method members - <$anon: <error>>,1.0,1.0,0.125,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait SystemSettingsControllerBase - method disableByNotYourself - <$anon: <error>>,1.0,4.0,0.4444444444444444,0.0,0.0,0.0,0.0
+HEAD,3,package view - object helpers,17.0,75.0,0.24752475247524752,0.0,1.0,2.0,2.0
+HEAD,1,package view - object helpers - class RegexReplaceString,1.0,1.0,0.2,0.0,0.0,0.0,0.0
+HEAD,0,package view - object helpers - class RichHtmlSeq,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package view - object helpers - class CommentDiffLine,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,11,package service - trait IssuesService,97.0,168.0,0.25688073394495414,0.0,0.0,2.0,0.0
+HEAD,1,package service - object IssuesService,16.0,31.0,0.248,0.0,0.0,0.0,0.0
+HEAD,1,package service - object IssuesService - class IssueSearchCondition,14.0,29.0,0.3972602739726027,0.0,0.0,0.0,0.0
+HEAD,1,package service - object IssuesService - object IssueSearchCondition,2.0,2.0,0.06060606060606061,0.0,0.0,0.0,0.0
+HEAD,0,package service - object IssuesService - class CommitStatusInfo,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object IssuesService - class IssueInfo,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - class CreateAGroup,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - class IndexController,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,3,package controller - trait IndexControllerBase,10.0,114.0,0.5205479452054794,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait IndexControllerBase - class SignInForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait IndexControllerBase - class OidcContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait GroupMemberComponent,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait GroupMemberComponent - class GroupMembers,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class GroupMember,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object WikiService,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object WikiService - class WikiPageInfo,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object WikiService - class WikiPageHistoryInfo,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package service - trait WikiService,23.0,189.0,0.7590361445783133,0.0,2.0,9.0,4.0
+HEAD,0,package service - trait WikiService - method revertWikiPage - class RevertInfo,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - trait TextDecorator,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - class ApiGroup,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiGroup,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - class RepositorySettingsController,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,9,package controller - trait RepositorySettingsControllerBase,48.0,219.0,0.6049723756906077,0.0,0.0,0.0,2.0
+HEAD,0,package controller - trait RepositorySettingsControllerBase - class OptionsForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait RepositorySettingsControllerBase - class DefaultBranchForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait RepositorySettingsControllerBase - class DeployKeyForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait RepositorySettingsControllerBase - class WebHookForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait RepositorySettingsControllerBase - class RenameRepositoryForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait RepositorySettingsControllerBase - class TransferOwnerShipForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait RepositorySettingsControllerBase - method webHook - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait RepositorySettingsControllerBase - method webhookEvents - <$anon: <error>>,2.0,2.0,0.16666666666666666,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait RepositorySettingsControllerBase - method renameRepositoryName - <$anon: <error>>,5.0,4.0,0.2857142857142857,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait RepositorySettingsControllerBase - method featureOption - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait RepositorySettingsControllerBase - method transferUser - <$anon: <error>>,3.0,4.0,0.26666666666666666,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait RepositorySettingsControllerBase - method mergeOptions - <$anon: <error>>,1.0,1.0,0.07142857142857142,0.0,0.0,0.0,0.0
+HEAD,0,package service - trait GpgKeyService,3.0,2.0,0.14285714285714285,0.0,0.0,0.0,0.0
+HEAD,0,package api - class ApiCommit,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiCommit,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - class PreProcessController,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package controller - trait PreProcessControllerBase,2.0,3.0,0.15,0.0,0.0,0.0,0.0
+HEAD,0,package controller - class PullRequestsController,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,11,package controller - trait PullRequestsControllerBase,78.0,471.0,0.8738404452690167,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait PullRequestsControllerBase - class PullRequestForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait PullRequestsControllerBase - class MergeForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package servlet - class ControllerFilter,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package servlet - class CompositeScalatraFilter,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package servlet - class MockFilterChain,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package api - class CreateARepository,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - class ApiComment,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiComment,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object TextAvatarUtil,2.0,2.0,0.022727272727272728,0.0,0.0,0.0,0.0
+HEAD,0,package api - class ApiPath,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - class SshPath,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait LabelComponent,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait LabelComponent - class Labels,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class Label,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,8,package view - trait LinkConverter,10.0,54.0,0.6136363636363636,0.0,0.0,0.0,0.0
+HEAD,0,package api - class ApiCommits,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiCommits,7.0,37.0,0.37373737373737376,0.0,1.0,2.0,2.0
+HEAD,0,package api - object ApiCommits - class Commit,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiCommits - class Tree,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiCommits - class Stats,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiCommits - class File,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,3,package servlet - class TransactionFilter,2.0,9.0,0.45,0.0,0.0,0.0,0.0
+HEAD,1,package servlet - object Database,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - trait ApiGitReferenceControllerBase,4.0,21.0,0.6774193548387096,0.0,0.0,0.0,0.0
+HEAD,0,package util - object EditorConfigUtil,6.0,19.0,0.18095238095238095,0.0,0.0,0.0,0.0
+HEAD,0,package util - object EditorConfigUtil - class JGitResource,4.0,16.0,0.4444444444444444,0.0,0.0,0.0,0.0
+HEAD,0,package util - object EditorConfigUtil - class JGitResourcePath,2.0,3.0,0.11538461538461539,0.0,0.0,0.0,0.0
+HEAD,0,package util - object EditorConfigUtil - object JGitResourcePath,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object EditorConfigUtil - class EditorConfigInfo,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - object Results,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - object Results - class Redirect,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - object Results - class Fragment,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - trait RepositoryHook,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object GpgUtil,5.0,21.0,0.44680851063829785,0.0,0.0,0.0,0.0
+HEAD,2,package controller - class RepositoryViewerController,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,20,package controller - trait RepositoryViewerControllerBase,95.0,667.0,0.7631578947368421,0.0,0.0,5.0,10.0
+HEAD,0,package controller - trait RepositoryViewerControllerBase - class UploadForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package controller - trait RepositoryViewerControllerBase - class EditorForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package controller - trait RepositoryViewerControllerBase - class DeleteForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait RepositoryViewerControllerBase - class CommentForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait RepositoryViewerControllerBase - class TagForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait RepositoryViewerControllerBase - class UploadFiles,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait RepositoryViewerControllerBase - method conflict - <$anon: <error>>,1.0,7.0,0.4117647058823529,0.0,0.0,0.0,0.0
+HEAD,1,package plugin - trait IssueHook,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - trait PullRequestHook,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - class ApiCommitListItem,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiCommitListItem,1.0,1.0,0.045454545454545456,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiCommitListItem - class Parent,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiCommitListItem - class Commit,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - trait ApiUserControllerBase,5.0,27.0,0.4153846153846154,0.0,0.0,0.0,0.0
+HEAD,0,package view - class Pagination,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - class CreateARelease,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - trait ApiRepositoryStatusControllerBase,16.0,39.0,0.8125,0.0,0.0,0.0,0.0
+HEAD,0,package api - class CreateAStatus,3.0,3.0,0.25,0.0,0.0,0.0,0.0
+HEAD,2,package controller - class DashboardController,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package controller - trait DashboardControllerBase,1.0,1.0,0.010309278350515464,0.0,0.0,0.0,0.0
+HEAD,0,package util - object ConfigUtil,1.0,5.0,0.17857142857142858,0.0,0.0,0.0,0.0
+HEAD,0,package service - trait ProtectedBranchService,9.0,9.0,0.20930232558139536,0.0,0.0,0.0,0.0
+HEAD,2,package service - object ProtectedBranchService,5.0,5.0,0.05434782608695652,0.0,0.0,0.0,0.0
+HEAD,0,package service - object ProtectedBranchService - class ProtectedBranchReceiveHook,1.0,1.0,0.03333333333333333,0.0,0.0,0.0,0.0
+HEAD,2,package service - object ProtectedBranchService - class ProtectedBranchInfo,4.0,4.0,0.07142857142857142,0.0,0.0,0.0,0.0
+HEAD,0,package service - object ProtectedBranchService - object ProtectedBranchInfo,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package <empty> - object Checksums,2.0,16.0,0.5925925925925926,0.0,0.0,1.0,0.0
+HEAD,0,package api - class CreateAnIssue,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,4,package service - trait PullRequestService,33.0,191.0,0.4658536585365854,0.0,1.0,3.0,3.0
+HEAD,0,package service - object PullRequestService,9.0,8.0,0.2222222222222222,0.0,0.0,0.0,0.0
+HEAD,0,package service - object PullRequestService - class PullRequestCount,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object PullRequestService - class MergeStatus,9.0,8.0,0.25,0.0,0.0,0.0,0.0
+HEAD,0,package api - trait ApiRepositoryContentsControllerBase,15.0,87.0,0.8365384615384616,0.0,0.0,0.0,2.0
+HEAD,0,package api - trait ApiIssueControllerBase,19.0,67.0,0.9054054054054054,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait RepositoryWebHookComponent,3.0,2.0,0.13333333333333333,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait RepositoryWebHookComponent - class RepositoryWebHooks,1.0,1.0,0.1111111111111111,0.0,0.0,0.0,0.0
+HEAD,0,package model - class RepositoryWebHook,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait AccountComponent,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait AccountComponent - class Accounts,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class Account,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package util - object Keys,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Keys - object Session,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Keys - object Flash,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package util - object Keys - object Request,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - object Images,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package <empty> - class ScalatraBootstrap,1.0,1.0,0.019230769230769232,0.0,0.0,0.0,0.0
+HEAD,0,package api - trait ApiIssueLabelControllerBase,26.0,111.0,0.888,0.0,0.0,0.0,0.0
+HEAD,3,package util - object JDBCUtil,28.0,126.0,0.65625,0.0,1.0,11.0,2.0
+HEAD,3,package util - object JDBCUtil - class RichConnection,28.0,126.0,0.6666666666666666,0.0,1.0,11.0,2.0
+HEAD,0,package util - object JDBCUtil - class TableDependency,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package util - object StringUtil,8.0,15.0,0.14018691588785046,0.0,0.0,1.0,0.0
+HEAD,0,package service - object RepositoryCreationService,1.0,1.0,0.05263157894736842,0.0,0.0,0.0,0.0
+HEAD,0,package service - trait RepositoryCreationService,9.0,99.0,0.5561797752808989,0.0,0.0,0.0,0.0
+HEAD,0,package service - trait OpenIDConnectService,4.0,24.0,0.2,0.0,0.0,2.0,0.0
+HEAD,0,package service - object OpenIDConnectService,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - trait SuggestionProvider,1.0,2.0,0.14285714285714285,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - class UserNameSuggestionProvider,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - trait CommitsService,14.0,27.0,0.18493150684931506,0.0,0.0,2.0,0.0
+HEAD,0,package api - class CreateAFile,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - class ApiPullRequestReviewComment,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiPullRequestReviewComment,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package service - trait HandleCommentService,15.0,64.0,0.8421052631578947,0.0,0.0,4.0,0.0
+HEAD,0,package service - trait RequestCache,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,10,package service - trait RepositoryService,155.0,311.0,0.5073409461663948,0.0,0.0,0.0,0.0
+HEAD,0,package service - object RepositoryService,1.0,2.0,0.06451612903225806,0.0,0.0,0.0,0.0
+HEAD,0,package service - object RepositoryService - class RepositoryInfo,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - class Mailer,12.0,38.0,0.5507246376811594,0.0,0.0,3.0,0.0
+HEAD,0,package api - trait FieldSerializable,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package view - trait AvatarImageProvider,2.0,8.0,0.26666666666666666,0.0,0.0,0.0,0.0
+HEAD,0,package api - trait ApiRepositoryControllerBase,13.0,60.0,0.7058823529411765,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait SshKeyComponent,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait SshKeyComponent - class SshKeys,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class SshKey,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - trait Renderer,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - object MarkdownRenderer,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - object DefaultRenderer,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - class RenderRequest,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package servlet - class PluginControllerFilter,3.0,21.0,0.6176470588235294,1.0,0.0,1.0,0.0
+HEAD,0,package api - class ApiReleaseAsset,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiReleaseAsset,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - class ApiRelease,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiRelease,1.0,2.0,0.11764705882352941,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait AccountWebHookComponent,3.0,2.0,0.15384615384615385,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait AccountWebHookComponent - class AccountWebHooks,1.0,1.0,0.14285714285714285,0.0,0.0,0.0,0.0
+HEAD,0,package model - class AccountWebHook,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object LDAPUtil,8.0,48.0,0.22641509433962265,0.0,0.0,0.0,0.0
+HEAD,0,package util - object LDAPUtil - class LDAPUserInfo,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - class ApiEndPoint,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package servlet - class PluginAssetsServlet,4.0,28.0,0.8,0.0,0.0,3.0,0.0
+HEAD,0,package api - class ApiObject,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - class ApiRef,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Directory,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - class CreateAComment,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - class ApiIssue,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiIssue,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - trait ApiReleaseControllerBase,17.0,98.0,0.8990825688073395,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait ReleaseTagComponent,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait ReleaseTagComponent - class ReleaseTags,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class ReleaseTag,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,6,package servlet - class GitAuthenticationFilter,12.0,57.0,0.4830508474576271,0.0,0.0,2.0,0.0
+HEAD,0,package servlet - class GitAuthenticationFilter - method doFilter - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ssh - class NoShell,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ssh - class NoShell - method create - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait TemplateComponent,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait TemplateComponent - trait BasicTemplate,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait TemplateComponent - trait IssueTemplate,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait TemplateComponent - trait LabelTemplate,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait TemplateComponent - trait PriorityTemplate,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait TemplateComponent - trait MilestoneTemplate,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait TemplateComponent - trait CommitTemplate,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait TemplateComponent - trait BranchTemplate,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait Comment,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait IssueCommentComponent,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait IssueCommentComponent - class IssueComments,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class IssueComment,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait CommitCommentComponent,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait CommitCommentComponent - class CommitComments,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class CommitComment,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class CommitComments,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object LockUtil,1.0,7.0,0.4117647058823529,0.0,0.0,1.0,0.0
+HEAD,0,package plugin - class PluginRegistry,3.0,6.0,0.058823529411764705,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - object PluginRegistry,9.0,82.0,0.5256410256410257,3.0,0.0,3.0,2.0
+HEAD,0,package plugin - object PluginRegistry - method listPluginJars - <$anon: java.io.FilenameFilter>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - class Link,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - class PluginInfoBase,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - class PluginInfo,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - class PluginWatchThread,3.0,8.0,0.18181818181818182,0.0,0.0,1.0,0.0
+HEAD,0,package plugin - class PluginWatchThread - method run - <$anon: Thread>,1.0,4.0,0.5,0.0,0.0,0.0,0.0
+HEAD,0,package service - object PaginationHelper,2.0,2.0,0.25,0.0,0.0,0.0,0.0
+HEAD,0,package service - trait AccessTokenService,7.0,6.0,0.17142857142857143,0.0,0.0,0.0,0.0
+HEAD,0,package service - object AccessTokenService,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package ssh - object SshUtil,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package servlet - class SessionCleanupListener,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package model - trait DeployKeyComponent,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package model - trait DeployKeyComponent - class DeployKeys,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class DeployKey,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Implicits,3.0,10.0,0.16393442622950818,0.0,1.0,1.0,1.0
+HEAD,0,package util - object Implicits - class RichSeq,1.0,1.0,0.08333333333333333,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Implicits - class RichString,1.0,7.0,0.3333333333333333,0.0,1.0,1.0,1.0
+HEAD,0,package util - object Implicits - class RichRequest,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Implicits - class RichSession,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - trait ApiRepositoryCommitControllerBase,7.0,47.0,0.6619718309859155,0.0,0.0,0.0,0.0
+HEAD,0,package api - class CreateAPullRequest,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - class CreateAPullRequestAlt,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - class GitRepositoryRouting,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - trait GitRepositoryFilter,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - trait DeployKeyService,4.0,4.0,0.17391304347826086,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait AccountWebHookEventComponent,1.0,1.0,0.05,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait AccountWebHookEventComponent - class AccountWebHookEvents,1.0,1.0,0.07142857142857142,0.0,0.0,0.0,0.0
+HEAD,0,package model - class AccountWebHookEvent,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - trait IssueCreationService,4.0,5.0,0.09433962264150944,0.0,0.0,0.0,0.0
+HEAD,4,package service - trait WebHookService,44.0,119.0,0.47410358565737054,0.0,0.0,1.0,0.0
+HEAD,0,package service - trait WebHookService - method callWebHook - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - trait WebHookPullRequestService,42.0,81.0,0.6328125,0.0,0.0,0.0,0.0
+HEAD,0,package service - trait WebHookPullRequestReviewCommentService,8.0,24.0,0.5581395348837209,0.0,0.0,0.0,0.0
+HEAD,0,package service - trait WebHookIssueCommentService,7.0,21.0,0.5833333333333334,0.0,0.0,0.0,0.0
+HEAD,0,package service - object WebHookService,7.0,17.0,0.06563706563706563,0.0,0.0,0.0,0.0
+HEAD,0,package service - object WebHookService - trait WebHookPayload,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object WebHookService - class WebHookCreatePayload,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object WebHookService - object WebHookCreatePayload,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object WebHookService - class WebHookPushPayload,1.0,1.0,0.05555555555555555,0.0,0.0,0.0,0.0
+HEAD,0,package service - object WebHookService - object WebHookPushPayload,1.0,2.0,0.058823529411764705,0.0,0.0,0.0,0.0
+HEAD,0,package service - object WebHookService - class WebHookIssuesPayload,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object WebHookService - class WebHookPullRequestPayload,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object WebHookService - object WebHookPullRequestPayload,1.0,1.0,0.02631578947368421,0.0,0.0,0.0,0.0
+HEAD,0,package service - object WebHookService - class WebHookIssueCommentPayload,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object WebHookService - object WebHookIssueCommentPayload,2.0,2.0,0.07407407407407407,0.0,0.0,0.0,0.0
+HEAD,0,package service - object WebHookService - class WebHookPullRequestReviewCommentPayload,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object WebHookService - object WebHookPullRequestReviewCommentPayload,1.0,1.0,0.023255813953488372,0.0,0.0,0.0,0.0
+HEAD,0,package service - object WebHookService - class WebHookGollumPayload,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object WebHookService - class WebHookGollumPagePayload,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object WebHookService - object WebHookGollumPayload,1.0,10.0,0.3125,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait IssueComponent,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait IssueComponent - class IssueId,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait IssueComponent - class IssueOutline,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait IssueComponent - class Issues,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class Issue,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package servlet - class GitLfsTransferServlet,9.0,27.0,0.47368421052631576,0.0,0.0,0.0,0.0
+HEAD,0,package util - class RepositoryName,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object RepositoryName,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait CollaboratorComponent,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait CollaboratorComponent - class Collaborators,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class Collaborator,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class Role,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object Role,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object Role - object ADMIN,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object Role - object DEVELOPER,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object Role - object GUEST,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - class ApiContents,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiContents,1.0,9.0,0.45,0.0,0.0,0.0,0.0
+HEAD,0,package model - class WebHookContentType,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object WebHookContentType,1.0,1.0,0.1,0.0,0.0,0.0,0.0
+HEAD,0,package model - object WebHookContentType - object JSON,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object WebHookContentType - object FORM,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait WebHook,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object WebHook,1.0,1.0,0.020833333333333332,0.0,0.0,0.0,0.0
+HEAD,0,package model - object WebHook - class Event,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object WebHook - object CommitComment,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object WebHook - object Create,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object WebHook - object Delete,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object WebHook - object Deployment,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object WebHook - object DeploymentStatus,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object WebHook - object Fork,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object WebHook - object Gollum,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object WebHook - object IssueComment,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object WebHook - object Issues,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object WebHook - object Member,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object WebHook - object PageBuild,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object WebHook - object Public,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object WebHook - object PullRequest,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object WebHook - object PullRequestReviewComment,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object WebHook - object Push,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object WebHook - object Release,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object WebHook - object Status,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object WebHook - object TeamAdd,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object WebHook - object Watch,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object WebHook - object Event,1.0,1.0,0.037037037037037035,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait IssueLabelComponent,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait IssueLabelComponent - class IssueLabels,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class IssueLabel,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object JsonFormat,5.0,25.0,0.4098360655737705,0.0,0.0,0.0,0.0
+HEAD,0,package api - object JsonFormat - class Context,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - class ApiPusher,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiPusher,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait RepositoryComponent,1.0,20.0,0.25,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait RepositoryComponent - class Repositories,1.0,20.0,0.26666666666666666,0.0,0.0,0.0,0.0
+HEAD,0,package model - class Repository,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class RepositoryOptions,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - class AddACollaborator,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package core - object GitBucketCoreModule,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object SyntaxSugars,1.0,1.0,0.02127659574468085,0.0,0.0,0.0,0.0
+HEAD,0,package util - object SyntaxSugars - object ~,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object SyntaxSugars - class HeadValueAccessibleMap,1.0,1.0,0.16666666666666666,0.0,0.0,0.0,0.0
+HEAD,0,package service - trait PrioritiesService,27.0,30.0,0.35294117647058826,0.0,0.0,0.0,0.0
+HEAD,0,package api - class ApiBranch,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - class ApiBranchCommit,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - class ApiBranchForList,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,7,package view - object Markdown,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,7,package view - object Markdown - class GitBucketMarkedRenderer,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package servlet - class ApiAuthenticationFilter,4.0,6.0,0.14634146341463414,0.0,0.0,0.0,0.0
+HEAD,0,package api - class ApiCommitStatus,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiCommitStatus,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - trait ReceiveHook,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package util - object FileUtil,2.0,10.0,0.16666666666666666,0.0,0.0,0.0,0.0
+HEAD,0,package api - class ApiPlugin,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiPlugin,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait Profile,4.0,3.0,0.21428571428571427,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait Profile - class RichColumn,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait ProfileProvider,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait CoreProfile,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object Profile,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - class PrioritiesController,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait PrioritiesControllerBase,16.0,60.0,0.5769230769230769,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait PrioritiesControllerBase - class PriorityForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait PrioritiesControllerBase - method priorityName - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait PrioritiesControllerBase - method uniquePriorityName - <$anon: <error>>,4.0,5.0,0.23809523809523808,0.0,0.0,0.0,0.0
+HEAD,0,package api - class ApiBranchProtection,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiBranchProtection,1.0,10.0,0.2631578947368421,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiBranchProtection - class EnablingAndDisabling,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiBranchProtection - class Status,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiBranchProtection - class EnforcementLevel,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiBranchProtection - object Off,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiBranchProtection - object NonAdmins,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiBranchProtection - object Everyone,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiBranchProtection - object EnforcementLevel,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - trait ApiIssueCommentControllerBase,14.0,27.0,0.7714285714285715,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - trait AccountHook,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - class ApiUser,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiUser,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - class ReleaseController,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package controller - trait ReleaseControllerBase,31.0,137.0,0.8154761904761905,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait ReleaseControllerBase - class ReleaseForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package service - trait ActivityService,8.0,7.0,0.019553072625698324,0.0,0.0,0.0,0.0
+HEAD,0,package api - class ApiRepository,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiRepository,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - class ApiError,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - trait ApiRepositoryCollaboratorControllerBase,5.0,14.0,0.7,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait ProtectedBranchComponent,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait ProtectedBranchComponent - class ProtectedBranches,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait ProtectedBranchComponent - class ProtectedBranchContexts,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class ProtectedBranch,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class ProtectedBranchContext,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait CommitStatusComponent,3.0,2.0,0.06451612903225806,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait CommitStatusComponent - class CommitStatuses,1.0,1.0,0.04,0.0,0.0,0.0,0.0
+HEAD,0,package model - class CommitStatus,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object CommitStatus,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class CommitState,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object CommitState,1.0,1.0,0.05,0.0,0.0,0.0,0.0
+HEAD,0,package model - object CommitState - object ERROR,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object CommitState - object FAILURE,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object CommitState - object PENDING,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object CommitState - object SUCCESS,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait RepositoryWebHookEventComponent,1.0,1.0,0.047619047619047616,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait RepositoryWebHookEventComponent - class RepositoryWebHookEvents,1.0,1.0,0.0625,0.0,0.0,0.0,0.0
+HEAD,0,package model - class RepositoryWebHookEvent,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - trait ReleaseService,14.0,13.0,0.14606741573033707,0.0,0.0,0.0,0.0
+HEAD,0,package service - object ReleaseService,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package util - object DatabaseConfig,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - trait DatabaseType,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object DatabaseType,1.0,1.0,0.024390243902439025,0.0,0.0,0.0,0.0
+HEAD,0,package util - object DatabaseType - object H2,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object DatabaseType - object MySQL,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object DatabaseType - object MariaDb,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object DatabaseType - object PostgreSQL,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object DatabaseType - object BlockingPostgresDriver,1.0,1.0,0.14285714285714285,0.0,0.0,0.0,0.0
+HEAD,0,package util - trait Validations,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - trait Validations - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - trait Validations - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - trait Validations - method date - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait PriorityComponent,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait PriorityComponent - class Priorities,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class Priority,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - class CreateALabel,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - trait SshKeyService,4.0,3.0,0.3,0.0,0.0,0.0,0.0
+HEAD,0,package controller - class MilestonesController,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package controller - trait MilestonesControllerBase,22.0,54.0,0.6506024096385542,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait MilestonesControllerBase - class MilestoneForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package controller - trait MilestonesControllerBase - method uniqueMilestone - <$anon: <error>>,5.0,11.0,0.5238095238095238,0.0,0.0,0.0,0.0
+HEAD,0,package controller - class WikiController,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package controller - trait WikiControllerBase,37.0,196.0,0.717948717948718,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait WikiControllerBase - class WikiPageEditForm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait WikiControllerBase - method unique - <$anon: <error>>,2.0,2.0,0.18181818181818182,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait WikiControllerBase - method pagename - <$anon: <error>>,1.0,1.0,0.1111111111111111,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait WikiControllerBase - method conflictForNew - <$anon: <error>>,1.0,2.0,0.2857142857142857,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait WikiControllerBase - method conflictForEdit - <$anon: <error>>,2.0,2.0,0.2857142857142857,0.0,0.0,0.0,0.0
+HEAD,0,package api - class UpdateAUser,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - trait RepositorySearchService,11.0,42.0,0.45161290322580644,0.0,0.0,1.0,0.0
+HEAD,0,package service - object RepositorySearchService,3.0,3.0,0.07894736842105263,0.0,0.0,0.0,0.0
+HEAD,0,package service - object RepositorySearchService - class SearchResult,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object RepositorySearchService - class IssueSearchResult,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object RepositorySearchService - class FileSearchResult,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ssh - object SshServer,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package ssh - class SshServerListener,2.0,3.0,0.1875,0.0,0.0,2.0,0.0
+HEAD,0,package model - trait AccountFederationComponent,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait AccountFederationComponent - class AccountFederations,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class AccountFederation,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package controller - class FileUploadController,14.0,69.0,0.4423076923076923,0.0,0.0,1.0,0.0
+HEAD,3,package controller - class ControllerBase,10.0,37.0,0.185,0.0,0.0,1.0,0.0
+HEAD,0,package controller - class ControllerBase - method trim2 - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - class Context,1.0,6.0,0.24,0.0,0.0,0.0,0.0
+HEAD,1,package controller - trait AccountManagementControllerBase,8.0,26.0,0.2708333333333333,0.0,0.0,1.0,0.0
+HEAD,0,package controller - trait AccountManagementControllerBase - method uniqueUserName - <$anon: <error>>,1.0,2.0,0.3333333333333333,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait AccountManagementControllerBase - method uniqueMailAddress - <$anon: <error>>,2.0,5.0,0.23809523809523808,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait AccountManagementControllerBase - method uniqueExtraMailAddress - <$anon: <error>>,2.0,5.0,0.23809523809523808,0.0,0.0,0.0,0.0
+HEAD,0,package controller - trait AccountManagementControllerBase - method reservedNames - <$anon: <error>>,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package controller - class ApiController,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,6,package controller - trait ApiControllerBase,1.0,1.0,0.037037037037037035,0.0,0.0,0.0,0.0
+HEAD,0,package api - class ApiLabel,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiLabel,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait ReleaseAssetComponent,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait ReleaseAssetComponent - class ReleaseAssets,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class ReleaseAsset,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package <empty> - object PluginsJson,1.0,4.0,0.4,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait ActivityComponent,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait ActivityComponent - class Activities,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class Activity,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait PullRequestComponent,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait PullRequestComponent - class PullRequests,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class PullRequest,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait AccessTokenComponent,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - trait AccessTokenComponent - class AccessTokens,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - class AccessToken,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - trait CommitStatusService,13.0,13.0,0.19696969696969696,0.0,0.0,0.0,0.0
+HEAD,1,package service - trait AccountFederationService,4.0,7.0,0.125,0.0,0.0,0.0,0.0
+HEAD,0,package service - object AccountFederationService,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - trait LabelsService,9.0,8.0,0.25806451612903225,0.0,0.0,0.0,0.0
+HEAD,4,package service - trait AccountService,37.0,50.0,0.1953125,0.0,0.0,0.0,0.0
+HEAD,0,package service - object AccountService,0.0,0.0,0.0,0.0,0.0,0.0,0.0
