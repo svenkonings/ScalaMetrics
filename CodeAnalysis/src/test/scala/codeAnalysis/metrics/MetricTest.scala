@@ -4,6 +4,7 @@ import codeAnalysis.UnitSpec
 import codeAnalysis.analyser.Analyser
 import codeAnalysis.analyser.metric.MetricProducer
 import codeAnalysis.metrics.baseline._
+import codeAnalysis.metrics.multiparadigm._
 import codeAnalysis.metrics.paradigmScore._
 
 class MetricTest extends UnitSpec {
@@ -66,5 +67,25 @@ class MetricTest extends UnitSpec {
 
   test("Depth of Nesting test") {
     print(DepthOfNesting)
+  }
+
+  test("Number of Lambda Functions test") {
+    print(NumberOfLambdaFunctions)
+  }
+
+  test("Source Lines of Lambda test") {
+    print(SourceLinesOfLambda)
+  }
+
+  test("Lambda Score test") {
+    print(LambdaScore)
+  }
+
+  test("Number of Lambda Functions Using Variables test") {
+    print(LambdaFunctionsUsingVariables)
+  }
+
+  test("Number of Lambda Functions With Side-Effects test") {
+    print(LambdaFunctionsWithSideEffects)
   }
 }

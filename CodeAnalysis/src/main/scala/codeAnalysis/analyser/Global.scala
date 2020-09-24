@@ -301,6 +301,8 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
 
     def isMethod: Boolean = tree.symbol != null && tree.symbol.kindString.contains("method")
 
+    def isFor: Boolean = tree.attachments.all.contains(ForAttachment)
+
     def myFilter(f: PartialFunction[Tree, Boolean]): List[Tree] = new FilterTraverser(f).filter(tree)
 
     def myCollect[T](f: PartialFunction[Tree, T]): List[T] = new CollectTraverser(f).collect(tree)
