@@ -1,8 +1,8 @@
 package validator
 
-import codeAnalysis.metrics.multiparadigm._
+import codeAnalysis.metrics.multiparadigm.zuilhof._
 
-class MultiparadigmValidatorTest extends UnitSpec("multiparadigm", List(
+class MultiparadigmZuilhofValidatorTest extends UnitSpec("multiparadigm-zuilhof", List(
   NumberOfLambdaFunctions,
   SourceLinesOfLambda,
   LambdaScore,

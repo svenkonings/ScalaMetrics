@@ -1,4 +1,4 @@
-package codeAnalysis.metrics.multiparadigm
+package codeAnalysis.metrics.multiparadigm.zuilhof
 
 import codeAnalysis.analyser.Compiler
 import codeAnalysis.analyser.metric.{Metric, MetricProducer, MetricResult, ObjectMetric}

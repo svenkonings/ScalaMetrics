@@ -4,7 +4,7 @@ import codeAnalysis.UnitSpec
 import codeAnalysis.analyser.Analyser
 import codeAnalysis.analyser.metric.MetricProducer
 import codeAnalysis.metrics.baseline._
-import codeAnalysis.metrics.multiparadigm._
+import codeAnalysis.metrics.multiparadigm.zuilhof._
 import codeAnalysis.metrics.paradigmScore._
 
 class MetricTest extends UnitSpec {

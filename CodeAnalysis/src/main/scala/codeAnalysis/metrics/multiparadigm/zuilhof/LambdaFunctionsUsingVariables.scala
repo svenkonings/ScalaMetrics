@@ -1,4 +1,4 @@
-package codeAnalysis.metrics.multiparadigm
+package codeAnalysis.metrics.multiparadigm.zuilhof
 
 import codeAnalysis.analyser.Compiler
 import codeAnalysis.analyser.metric.{Metric, MetricProducer, MetricResult, ObjectMetric}
@@ -9,7 +9,7 @@ object LambdaFunctionsUsingVariables extends MetricProducer {
 
 class LambdaFunctionsUsingVariables(override val compiler: Compiler) extends ObjectMetric {
 
-  import global.{TreeExtensions, SymbolExtensions}
+  import global.{SymbolExtensions, TreeExtensions}
 
   def functionsUsingOuterVariables(tree: global.ImplDef): Int = tree.count {
     case function: global.Function => function.myExists {
