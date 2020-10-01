@@ -12,7 +12,7 @@ class WeightedMethodCount(override val compiler: Compiler) extends ObjectMetric 
   import global.TreeExtensions
 
   def weightedMethodCount(tree: global.ImplDef): Int =
-    tree.myCollect { case defDef: global.DefDef if defDef.symbol.owner == tree.symbol => defDef }
+    tree.collectTraverse { case defDef: global.DefDef if defDef.symbol.owner == tree.symbol => defDef }
       .map(_.cyclomaticComplexity)
       .sum
 

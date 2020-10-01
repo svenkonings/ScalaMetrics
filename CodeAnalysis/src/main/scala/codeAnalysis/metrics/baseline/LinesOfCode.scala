@@ -25,7 +25,7 @@ class LinesOfCode(override val compiler: Compiler) extends FileMetric with Objec
       .filterNot(emptyLineRegex.matches)
       .toList
     val lineCount = lines.size
-    val codeLineCount = tree.lines(_ => true)
+    val codeLineCount = tree.linesTraverse(_ => true)
     val commentLineCount = commentLineRegex
       .findAllIn(lines.mkString("\n"))
       .flatMap(_.split('\n'))

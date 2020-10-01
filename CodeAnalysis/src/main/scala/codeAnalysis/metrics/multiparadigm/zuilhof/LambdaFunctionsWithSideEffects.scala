@@ -11,12 +11,12 @@ class LambdaFunctionsWithSideEffects(override val compiler: Compiler) extends Ob
 
   import global.TreeExtensions
 
-  def functionsWithSideEffects(tree: global.ImplDef): Int = tree.count {
-    case tree: global.Function => tree.myExists(_.isUnit)
+  def functionsWithSideEffects(tree: global.ImplDef): Int = tree.countTraverse {
+    case tree: global.Function => tree.existsTraverse(_.isUnit)
   }
 
-  def functionsWithAssignment(tree: global.ImplDef): Int = tree.count {
-    case tree: global.Function => tree.myExists {
+  def functionsWithAssignment(tree: global.ImplDef): Int = tree.countTraverse {
+    case tree: global.Function => tree.existsTraverse {
       case _: global.Assign => true // Inner variable assign
       case tree: global.Select => tree.name.endsWith("_$eq") // Outer variable assign
     }

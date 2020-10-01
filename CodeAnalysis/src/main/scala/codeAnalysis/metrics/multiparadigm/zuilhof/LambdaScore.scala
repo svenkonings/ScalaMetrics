@@ -13,10 +13,10 @@ class LambdaScore(override val compiler: Compiler) extends ObjectMetric {
   import global.TreeExtensions
 
   def lambdaScore(tree: global.ImplDef): Double = {
-    val lambdaLines = tree.lines {
+    val lambdaLines = tree.linesTraverse {
       case _: global.Function => true
     }
-    val sourceLines = tree.lines(_ => true)
+    val sourceLines = tree.linesTraverse(_ => true)
     lambdaLines \ sourceLines
   }
 

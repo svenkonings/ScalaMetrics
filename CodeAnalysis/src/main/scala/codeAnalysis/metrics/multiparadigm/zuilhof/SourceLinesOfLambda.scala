@@ -11,7 +11,7 @@ class SourceLinesOfLambda(override val compiler: Compiler) extends ObjectMetric 
 
   import global.TreeExtensions
 
-  def sourceLinesOfLambda(tree: global.ImplDef): Int = tree.lines {
+  def sourceLinesOfLambda(tree: global.ImplDef): Int = tree.linesTraverse {
     case _: global.Function => true
   }
 

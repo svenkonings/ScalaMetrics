@@ -15,7 +15,7 @@ class ParadigmScoreBool(override val compiler: Compiler) extends MethodMetric {
   /**
    * BF1: Checks whether the method is recursive or not
    */
-  def isRecursive(tree: global.DefDef): Int = tree.myExists {
+  def isRecursive(tree: global.DefDef): Int = tree.existsTraverse {
     case apply: global.Apply => tree.symbol == apply.symbol
   }.toInt
 
@@ -27,14 +27,14 @@ class ParadigmScoreBool(override val compiler: Compiler) extends MethodMetric {
   /**
    * BF3: Checks whether the method has nested methods or not
    */
-  def hasNestedMethods(tree: global.DefDef): Int = tree.myExists {
+  def hasNestedMethods(tree: global.DefDef): Int = tree.existsTraverse {
     case defdef: global.DefDef => tree != defdef
   }.toInt
 
   /**
    * BF4: Checks whether the tree contains functions
    */
-  def hasFunctions(tree: global.DefDef): Int = tree.myExists(_.isFunction).toInt
+  def hasFunctions(tree: global.DefDef): Int = tree.existsTraverse(_.isFunction).toInt
 
   /**
    * BF4a: Checks whether the tree returns a higher order type
@@ -50,14 +50,14 @@ class ParadigmScoreBool(override val compiler: Compiler) extends MethodMetric {
   /**
    * BF4c: Checks whether the method has calls to higher order functions
    */
-  def hasHigherOrderCalls(tree: global.DefDef): Int = tree.myExists {
+  def hasHigherOrderCalls(tree: global.DefDef): Int = tree.existsTraverse {
     case apply: global.Apply => apply.args.exists(_.isFunction)
   }.toInt
 
   /**
    * BF4d: Checks whether the method has calls to functions
    */
-  def hasFunctionCalls(tree: global.DefDef): Int = tree.myExists {
+  def hasFunctionCalls(tree: global.DefDef): Int = tree.existsTraverse {
     case apply: global.Apply => apply.fun match {
       case select: global.Select => select.qualifier.isFunction
       case _ => false
@@ -67,21 +67,21 @@ class ParadigmScoreBool(override val compiler: Compiler) extends MethodMetric {
   /**
    * BF4e: Checks whether the tree has calls returning partial functions
    */
-  def hasCurrying(tree: global.DefDef): Int = tree.myExists {
+  def hasCurrying(tree: global.DefDef): Int = tree.existsTraverse {
     case apply: global.Apply => apply.isFunction
   }.toInt
 
   /**
    * BF5: Checks whether the tree contains pattern matching
    */
-  def hasPatternMatching(tree: global.DefDef): Int = tree.myExists {
+  def hasPatternMatching(tree: global.DefDef): Int = tree.existsTraverse {
     case _: global.Match => true
   }.toInt
 
   /**
    * BF6: Checks whether the tree uses lazy values
    */
-  def hasLazyValues(tree: global.DefDef): Int = tree.myExists(_.isLazy).toInt
+  def hasLazyValues(tree: global.DefDef): Int = tree.existsTraverse(_.isLazy).toInt
 
   /**
    * BF7: Checks whether the tree uses multiple parameter lists
@@ -91,40 +91,40 @@ class ParadigmScoreBool(override val compiler: Compiler) extends MethodMetric {
   /**
    * BO1: Checks whether the tree uses variables
    */
-  def hasVariables(tree: global.DefDef): Int = tree.myExists(_.isVar).toInt
+  def hasVariables(tree: global.DefDef): Int = tree.existsTraverse(_.isVar).toInt
 
   /**
    * BO1a: Checks whether the tree defines variables
    */
-  def hasVariableDefinitions(tree: global.DefDef): Int = tree.myExists {
+  def hasVariableDefinitions(tree: global.DefDef): Int = tree.existsTraverse {
     case tree: global.ValDef => tree.isVar
   }.toInt
 
   /**
    * BO1b: Checks whether the tree assignes inner variables
    */
-  def hasInnerVariableAssignment(tree: global.DefDef): Int = tree.myExists {
+  def hasInnerVariableAssignment(tree: global.DefDef): Int = tree.existsTraverse {
     case _: global.Assign => true // Inner variable assign
   }.toInt
 
   /**
    * BO1c: Checks whether the tree selects outer variables
    */
-  def hasOuterVariableUsage(tree: global.DefDef): Int = tree.myExists {
+  def hasOuterVariableUsage(tree: global.DefDef): Int = tree.existsTraverse {
     case tree: global.Select => tree.isVar
   }.toInt
 
   /**
    * BO1d: Checks whether the tree assignes outer variables
    */
-  def hasOuterVariableAssignment(tree: global.DefDef): Int = tree.myExists {
+  def hasOuterVariableAssignment(tree: global.DefDef): Int = tree.existsTraverse {
     case tree: global.Select => tree.name.endsWith("_$eq") // Outer variable assign
   }.toInt
 
   /**
    * BO2: Checks whether the tree constians Unit types
    */
-  def hasSideEffects(tree: global.DefDef): Int = tree.myExists(_.isUnit).toInt
+  def hasSideEffects(tree: global.DefDef): Int = tree.existsTraverse(_.isUnit).toInt
 
   /**
    * BO2a: Checks whether the tree returns Unit
@@ -134,7 +134,7 @@ class ParadigmScoreBool(override val compiler: Compiler) extends MethodMetric {
   /**
    * BO2b: Checks whether the tree contains calls resulting in Unit
    */
-  def hasSideEffectCalls(tree: global.DefDef): Int = tree.myExists {
+  def hasSideEffectCalls(tree: global.DefDef): Int = tree.existsTraverse {
     case apply: global.Apply => apply.isUnit
     case _: global.Assign => true
   }.toInt
@@ -142,7 +142,7 @@ class ParadigmScoreBool(override val compiler: Compiler) extends MethodMetric {
   /**
    * BO2c: Checks whether the tree uses functions resulting in Unit
    */
-  def hasSideEffectFunctions(tree: global.DefDef): Int = tree.myExists {
+  def hasSideEffectFunctions(tree: global.DefDef): Int = tree.existsTraverse {
     case function: global.Function => function.body.isUnit
   }.toInt
 

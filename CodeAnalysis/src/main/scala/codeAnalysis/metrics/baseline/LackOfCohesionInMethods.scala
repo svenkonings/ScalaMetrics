@@ -17,24 +17,24 @@ class LackOfCohesionInMethods(override val compiler: Compiler) extends ObjectMet
 
   def LCOM1(tree: global.ImplDef): Double = {
     // LCOM Chidamber & Kemerer
-    val fields = tree.myCollect { case valDef: global.ValDef if valDef.symbol.owner == tree.symbol => valDef.symbol.toString }
-    val methods = tree.myCollect { case defDef: global.DefDef if defDef.symbol.owner == tree.symbol => defDef }
+    val fields = tree.collectTraverse { case valDef: global.ValDef if valDef.symbol.owner == tree.symbol => valDef.symbol.toString }
+    val methods = tree.collectTraverse { case defDef: global.DefDef if defDef.symbol.owner == tree.symbol => defDef }
 
     val f = fields.size
     val m = methods.size
-    val mf = fields.map(field => methods.count(_.myExists { case select: global.Select => select.symbol.toString == field })).sum
+    val mf = fields.map(field => methods.count(_.existsTraverse { case select: global.Select => select.symbol.toString == field })).sum
     val lcom = 1 - (mf \ (m * f))
     lcom
   }
 
   def LCOM2(tree: global.ImplDef): Double = {
     // LCOM Henderson-Sellers
-    val fields = tree.myCollect { case valDef: global.ValDef if valDef.symbol.owner == tree.symbol => valDef.symbol.pathString }
-    val methods = tree.myCollect { case defDef: global.DefDef if defDef.symbol.owner == tree.symbol => defDef }
+    val fields = tree.collectTraverse { case valDef: global.ValDef if valDef.symbol.owner == tree.symbol => valDef.symbol.pathString }
+    val methods = tree.collectTraverse { case defDef: global.DefDef if defDef.symbol.owner == tree.symbol => defDef }
 
     val f = fields.size
     val m = methods.size
-    val mf = fields.map(field => methods.count(_.myExists { case select: global.Select => select.symbol.pathString == field })).sum
+    val mf = fields.map(field => methods.count(_.existsTraverse { case select: global.Select => select.symbol.pathString == field })).sum
     val lcomhs = (m - (mf \ f)) \ (m - 1)
     if (lcomhs == -0.0) 0.0 else lcomhs
   }
@@ -47,11 +47,11 @@ class LackOfCohesionInMethods(override val compiler: Compiler) extends ObjectMet
       calls: mutable.Set[String] = mutable.Set()
     )
     val components = mutable.ListBuffer[Component]()
-    val methods = tree.myCollect { case defDef: global.DefDef if defDef.symbol.owner == tree.symbol => defDef }
+    val methods = tree.collectTraverse { case defDef: global.DefDef if defDef.symbol.owner == tree.symbol => defDef }
     methods.foreach { method =>
       val name = method.symbol.pathString
-      val values = mutable.Set.from(method.myCollect { case select: global.Select if select.symbol.owner == method.symbol.owner && select.isValOrVar => select.symbol.pathString })
-      val calls = mutable.Set.from(method.myCollect { case select: global.Select if select.symbol.owner == method.symbol.owner && select.isMethod => select.symbol.pathString })
+      val values = mutable.Set.from(method.collectTraverse { case select: global.Select if select.symbol.owner == method.symbol.owner && select.isValOrVar => select.symbol.pathString })
+      val calls = mutable.Set.from(method.collectTraverse { case select: global.Select if select.symbol.owner == method.symbol.owner && select.isMethod => select.symbol.pathString })
       // Methods a and b are related if they access the same class level variable or one calls the other
       val cohesiveComponent = components.find(
         component => values.exists(component.values) ||

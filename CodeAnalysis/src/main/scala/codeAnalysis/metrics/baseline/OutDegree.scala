@@ -11,11 +11,11 @@ class OutDegree(override val compiler: Compiler) extends MethodMetric {
 
   import global.TreeExtensions
 
-  def outDegree(tree: global.DefDef): Int = tree.count {
+  def outDegree(tree: global.DefDef): Int = tree.countTraverse {
     case _: global.Apply => true
   }
 
-  def outDegreeDistinct(tree: global.DefDef): Int = tree.myCollect {
+  def outDegreeDistinct(tree: global.DefDef): Int = tree.collectTraverse {
     case tree: global.Apply => tree.fun.symbol
   }.toSet.size
 

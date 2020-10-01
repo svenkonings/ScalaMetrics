@@ -15,7 +15,7 @@ class ParadigmScoreFraction(override val compiler: Compiler) extends MethodMetri
   /**
    * FF1: The fraction of lines with recursive method calls
    */
-  def fractionRecursiveCalls(tree: global.DefDef): Int = tree.lines {
+  def fractionRecursiveCalls(tree: global.DefDef): Int = tree.linesTraverse {
     case apply: global.Apply => tree.symbol == apply.symbol
   }
 
@@ -27,14 +27,14 @@ class ParadigmScoreFraction(override val compiler: Compiler) extends MethodMetri
   /**
    * FF3: The fraction of lines with nested methods
    */
-  def fractionNestedMethods(tree: global.DefDef): Int = tree.lines {
+  def fractionNestedMethods(tree: global.DefDef): Int = tree.linesTraverse {
     case defdef: global.DefDef => tree != defdef
   }
 
   /**
    * FF4: The fraction of lines with functions
    */
-  def fractionFunctions(tree: global.DefDef): Int = tree.lines(_.isFunction)
+  def fractionFunctions(tree: global.DefDef): Int = tree.linesTraverse(_.isFunction)
 
   /**
    * BF4a: Checks whether the tree returns a higher order type
@@ -50,14 +50,14 @@ class ParadigmScoreFraction(override val compiler: Compiler) extends MethodMetri
   /**
    * FF4c: The fraction of lines with calls to higher order functions
    */
-  def fractionHigherOrderCalls(tree: global.DefDef): Int = tree.lines {
+  def fractionHigherOrderCalls(tree: global.DefDef): Int = tree.linesTraverse {
     case apply: global.Apply => apply.args.exists(_.isFunction)
   }
 
   /**
    * FF4d: The fraction of lines with calls to functions
    */
-  def fractionFunctionCalls(tree: global.DefDef): Int = tree.lines {
+  def fractionFunctionCalls(tree: global.DefDef): Int = tree.linesTraverse {
     case apply: global.Apply => apply.fun match {
       case select: global.Select => select.qualifier.isFunction
       case _ => false
@@ -67,21 +67,21 @@ class ParadigmScoreFraction(override val compiler: Compiler) extends MethodMetri
   /**
    * FF4e: The fraction of lines with calls returning partial functions
    */
-  def fractionCurrying(tree: global.DefDef): Int = tree.lines {
+  def fractionCurrying(tree: global.DefDef): Int = tree.linesTraverse {
     case apply: global.Apply => apply.isFunction
   }
 
   /**
    * FF5: The fraction of lines with pattern matches
    */
-  def fractionPatternMatching(tree: global.DefDef): Int = tree.lines {
+  def fractionPatternMatching(tree: global.DefDef): Int = tree.linesTraverse {
     case _: global.Match => true
   }
 
   /**
    * FF6: The fraction of lines with lazy value usage
    */
-  def fractionLazyValues(tree: global.DefDef): Int = tree.lines(_.isLazy)
+  def fractionLazyValues(tree: global.DefDef): Int = tree.linesTraverse(_.isLazy)
 
   /**
    * BF7: Checks whether the tree uses multiple parameter lists
@@ -91,40 +91,40 @@ class ParadigmScoreFraction(override val compiler: Compiler) extends MethodMetri
   /**
    * FO1: The fraction of lines with variable usage
    */
-  def fractionVariables(tree: global.DefDef): Int = tree.lines(_.isVar)
+  def fractionVariables(tree: global.DefDef): Int = tree.linesTraverse(_.isVar)
 
   /**
    * FO1a: The fraction of lines with variable definitions
    */
-  def fractionVariableDefinitions(tree: global.DefDef): Int = tree.lines {
+  def fractionVariableDefinitions(tree: global.DefDef): Int = tree.linesTraverse {
     case tree: global.ValDef => tree.isVar
   }
 
   /**
    * FO1b: The fraction of lines with assignesnments to inner variables
    */
-  def fractionInnerVariableAssignment(tree: global.DefDef): Int = tree.lines {
+  def fractionInnerVariableAssignment(tree: global.DefDef): Int = tree.linesTraverse {
     case _: global.Assign => true // Inner variable assign
   }
 
   /**
    * FO1c: The fraction of lines with outer variable references
    */
-  def fractionOuterVariableUsage(tree: global.DefDef): Int = tree.lines {
+  def fractionOuterVariableUsage(tree: global.DefDef): Int = tree.linesTraverse {
     case tree: global.Select => tree.isVar
   }
 
   /**
    * FO1d: The fraction of lines with outer variable assignments
    */
-  def fractionOuterVariableAssignment(tree: global.DefDef): Int = tree.lines {
+  def fractionOuterVariableAssignment(tree: global.DefDef): Int = tree.linesTraverse {
     case tree: global.Select => tree.name.endsWith("_$eq") // Outer variable assign
   }
 
   /**
    * FO2: The fraction of lines with calls resulting in Unit
    */
-  def fractionSideEffects(tree: global.DefDef): Int = tree.lines(_.isUnit)
+  def fractionSideEffects(tree: global.DefDef): Int = tree.linesTraverse(_.isUnit)
 
   /**
    * BO2a: Checks whether the tree returns Unit
@@ -134,7 +134,7 @@ class ParadigmScoreFraction(override val compiler: Compiler) extends MethodMetri
   /**
    * FO2b: The fraction of lines with calls resulting in Unit
    */
-  def fractionSideEffectCalls(tree: global.DefDef): Int = tree.lines {
+  def fractionSideEffectCalls(tree: global.DefDef): Int = tree.linesTraverse {
     case apply: global.Apply => apply.isUnit
     case _: global.Assign => true
   }
@@ -142,12 +142,12 @@ class ParadigmScoreFraction(override val compiler: Compiler) extends MethodMetri
   /**
    * FO2c: The fraction of lines with functions resulting in Unit
    */
-  def fractionSideEffectFunctions(tree: global.DefDef): Int = tree.lines {
+  def fractionSideEffectFunctions(tree: global.DefDef): Int = tree.linesTraverse {
     case function: global.Function => function.body.isUnit
   }
 
   override def run(tree: global.DefDef): List[MetricResult] = {
-    val total = tree.lines(_ => true)
+    val total = tree.linesTraverse(_ => true)
 
     val f1 = fractionRecursiveCalls(tree) \ total
     val f2 = isNested(tree)

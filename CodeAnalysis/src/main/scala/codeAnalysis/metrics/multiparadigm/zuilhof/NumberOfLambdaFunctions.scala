@@ -11,7 +11,7 @@ class NumberOfLambdaFunctions(override val compiler: Compiler) extends ObjectMet
 
   import global.TreeExtensions
 
-  def numberOfLambdaFunctions(tree: global.ImplDef): Int = tree.count {
+  def numberOfLambdaFunctions(tree: global.ImplDef): Int = tree.countTraverse {
     case _: global.Function => true
   }
 

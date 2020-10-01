@@ -11,11 +11,11 @@ class PatternSize(override val compiler: Compiler) extends MethodMetric {
 
   import global.TreeExtensions
 
-  def patternSize(tree: global.DefDef): Int = tree.sum {
-    case tree: global.CaseDef => tree.pat.count(_ => true)
+  def patternSize(tree: global.DefDef): Int = tree.sumTraverse {
+    case tree: global.CaseDef => tree.pat.countTraverse(_ => true)
   }
 
-  def patternVariables(tree: global.DefDef): Int = tree.count {
+  def patternVariables(tree: global.DefDef): Int = tree.countTraverse {
     case _: global.Bind => true
   }
 

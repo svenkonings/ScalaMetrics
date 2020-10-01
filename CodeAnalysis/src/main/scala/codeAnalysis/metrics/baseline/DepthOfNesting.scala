@@ -13,7 +13,7 @@ class DepthOfNesting(override val compiler: Compiler) extends MethodMetric {
 
   def depthOfNesting(tree: global.DefDef): Int = {
     def recurisveDepth(tree: global.Tree): Int = 1 + tree.children.map(recurisveDepth).maxOption.getOrElse(0)
-    tree.myCollect {
+    tree.collectTraverse {
       case tree: global.CaseDef => recurisveDepth(tree.body)
     }.maxOption.getOrElse(0)
   }

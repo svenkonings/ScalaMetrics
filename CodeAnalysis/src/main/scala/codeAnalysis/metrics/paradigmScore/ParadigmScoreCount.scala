@@ -15,7 +15,7 @@ class ParadigmScoreCount(override val compiler: Compiler) extends MethodMetric {
   /**
    * CF1: Counts the number of recursive method calls
    */
-  def countRecursiveCalls(tree: global.DefDef): Int = tree.count {
+  def countRecursiveCalls(tree: global.DefDef): Int = tree.countTraverse {
     case apply: global.Apply => tree.symbol == apply.symbol
   }
 
@@ -35,14 +35,14 @@ class ParadigmScoreCount(override val compiler: Compiler) extends MethodMetric {
   /**
    * CF3: Counts the number of nested methods
    */
-  def countNestedMethods(tree: global.DefDef): Int = tree.count {
+  def countNestedMethods(tree: global.DefDef): Int = tree.countTraverse {
     case defdef: global.DefDef => tree != defdef
   }
 
   /**
    * CF4: Counts the number of functions
    */
-  def countFunctions(tree: global.DefDef): Int = tree.count {
+  def countFunctions(tree: global.DefDef): Int = tree.countTraverse {
     case term@(_: global.TermTree | _: global.SymTree) => term.isFunction
   }
 
@@ -60,14 +60,14 @@ class ParadigmScoreCount(override val compiler: Compiler) extends MethodMetric {
   /**
    * CF4c: Counts the number of calls to higher order functions
    */
-  def countHigherOrderCalls(tree: global.DefDef): Int = tree.count {
+  def countHigherOrderCalls(tree: global.DefDef): Int = tree.countTraverse {
     case apply: global.Apply => apply.args.exists(_.isFunction)
   }
 
   /**
    * CF4d: Counts the number of calls to functions
    */
-  def countFunctionCalls(tree: global.DefDef): Int = tree.count {
+  def countFunctionCalls(tree: global.DefDef): Int = tree.countTraverse {
     case apply: global.Apply => apply.fun match {
       case select: global.Select => select.qualifier.isFunction
       case _ => false
@@ -77,21 +77,21 @@ class ParadigmScoreCount(override val compiler: Compiler) extends MethodMetric {
   /**
    * CF4e: Counts the number of calls returning partial functions
    */
-  def countCurrying(tree: global.DefDef): Int = tree.count {
+  def countCurrying(tree: global.DefDef): Int = tree.countTraverse {
     case apply: global.Apply => apply.isFunction
   }
 
   /**
    * CF5: Counts the number of pattern matches
    */
-  def countPatternMatching(tree: global.DefDef): Int = tree.count {
+  def countPatternMatching(tree: global.DefDef): Int = tree.countTraverse {
     case _: global.Match => true
   }
 
   /**
    * CF6: Counts the number of lazy value usage
    */
-  def countLazyValues(tree: global.DefDef): Int = tree.count {
+  def countLazyValues(tree: global.DefDef): Int = tree.countTraverse {
     case term@(_: global.TermTree | _: global.SymTree) => term.isLazy
   }
 
@@ -106,42 +106,42 @@ class ParadigmScoreCount(override val compiler: Compiler) extends MethodMetric {
   /**
    * CO1: Counts the number of variable usage
    */
-  def countVariables(tree: global.DefDef): Int = tree.count {
+  def countVariables(tree: global.DefDef): Int = tree.countTraverse {
     case term@(_: global.TermTree | _: global.SymTree) => term.isVar
   }
 
   /**
    * CO1a: Counts the number of variable definitions
    */
-  def countVariableDefinitions(tree: global.DefDef): Int = tree.count {
+  def countVariableDefinitions(tree: global.DefDef): Int = tree.countTraverse {
     case tree: global.ValDef => tree.isVar
   }
 
   /**
    * CO1b: Counts the assignesnments to inner variables
    */
-  def countInnerVariableAssignment(tree: global.DefDef): Int = tree.count {
+  def countInnerVariableAssignment(tree: global.DefDef): Int = tree.countTraverse {
     case _: global.Assign => true // Inner variable assign
   }
 
   /**
    * CO1c: Counts outer variable references
    */
-  def countOuterVariableUsage(tree: global.DefDef): Int = tree.count {
+  def countOuterVariableUsage(tree: global.DefDef): Int = tree.countTraverse {
     case tree: global.Select => tree.isVar
   }
 
   /**
    * CO1d: Counts outer variable assignments
    */
-  def countOuterVariableAssignment(tree: global.DefDef): Int = tree.count {
+  def countOuterVariableAssignment(tree: global.DefDef): Int = tree.countTraverse {
     case tree: global.Select => tree.name.endsWith("_$eq") // Outer variable assign
   }
 
   /**
    * CO2: Counts the number of calls resulting in Unit
    */
-  def countSideEffects(tree: global.DefDef): Int = tree.count {
+  def countSideEffects(tree: global.DefDef): Int = tree.countTraverse {
     case tree@(_: global.TermTree | _: global.SymTree) => tree.isUnit
   }
 
@@ -153,7 +153,7 @@ class ParadigmScoreCount(override val compiler: Compiler) extends MethodMetric {
   /**
    * CO2b: Count the number of calls resulting in Unit
    */
-  def countSideEffectCalls(tree: global.DefDef): Int = tree.count {
+  def countSideEffectCalls(tree: global.DefDef): Int = tree.countTraverse {
     case apply: global.Apply => apply.isUnit
     case _: global.Assign => true
   }
@@ -161,7 +161,7 @@ class ParadigmScoreCount(override val compiler: Compiler) extends MethodMetric {
   /**
    * CO2c: Count the number of functions resulting in Unit
    */
-  def countSideEffectFunctions(tree: global.DefDef): Int = tree.count {
+  def countSideEffectFunctions(tree: global.DefDef): Int = tree.countTraverse {
     case function: global.Function => function.body.isUnit
   }
 

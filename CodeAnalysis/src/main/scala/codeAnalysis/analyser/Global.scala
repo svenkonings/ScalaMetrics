@@ -4,6 +4,7 @@ import codeAnalysis.analyser.FractionPart.FractionPart
 import codeAnalysis.util.Extensions.DoubleExtension
 
 import scala.collection.mutable
+import scala.collection.mutable.ListBuffer
 import scala.reflect.internal.util.DefinedPosition
 import scala.tools.nsc.reporters.Reporter
 import scala.tools.nsc.{Settings, interactive}
@@ -190,7 +191,7 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
   }
 
   class FilterTraverser(f: PartialFunction[Tree, Boolean]) extends ScapegoatTraverser {
-    private var value: mutable.ListBuffer[Tree] = mutable.ListBuffer()
+    private var value: ListBuffer[Tree] = ListBuffer()
 
     def filter(tree: Global#Tree): List[Tree] = {
       traverse(tree.asInstanceOf[Tree])
@@ -206,7 +207,7 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
   }
 
   class CollectTraverser[T](f: PartialFunction[Tree, T]) extends ScapegoatTraverser {
-    private var value: mutable.ListBuffer[T] = mutable.ListBuffer()
+    private var value: ListBuffer[T] = ListBuffer()
 
     def collect(tree: Global#Tree): List[T] = {
       traverse(tree.asInstanceOf[Tree])
@@ -303,27 +304,27 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
 
     def isFor: Boolean = tree.attachments.all.contains(ForAttachment)
 
-    def myFilter(f: PartialFunction[Tree, Boolean]): List[Tree] = new FilterTraverser(f).filter(tree)
+    def filterTraverse(f: PartialFunction[Tree, Boolean]): List[Tree] = new FilterTraverser(f).filter(tree)
 
-    def myCollect[T](f: PartialFunction[Tree, T]): List[T] = new CollectTraverser(f).collect(tree)
+    def collectTraverse[T](f: PartialFunction[Tree, T]): List[T] = new CollectTraverser(f).collect(tree)
 
-    def myFind(f: PartialFunction[Tree, Boolean]): Option[Tree] = new FindTraverser(f).find(tree)
+    def findTraverse(f: PartialFunction[Tree, Boolean]): Option[Tree] = new FindTraverser(f).find(tree)
 
-    def myExists(f: PartialFunction[Tree, Boolean]): Boolean = new ExistsTraverser(f).exists(tree)
+    def existsTraverse(f: PartialFunction[Tree, Boolean]): Boolean = new ExistsTraverser(f).exists(tree)
 
-    def myForall(f: PartialFunction[Tree, Boolean]): Boolean = new ForallTraverser(f).forall(tree)
+    def forallTraverse(f: PartialFunction[Tree, Boolean]): Boolean = new ForallTraverser(f).forall(tree)
 
-    def fold[T](base: T)(f: (T, Tree) => T): T = new FoldTraverser(base)(f).fold(tree)
+    def foldTraverse[T](base: T)(f: (T, Tree) => T): T = new FoldTraverser(base)(f).fold(tree)
 
-    def sum(f: PartialFunction[Tree, Int]): Int = new SumTraverser(f).sum(tree)
+    def sumTraverse(f: PartialFunction[Tree, Int]): Int = new SumTraverser(f).sum(tree)
 
-    def count(f: PartialFunction[Tree, Boolean]): Int = new CountTraverser(f).count(tree)
+    def countTraverse(f: PartialFunction[Tree, Boolean]): Int = new CountTraverser(f).count(tree)
 
     def parentTraverse[T](f: Option[T] => PartialFunction[Tree, T]): Option[T] = new ParentTraverser(f).top(tree)
 
-    def fraction(f: PartialFunction[Tree, FractionPart]): Double = new FractionTraverser(f).fraction(tree)
+    def fractionTraverse(f: PartialFunction[Tree, FractionPart]): Double = new FractionTraverser(f).fraction(tree)
 
-    def lines(f: PartialFunction[Tree, Boolean]): Int = new LinesTraverser(f).lines(tree)
+    def linesTraverse(f: PartialFunction[Tree, Boolean]): Int = new LinesTraverser(f).lines(tree)
 
     def cyclomaticComplexity: Int = new CyclomaticComplexityTraverser().complexity(tree)
   }

@@ -27,7 +27,7 @@ class ParadigmScoreLandkroon(override val compiler: Compiler) extends MethodMetr
   /**
    * Counts the number of variable usage
    */
-  def variables(tree: global.DefDef): Int = tree.count(_.isVar)
+  def variables(tree: global.DefDef): Int = tree.countTraverse(_.isVar)
 
   /**
    * Checks whether the method is nested or not
@@ -37,7 +37,7 @@ class ParadigmScoreLandkroon(override val compiler: Compiler) extends MethodMetr
   /**
    * Counts the number of functional and imperative calls
    */
-  def countFuncCalls(tree: global.Tree): (Int, Int) = tree.fold((0, 0))((previous, tree) => previous + (tree match {
+  def countFuncCalls(tree: global.Tree): (Int, Int) = tree.foldTraverse((0, 0))((previous, tree) => previous + (tree match {
     case tree: global.Apply if (tree.symbol != null && functionalFuncs.contains(tree.symbol.name.toString)) => (1, 0)
     case tree: global.Apply if (tree.symbol != null && impFuncs.contains(tree.symbol.name.toString)) => (0, 1)
     case _: global.Match => (1, 0)

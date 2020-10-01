@@ -11,15 +11,15 @@ class LambdaFunctionsUsingVariables(override val compiler: Compiler) extends Obj
 
   import global.{SymbolExtensions, TreeExtensions}
 
-  def functionsUsingOuterVariables(tree: global.ImplDef): Int = tree.count {
-    case function: global.Function => function.myExists {
+  def functionsUsingOuterVariables(tree: global.ImplDef): Int = tree.countTraverse {
+    case function: global.Function => function.existsTraverse {
       case select: global.Select => select.isVar
     }
   }
 
-  def functionsUsingInnerVariables(tree: global.ImplDef): Int = tree.count {
-    case function: global.Function => function.myExists {
-      case ident: global.Ident if !function.myExists{
+  def functionsUsingInnerVariables(tree: global.ImplDef): Int = tree.countTraverse {
+    case function: global.Function => function.existsTraverse {
+      case ident: global.Ident if !function.existsTraverse{
         case valDef: global.ValDef => valDef.symbol.qualifiedName == ident.symbol.qualifiedName
       } => ident.isVar
     }
