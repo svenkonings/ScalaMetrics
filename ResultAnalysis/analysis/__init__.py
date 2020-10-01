@@ -37,6 +37,8 @@ def parse_args():
                         action="store_true")
     parser.add_argument('--multivariate-baseline', help='Enable multivariate baseline regression',
                         dest='multivariate_baseline', action="store_true")
+    parser.add_argument('--multivariate-baseline-control', help='Enable multivariate baseline control metric',
+                        dest='multivariate_baseline_control', action="store_true")
     return parser.parse_args()
 
 

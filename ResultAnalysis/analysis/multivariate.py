@@ -10,6 +10,9 @@ from analysis import categories, projects, save_dataframe, get_metric_results, t
 
 
 def main(args):
+    """
+    Runs multivariate regression on all metrics together.
+    """
     warnings.filterwarnings("ignore", category=ConvergenceWarning, module="sklearn")
     if args.split_paradigm_score:
         folder = f'{args.folder}/split-regression/multivariate/'

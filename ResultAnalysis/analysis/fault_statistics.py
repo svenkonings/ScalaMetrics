@@ -4,6 +4,9 @@ from analysis import categories, projects, save_dataframe, get_metric_results, p
 
 
 def main(args):
+    """
+    Calculates statistics of the available fault data.
+    """
     if args.split_paradigm_score:
         folder = f'{args.folder}/split-regression/fault-statistics/'
     else:

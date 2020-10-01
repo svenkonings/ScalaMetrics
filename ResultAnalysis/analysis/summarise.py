@@ -6,40 +6,42 @@ from analysis import save_dataframe, categories, parse_args
 
 
 def main(args):
-    summarise_univariate(args)
-    if args.multivariate_baseline:
-        summarise_multivariate(args)
-
-
-def summarise_univariate(args):
+    """
+     Summarises analysis results by calculating the means,
+     the standard deviations and the medians.
+    """
     if args.split_paradigm_score:
-        folder = f'{args.folder}/split-regression/univariate/'
+        summarise_split_directory(args, 'univariate')
     else:
-        folder = f'{args.folder}/regression/univariate/'
-    for category in categories:
-        path = folder + category
-        if args.split_paradigm_score:
-            for paradigm in ['Neutral', 'OOP', 'FP', 'Mix']:
-                df = read_all(path, ['name', 'precision', 'recall', 'mcc'], paradigm)
-                if df is not None:
-                    summarise(df, path, category + paradigm, paradigm)
-        else:
-            df = read_all(path, ['name', 'precision', 'recall', 'mcc'])
-            if df is not None:
-                summarise(df, path, category)
+        summarise_directory(args, 'univariate')
+    if args.multivariate_baseline:
+        summarise_directory(args, 'multivariate-baseline')
+        summarise_directory(args, 'multivariate-baseline-hasdata')
+    if args.multivariate_baseline_control:
+        summarise_directory(args, 'mulitvariate-baseline-control')
 
 
-def summarise_multivariate(args):
-    folder = f'{args.folder}/regression/mulitvariate-baseline/'
+def summarise_directory(args, directory):
+    folder = f'{args.folder}/regression/{directory}/'
     for category in categories:
         path = folder + category
         df = read_all(path, ['name', 'precision', 'recall', 'mcc'])
         if df is not None:
-            summarise(df, path, category)
+            summarise(df, path, category, directory)
 
 
-def summarise(df, path, category, suffix=''):
-    print(f'Summarise {category}')
+def summarise_split_directory(args, directory):
+    folder = f'{args.folder}/split-regression/{directory}/'
+    for category in categories:
+        path = folder + category
+        for paradigm in ['Neutral', 'OOP', 'FP', 'Mix']:
+            df = read_all(path, ['name', 'precision', 'recall', 'mcc'], paradigm)
+            if df is not None:
+                summarise(df, path, category + paradigm, directory, paradigm)
+
+
+def summarise(df, path, category, directory, suffix=''):
+    print(f'Summarise {category} {directory}')
     means = df.groupby('name').agg(['mean', 'std'])
     means.columns = means.columns.map(' '.join)
     save_dataframe(means, path, 'means' + suffix)

@@ -3,6 +3,9 @@ from analysis import categories, projects, save_dataframe, get_metric_results, g
 
 
 def main(args):
+    """
+    Calculates descriptive statistics of the metric values.
+    """
     if args.split_paradigm_score:
         folder = f'{args.folder}/split-regression/descriptive/'
     else:

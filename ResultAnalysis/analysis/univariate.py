@@ -6,9 +6,13 @@ from sklearn.model_selection import StratifiedKFold, cross_val_predict
 
 from analysis import categories, projects, save_dataframe, get_metric_results, get_columns, to_binary, get_stats, \
     parse_args, split_paradigm_score
+from analysis.summarise import summarise_directory, summarise_split_directory
 
 
 def main(args):
+    """
+    Runs univariate regression for each of the available metrics.
+    """
     warnings.filterwarnings("ignore", category=RuntimeWarning, module="sklearn")
     if args.split_paradigm_score:
         folder = f'{args.folder}/split-regression/univariate/'
@@ -25,6 +29,10 @@ def main(args):
                         univariate(scores, folder, category, name + paradigm, estimator, cv, args)
                 else:
                     univariate(df, folder, category, name, estimator, cv, args)
+    if args.split_paradigm_score:
+        summarise_split_directory(args, 'univariate')
+    else:
+        summarise_directory(args, 'univariate')
 
 
 def univariate(df, folder, category, name, estimator, cv, args):

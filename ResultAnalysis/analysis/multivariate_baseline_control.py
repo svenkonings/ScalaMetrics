@@ -8,26 +8,30 @@ from sklearn.model_selection import StratifiedKFold, cross_val_predict
 
 from analysis import categories, projects, get_metric_results, get_columns, to_binary, get_stats, \
     parse_args, save_dataframe
-from analysis.summarise import read_all, summarise
+from analysis.summarise import summarise_directory
 
 random = Random(42)
 
 
 def main(args):
-    warnings.filterwarnings("ignore", category=RuntimeWarning, module="sklearn")
+    """
+    Runs univariate and multivariate baseline regression on a control metric.
+    The control metric is the expected values with a small probability of being incorrect.
+    """
     warnings.filterwarnings("ignore", category=ConvergenceWarning, module="sklearn")
-    folder = f'{args.folder}/regression/mulitvariate-baseline-control/'
+    folder = f'{args.folder}/regression/multivariate-baseline-control/'
     estimator = LogisticRegression(class_weight='balanced', random_state=42)
     cv = StratifiedKFold(n_splits=10, shuffle=True, random_state=42)
     for category in categories:
         for path, name in projects.items():
             df = get_metric_results('baseline', path, category)
             if df is not None:
-                multivariate_test(df, folder, category, name, estimator, cv, args)
+                multivariate_baseline_control(df, folder, category, name, estimator, cv, args)
+    summarise_directory(args, 'multivariate-baseline-control')
 
 
-def multivariate_test(df, folder, category, name, estimator, cv, args):
-    print(f'[{category}] Mulitvariate baseline: {name}')
+def multivariate_baseline_control(df, folder, category, name, estimator, cv, args):
+    print(f'[{category}] Mulitvariate baseline control: {name}')
     faults = df['faults'].apply(to_binary)
     result = pd.DataFrame(
         columns=['name', 'tn', 'fp', 'fn', 'tp', 'r2', 'precision', 'recall', 'mcc']
@@ -63,16 +67,5 @@ def multivariate_test(df, folder, category, name, estimator, cv, args):
     save_dataframe(result, folder + category, name, False)
 
 
-def summarise_multivariate(args):
-    folder = f'{args.folder}/regression/mulitvariate-baseline-control/'
-    for category in categories:
-        path = folder + category
-        df = read_all(path, ['name', 'precision', 'recall', 'mcc'])
-        if df is not None:
-            summarise(df, path, category)
-
-
 if __name__ == '__main__':
-    args = parse_args()
-    main(args)
-    summarise_multivariate(args)
+    main(parse_args())
