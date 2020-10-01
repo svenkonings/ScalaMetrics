@@ -141,6 +141,56 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
     def count(tree: Global#Tree): Int = sum(tree)
   }
 
+  class ScopeFoldTraverser[T](base: T)(f: mutable.Stack[ListBuffer[String]] => (T, Tree) => T) extends ScapegoatTraverser {
+    private var value: T = base
+    private val scopes = mutable.Stack[ListBuffer[String]]()
+
+    private def enter(): Unit = scopes.push(ListBuffer())
+
+    private def add(name: String): Unit = scopes.top.append(name.trim)
+
+    private def exit(): Unit = scopes.pop()
+
+    def fold(tree: Global#Tree): T = {
+      traverse(tree.asInstanceOf[Tree])
+      val result = value
+      value = base
+      result
+    }
+
+    override protected def inspect(tree: Tree): Unit = {
+      value = f(scopes)(value, tree)
+      tree match {
+        case _: ImplDef | _: Function | _: Block | _: CaseDef =>
+          enter()
+          continue(tree)
+          exit()
+        case DefDef(_, TermName(name), _, _, _, _) =>
+          add(name)
+          enter()
+          continue(tree)
+          exit()
+        case ValDef(_, TermName(name), _, _) =>
+          add(name)
+          continue(tree)
+        case Bind(name, _) =>
+          add(name.toString)
+          continue(tree)
+        case _ => continue(tree)
+      }
+    }
+  }
+
+  class ScopeSumTraverser(f: mutable.Stack[ListBuffer[String]] => PartialFunction[Tree, Int]) extends
+    ScopeFoldTraverser[Int](0)(scopes => (value, tree) => value + f(scopes).applyOrElse(tree, (_: Tree) => 0)) {
+    def sum(tree: Global#Tree): Int = fold(tree)
+  }
+
+  class ScopeCountTraverser(f: mutable.Stack[ListBuffer[String]] => PartialFunction[Tree, Boolean]) extends
+    ScopeSumTraverser(scopes => f(scopes).andThen(result => if (result) 1 else 0)) {
+    def count(tree: Global#Tree): Int = sum(tree)
+  }
+
   class FractionTraverser(f: PartialFunction[Tree, FractionPart]) extends ScapegoatTraverser {
     private var numerator, denominator = 0
 
@@ -319,6 +369,12 @@ class Global(settings: Settings, reporter: Reporter) extends interactive.Global(
     def sumTraverse(f: PartialFunction[Tree, Int]): Int = new SumTraverser(f).sum(tree)
 
     def countTraverse(f: PartialFunction[Tree, Boolean]): Int = new CountTraverser(f).count(tree)
+
+    def scopeFoldTraverse[T](base: T)(f: mutable.Stack[ListBuffer[String]] => (T, Tree) => T): T = new ScopeFoldTraverser(base)(f).fold(tree)
+
+    def scopeSumTraverse(f: mutable.Stack[ListBuffer[String]] => PartialFunction[Tree, Int]): Int = new ScopeSumTraverser(f).sum(tree)
+
+    def scopeCountTraverse(f: mutable.Stack[ListBuffer[String]] => PartialFunction[Tree, Boolean]): Int = new ScopeCountTraverser(f).count(tree)
 
     def parentTraverse[T](f: Option[T] => PartialFunction[Tree, T]): Option[T] = new ParentTraverser(f).top(tree)
 

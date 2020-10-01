@@ -4,6 +4,7 @@ import codeAnalysis.UnitSpec
 import codeAnalysis.analyser.Analyser
 import codeAnalysis.analyser.metric.MetricProducer
 import codeAnalysis.metrics.baseline._
+import codeAnalysis.metrics.multiparadigm.constructs._
 import codeAnalysis.metrics.multiparadigm.zuilhof._
 import codeAnalysis.metrics.paradigmScore._
 
@@ -87,5 +88,25 @@ class MetricTest extends UnitSpec {
 
   test("Number of Lambda Functions With Side-Effects test") {
     print(LambdaFunctionsWithSideEffects)
+  }
+
+  test("Number of overriding pattern variables test") {
+    print(OverridingPatternVariables)
+  }
+
+  test("Number of implicits test") {
+    print(NumberOfImplicits)
+  }
+
+  test("Variable types test") {
+    print(VariableTypes)
+  }
+
+  test("Usage of Null test") {
+    print(UsageOfNull)
+  }
+
+  test("Number of Returns test") {
+    print(NumberOfReturns)
   }
 }
