@@ -46,7 +46,8 @@ def get_columns(df, args):
     columns = list(df.select_dtypes(include='number').keys())
     columns.remove('faults')
     for column in args.exclude_columns:
-        columns.remove(column)
+        if column in columns:
+            columns.remove(column)
     return columns
 
 
