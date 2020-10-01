@@ -7948,7 +7948,7 @@ HEAD,0,package internal - class LoggingTestKitImpl - method withMessageRegex,0.0
 HEAD,0,package internal - class LoggingTestKitImpl - method withCause,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - class LoggingTestKitImpl - method withMdc,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - class LoggingTestKitImpl - method withMdc,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package internal - class LoggingTestKitImpl - method withCustom,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+HEAD,0,package internal - class LoggingTestKitImpl - method withCustom,0.0,0.0,0.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package internal - class LoggingTestKitImpl - method withCause,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package sharding - class ClusterShardingGracefulShutdownSpec - method join,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,8.0,1.0,3.0,0.0,12.0,1.0,-1.0
 HEAD,0,package sharding - class ClusterShardingGracefulShutdownSpec - method startSharding,0.0,0.0,0.0,6.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
@@ -9261,8 +9261,8 @@ HEAD,0,package internal - class StubbedActorContext - method toString,0.0,0.0,0.
 HEAD,0,package internal - class StubbedActorContext - method log,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,2.0,1.0,-1.0
 HEAD,0,package internal - class StubbedActorContext - method setLoggerName,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,4.0,1.0,-1.0
 HEAD,0,package internal - class StubbedActorContext - method setLoggerName,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,4.0,1.0,-1.0
-HEAD,0,package internal - class StubbedActorContext - method logEntries,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package internal - class StubbedActorContext - method clearLog,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,2.0,1.0,-1.0
+HEAD,0,package internal - class StubbedActorContext - method logEntries,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+HEAD,0,package internal - class StubbedActorContext - method clearLog,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,4.0,1.0,-1.0
 HEAD,0,package internal - class StubbedActorContext - method onUnhandled,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3.0,0.0,0.0,2.0,1.0,2.0,1.0,1.0,0.0,10.0,1.0,-1.0
 HEAD,0,package internal - class StubbedActorContext - method unhandledMessages,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,2.0,1.0,-1.0
 HEAD,0,package internal - class StubbedActorContext - method clearUnhandled,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,1.0,1.0,2.0,1.0,1.0,0.0,8.0,1.0,-1.0
@@ -14356,7 +14356,7 @@ HEAD,0,package stage - class GraphStageLogic - class Emitting - method onDownstr
 HEAD,0,package stage - class GraphStageLogic - class EmittingSingle - method onPull,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,4.0,1.0,2.0,0.0,7.0,1.0,-1.0
 HEAD,0,package stage - class GraphStageLogic - class EmittingIterator - method onPull,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0,1.0,2.0,0.0,9.0,1.0,-1.0
 HEAD,0,package stage - class GraphStageLogic - class EmittingCompletion - method onPull,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,4.0,1.0,-1.0
-HEAD,1,package stage - class GraphStageLogic - method passAlong,0.0,0.0,4.0,8.0,0.0,0.0,3.0,1.0,1.0,0.0,0.0,0.0,17.0,1.0,0.0,0.0,1.0,0.0,28.0,1.0,8.0,0.0,39.0,1.0,-0.39285714285714285
+HEAD,1,package stage - class GraphStageLogic - method passAlong,0.0,0.0,4.0,9.0,0.0,0.0,3.0,1.0,1.0,0.0,0.0,0.0,18.0,1.0,0.0,0.0,1.0,0.0,28.0,1.0,8.0,0.0,39.0,1.0,-0.3684210526315789
 HEAD,0,package stage - class GraphStageLogic - method passAlong - class PassAlongHandler - method apply,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,4.0,1.0,-1.0
 HEAD,1,package stage - class GraphStageLogic - method passAlong - class PassAlongHandler - method onPush,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,3.0,1.0,1.0,0.0,5.0,1.0,-0.42857142857142855
 HEAD,1,package stage - class GraphStageLogic - method passAlong - class PassAlongHandler - method onUpstreamFinish,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,4.0,1.0,1.0,0.0,6.0,1.0,-1.0
@@ -18193,7 +18193,7 @@ HEAD,0,package dispatch - class OnComplete - method internal,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package dispatch - class OnComplete - method onComplete,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,2.0,1.0,-1.0
 HEAD,0,package dispatch - class Recover - method internal,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package dispatch - class Recover - method recover,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package dispatch - object Filter - method filterOf,0.0,0.0,1.0,6.0,1.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+HEAD,0,package dispatch - object Filter - method filterOf,0.0,0.0,1.0,7.0,1.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,11.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package dispatch - object Filter - method filterOf - <$anon: T => Boolean> - method apply,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package dispatch - class Foreach - method internal,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,4.0,1.0,-1.0
 HEAD,0,package dispatch - class Foreach - method each,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,2.0,1.0,-1.0

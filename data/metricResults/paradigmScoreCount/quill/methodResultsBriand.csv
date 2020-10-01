@@ -228,13 +228,13 @@ HEAD,0,package jasync - trait ArrayEncoders - method arrayLocalDateEncoder,0.0,0
 HEAD,0,package jasync - trait ArrayEncoders - method arrayEncoder,0.0,0.0,0.0,5.0,1.0,1.0,2.0,0.0,1.0,0.0,0.0,0.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package jasync - trait ArrayEncoders - method arrayRawEncoder,0.0,0.0,0.0,3.0,1.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package jasync - trait Decoders - class AsyncDecoder - method apply,0.0,0.0,0.0,2.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
-HEAD,0,package jasync - trait Decoders - method decoder,0.0,0.0,1.0,12.0,1.0,1.0,1.0,3.0,2.0,1.0,0.0,1.0,23.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+HEAD,0,package jasync - trait Decoders - method decoder,0.0,0.0,1.0,13.0,1.0,1.0,1.0,3.0,2.0,1.0,0.0,1.0,24.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package jasync - trait Decoders - method decoder - <$anon: (Decoders.this.Index  Decoders.this.ResultRow) => T> - method apply,0.0,0.0,0.0,2.0,0.0,0.0,0.0,2.0,0.0,1.0,0.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
-HEAD,0,package jasync - trait Decoders - method mappedDecoder,0.0,0.0,1.0,11.0,1.0,1.0,1.0,3.0,2.0,0.0,0.0,0.0,20.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+HEAD,0,package jasync - trait Decoders - method mappedDecoder,0.0,0.0,1.0,12.0,1.0,1.0,1.0,3.0,2.0,0.0,0.0,0.0,21.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package jasync - trait Decoders - method mappedDecoder - <$anon: (Decoders.this.Index  Decoders.this.ResultRow) => O> - method apply,0.0,0.0,0.0,2.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package jasync - trait Decoders - trait NumericDecoder - method apply,0.0,0.0,0.0,7.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package jasync - trait Decoders - trait NumericDecoder - method decode,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
-HEAD,0,package jasync - trait Decoders - method optionDecoder,0.0,0.0,1.0,10.0,1.0,1.0,1.0,2.0,2.0,1.0,0.0,0.0,19.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+HEAD,0,package jasync - trait Decoders - method optionDecoder,0.0,0.0,1.0,11.0,1.0,1.0,1.0,2.0,2.0,1.0,0.0,0.0,20.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package jasync - trait Decoders - method optionDecoder - <$anon: (Decoders.this.Index  Decoders.this.ResultRow) => Option[T]> - method apply,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package jasync - trait Decoders - <$anon: (Decoders.this.Index  Decoders.this.ResultRow) => BigDecimal> - method decode,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package jasync - trait Decoders - <$anon: (Decoders.this.Index  Decoders.this.ResultRow) => Int> - method decode,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
@@ -282,7 +282,7 @@ HEAD,0,package async - trait ArrayDecoders - method arrayJodaDateTimeDecoder,0.0
 HEAD,0,package async - trait ArrayDecoders - method arrayJodaLocalDateTimeDecoder,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package async - trait ArrayDecoders - method arrayJodaLocalDateDecoder,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package async - trait ArrayDecoders - method arrayLocalDateDecoder,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
-HEAD,0,package async - trait ArrayDecoders - method arrayDecoder,0.0,0.0,1.0,8.0,1.0,1.0,1.0,1.0,2.0,2.0,0.0,1.0,18.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+HEAD,0,package async - trait ArrayDecoders - method arrayDecoder,0.0,0.0,1.0,9.0,1.0,1.0,1.0,1.0,2.0,2.0,0.0,1.0,19.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package async - trait ArrayDecoders - method arrayDecoder - <$anon: (ArrayDecoders.this.Index  ArrayDecoders.this.ResultRow) => Col> - method apply,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package async - trait ArrayDecoders - method arrayRawEncoder,0.0,0.0,0.0,3.0,1.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package gen - trait CodeGeneratorComponents - method defaultExcludedSchemas,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -500,11 +500,11 @@ HEAD,0,package getquill - class AsyncMirrorContext - method executeBatchActionRe
 HEAD,0,package getquill - class AsyncMirrorContext - method prepareParams,0.0,0.0,0.0,3.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,1,package async - trait Encoders - class AsyncEncoder - method apply,0.0,0.0,0.0,2.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,8,package async - trait Encoders - method encoder,0.0,0.0,0.0,3.0,1.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
-HEAD,0,package async - trait Encoders - method encoder,0.0,0.0,1.0,9.0,1.0,1.0,1.0,2.0,2.0,0.0,0.0,0.0,17.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+HEAD,0,package async - trait Encoders - method encoder,0.0,0.0,1.0,10.0,1.0,1.0,1.0,2.0,2.0,0.0,0.0,0.0,18.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package async - trait Encoders - method encoder - <$anon: (Encoders.this.Index  T  Encoders.this.PrepareRow) => Encoders.this.PrepareRow> - method apply,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
-HEAD,0,package async - trait Encoders - method mappedEncoder,0.0,0.0,1.0,11.0,1.0,1.0,1.0,3.0,2.0,0.0,0.0,0.0,20.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+HEAD,0,package async - trait Encoders - method mappedEncoder,0.0,0.0,1.0,12.0,1.0,1.0,1.0,3.0,2.0,0.0,0.0,0.0,21.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package async - trait Encoders - method mappedEncoder - <$anon: (Encoders.this.Index  I  Encoders.this.PrepareRow) => Encoders.this.PrepareRow> - method apply,0.0,0.0,0.0,2.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
-HEAD,7,package async - trait Encoders - method optionEncoder,0.0,0.0,1.0,11.0,1.0,1.0,1.0,3.0,2.0,1.0,0.0,0.0,21.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+HEAD,7,package async - trait Encoders - method optionEncoder,0.0,0.0,1.0,12.0,1.0,1.0,1.0,3.0,2.0,1.0,0.0,0.0,22.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package async - trait Encoders - method optionEncoder - <$anon: (Encoders.this.Index  Option[T]  Encoders.this.PrepareRow) => Encoders.this.PrepareRow> - method apply,0.0,0.0,0.0,2.0,0.0,0.0,0.0,2.0,0.0,1.0,0.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package encoding - trait Decoders - class CassandraDecoder - method apply,0.0,0.0,0.0,2.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,2,package encoding - trait Decoders - method decoder,0.0,0.0,0.0,5.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
@@ -2033,7 +2033,7 @@ HEAD,0,package gen - trait Generator - method defaultNamespace,0.0,0.0,0.0,0.0,0
 HEAD,0,package gen - trait Generator - method filter,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package gen - trait Generator - method packagePrefix,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package gen - trait Generator - method connectionMakers,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package gen - trait Generator - method generatorMaker,0.0,0.0,1.0,6.0,1.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+HEAD,0,package gen - trait Generator - method generatorMaker,0.0,0.0,1.0,7.0,1.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,11.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package gen - trait Generator - method generatorMaker - <$anon: io.getquill.codegen.gen.EmitterSettings[Generator.this.TableMeta Generator.this.ColumnMeta] => Generator.this.CodeEmitter> - method apply,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package gen - trait Generator - class MultiGeneratorFactory - method apply,0.0,0.0,0.0,4.0,0.0,0.0,3.0,1.0,0.0,0.0,0.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package gen - trait Generator - method makeGenerators,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
@@ -2072,7 +2072,7 @@ HEAD,0,package gen - trait Generator - class CodeEmitter - class CombinedTableSc
 HEAD,0,package gen - trait Generator - class CodeEmitter - class CombinedTableSchemasGen - class QuerySchemaGen - class QuerySchemaMappingGen - method databaseColumn,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package jasync - class JAsyncContext - method toFuture,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package jasync - class JAsyncContext - method toCompletableFuture,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package jasync - class JAsyncContext - method toKotlinFunction,0.0,0.0,1.0,8.0,1.0,1.0,0.0,2.0,1.0,0.0,0.0,0.0,14.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+HEAD,0,package jasync - class JAsyncContext - method toKotlinFunction,0.0,0.0,1.0,9.0,1.0,1.0,0.0,2.0,1.0,0.0,0.0,0.0,15.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package jasync - class JAsyncContext - method toKotlinFunction - <$anon: T => R> - method invoke,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package jasync - class JAsyncContext - method close,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3.0,1.0,0.0,0.0,4.0,1.0,-1.0
 HEAD,0,package jasync - class JAsyncContext - method withConnection,0.0,0.0,0.0,3.0,0.0,1.0,0.0,2.0,0.0,1.0,0.0,1.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
@@ -2173,7 +2173,7 @@ HEAD,2,package dsl - class EncodingDslMacro - method withAnyValParam,0.0,0.0,0.0
 HEAD,0,package dsl - class EncodingDslMacro - method primaryConstructor,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package util - object OptionalTypecheck - method apply,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package jdbc - class ComposeableTraitsJdbcCodegen - method makeGenerators,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
-HEAD,0,package jdbc - class ComposeableTraitsJdbcCodegen - method generatorMaker,0.0,0.0,1.0,6.0,1.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+HEAD,0,package jdbc - class ComposeableTraitsJdbcCodegen - method generatorMaker,0.0,0.0,1.0,7.0,1.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,11.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package jdbc - class ComposeableTraitsJdbcCodegen - method generatorMaker - <$anon: io.getquill.codegen.gen.EmitterSettings[ComposeableTraitsJdbcCodegen.this.TableMeta ComposeableTraitsJdbcCodegen.this.ColumnMeta] => ComposeableTraitsJdbcCodegen.this.ContextifiedUnitGenerator> - method apply,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package jdbc - class ComposeableTraitsJdbcCodegen - method packagingStrategy,0.0,0.0,0.0,7.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package jdbc - class ComposeableTraitsJdbcCodegen - class ContextifiedUnitGenerator - method possibleTraitNesting,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -2252,16 +2252,16 @@ HEAD,0,package jasync - trait ArrayDecoders - method arrayJodaDateTimeDecoder,0.
 HEAD,0,package jasync - trait ArrayDecoders - method arrayJodaLocalDateTimeDecoder,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package jasync - trait ArrayDecoders - method arrayJodaLocalDateDecoder,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package jasync - trait ArrayDecoders - method arrayLocalDateDecoder,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
-HEAD,0,package jasync - trait ArrayDecoders - method arrayDecoder,0.0,0.0,1.0,8.0,1.0,1.0,1.0,1.0,2.0,2.0,0.0,1.0,18.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+HEAD,0,package jasync - trait ArrayDecoders - method arrayDecoder,0.0,0.0,1.0,9.0,1.0,1.0,1.0,1.0,2.0,2.0,0.0,1.0,19.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package jasync - trait ArrayDecoders - method arrayDecoder - <$anon: (ArrayDecoders.this.Index  ArrayDecoders.this.ResultRow) => Col> - method apply,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package jasync - trait ArrayDecoders - method arrayRawEncoder,0.0,0.0,0.0,3.0,1.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package jasync - trait Encoders - class AsyncEncoder - method apply,0.0,0.0,0.0,2.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package jasync - trait Encoders - method encoder,0.0,0.0,0.0,3.0,1.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
-HEAD,0,package jasync - trait Encoders - method encoder,0.0,0.0,1.0,9.0,1.0,1.0,1.0,2.0,2.0,0.0,0.0,0.0,17.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+HEAD,0,package jasync - trait Encoders - method encoder,0.0,0.0,1.0,10.0,1.0,1.0,1.0,2.0,2.0,0.0,0.0,0.0,18.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package jasync - trait Encoders - method encoder - <$anon: (Encoders.this.Index  T  Encoders.this.PrepareRow) => Encoders.this.PrepareRow> - method apply,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
-HEAD,0,package jasync - trait Encoders - method mappedEncoder,0.0,0.0,1.0,11.0,1.0,1.0,1.0,3.0,2.0,0.0,0.0,0.0,20.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+HEAD,0,package jasync - trait Encoders - method mappedEncoder,0.0,0.0,1.0,12.0,1.0,1.0,1.0,3.0,2.0,0.0,0.0,0.0,21.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package jasync - trait Encoders - method mappedEncoder - <$anon: (Encoders.this.Index  I  Encoders.this.PrepareRow) => Encoders.this.PrepareRow> - method apply,0.0,0.0,0.0,2.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
-HEAD,0,package jasync - trait Encoders - method optionEncoder,0.0,0.0,1.0,11.0,1.0,1.0,1.0,3.0,2.0,1.0,0.0,0.0,21.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+HEAD,0,package jasync - trait Encoders - method optionEncoder,0.0,0.0,1.0,12.0,1.0,1.0,1.0,3.0,2.0,1.0,0.0,0.0,22.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package jasync - trait Encoders - method optionEncoder - <$anon: (Encoders.this.Index  Option[T]  Encoders.this.PrepareRow) => Encoders.this.PrepareRow> - method apply,0.0,0.0,0.0,2.0,0.0,0.0,0.0,2.0,0.0,1.0,0.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package context - trait ContextMacro - method expand,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package context - trait ContextMacro - method extractAst,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
@@ -2283,13 +2283,13 @@ HEAD,0,package getquill - object MirrorSqlDialectWithOutputClause - method prepa
 HEAD,0,package getquill - object MirrorSqlDialectWithNoReturn - method prepareForProbing,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package capture - object TemporaryIdent - method unapply,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,1,package async - trait Decoders - class AsyncDecoder - method apply,0.0,0.0,0.0,2.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
-HEAD,2,package async - trait Decoders - method decoder,0.0,0.0,1.0,12.0,1.0,1.0,1.0,3.0,2.0,1.0,0.0,1.0,23.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+HEAD,2,package async - trait Decoders - method decoder,0.0,0.0,1.0,13.0,1.0,1.0,1.0,3.0,2.0,1.0,0.0,1.0,24.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,1,package async - trait Decoders - method decoder - <$anon: (Decoders.this.Index  Decoders.this.ResultRow) => T> - method apply,0.0,0.0,0.0,2.0,0.0,0.0,0.0,2.0,0.0,1.0,0.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
-HEAD,0,package async - trait Decoders - method mappedDecoder,0.0,0.0,1.0,11.0,1.0,1.0,1.0,3.0,2.0,0.0,0.0,0.0,20.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+HEAD,0,package async - trait Decoders - method mappedDecoder,0.0,0.0,1.0,12.0,1.0,1.0,1.0,3.0,2.0,0.0,0.0,0.0,21.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package async - trait Decoders - method mappedDecoder - <$anon: (Decoders.this.Index  Decoders.this.ResultRow) => O> - method apply,0.0,0.0,0.0,2.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,2,package async - trait Decoders - trait NumericDecoder - method apply,0.0,0.0,0.0,7.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,1,package async - trait Decoders - trait NumericDecoder - method decode,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
-HEAD,2,package async - trait Decoders - method optionDecoder,0.0,0.0,1.0,10.0,1.0,1.0,1.0,2.0,2.0,1.0,0.0,0.0,19.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+HEAD,2,package async - trait Decoders - method optionDecoder,0.0,0.0,1.0,11.0,1.0,1.0,1.0,2.0,2.0,1.0,0.0,0.0,20.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,1,package async - trait Decoders - method optionDecoder - <$anon: (Decoders.this.Index  Decoders.this.ResultRow) => Option[T]> - method apply,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package async - trait Decoders - <$anon: (Decoders.this.Index  Decoders.this.ResultRow) => BigDecimal> - method decode,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package async - trait Decoders - <$anon: (Decoders.this.Index  Decoders.this.ResultRow) => Int> - method decode,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0

@@ -9261,7 +9261,7 @@ HEAD,0,package internal - class StubbedActorContext - method toString,0.0,0.0,0.
 HEAD,0,package internal - class StubbedActorContext - method log,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - class StubbedActorContext - method setLoggerName,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - class StubbedActorContext - method setLoggerName,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package internal - class StubbedActorContext - method logEntries,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package internal - class StubbedActorContext - method logEntries,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0
 HEAD,0,package internal - class StubbedActorContext - method clearLog,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - class StubbedActorContext - method onUnhandled,0.0,0.0,0.0,0.0,3.0,0.0,0.0,3.0,1.0,0.0
 HEAD,0,package internal - class StubbedActorContext - method unhandledMessages,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,1.0,0.0

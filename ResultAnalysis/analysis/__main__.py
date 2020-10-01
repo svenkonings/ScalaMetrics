@@ -1,5 +1,5 @@
-from analysis import descriptive, fault_statistics, univariate, multivariate, summarise, parse_args, \
-    multivariate_baseline, multivariate_baseline_hasdata, multivariate_baseline_control
+from analysis import descriptive, fault_statistics, univariate, multivariate, parse_args, multivariate_baseline, \
+    multivariate_baseline_hasdata, multivariate_baseline_control
 
 if __name__ == '__main__':
     args = parse_args()

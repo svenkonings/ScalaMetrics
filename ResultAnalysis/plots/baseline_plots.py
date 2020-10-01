@@ -13,6 +13,8 @@ def main(args):
         oop = get_split_results(category, 'OOP')
         fp = get_split_results(category, 'FP')
         mix = get_split_results(category, 'Mix')
+        if neutral is None or oop is None or fp is None or mix is None:
+            continue
 
         ind = np.arange(len(neutral))
         width = 0.2

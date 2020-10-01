@@ -42,10 +42,13 @@ def summarise_split_directory(args, directory):
 
 def summarise(df, path, category, directory, suffix=''):
     print(f'Summarise {category} {directory}')
+    counts = df.groupby('name').size().to_frame('count')
     means = df.groupby('name').agg(['mean', 'std'])
     means.columns = means.columns.map(' '.join)
+    means = counts.join(means)
     save_dataframe(means, path, 'means' + suffix)
     medians = df.groupby('name').median()
+    medians = counts.join(medians)
     save_dataframe(medians, path, 'medians' + suffix)
 
 

@@ -7948,7 +7948,7 @@ HEAD,0,package internal - class LoggingTestKitImpl - method withMessageRegex,0.0
 HEAD,0,package internal - class LoggingTestKitImpl - method withCause,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - class LoggingTestKitImpl - method withMdc,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - class LoggingTestKitImpl - method withMdc,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package internal - class LoggingTestKitImpl - method withCustom,0.0,0.0,0.0,0.5,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+HEAD,0,package internal - class LoggingTestKitImpl - method withCustom,0.0,0.0,0.0,1.0,0.0,1.0,0.5,0.0,0.0,0.0,0.0,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package internal - class LoggingTestKitImpl - method withCause,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package sharding - class ClusterShardingGracefulShutdownSpec - method join,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.7142857142857143,0.0,2.7142857142857144,1.0,-1.0
 HEAD,0,package sharding - class ClusterShardingGracefulShutdownSpec - method startSharding,0.0,0.0,0.0,0.2222222222222222,0.0,0.0,0.8888888888888888,0.0,0.0,0.0,0.0,0.0,1.1111111111111112,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
@@ -9261,8 +9261,8 @@ HEAD,0,package internal - class StubbedActorContext - method toString,0.0,0.0,0.
 HEAD,0,package internal - class StubbedActorContext - method log,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.25,0.0,0.25,0.0,0.5,1.0,-1.0
 HEAD,0,package internal - class StubbedActorContext - method setLoggerName,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.3333333333333333,0.0,2.333333333333333,1.0,-1.0
 HEAD,0,package internal - class StubbedActorContext - method setLoggerName,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.3333333333333333,0.0,2.333333333333333,1.0,-1.0
-HEAD,0,package internal - class StubbedActorContext - method logEntries,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package internal - class StubbedActorContext - method clearLog,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,2.0,1.0,-1.0
+HEAD,0,package internal - class StubbedActorContext - method logEntries,0.0,0.0,0.0,0.42857142857142855,0.0,0.0,0.7142857142857143,0.0,0.0,0.0,0.0,0.0,1.1428571428571428,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+HEAD,0,package internal - class StubbedActorContext - method clearLog,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.5,0.0,2.5,1.0,-1.0
 HEAD,0,package internal - class StubbedActorContext - method onUnhandled,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,0.0,0.0,0.5,0.5,1.0,1.0,0.5,0.0,4.0,1.0,-1.0
 HEAD,0,package internal - class StubbedActorContext - method unhandledMessages,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,2.0,1.0,-1.0
 HEAD,0,package internal - class StubbedActorContext - method clearUnhandled,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,6.0,1.0,-1.0

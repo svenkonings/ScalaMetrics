@@ -15,7 +15,7 @@ def scatter(df, subfolder, name, x_axis, y_axis):
     plt.xlabel('Functional score')
     plt.ylabel('Imperative score')
     plt.title(name)
-    savefig('paradigmScore', 'scatter' + subfolder, name, '.pdf', args)
+    savefig('paradigmScoreFraction', 'scatter/' + subfolder, name, '.pdf', args)
 
 
 def scatter_faults(df, subfolder, name, x_axis, y_axis):
@@ -32,7 +32,7 @@ def scatter_faults(df, subfolder, name, x_axis, y_axis):
     plt.xlabel('Functional score')
     plt.ylabel('Imperative score')
     plt.title(name)
-    savefig('paradigmScore', 'scatter-faults' + subfolder, name, '.pdf', args)
+    savefig('paradigmScoreFraction', 'scatter-faults/' + subfolder, name, '.pdf', args)
 
 
 def scatter_color(df, subfolder, name, x_axis, y_axis):
@@ -46,7 +46,7 @@ def scatter_color(df, subfolder, name, x_axis, y_axis):
     plt.xlabel('Functional score')
     plt.ylabel('Imperative score')
     plt.title(name)
-    savefig('paradigmScore', 'scatter-color' + subfolder, name, '.pdf', args)
+    savefig('paradigmScoreFraction', 'scatter-color/' + subfolder, name, '.pdf', args)
 
 
 def hist_faults(df, subfolder, name, score_axis, has_points_axis):
@@ -89,19 +89,19 @@ def hist_faults(df, subfolder, name, score_axis, has_points_axis):
     plt.xlabel('Paradigm score')
     plt.ylabel('Occurrences')
     plt.title(name)
-    savefig('paradigmScore', 'hist-faults' + subfolder, name, '.pdf', args)
+    savefig('paradigmScoreFraction', 'hist-faults/' + subfolder, name, '.pdf', args)
 
 
 def plot_methods(project, name):
-    df = get_metric_results('paradigmScore', project, 'methodResultsBriand')
+    df = get_metric_results('paradigmScoreFraction', project, 'methodResultsBriand')
     name = name + ' methods'
     subfolder = 'methods/'
     plot(df, name, subfolder)
 
 
 def plot_objects(project, name):
-    df = get_metric_results('paradigmScore', project, 'objectMethodAvrResultsBriand')
-    df_max = get_metric_results('paradigmScore', project, 'objectMethodMaxResultsBriand')
+    df = get_metric_results('paradigmScoreFraction', project, 'objectAvrResultsBriand')
+    df_max = get_metric_results('paradigmScoreFraction', project, 'objectMaxResultsBriand')
     df['HasPointsFraction'] = df_max['HasPointsFraction']  # Use maximum instead of average for HasPointsFraction
     name = name + ' objects'
     subfolder = 'objects/'
