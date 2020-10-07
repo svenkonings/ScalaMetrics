@@ -35,7 +35,7 @@ def plot_barcharts(folder, category, args, neutral, oop, fp, mix):
     plt.bar(ind + 3 * width, mix['mcc mean'], width, label='Mixed')  # , yerr=mix['mcc std'])
     plt.title(category)
     plt.ylabel('MCC')
-    plt.ylim(-0.05, 0.45)
+    plt.ylim(-0.05, 0.5)
     plt.xticks(ticks=ind + 1.5 * width, labels=neutral['name'], rotation=-30, ha='left')
     plt.grid(axis='y')
     plt.gcf().set_size_inches(16, 6)  # Double horizontal size
