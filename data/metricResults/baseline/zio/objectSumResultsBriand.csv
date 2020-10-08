@@ -1,58 +1,58 @@
 commit,faults,path,FanOut,FanIn,CouplingBetweenObjects,DepthOfInheritance,LackOfCohesionInMethods,LinesOfCode,SourceLinesOfCode,CommentLinesOfCode,CommentDensity,NumberOfChildren,ResponseForClass,WeightedMethodCount,CyclomaticComplexity,DepthOfNesting,OutDegree,OutDegreeDistinct,PatternSize,NumberOfPatternVariables,HasPointsFraction,ParadigmScoreFraction
-HEAD,0,package zio - package internal - package object internal,10.0,0.0,10.0,0.0,0.0,17.0,8.0,9.0,0.5294117647058824,0.0,6.0,0.0,3.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0
+HEAD,0,package zio - package internal - package object internal,10.0,0.0,10.0,0.0,0.0,17.0,8.0,9.0,0.5294117647058824,0.0,6.0,3.0,3.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - trait PlatformSpecific,33.0,1.0,34.0,0.0,0.0,18.0,18.0,0.0,0.0,1.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - trait PlatformSpecific - object ZEnv,32.0,2.0,34.0,0.0,0.0,15.0,16.0,0.0,0.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - trait PlatformSpecific - object ZEnv - object Services,23.0,5.0,28.0,0.0,0.0,9.0,10.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - package console - package object console,36.0,7.0,42.0,0.0,0.0,91.0,56.0,35.0,0.38461538461538464,0.0,37.0,0.0,4.0,0.0,16.0,16.0,0.0,0.0,4.0,1.3333333333333333
+HEAD,0,package zio - package console - package object console,36.0,7.0,42.0,0.0,0.0,91.0,56.0,35.0,0.38461538461538464,0.0,37.0,4.0,4.0,0.0,16.0,16.0,0.0,0.0,4.0,1.3333333333333333
 HEAD,0,package zio - package console - package object console - object Console,28.0,6.0,34.0,1.0,0.0,63.0,43.0,20.0,0.31746031746031744,0.0,28.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - package console - package object console - object Console - trait Service,3.0,10.0,13.0,1.0,5.0,7.0,7.0,0.0,0.0,0.0,5.0,5.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - package console - package object console - object Console - object Service,21.0,10.0,29.0,1.0,0.0,50.0,31.0,20.0,0.39215686274509803,0.0,20.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - package console - package object console - object Console - object Service - <$anon: zio.console.Console.Service>,18.0,0.0,18.0,2.0,4.0,48.0,28.0,20.0,0.4166666666666667,0.0,20.0,8.0,8.0,0.0,23.0,16.0,0.0,0.0,2.0,-0.4
 HEAD,0,package zio - class Schedule,163.0,10.0,171.0,1.0,15.0,607.0,363.0,243.0,0.400990099009901,0.0,140.0,132.0,132.0,170.0,459.0,295.0,411.0,116.0,53.0,51.0
-HEAD,1,package zio - object Schedule,80.0,10.0,85.0,1.0,0.0,327.0,191.0,136.0,0.41590214067278286,0.0,92.0,0.0,44.0,44.0,149.0,113.0,34.0,8.0,27.0,27.0
+HEAD,1,package zio - object Schedule,80.0,10.0,85.0,1.0,0.0,327.0,191.0,136.0,0.41590214067278286,0.0,92.0,41.0,44.0,44.0,149.0,113.0,34.0,8.0,27.0,27.0
 HEAD,0,package zio - object Schedule - method apply - <$anon: zio.Schedule[Env In Out]>,1.0,0.0,1.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object Schedule - method fixed - class State,3.0,14.0,17.0,2.0,0.0,1.0,1.0,0.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object Schedule - class Driver,4.0,3.0,6.0,2.0,0.0,5.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - object Schedule - object StepFunction,11.0,1.0,12.0,0.0,0.0,3.0,4.0,0.0,0.0,0.0,3.0,0.0,1.0,0.0,2.0,2.0,0.0,0.0,1.0,1.0
+HEAD,0,package zio - object Schedule - object StepFunction,11.0,1.0,12.0,0.0,0.0,3.0,4.0,0.0,0.0,0.0,3.0,1.0,1.0,0.0,2.0,2.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - object Schedule - trait Decision,17.0,7.0,22.0,0.0,4.0,21.0,22.0,0.0,0.0,2.0,10.0,11.0,11.0,23.0,22.0,17.0,34.0,10.0,4.0,4.0
 HEAD,0,package zio - object Schedule - object Decision,10.0,7.0,14.0,0.0,0.0,8.0,9.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object Schedule - object Decision - class Done,4.0,17.0,20.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object Schedule - object Decision - class Continue,6.0,11.0,16.0,2.0,0.0,5.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class IOForkInterruptBenchmark,12.0,0.0,12.0,0.0,2.0,47.0,42.0,0.0,0.0,0.0,15.0,8.0,8.0,0.0,39.0,16.0,0.0,0.0,5.0,-2.646031746031746
-HEAD,0,package zio - object IOBenchmarks,37.0,33.0,70.0,2.0,0.0,52.0,51.0,0.0,0.0,0.0,23.0,0.0,9.0,0.0,37.0,17.0,0.0,0.0,6.0,6.0
+HEAD,0,package zio - object IOBenchmarks,37.0,33.0,70.0,2.0,0.0,52.0,51.0,0.0,0.0,0.0,23.0,9.0,9.0,0.0,37.0,17.0,0.0,0.0,6.0,6.0
 HEAD,0,package zio - object IOBenchmarks - <$anon: zio.BootstrapRuntime>,3.0,0.0,3.0,2.0,0.0,3.0,3.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object IOBenchmarks - class Thunk,13.0,8.0,21.0,0.0,1.0,13.0,13.0,0.0,0.0,0.0,7.0,4.0,4.0,6.0,11.0,10.0,4.0,1.0,3.0,3.0
-HEAD,0,package zio - object IOBenchmarks - object Thunk,7.0,8.0,14.0,0.0,0.0,4.0,5.0,0.0,0.0,0.0,2.0,0.0,2.0,0.0,2.0,2.0,0.0,0.0,2.0,2.0
+HEAD,0,package zio - object IOBenchmarks - object Thunk,7.0,8.0,14.0,0.0,0.0,4.0,5.0,0.0,0.0,0.0,2.0,2.0,2.0,0.0,2.0,2.0,0.0,0.0,2.0,2.0
 HEAD,0,package zio - class ParSequenceBenchmark,21.0,0.0,21.0,0.0,1.0,72.0,60.0,0.0,0.0,0.0,26.0,11.0,11.0,0.0,84.0,59.0,0.0,0.0,11.0,3.666666666666667
 HEAD,0,package zio - trait App,11.0,2.0,13.0,2.0,2.0,28.0,19.0,9.0,0.32142857142857145,0.0,6.0,6.0,6.0,11.0,14.0,6.0,6.0,0.0,1.0,-0.6190476190476191
 HEAD,0,package zio - trait App - method main - <$anon: Thread>,2.0,0.0,2.0,2.0,1.0,5.0,5.0,0.0,0.0,0.0,1.0,2.0,2.0,1.0,2.0,2.0,1.0,0.0,1.0,-0.7142857142857143
 HEAD,0,package zio - class NonEmptyChunk,48.0,11.0,58.0,0.0,4.0,169.0,82.0,88.0,0.5176470588235295,0.0,61.0,34.0,34.0,16.0,69.0,62.0,17.0,5.0,13.0,11.275862068965516
-HEAD,0,package zio - object NonEmptyChunk,19.0,11.0,28.0,0.0,0.0,44.0,17.0,27.0,0.6136363636363636,0.0,13.0,0.0,8.0,4.0,15.0,14.0,6.0,2.0,2.0,2.0
+HEAD,0,package zio - object NonEmptyChunk,19.0,11.0,28.0,0.0,0.0,44.0,17.0,27.0,0.6136363636363636,0.0,13.0,8.0,8.0,4.0,15.0,14.0,6.0,2.0,2.0,2.0
 HEAD,2,package stream - class ZSink,182.0,13.0,194.0,0.0,13.0,432.0,293.0,118.0,0.2871046228710462,1.0,89.0,84.0,84.0,100.0,322.0,167.0,288.0,64.0,33.0,32.680639334380714
 HEAD,0,package stream - class ZSink - method zipWithPar - trait State,0.0,32.0,32.0,0.0,0.0,1.0,2.0,0.0,0.0,18.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stream - class ZSink - method zipWithPar - object BothRunning,4.0,1.0,5.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stream - class ZSink - method zipWithPar - class LeftDone,4.0,4.0,8.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stream - class ZSink - method zipWithPar - class RightDone,4.0,4.0,8.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,8,package stream - object ZSink,127.0,13.0,137.0,1.0,0.0,364.0,252.0,102.0,0.288135593220339,1.0,95.0,0.0,76.0,80.0,250.0,166.0,126.0,30.0,25.0,24.23666901573878
-HEAD,0,package stream - object ZSink - object Push,28.0,4.0,32.0,0.0,0.0,20.0,18.0,3.0,0.14285714285714285,0.0,20.0,0.0,5.0,5.0,24.0,19.0,8.0,3.0,2.0,1.8181818181818181
+HEAD,8,package stream - object ZSink,127.0,13.0,137.0,1.0,0.0,364.0,252.0,102.0,0.288135593220339,1.0,95.0,76.0,76.0,80.0,250.0,166.0,126.0,30.0,25.0,24.23666901573878
+HEAD,0,package stream - object ZSink - object Push,28.0,4.0,32.0,0.0,0.0,20.0,18.0,3.0,0.14285714285714285,0.0,20.0,5.0,5.0,5.0,24.0,19.0,8.0,3.0,2.0,1.8181818181818181
 HEAD,0,package stream - object ZSink - method apply - <$anon: zio.stream.ZSink[R E I L Z]>,1.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class ZScope,11.0,20.0,30.0,0.0,7.0,54.0,13.0,42.0,0.7636363636363637,2.0,13.0,10.0,10.0,0.0,5.0,5.0,0.0,0.0,3.0,3.0
-HEAD,1,package zio - object ZScope,63.0,20.0,74.0,0.0,0.0,185.0,154.0,30.0,0.16304347826086957,2.0,77.0,0.0,3.0,0.0,14.0,13.0,0.0,0.0,1.0,1.0
+HEAD,1,package zio - object ZScope,63.0,20.0,74.0,0.0,0.0,185.0,154.0,30.0,0.16304347826086957,2.0,77.0,3.0,3.0,0.0,14.0,13.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - object ZScope - class Mode,0.0,8.0,8.0,0.0,0.0,1.0,2.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ZScope - object Mode,9.0,8.0,14.0,0.0,0.0,4.0,5.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ZScope - object Mode - object Weak,5.0,4.0,9.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ZScope - object Mode - object Strong,5.0,5.0,10.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ZScope - class Key,1.0,11.0,12.0,0.0,1.0,12.0,4.0,9.0,0.6923076923076923,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - object ZScope - object Key,5.0,11.0,14.0,0.0,0.0,3.0,4.0,0.0,0.0,0.0,2.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
+HEAD,0,package zio - object ZScope - object Key,5.0,11.0,14.0,0.0,0.0,3.0,4.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - object ZScope - object Key - method apply - <$anon: zio.ZScope.Key>,3.0,0.0,3.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,1,package zio - object ZScope - object global,18.0,6.0,22.0,1.0,0.0,16.0,16.0,0.0,0.0,0.0,11.0,0.0,9.0,3.0,4.0,4.0,5.0,1.0,3.0,3.0
+HEAD,1,package zio - object ZScope - object global,18.0,6.0,22.0,1.0,0.0,16.0,16.0,0.0,0.0,0.0,11.0,9.0,9.0,3.0,4.0,4.0,5.0,1.0,3.0,3.0
 HEAD,0,package zio - object ZScope - class Open,4.0,2.0,6.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ZScope - class OrderedFinalizer,4.0,2.0,6.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,1,package zio - object ZScope - class Local,46.0,3.0,49.0,1.0,5.0,111.0,104.0,6.0,0.05454545454545454,0.0,63.0,32.0,32.0,17.0,116.0,83.0,12.0,3.0,4.0,2.557377049180328
 HEAD,0,package zio - class ParallelMergeSortBenchmark,34.0,0.0,34.0,0.0,3.0,85.0,78.0,0.0,0.0,0.0,51.0,22.0,22.0,14.0,92.0,63.0,21.0,4.0,10.0,-4.499512774806893
 HEAD,1,package zio - class StreamBenchmarks,25.0,0.0,25.0,0.0,2.0,54.0,48.0,0.0,0.0,0.0,28.0,5.0,5.0,0.0,69.0,39.0,0.0,0.0,5.0,1.7030303030303031
 HEAD,1,package zio - class CSVStreamBenchmarks,36.0,0.0,36.0,0.0,2.0,95.0,88.0,0.0,0.0,0.0,28.0,20.0,20.0,32.0,81.0,29.0,24.0,6.0,5.0,-0.16198262646908507
-HEAD,0,package zio - object CSV,26.0,1.0,27.0,0.0,0.0,31.0,31.0,0.0,0.0,0.0,28.0,0.0,7.0,10.0,37.0,26.0,1.0,0.0,2.0,0.9824561403508772
+HEAD,0,package zio - object CSV,26.0,1.0,27.0,0.0,0.0,31.0,31.0,0.0,0.0,0.0,28.0,7.0,7.0,10.0,37.0,26.0,1.0,0.0,2.0,0.9824561403508772
 HEAD,0,package zio - object CSV - trait Token,0.0,5.0,5.0,0.0,0.0,1.0,2.0,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object CSV - object NewCol,4.0,2.0,6.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object CSV - object NewRow,4.0,1.0,5.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -72,18 +72,18 @@ HEAD,0,package zio - trait PlatformSpecific,38.0,1.0,39.0,0.0,0.0,19.0,19.0,0.0,
 HEAD,0,package zio - trait PlatformSpecific - object ZEnv,37.0,2.0,39.0,0.0,0.0,16.0,17.0,0.0,0.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - trait PlatformSpecific - object ZEnv - object Services,27.0,5.0,32.0,0.0,0.0,10.0,11.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class NeedsEnv,0.0,11.0,11.0,0.0,0.0,1.0,2.0,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - object NeedsEnv,2.0,11.0,12.0,1.0,0.0,3.0,3.0,0.0,0.0,3.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package internal - object MutableConcurrentQueue,9.0,24.0,29.0,0.0,0.0,11.0,7.0,5.0,0.4166666666666667,11.0,4.0,0.0,3.0,0.0,4.0,4.0,0.0,0.0,0.0,0.0
+HEAD,0,package zio - object NeedsEnv,2.0,11.0,12.0,1.0,0.0,3.0,3.0,0.0,0.0,3.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package internal - object MutableConcurrentQueue,9.0,24.0,29.0,0.0,0.0,11.0,7.0,5.0,0.4166666666666667,11.0,4.0,3.0,3.0,0.0,4.0,4.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - class MutableConcurrentQueue,4.0,24.0,28.0,0.0,7.0,53.0,10.0,43.0,0.8113207547169812,11.0,7.0,7.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - class DefaultExecutors,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - object PlatformConstants,2.0,2.0,4.0,0.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class IOMapBenchmark,23.0,0.0,23.0,0.0,7.0,90.0,70.0,0.0,0.0,0.0,36.0,20.0,20.0,0.0,82.0,62.0,0.0,0.0,9.0,6.612698412698413
 HEAD,0,package zio - class IOEmptyRaceBenchmark,10.0,0.0,10.0,0.0,2.0,30.0,25.0,0.0,0.0,0.0,15.0,8.0,8.0,0.0,31.0,18.0,0.0,0.0,3.0,1.2857142857142856
 HEAD,2,package stm - class TMap,49.0,5.0,54.0,0.0,4.0,317.0,244.0,73.0,0.2302839116719243,0.0,75.0,46.0,46.0,5.0,231.0,157.0,6.0,2.0,22.0,15.615765948852367
-HEAD,2,package stm - object TMap,41.0,5.0,45.0,0.0,0.0,47.0,38.0,9.0,0.19148936170212766,0.0,31.0,0.0,10.0,0.0,35.0,31.0,0.0,0.0,1.0,-0.21739130434782614
+HEAD,2,package stm - object TMap,41.0,5.0,45.0,0.0,0.0,47.0,38.0,9.0,0.19148936170212766,0.0,31.0,10.0,10.0,0.0,35.0,31.0,0.0,0.0,1.0,-0.21739130434782614
 HEAD,0,package stm - object TMap - class UpdateResult,3.0,1.0,4.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - trait ChunkPlatformSpecific,7.0,1.0,8.0,0.0,0.0,8.0,8.0,0.0,0.0,1.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - trait ChunkPlatformSpecific - object Tags,6.0,36.0,42.0,0.0,0.0,6.0,7.0,0.0,0.0,0.0,3.0,0.0,2.0,1.0,1.0,1.0,1.0,0.0,1.0,0.0
+HEAD,0,package zio - trait ChunkPlatformSpecific - object Tags,6.0,36.0,42.0,0.0,0.0,6.0,7.0,0.0,0.0,0.0,3.0,2.0,2.0,1.0,1.0,1.0,1.0,0.0,1.0,0.0
 HEAD,0,package internal - class OneElementConcQueueNoMetric,13.0,1.0,14.0,1.0,3.0,44.0,42.0,0.0,0.0,0.0,15.0,14.0,14.0,0.0,16.0,16.0,0.0,0.0,2.0,-2.0
 HEAD,0,package internal - trait PlatformSpecific,33.0,1.0,34.0,0.0,8.0,82.0,36.0,45.0,0.5555555555555556,1.0,26.0,11.0,11.0,0.0,14.0,12.0,0.0,0.0,5.0,1.057142857142857
 HEAD,0,package internal - trait PlatformSpecific - method fromExecutor - <$anon: zio.internal.Platform>,17.0,0.0,17.0,1.0,3.0,13.0,13.0,0.0,0.0,0.0,9.0,4.0,4.0,0.0,2.0,2.0,0.0,0.0,2.0,-2.0
@@ -101,7 +101,7 @@ HEAD,0,package zio - trait ChunkFactory,4.0,1.0,5.0,0.0,2.0,4.0,4.0,0.0,0.0,1.0,
 HEAD,0,package tracing - class ZIOFn,1.0,10.0,11.0,1.0,1.0,3.0,3.0,0.0,0.0,2.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package tracing - class ZIOFn1,2.0,18.0,20.0,2.0,1.0,3.0,3.0,0.0,0.0,15.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package tracing - class ZIOFn2,2.0,2.0,4.0,2.0,1.0,3.0,3.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package tracing - object ZIOFn,14.0,10.0,22.0,1.0,0.0,18.0,10.0,6.0,0.375,2.0,8.0,0.0,3.0,0.0,8.0,6.0,0.0,0.0,3.0,2.6666666666666665
+HEAD,0,package tracing - object ZIOFn,14.0,10.0,22.0,1.0,0.0,18.0,10.0,6.0,0.375,2.0,8.0,3.0,3.0,0.0,8.0,6.0,0.0,0.0,3.0,2.6666666666666665
 HEAD,0,package tracing - object ZIOFn - method apply - <$anon: A => B>,4.0,0.0,4.0,3.0,1.0,4.0,4.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
 HEAD,0,package compression - class CompressionParameters,5.0,0.0,5.0,2.0,0.0,5.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package compression - class CompressionLevel,1.0,14.0,15.0,0.0,0.0,1.0,2.0,0.0,0.0,11.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -129,42 +129,42 @@ HEAD,0,package compression - object FlushMode - object SyncFlush,4.0,1.0,5.0,2.0
 HEAD,0,package compression - object FlushMode - object FullFlush,4.0,1.0,5.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package fix - object CurriedAssert,2.0,1.0,3.0,0.0,0.0,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package chunks - class ChunkPrependBenchmarks,8.0,0.0,8.0,0.0,1.0,26.0,23.0,0.0,0.0,0.0,7.0,4.0,4.0,0.0,8.0,8.0,0.0,0.0,2.0,-2.0
-HEAD,3,package internal - object PlatformLive,22.0,0.0,22.0,0.0,0.0,21.0,21.0,0.0,0.0,0.0,13.0,0.0,4.0,0.0,8.0,7.0,0.0,0.0,1.0,0.19999999999999996
+HEAD,3,package internal - object PlatformLive,22.0,0.0,22.0,0.0,0.0,21.0,21.0,0.0,0.0,0.0,13.0,4.0,4.0,0.0,8.0,7.0,0.0,0.0,1.0,0.19999999999999996
 HEAD,3,package internal - object PlatformLive - method fromExecutor - <$anon: zio.internal.Platform>,17.0,0.0,17.0,1.0,3.0,13.0,13.0,0.0,0.0,0.0,9.0,4.0,4.0,0.0,2.0,2.0,0.0,0.0,2.0,-2.0
 HEAD,0,package zio - trait EitherCompat,0.0,2.0,2.0,0.0,0.0,1.0,1.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,8,package internal - class FiberContext,140.0,5.0,143.0,3.0,7.0,780.0,671.0,89.0,0.11710526315789474,0.0,170.0,192.0,192.0,140.0,405.0,271.0,337.0,55.0,28.0,2.534169990636646
-HEAD,2,package internal - class FiberContext - object InterruptExit,8.0,1.0,8.0,1.0,0.0,9.0,9.0,0.0,0.0,0.0,5.0,0.0,2.0,0.0,5.0,4.0,0.0,0.0,1.0,-1.0
-HEAD,2,package internal - class FiberContext - object TracingRegionExit,7.0,1.0,7.0,1.0,0.0,7.0,6.0,1.0,0.14285714285714285,0.0,3.0,0.0,1.0,0.0,2.0,2.0,0.0,0.0,1.0,-1.0
+HEAD,2,package internal - class FiberContext - object InterruptExit,8.0,1.0,8.0,1.0,0.0,9.0,9.0,0.0,0.0,0.0,5.0,2.0,2.0,0.0,5.0,4.0,0.0,0.0,1.0,-1.0
+HEAD,2,package internal - class FiberContext - object TracingRegionExit,7.0,1.0,7.0,1.0,0.0,7.0,6.0,1.0,0.14285714285714285,0.0,3.0,1.0,1.0,0.0,2.0,2.0,0.0,0.0,1.0,-1.0
 HEAD,5,package internal - object FiberContext,28.0,5.0,33.0,0.0,0.0,30.0,29.0,0.0,0.0,0.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - object FiberContext - class FiberState,11.0,5.0,16.0,2.0,2.0,15.0,14.0,0.0,0.0,2.0,4.0,7.0,7.0,2.0,5.0,2.0,17.0,3.0,1.0,1.0
-HEAD,2,package internal - object FiberContext - object FiberState,21.0,5.0,23.0,1.0,0.0,12.0,12.0,0.0,0.0,2.0,5.0,0.0,1.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
+HEAD,2,package internal - object FiberContext - object FiberState,21.0,5.0,23.0,1.0,0.0,12.0,12.0,0.0,0.0,2.0,5.0,1.0,1.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
 HEAD,2,package internal - object FiberContext - object FiberState - class Executing,6.0,3.0,9.0,3.0,0.0,5.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,2,package internal - object FiberContext - object FiberState - class Done,10.0,3.0,13.0,3.0,2.0,4.0,4.0,0.0,0.0,0.0,2.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,2,package zio - object UIO,191.0,63.0,252.0,0.0,0.0,598.0,253.0,345.0,0.5769230769230769,0.0,219.0,0.0,110.0,0.0,185.0,105.0,0.0,0.0,68.0,68.0
+HEAD,2,package zio - object UIO,191.0,63.0,252.0,0.0,0.0,598.0,253.0,345.0,0.5769230769230769,0.0,219.0,110.0,110.0,0.0,185.0,105.0,0.0,0.0,68.0,68.0
 HEAD,0,package stacktracer - class ZTraceElement,3.0,11.0,14.0,2.0,1.0,3.0,3.0,0.0,0.0,2.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stacktracer - object ZTraceElement,9.0,11.0,17.0,1.0,0.0,9.0,9.0,0.0,0.0,2.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stacktracer - object ZTraceElement - class NoLocation,4.0,4.0,8.0,3.0,1.0,3.0,3.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stacktracer - object ZTraceElement - class SourceLocation,6.0,3.0,9.0,3.0,1.0,4.0,4.0,0.0,0.0,0.0,3.0,2.0,2.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class IODeepLeftBindBenchmark,12.0,0.0,12.0,0.0,2.0,39.0,34.0,0.0,0.0,0.0,11.0,8.0,8.0,0.0,21.0,18.0,0.0,0.0,3.0,-2.5999999999999996
-HEAD,2,package zio - object IO,330.0,69.0,397.0,0.0,0.0,721.0,322.0,399.0,0.5533980582524272,0.0,259.0,0.0,128.0,0.0,218.0,123.0,0.0,0.0,80.0,80.0
+HEAD,2,package zio - object IO,330.0,69.0,397.0,0.0,0.0,721.0,322.0,399.0,0.5533980582524272,0.0,259.0,128.0,128.0,0.0,218.0,123.0,0.0,0.0,80.0,80.0
 HEAD,0,package zio - object IO - class BracketAcquire_,2.0,4.0,5.0,0.0,1.0,4.0,4.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object IO - class BracketRelease_,5.0,5.0,10.0,0.0,1.0,4.0,5.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - object IO - class BracketAcquire,3.0,8.0,10.0,0.0,1.0,4.0,4.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - object IO - class BracketRelease,6.0,5.0,11.0,0.0,1.0,4.0,5.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - class FiberRef,30.0,18.0,45.0,1.0,5.0,131.0,72.0,59.0,0.45038167938931295,0.0,37.0,15.0,15.0,0.0,52.0,46.0,0.0,0.0,12.0,9.973969293118229
 HEAD,0,package zio - class FiberRef - method unsafeAsThreadLocal - <$anon: ThreadLocal[A]>,13.0,0.0,13.0,1.0,4.0,26.0,26.0,0.0,0.0,0.0,15.0,7.0,7.0,0.0,15.0,14.0,0.0,0.0,3.0,-1.0
-HEAD,0,package zio - object FiberRef,7.0,18.0,25.0,1.0,0.0,7.0,4.0,3.0,0.42857142857142855,0.0,1.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
+HEAD,0,package zio - object FiberRef,7.0,18.0,25.0,1.0,0.0,7.0,4.0,3.0,0.42857142857142855,0.0,1.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
 HEAD,0,package internal - class LinkedQueue,11.0,3.0,14.0,1.0,4.0,28.0,23.0,5.0,0.17857142857142858,0.0,14.0,9.0,9.0,0.0,9.0,9.0,0.0,0.0,1.0,-1.0
 HEAD,0,package internal - class RingBufferMethodDispatchBenchmark,10.0,0.0,10.0,0.0,2.0,79.0,56.0,0.0,0.0,0.0,17.0,12.0,12.0,0.0,29.0,28.0,0.0,0.0,10.0,-7.166666666666666
 HEAD,0,package zio - class QueueSequentialBenchmark,13.0,0.0,13.0,0.0,3.0,60.0,55.0,0.0,0.0,0.0,23.0,17.0,17.0,35.0,59.0,30.0,8.0,0.0,5.0,1.608695652173913
 HEAD,0,package zio - trait ZIOPlatformSpecific,0.0,1.0,1.0,0.0,0.0,1.0,2.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - trait ZIOCompanionPlatformSpecific,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package internal - object Utils,15.0,1.0,16.0,0.0,0.0,7.0,6.0,0.0,0.0,0.0,9.0,0.0,2.0,0.0,13.0,7.0,0.0,0.0,1.0,1.0
+HEAD,0,package internal - object Utils,15.0,1.0,16.0,0.0,0.0,7.0,6.0,0.0,0.0,0.0,9.0,2.0,2.0,0.0,13.0,7.0,0.0,0.0,1.0,1.0
 HEAD,0,package stm - class SemaphoreBenchmark,19.0,0.0,19.0,0.0,2.0,31.0,26.0,0.0,0.0,0.0,19.0,6.0,6.0,3.0,44.0,22.0,3.0,0.0,3.0,0.2941176470588235
 HEAD,0,package internal - class RingBufferPow2,3.0,5.0,8.0,2.0,1.0,5.0,5.0,0.0,0.0,0.0,5.0,1.0,1.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
-HEAD,0,package internal - object RingBufferPow2,6.0,5.0,10.0,0.0,0.0,6.0,6.0,0.0,0.0,0.0,3.0,0.0,1.0,0.0,3.0,3.0,0.0,0.0,1.0,-1.0
+HEAD,0,package internal - object RingBufferPow2,6.0,5.0,10.0,0.0,0.0,6.0,6.0,0.0,0.0,0.0,3.0,1.0,1.0,0.0,3.0,3.0,0.0,0.0,1.0,-1.0
 HEAD,0,package zio - class FiberRefBenchmarks,20.0,0.0,20.0,0.0,4.0,39.0,33.0,0.0,0.0,0.0,29.0,11.0,11.0,16.0,58.0,35.0,4.0,0.0,7.0,-5.171066676154558
-HEAD,0,package impl - object AkkaLineNumbers,56.0,7.0,58.0,0.0,0.0,309.0,291.0,50.0,0.1466275659824047,0.0,92.0,0.0,70.0,60.0,199.0,143.0,72.0,15.0,16.0,-5.4355147559952055
+HEAD,0,package impl - object AkkaLineNumbers,56.0,7.0,58.0,0.0,0.0,309.0,291.0,50.0,0.1466275659824047,0.0,92.0,70.0,70.0,60.0,199.0,143.0,72.0,15.0,16.0,-5.4355147559952055
 HEAD,0,package impl - object AkkaLineNumbers - class Result,0.0,5.0,5.0,0.0,0.0,1.0,2.0,0.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package impl - object AkkaLineNumbers - object NoSourceInfo,5.0,2.0,7.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package impl - object AkkaLineNumbers - class UnknownSourceFormat,5.0,1.0,6.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -174,13 +174,13 @@ HEAD,0,package impl - object AkkaLineNumbers - class Constants,12.0,1.0,13.0,0.0
 HEAD,0,package stm - class TMapContentionBenchmarks,26.0,0.0,26.0,0.0,1.0,23.0,19.0,0.0,0.0,0.0,20.0,3.0,3.0,0.0,23.0,17.0,0.0,0.0,3.0,-2.75
 HEAD,1,package zio - trait Runtime,62.0,33.0,93.0,0.0,3.0,139.0,61.0,79.0,0.5642857142857143,4.0,52.0,17.0,17.0,0.0,57.0,52.0,0.0,0.0,16.0,12.589763779527559
 HEAD,0,package zio - trait Runtime - method unsafeRunToFuture - <$anon: zio.CancelableFuture[A]>,8.0,0.0,8.0,3.0,1.0,3.0,3.0,0.0,0.0,0.0,3.0,1.0,1.0,0.0,2.0,2.0,0.0,0.0,1.0,1.0
-HEAD,0,package zio - object Runtime,33.0,33.0,60.0,0.0,0.0,80.0,56.0,24.0,0.3,4.0,29.0,0.0,4.0,9.0,17.0,10.0,13.0,3.0,1.0,0.8823529411764707
+HEAD,0,package zio - object Runtime,33.0,33.0,60.0,0.0,0.0,80.0,56.0,24.0,0.3,4.0,29.0,4.0,4.0,9.0,17.0,10.0,13.0,3.0,1.0,0.8823529411764707
 HEAD,0,package zio - object Runtime - class Managed,13.0,13.0,26.0,1.0,2.0,26.0,21.0,5.0,0.19230769230769232,0.0,18.0,10.0,10.0,0.0,19.0,19.0,0.0,0.0,10.0,6.666666666666666
-HEAD,0,package zio - object Runtime - object Managed,7.0,13.0,18.0,0.0,0.0,12.0,9.0,4.0,0.3076923076923077,0.0,3.0,0.0,1.0,0.0,2.0,2.0,0.0,0.0,1.0,0.6666666666666667
+HEAD,0,package zio - object Runtime - object Managed,7.0,13.0,18.0,0.0,0.0,12.0,9.0,4.0,0.3076923076923077,0.0,3.0,1.0,1.0,0.0,2.0,2.0,0.0,0.0,1.0,0.6666666666666667
 HEAD,0,package zio - object Runtime - object Managed - method apply - <$anon: zio.Runtime.Managed[R]>,5.0,0.0,5.0,2.0,1.0,5.0,5.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,-0.2
 HEAD,0,package zio - object Runtime - method apply - <$anon: zio.Runtime[R]>,3.0,0.0,3.0,1.0,0.0,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class =!=,1.0,4.0,5.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - object =!=,3.0,4.0,5.0,1.0,0.0,3.0,3.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
+HEAD,0,package zio - object =!=,3.0,4.0,5.0,1.0,0.0,3.0,3.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object =!= - method neq - <$anon: A =!= B>,1.0,0.0,1.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class ExecutionStrategy,0.0,15.0,15.0,0.0,0.0,1.0,2.0,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ExecutionStrategy,10.0,15.0,21.0,0.0,0.0,15.0,5.0,10.0,0.6666666666666666,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -190,17 +190,17 @@ HEAD,0,package zio - object ExecutionStrategy - class ParallelN,4.0,2.0,6.0,2.0,
 HEAD,0,package impl - class AkkaLineNumbersTracer,22.0,5.0,27.0,2.0,1.0,18.0,18.0,0.0,0.0,0.0,11.0,5.0,5.0,12.0,17.0,11.0,21.0,6.0,1.0,1.0
 HEAD,0,package impl - object AkkaLineNumbersTracer,6.0,5.0,11.0,1.0,0.0,3.0,3.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stm - class TSet,19.0,2.0,21.0,0.0,4.0,83.0,32.0,51.0,0.6144578313253012,0.0,36.0,16.0,16.0,0.0,36.0,33.0,0.0,0.0,12.0,7.238095238095239
-HEAD,0,package stm - object TSet,16.0,2.0,17.0,0.0,0.0,15.0,6.0,9.0,0.6,0.0,7.0,0.0,3.0,0.0,7.0,7.0,0.0,0.0,1.0,0.3333333333333333
+HEAD,0,package stm - object TSet,16.0,2.0,17.0,0.0,0.0,15.0,6.0,9.0,0.6,0.0,7.0,3.0,3.0,0.0,7.0,7.0,0.0,0.0,1.0,0.3333333333333333
 HEAD,0,package zio - trait ZIOPlatformSpecific,4.0,1.0,4.0,0.0,1.0,13.0,7.0,7.0,0.5,1.0,2.0,2.0,2.0,0.0,5.0,2.0,0.0,0.0,2.0,2.0
 HEAD,0,package zio - trait ZIOCompanionPlatformSpecific,3.0,1.0,4.0,0.0,1.0,17.0,14.0,3.0,0.17647058823529413,1.0,1.0,3.0,3.0,3.0,8.0,2.0,5.0,1.0,1.0,1.0
 HEAD,0,package stacktracer - class Tracer,2.0,13.0,15.0,1.0,1.0,3.0,3.0,0.0,0.0,2.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package stacktracer - object Tracer,15.0,13.0,25.0,1.0,0.0,23.0,23.0,0.0,0.0,2.0,10.0,0.0,3.0,0.0,8.0,7.0,0.0,0.0,2.0,2.0
+HEAD,0,package stacktracer - object Tracer,15.0,13.0,25.0,1.0,0.0,23.0,23.0,0.0,0.0,2.0,10.0,3.0,3.0,0.0,8.0,7.0,0.0,0.0,2.0,2.0
 HEAD,0,package stacktracer - object Tracer - method cached - <$anon: zio.internal.stacktracer.Tracer>,6.0,0.0,6.0,2.0,1.0,13.0,13.0,0.0,0.0,0.0,6.0,2.0,2.0,0.0,5.0,5.0,0.0,0.0,0.0,0.0
 HEAD,0,package stacktracer - object Tracer - <$anon: zio.internal.stacktracer.Tracer>,6.0,0.0,6.0,2.0,1.0,4.0,4.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class ArrayFillBenchmark,20.0,0.0,20.0,0.0,4.0,56.0,50.0,0.0,0.0,0.0,23.0,13.0,13.0,4.0,59.0,34.0,4.0,0.0,5.0,0.03805237315875626
-HEAD,0,package <empty> - object MimaSettings,5.0,0.0,5.0,0.0,0.0,11.0,11.0,0.0,0.0,0.0,2.0,0.0,1.0,0.0,9.0,3.0,0.0,0.0,0.0,0.0
+HEAD,0,package <empty> - object MimaSettings,5.0,0.0,5.0,0.0,0.0,11.0,11.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,9.0,3.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class ChunkBuilder,1.0,40.0,41.0,3.0,0.0,1.0,1.0,0.0,0.0,18.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - object ChunkBuilder,46.0,40.0,75.0,0.0,0.0,311.0,266.0,34.0,0.11333333333333333,18.0,90.0,0.0,7.0,0.0,18.0,15.0,0.0,0.0,1.0,-0.33333333333333326
+HEAD,0,package zio - object ChunkBuilder,46.0,40.0,75.0,0.0,0.0,311.0,266.0,34.0,0.11333333333333333,18.0,90.0,7.0,7.0,0.0,18.0,15.0,0.0,0.0,1.0,-0.33333333333333326
 HEAD,0,package zio - object ChunkBuilder - method make - <$anon: zio.ChunkBuilder[A]>,12.0,0.0,12.0,4.0,1.0,31.0,29.0,0.0,0.0,0.0,13.0,9.0,9.0,0.0,15.0,15.0,0.0,0.0,4.0,-4.0
 HEAD,0,package zio - object ChunkBuilder - class Boolean,20.0,4.0,24.0,4.0,2.0,56.0,54.0,0.0,0.0,0.0,29.0,13.0,13.0,8.0,41.0,30.0,5.0,1.0,6.0,-3.7272727272727275
 HEAD,0,package zio - object ChunkBuilder - class Byte,13.0,4.0,17.0,4.0,2.0,26.0,25.0,0.0,0.0,0.0,14.0,9.0,9.0,4.0,7.0,7.0,5.0,1.0,3.0,-1.0
@@ -211,23 +211,23 @@ HEAD,0,package zio - object ChunkBuilder - class Int,12.0,4.0,16.0,4.0,2.0,26.0,
 HEAD,0,package zio - object ChunkBuilder - class Long,13.0,4.0,17.0,4.0,2.0,26.0,25.0,0.0,0.0,0.0,14.0,9.0,9.0,4.0,7.0,7.0,5.0,1.0,3.0,-1.0
 HEAD,0,package zio - object ChunkBuilder - class Short,13.0,4.0,17.0,4.0,2.0,26.0,25.0,0.0,0.0,0.0,14.0,9.0,9.0,4.0,7.0,7.0,5.0,1.0,3.0,-1.0
 HEAD,0,package internal - class Tracing,4.0,15.0,19.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package internal - object Tracing,7.0,15.0,21.0,1.0,0.0,3.0,3.0,0.0,0.0,0.0,3.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
+HEAD,0,package internal - object Tracing,7.0,15.0,21.0,1.0,0.0,3.0,3.0,0.0,0.0,0.0,3.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
 HEAD,0,package chunks - class ChunkCreationBenchmarks,9.0,0.0,9.0,0.0,1.0,210.0,191.0,0.0,0.0,0.0,22.0,19.0,19.0,0.0,50.0,50.0,0.0,0.0,19.0,-19.0
 HEAD,0,package internal - class MergeAllParBenchmark,15.0,0.0,15.0,0.0,1.0,13.0,11.0,0.0,0.0,0.0,12.0,3.0,3.0,0.0,13.0,8.0,0.0,0.0,3.0,0.0
 HEAD,0,package zio - trait ChunkPlatformSpecific,24.0,1.0,25.0,0.0,0.0,48.0,48.0,1.0,0.02040816326530612,1.0,16.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - trait ChunkPlatformSpecific - object Tags,23.0,36.0,59.0,0.0,0.0,46.0,47.0,1.0,0.020833333333333332,0.0,16.0,0.0,18.0,0.0,36.0,28.0,0.0,0.0,0.0,0.0
+HEAD,0,package zio - trait ChunkPlatformSpecific - object Tags,23.0,36.0,59.0,0.0,0.0,46.0,47.0,1.0,0.020833333333333332,0.0,16.0,18.0,18.0,0.0,36.0,28.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - class RoundtripBenchmark,7.0,0.0,7.0,0.0,2.0,39.0,32.0,0.0,0.0,0.0,11.0,7.0,7.0,0.0,15.0,14.0,0.0,0.0,5.0,-2.111111111111111
 HEAD,0,package zio - trait ChunkLike,43.0,2.0,44.0,7.0,14.0,152.0,101.0,49.0,0.32666666666666666,1.0,51.0,31.0,31.0,0.0,62.0,50.0,0.0,0.0,9.0,5.8
-HEAD,0,package zio - object ChunkLike,13.0,2.0,14.0,3.0,0.0,20.0,12.0,8.0,0.4,1.0,8.0,0.0,4.0,9.0,6.0,6.0,6.0,2.0,1.0,0.6363636363636364
-HEAD,2,package zio - object RIO,334.0,2.0,336.0,0.0,0.0,746.0,318.0,428.0,0.5737265415549598,0.0,274.0,0.0,136.0,0.0,205.0,121.0,0.0,0.0,77.0,77.0
+HEAD,0,package zio - object ChunkLike,13.0,2.0,14.0,3.0,0.0,20.0,12.0,8.0,0.4,1.0,8.0,4.0,4.0,9.0,6.0,6.0,6.0,2.0,1.0,0.6363636363636364
+HEAD,2,package zio - object RIO,334.0,2.0,336.0,0.0,0.0,746.0,318.0,428.0,0.5737265415549598,0.0,274.0,136.0,136.0,0.0,205.0,121.0,0.0,0.0,77.0,77.0
 HEAD,0,package tracing - class TracingConfig,4.0,13.0,17.0,2.0,0.0,10.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package tracing - object TracingConfig,4.0,13.0,16.0,1.0,0.0,5.0,5.0,0.0,0.0,0.0,4.0,0.0,3.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0
+HEAD,0,package tracing - object TracingConfig,4.0,13.0,16.0,1.0,0.0,5.0,5.0,0.0,0.0,0.0,4.0,3.0,3.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0
 HEAD,0,package fix - object CurriedAssert,3.0,1.0,4.0,0.0,0.0,4.0,4.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,1,package stm - class TArray,62.0,4.0,66.0,0.0,10.0,318.0,190.0,123.0,0.3929712460063898,0.0,91.0,74.0,74.0,18.0,232.0,196.0,14.0,3.0,34.0,27.527220698959834
-HEAD,0,package stm - object TArray,18.0,4.0,21.0,0.0,0.0,15.0,6.0,9.0,0.6,0.0,8.0,0.0,3.0,0.0,9.0,7.0,0.0,0.0,1.0,1.0
-HEAD,1,package zio - object Ref,9.0,21.0,29.0,1.0,0.0,14.0,8.0,6.0,0.42857142857142855,0.0,6.0,0.0,3.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0
+HEAD,0,package stm - object TArray,18.0,4.0,21.0,0.0,0.0,15.0,6.0,9.0,0.6,0.0,8.0,3.0,3.0,0.0,9.0,7.0,0.0,0.0,1.0,1.0
+HEAD,1,package zio - object Ref,9.0,21.0,29.0,1.0,0.0,14.0,8.0,6.0,0.42857142857142855,0.0,6.0,3.0,3.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0
 HEAD,0,package clock - trait PlatformSpecific,22.0,2.0,24.0,0.0,0.0,22.0,22.0,0.0,0.0,1.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package clock - trait PlatformSpecific - <$anon: zio.internal.Scheduler>,20.0,0.0,20.0,1.0,1.0,19.0,19.0,0.0,0.0,0.0,8.0,4.0,4.0,12.0,7.0,6.0,20.0,0.0,1.0,0.8076923076923076
+HEAD,0,package clock - trait PlatformSpecific - <$anon: zio.internal.Scheduler>,20.0,0.0,20.0,1.0,1.0,19.0,19.0,0.0,0.0,0.0,8.0,5.0,4.0,12.0,7.0,6.0,20.0,0.0,1.0,0.8076923076923076
 HEAD,0,package clock - trait PlatformSpecific - <$anon: zio.internal.Scheduler> - method schedule - <$anon: Runnable>,2.0,0.0,2.0,1.0,1.0,4.0,4.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,-1.0
 HEAD,0,package internal - class OneElementQueueConcBenchmark,11.0,1.0,12.0,0.0,7.0,59.0,43.0,2.0,0.044444444444444446,0.0,17.0,13.0,13.0,0.0,25.0,23.0,0.0,0.0,8.0,-8.0
 HEAD,0,package internal - object OneElementQueueConcBenchmark,4.0,1.0,5.0,0.0,0.0,12.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -240,14 +240,14 @@ HEAD,0,package internal - class JucBlockingQueue,12.0,1.0,13.0,1.0,4.0,14.0,14.0
 HEAD,0,package zio - class IODeepAttemptBenchmark,33.0,0.0,33.0,0.0,1.0,109.0,95.0,0.0,0.0,0.0,45.0,32.0,32.0,1.0,148.0,84.0,1.0,0.0,11.0,4.647474747474747
 HEAD,0,package zio - class IODeepAttemptBenchmark - class ZIOError,3.0,3.0,6.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - class StackBool,15.0,2.0,17.0,0.0,1.0,55.0,56.0,0.0,0.0,0.0,35.0,19.0,19.0,4.0,53.0,42.0,4.0,1.0,7.0,-4.0
-HEAD,0,package internal - object StackBool,8.0,2.0,9.0,0.0,0.0,18.0,18.0,0.0,0.0,0.0,5.0,0.0,3.0,0.0,7.0,6.0,0.0,0.0,2.0,-0.4444444444444444
+HEAD,0,package internal - object StackBool,8.0,2.0,9.0,0.0,0.0,18.0,18.0,0.0,0.0,0.0,5.0,3.0,3.0,0.0,7.0,6.0,0.0,0.0,2.0,-0.4444444444444444
 HEAD,0,package internal - object StackBool - class Entry,1.0,2.0,3.0,0.0,0.0,3.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - trait ChunkPlatformSpecific,7.0,1.0,8.0,0.0,0.0,8.0,8.0,0.0,0.0,1.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - trait ChunkPlatformSpecific - object Tags,6.0,36.0,42.0,0.0,0.0,6.0,7.0,0.0,0.0,0.0,3.0,0.0,2.0,1.0,1.0,1.0,1.0,0.0,1.0,0.0
-HEAD,0,package <empty> - object BuildHelper,30.0,0.0,30.0,0.0,0.0,327.0,292.0,9.0,0.029900332225913623,0.0,34.0,0.0,39.0,36.0,306.0,46.0,100.0,8.0,7.0,7.0
+HEAD,0,package zio - trait ChunkPlatformSpecific - object Tags,6.0,36.0,42.0,0.0,0.0,6.0,7.0,0.0,0.0,0.0,3.0,2.0,2.0,1.0,1.0,1.0,1.0,0.0,1.0,0.0
+HEAD,0,package <empty> - object BuildHelper,30.0,0.0,30.0,0.0,0.0,327.0,292.0,9.0,0.029900332225913623,0.0,34.0,39.0,39.0,36.0,306.0,46.0,100.0,8.0,7.0,7.0
 HEAD,0,package <empty> - object BuildHelper - class ModuleHelper,0.0,1.0,1.0,0.0,1.0,3.0,4.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,4.0,2.0,0.0,0.0,0.0,0.0
 HEAD,9,package zio - trait ZIO,469.0,273.0,692.0,1.0,86.0,1850.0,750.0,1096.0,0.5937161430119177,26.0,378.0,264.0,264.0,92.0,832.0,660.0,117.0,24.0,170.0,166.44282438428777
-HEAD,9,package zio - object ZIO,701.0,273.0,893.0,1.0,0.0,1852.0,1021.0,823.0,0.4463123644251627,26.0,427.0,0.0,215.0,139.0,800.0,541.0,190.0,50.0,137.0,131.96324705244518
+HEAD,9,package zio - object ZIO,701.0,273.0,893.0,1.0,0.0,1852.0,1021.0,823.0,0.4463123644251627,26.0,427.0,215.0,215.0,139.0,800.0,541.0,190.0,50.0,137.0,131.96324705244518
 HEAD,0,package zio - object ZIO - method fromFutureInterrupt - <$anon: scala.concurrent.ExecutionContext>,7.0,0.0,7.0,1.0,2.0,9.0,9.0,0.0,0.0,0.0,7.0,4.0,4.0,1.0,4.0,4.0,1.0,0.0,2.0,-1.8333333333333333
 HEAD,0,package zio - object ZIO - method reduceAllPar - method prepend - <$anon: Iterable[Z]>,5.0,0.0,5.0,4.0,1.0,3.0,3.0,0.0,0.0,0.0,4.0,1.0,1.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ZIO - method reduceAllParN - method prepend - <$anon: Iterable[Z]>,5.0,0.0,5.0,4.0,1.0,3.0,3.0,0.0,0.0,0.0,4.0,1.0,1.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
@@ -257,7 +257,7 @@ HEAD,0,package zio - object ZIO - class ZioRefineToOrDieOps,9.0,1.0,10.0,0.0,1.0
 HEAD,0,package zio - object ZIO - class ProvideSomeLayer,9.0,5.0,13.0,0.0,1.0,6.0,6.0,0.0,0.0,0.0,4.0,1.0,1.0,0.0,2.0,2.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - object ZIO - class UpdateService,5.0,5.0,9.0,0.0,1.0,4.0,4.0,0.0,0.0,0.0,3.0,1.0,1.0,0.0,3.0,2.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - object ZIO - class CanFilter,2.0,4.0,6.0,0.0,1.0,3.0,4.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - object ZIO - object CanFilter,5.0,4.0,7.0,0.0,0.0,6.0,7.0,0.0,0.0,0.0,2.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
+HEAD,0,package zio - object ZIO - object CanFilter,5.0,4.0,7.0,0.0,0.0,6.0,7.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - object ZIO - object CanFilter - method canFilter - <$anon: zio.ZIO.CanFilter[E]>,3.0,0.0,3.0,1.0,1.0,3.0,3.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ZIO - class ZIOWithFilterOps,11.0,1.0,12.0,0.0,1.0,16.0,7.0,9.0,0.5625,0.0,6.0,2.0,2.0,0.0,6.0,6.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - object ZIO - class Grafter,5.0,2.0,6.0,0.0,1.0,4.0,4.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
@@ -303,36 +303,36 @@ HEAD,0,package zio - object ZIO - class CheckInterrupt,5.0,3.0,8.0,2.0,1.0,3.0,3
 HEAD,0,package zio - object ZIO - class Fail,6.0,8.0,14.0,2.0,3.0,7.0,7.0,0.0,0.0,0.0,4.0,3.0,3.0,0.0,0.0,0.0,0.0,0.0,2.0,2.0
 HEAD,0,package zio - object ZIO - class Descriptor,5.0,8.0,12.0,2.0,1.0,3.0,3.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ZIO - class Lock,5.0,3.0,8.0,2.0,1.0,3.0,3.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - object ZIO - object Yield,5.0,3.0,8.0,2.0,0.0,3.0,3.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package zio - object ZIO - object Yield,5.0,3.0,8.0,2.0,0.0,3.0,3.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ZIO - class Read,5.0,4.0,9.0,2.0,1.0,3.0,3.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ZIO - class Provide,5.0,3.0,8.0,2.0,1.0,3.0,3.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ZIO - class EffectSuspendPartialWith,5.0,3.0,8.0,2.0,1.0,3.0,3.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ZIO - class EffectSuspendTotalWith,5.0,3.0,8.0,2.0,1.0,4.0,4.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ZIO - class FiberRefNew,7.0,4.0,11.0,2.0,1.0,4.0,4.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ZIO - class FiberRefModify,6.0,4.0,9.0,2.0,1.0,3.0,3.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - object ZIO - object Trace,5.0,3.0,8.0,2.0,0.0,3.0,3.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package zio - object ZIO - object Trace,5.0,3.0,8.0,2.0,0.0,3.0,3.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ZIO - class TracingStatus,5.0,8.0,11.0,2.0,1.0,3.0,3.0,0.0,0.0,2.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ZIO - class CheckTracing,5.0,3.0,8.0,2.0,1.0,3.0,3.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ZIO - class RaceWith,6.0,4.0,9.0,2.0,1.0,9.0,9.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ZIO - class Supervise,5.0,4.0,8.0,2.0,1.0,4.0,4.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ZIO - class GetForkScope,5.0,3.0,8.0,2.0,1.0,3.0,3.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ZIO - class OverrideForkScope,5.0,5.0,9.0,2.0,1.0,6.0,6.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - object ZIOArray,13.0,1.0,14.0,0.0,0.0,17.0,17.0,0.0,0.0,0.0,14.0,0.0,5.0,7.0,23.0,13.0,6.0,2.0,1.0,0.8412698412698413
-HEAD,0,package zio - object CatsIOArray,14.0,1.0,15.0,0.0,0.0,18.0,18.0,0.0,0.0,0.0,14.0,0.0,5.0,7.0,23.0,14.0,6.0,2.0,1.0,0.8983050847457626
-HEAD,0,package zio - object MonixIOArray,12.0,1.0,13.0,0.0,0.0,18.0,17.0,0.0,0.0,0.0,10.0,0.0,5.0,7.0,23.0,11.0,7.0,2.0,1.0,0.8799999999999999
+HEAD,0,package zio - object ZIOArray,13.0,1.0,14.0,0.0,0.0,17.0,17.0,0.0,0.0,0.0,14.0,5.0,5.0,7.0,23.0,13.0,6.0,2.0,1.0,0.8412698412698413
+HEAD,0,package zio - object CatsIOArray,14.0,1.0,15.0,0.0,0.0,18.0,18.0,0.0,0.0,0.0,14.0,5.0,5.0,7.0,23.0,14.0,6.0,2.0,1.0,0.8983050847457626
+HEAD,0,package zio - object MonixIOArray,12.0,1.0,13.0,0.0,0.0,18.0,17.0,0.0,0.0,0.0,10.0,5.0,5.0,7.0,23.0,11.0,7.0,2.0,1.0,0.8799999999999999
 HEAD,0,package zio - trait PlatformSpecific,33.0,1.0,34.0,0.0,0.0,13.0,13.0,0.0,0.0,1.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - trait PlatformSpecific - object ZEnv,31.0,2.0,33.0,0.0,0.0,10.0,11.0,0.0,0.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - trait PlatformSpecific - object ZEnv - object Services,19.0,5.0,24.0,0.0,0.0,4.0,5.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - class OneShot,8.0,6.0,14.0,0.0,3.0,22.0,13.0,10.0,0.43478260869565216,0.0,4.0,6.0,6.0,0.0,7.0,6.0,0.0,0.0,2.0,-2.0
-HEAD,0,package internal - object OneShot,5.0,6.0,10.0,0.0,0.0,6.0,3.0,3.0,0.5,0.0,2.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
+HEAD,0,package internal - object OneShot,5.0,6.0,10.0,0.0,0.0,6.0,3.0,3.0,0.5,0.0,2.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class ZTrace,19.0,7.0,26.0,2.0,1.0,51.0,42.0,6.0,0.125,0.0,20.0,8.0,8.0,4.0,28.0,15.0,6.0,1.0,3.0,1.0
-HEAD,0,package zio - object ZTrace,13.0,7.0,19.0,1.0,0.0,9.0,8.0,0.0,0.0,0.0,13.0,0.0,2.0,0.0,6.0,5.0,0.0,0.0,1.0,1.0
+HEAD,0,package zio - object ZTrace,13.0,7.0,19.0,1.0,0.0,9.0,8.0,0.0,0.0,0.0,13.0,2.0,2.0,0.0,6.0,5.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - class CanFail,0.0,16.0,16.0,0.0,0.0,1.0,2.0,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - object CanFail,2.0,16.0,17.0,1.0,0.0,3.0,3.0,0.0,0.0,3.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package zio - object CanFail,2.0,16.0,17.0,1.0,0.0,3.0,3.0,0.0,0.0,3.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class NeedsEnv,0.0,11.0,11.0,0.0,0.0,1.0,2.0,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - object NeedsEnv,2.0,11.0,12.0,1.0,0.0,11.0,5.0,1.0,0.16666666666666666,3.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package zio - object NeedsEnv,2.0,11.0,12.0,1.0,0.0,11.0,5.0,1.0,0.16666666666666666,3.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stm - class ZSTM,221.0,30.0,246.0,0.0,37.0,754.0,385.0,363.0,0.4852941176470588,0.0,157.0,150.0,150.0,63.0,417.0,335.0,131.0,22.0,80.0,75.4098494098494
-HEAD,1,package stm - object ZSTM,311.0,30.0,330.0,0.0,0.0,800.0,473.0,323.0,0.4057788944723618,0.0,194.0,0.0,78.0,25.0,216.0,164.0,38.0,9.0,47.0,42.61858974358975
+HEAD,1,package stm - object ZSTM,311.0,30.0,330.0,0.0,0.0,800.0,473.0,323.0,0.4057788944723618,0.0,194.0,78.0,78.0,25.0,216.0,164.0,38.0,9.0,47.0,42.61858974358975
 HEAD,0,package stm - object ZSTM - method replicate - <$anon: Iterable[zio.stm.ZSTM[R E A]]>,7.0,0.0,7.0,4.0,1.0,3.0,3.0,0.0,0.0,0.0,3.0,1.0,1.0,0.0,2.0,2.0,0.0,0.0,1.0,1.0
 HEAD,0,package stm - object ZSTM - class AccessPartiallyApplied,6.0,1.0,7.0,0.0,1.0,4.0,4.0,0.0,0.0,0.0,3.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
 HEAD,0,package stm - object ZSTM - class AccessMPartiallyApplied,7.0,1.0,8.0,0.0,1.0,4.0,4.0,0.0,0.0,0.0,3.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
@@ -341,7 +341,7 @@ HEAD,0,package stm - object ZSTM - class UnlessM,8.0,2.0,10.0,0.0,1.0,4.0,5.0,0.
 HEAD,0,package stm - object ZSTM - class UpdateService,5.0,2.0,6.0,0.0,1.0,4.0,5.0,0.0,0.0,0.0,3.0,1.0,1.0,0.0,2.0,2.0,0.0,0.0,1.0,1.0
 HEAD,0,package stm - object ZSTM - class WhenM,8.0,2.0,10.0,0.0,1.0,4.0,5.0,0.0,0.0,0.0,3.0,2.0,2.0,0.0,1.0,1.0,0.0,0.0,1.0,0.3333333333333333
 HEAD,0,package stm - object ZSTM - class Resumable,4.0,2.0,5.0,2.0,0.0,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package stm - object ZSTM - object internal,80.0,17.0,87.0,0.0,0.0,304.0,237.0,64.0,0.21262458471760798,0.0,65.0,0.0,52.0,15.0,140.0,121.0,31.0,6.0,12.0,-7.664373099072977
+HEAD,0,package stm - object ZSTM - object internal,80.0,17.0,87.0,0.0,0.0,304.0,237.0,64.0,0.21262458471760798,0.0,65.0,52.0,52.0,15.0,140.0,121.0,31.0,6.0,12.0,-7.664373099072977
 HEAD,0,package stm - object ZSTM - object internal - class Versioned,1.0,8.0,9.0,0.0,0.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stm - object ZSTM - object internal - class JournalAnalysis,2.0,6.0,8.0,2.0,0.0,1.0,1.0,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stm - object ZSTM - object internal - object JournalAnalysis,11.0,6.0,13.0,1.0,0.0,5.0,6.0,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -356,7 +356,7 @@ HEAD,0,package stm - object ZSTM - object internal - object TExit - class Succee
 HEAD,0,package stm - object ZSTM - object internal - object TExit - object Retry,4.0,7.0,11.0,3.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stm - object ZSTM - object internal - class Entry,10.0,7.0,15.0,0.0,3.0,44.0,28.0,17.0,0.37777777777777777,0.0,11.0,8.0,8.0,0.0,5.0,5.0,0.0,0.0,6.0,-6.0
 HEAD,0,package stm - object ZSTM - object internal - class Entry - method copy - <$anon: zio.stm.ZSTM.internal.Entry>,7.0,0.0,7.0,1.0,0.0,8.0,8.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package stm - object ZSTM - object internal - object Entry,8.0,7.0,12.0,0.0,0.0,16.0,13.0,4.0,0.23529411764705882,0.0,1.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,-1.0
+HEAD,0,package stm - object ZSTM - object internal - object Entry,8.0,7.0,12.0,0.0,0.0,16.0,13.0,4.0,0.23529411764705882,0.0,1.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,-1.0
 HEAD,0,package stm - object ZSTM - object internal - object Entry - method apply - <$anon: zio.stm.ZSTM.internal.Entry>,6.0,0.0,6.0,1.0,0.0,7.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stm - object ZSTM - object internal - class TryCommit,0.0,5.0,5.0,0.0,0.0,1.0,2.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stm - object ZSTM - object internal - object TryCommit,8.0,5.0,10.0,0.0,0.0,4.0,5.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -369,15 +369,15 @@ HEAD,0,package compression - class Gunzipper - class SkipCommentsStep,13.0,1.0,1
 HEAD,0,package compression - class Gunzipper - class CheckCrc16Step,19.0,1.0,19.0,1.0,1.0,14.0,13.0,1.0,0.07142857142857142,0.0,15.0,4.0,4.0,5.0,18.0,14.0,6.0,2.0,1.0,1.0
 HEAD,0,package compression - class Gunzipper - class Decompress,19.0,2.0,20.0,1.0,2.0,31.0,30.0,1.0,0.03225806451612903,0.0,22.0,7.0,7.0,1.0,26.0,23.0,5.0,1.0,3.0,-0.3999999999999999
 HEAD,0,package compression - class Gunzipper - class CheckTrailerStep,21.0,2.0,22.0,1.0,1.0,16.0,16.0,1.0,0.058823529411764705,0.0,17.0,6.0,6.0,5.0,28.0,17.0,6.0,2.0,1.0,1.0
-HEAD,0,package compression - object Gunzipper,10.0,8.0,17.0,0.0,0.0,9.0,9.0,0.0,0.0,0.0,5.0,0.0,1.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
+HEAD,0,package compression - object Gunzipper,10.0,8.0,17.0,0.0,0.0,9.0,9.0,0.0,0.0,0.0,5.0,1.0,1.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package compression - object Gunzipper - trait State,4.0,8.0,12.0,0.0,3.0,5.0,6.0,0.0,0.0,6.0,3.0,3.0,3.0,0.0,0.0,0.0,0.0,0.0,1.0,-1.0
 HEAD,0,package zio - class IOShallowAttemptBenchmark,34.0,0.0,34.0,0.0,1.0,126.0,108.0,0.0,0.0,0.0,48.0,38.0,38.0,16.0,167.0,85.0,20.0,0.0,10.0,6.536752136752136
 HEAD,0,package zio - class IOShallowAttemptBenchmark - class ZIOError,3.0,3.0,6.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - class ZReader,12.0,2.0,14.0,3.0,1.0,73.0,67.0,0.0,0.0,0.0,23.0,17.0,17.0,0.0,35.0,29.0,0.0,0.0,8.0,-6.34920634920635
-HEAD,0,package internal - object ZReader,22.0,2.0,23.0,0.0,0.0,15.0,15.0,0.0,0.0,0.0,8.0,0.0,6.0,9.0,12.0,6.0,22.0,4.0,1.0,1.0
+HEAD,0,package internal - object ZReader,22.0,2.0,23.0,0.0,0.0,15.0,15.0,0.0,0.0,0.0,8.0,6.0,6.0,9.0,12.0,6.0,22.0,4.0,1.0,1.0
 HEAD,1,package internal - class Stack,8.0,5.0,13.0,0.0,1.0,55.0,44.0,14.0,0.2413793103448276,0.0,15.0,11.0,11.0,0.0,26.0,20.0,0.0,0.0,5.0,-5.0
-HEAD,0,package internal - object Stack,4.0,5.0,8.0,0.0,0.0,8.0,8.0,0.0,0.0,0.0,3.0,0.0,2.0,0.0,3.0,3.0,0.0,0.0,1.0,-1.0
-HEAD,0,package zio - package clock - package object clock,46.0,9.0,54.0,0.0,0.0,61.0,49.0,12.0,0.19672131147540983,0.0,36.0,0.0,2.0,0.0,8.0,8.0,0.0,0.0,2.0,1.3333333333333333
+HEAD,0,package internal - object Stack,4.0,5.0,8.0,0.0,0.0,8.0,8.0,0.0,0.0,0.0,3.0,2.0,2.0,0.0,3.0,3.0,0.0,0.0,1.0,-1.0
+HEAD,0,package zio - package clock - package object clock,46.0,9.0,54.0,0.0,0.0,61.0,49.0,12.0,0.19672131147540983,0.0,36.0,2.0,2.0,0.0,8.0,8.0,0.0,0.0,2.0,1.3333333333333333
 HEAD,0,package zio - package clock - package object clock - object Clock,38.0,6.0,44.0,1.0,0.0,36.0,36.0,0.0,0.0,0.0,29.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - package clock - package object clock - object Clock - trait Service,11.0,9.0,20.0,1.0,4.0,8.0,8.0,0.0,0.0,0.0,9.0,6.0,6.0,0.0,5.0,5.0,0.0,0.0,2.0,2.0
 HEAD,0,package zio - package clock - package object clock - object Clock - object Service,30.0,9.0,37.0,1.0,0.0,22.0,23.0,0.0,0.0,0.0,19.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -394,23 +394,23 @@ HEAD,0,package internal - class OneElementConcurrentQueue,12.0,3.0,15.0,1.0,5.0,
 HEAD,0,package internal - class NotThreadSafeQueue,10.0,1.0,11.0,1.0,1.0,31.0,31.0,0.0,0.0,0.0,17.0,9.0,9.0,0.0,15.0,15.0,0.0,0.0,7.0,-7.0
 HEAD,0,package stm - class TArrayOpsBenchmarks,19.0,0.0,19.0,0.0,1.0,55.0,38.0,2.0,0.05,0.0,39.0,14.0,14.0,0.0,59.0,54.0,0.0,0.0,14.0,-3.7777777777777777
 HEAD,1,package zio - package stream - package object stream,7.0,0.0,7.0,0.0,0.0,8.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package internal - object RingBuffer,15.0,4.0,16.0,0.0,0.0,22.0,16.0,7.0,0.30434782608695654,2.0,16.0,0.0,3.0,0.0,13.0,12.0,0.0,0.0,1.0,-1.0
+HEAD,0,package internal - object RingBuffer,15.0,4.0,16.0,0.0,0.0,22.0,16.0,7.0,0.30434782608695654,2.0,16.0,3.0,3.0,0.0,13.0,12.0,0.0,0.0,1.0,-1.0
 HEAD,0,package internal - class RingBuffer,17.0,4.0,21.0,1.0,7.0,159.0,92.0,68.0,0.425,2.0,14.0,20.0,20.0,0.0,49.0,21.0,0.0,0.0,2.0,-2.0
 HEAD,0,package zio - package stm - package object stm,4.0,0.0,4.0,1.0,0.0,9.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class CanFail,0.0,16.0,16.0,0.0,0.0,1.0,2.0,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - object CanFail,2.0,16.0,17.0,1.0,0.0,13.0,5.0,2.0,0.2857142857142857,3.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package zio - object CanFail,2.0,16.0,17.0,1.0,0.0,13.0,5.0,2.0,0.2857142857142857,3.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class IODeepFlatMapBenchmark,25.0,0.0,25.0,0.0,7.0,90.0,70.0,0.0,0.0,0.0,37.0,20.0,20.0,0.0,112.0,62.0,0.0,0.0,9.0,6.612698412698413
 HEAD,0,package internal - class Scheduler,3.0,7.0,10.0,0.0,1.0,3.0,4.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
-HEAD,0,package internal - object Scheduler,18.0,7.0,23.0,0.0,0.0,19.0,19.0,0.0,0.0,0.0,8.0,0.0,4.0,12.0,8.0,7.0,20.0,0.0,1.0,0.7619047619047619
-HEAD,0,package internal - object Scheduler - method fromScheduledExecutorService - <$anon: zio.internal.Scheduler>,16.0,0.0,16.0,1.0,1.0,15.0,15.0,0.0,0.0,0.0,7.0,4.0,4.0,12.0,7.0,6.0,20.0,0.0,1.0,0.7674418604651164
+HEAD,0,package internal - object Scheduler,18.0,7.0,23.0,0.0,0.0,19.0,19.0,0.0,0.0,0.0,8.0,4.0,4.0,12.0,8.0,7.0,20.0,0.0,1.0,0.7619047619047619
+HEAD,0,package internal - object Scheduler - method fromScheduledExecutorService - <$anon: zio.internal.Scheduler>,16.0,0.0,16.0,1.0,1.0,15.0,15.0,0.0,0.0,0.0,7.0,5.0,4.0,12.0,7.0,6.0,20.0,0.0,1.0,0.7674418604651164
 HEAD,0,package internal - object Scheduler - method fromScheduledExecutorService - <$anon: zio.internal.Scheduler> - method schedule - <$anon: Runnable>,2.0,0.0,2.0,1.0,1.0,4.0,4.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,-1.0
-HEAD,0,package internal - object FiberRenderer,38.0,2.0,39.0,0.0,0.0,68.0,63.0,0.0,0.0,0.0,44.0,0.0,24.0,24.0,69.0,44.0,36.0,7.0,7.0,7.0
+HEAD,0,package internal - object FiberRenderer,38.0,2.0,39.0,0.0,0.0,68.0,63.0,0.0,0.0,0.0,44.0,24.0,24.0,24.0,69.0,44.0,36.0,7.0,7.0,7.0
 HEAD,0,package internal - class ProducerConsumerBenchmark,11.0,1.0,12.0,0.0,13.0,84.0,49.0,7.0,0.125,0.0,23.0,19.0,19.0,0.0,31.0,29.0,0.0,0.0,14.0,-14.0
 HEAD,0,package internal - object ProducerConsumerBenchmark,4.0,1.0,5.0,0.0,0.0,12.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - object ProducerConsumerBenchmark - class PollCounters,1.0,5.0,6.0,0.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - object ProducerConsumerBenchmark - class OfferCounters,1.0,5.0,6.0,0.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class Chunk,136.0,106.0,233.0,8.0,49.0,929.0,725.0,198.0,0.21451787648970747,9.0,147.0,195.0,195.0,62.0,497.0,372.0,82.0,19.0,59.0,24.514958776001475
-HEAD,3,package zio - object Chunk,133.0,106.0,227.0,1.0,0.0,552.0,490.0,60.0,0.10909090909090909,9.0,170.0,0.0,39.0,21.0,75.0,68.0,81.0,20.0,4.0,2.96
+HEAD,3,package zio - object Chunk,133.0,106.0,227.0,1.0,0.0,552.0,490.0,60.0,0.10909090909090909,9.0,170.0,39.0,39.0,21.0,75.0,68.0,81.0,20.0,4.0,2.96
 HEAD,0,package zio - object Chunk - class AppendN,18.0,2.0,19.0,9.0,1.0,21.0,21.0,0.0,0.0,0.0,20.0,6.0,6.0,1.0,20.0,16.0,1.0,0.0,2.0,-1.8
 HEAD,0,package zio - object Chunk - class PrependN,17.0,2.0,18.0,9.0,1.0,22.0,22.0,0.0,0.0,0.0,21.0,6.0,6.0,1.0,28.0,20.0,1.0,0.0,2.0,-1.846153846153846
 HEAD,2,package zio - object Chunk - class Arr,41.0,10.0,51.0,9.0,2.0,158.0,151.0,6.0,0.03821656050955414,9.0,48.0,32.0,32.0,4.0,105.0,101.0,6.0,2.0,12.0,-0.43779750252618477
@@ -419,7 +419,7 @@ HEAD,0,package zio - object Chunk - class Singleton,21.0,1.0,22.0,9.0,1.0,18.0,1
 HEAD,0,package zio - object Chunk - class Slice,12.0,2.0,13.0,9.0,1.0,24.0,24.0,0.0,0.0,0.0,9.0,5.0,5.0,0.0,13.0,12.0,0.0,0.0,2.0,-1.375
 HEAD,0,package zio - object Chunk - class VectorChunk,14.0,1.0,15.0,9.0,1.0,13.0,13.0,0.0,0.0,0.0,8.0,4.0,4.0,1.0,3.0,3.0,1.0,0.0,2.0,-0.7142857142857143
 HEAD,0,package zio - object Chunk - class BitChunk,20.0,5.0,24.0,9.0,1.0,63.0,63.0,0.0,0.0,0.0,27.0,11.0,11.0,0.0,80.0,44.0,0.0,0.0,3.0,-2.253731343283582
-HEAD,1,package zio - object Chunk - object Empty,17.0,8.0,24.0,9.0,0.0,21.0,17.0,4.0,0.19047619047619047,0.0,8.0,0.0,7.0,1.0,2.0,2.0,1.0,0.0,1.0,-5.551115123125783E-17
+HEAD,1,package zio - object Chunk - object Empty,17.0,8.0,24.0,9.0,0.0,21.0,17.0,4.0,0.19047619047619047,0.0,8.0,7.0,7.0,1.0,2.0,2.0,1.0,0.0,1.0,-5.551115123125783E-17
 HEAD,0,package zio - object Chunk - class AnyRefArray,4.0,1.0,5.0,10.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object Chunk - class ByteArray,7.0,1.0,8.0,10.0,1.0,3.0,3.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - object Chunk - class CharArray,7.0,1.0,8.0,10.0,1.0,3.0,3.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
@@ -430,11 +430,11 @@ HEAD,0,package zio - object Chunk - class FloatArray,7.0,1.0,8.0,10.0,1.0,3.0,3.
 HEAD,0,package zio - object Chunk - class ShortArray,7.0,1.0,8.0,10.0,1.0,3.0,3.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - object Chunk - class BooleanArray,7.0,1.0,8.0,10.0,1.0,3.0,3.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - class =!=,1.0,4.0,5.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - object =!=,7.0,4.0,9.0,1.0,0.0,6.0,7.0,0.0,0.0,0.0,5.0,0.0,4.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
+HEAD,0,package zio - object =!=,7.0,4.0,9.0,1.0,0.0,6.0,7.0,0.0,0.0,0.0,5.0,4.0,4.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object =!= - method neq - <$anon: A =!= B>,1.0,0.0,1.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class Reservation,4.0,2.0,6.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,4,package zio - class ZManaged,254.0,45.0,293.0,1.0,49.0,965.0,480.0,485.0,0.5025906735751295,1.0,197.0,154.0,154.0,168.0,532.0,368.0,207.0,56.0,98.0,96.73333333333333
-HEAD,7,package zio - object ZManaged,372.0,45.0,397.0,1.0,0.0,1083.0,542.0,533.0,0.4958139534883721,1.0,238.0,0.0,112.0,50.0,447.0,298.0,79.0,21.0,68.0,64.88236407232364
+HEAD,7,package zio - object ZManaged,372.0,45.0,397.0,1.0,0.0,1083.0,542.0,533.0,0.4958139534883721,1.0,238.0,112.0,112.0,50.0,447.0,298.0,79.0,21.0,68.0,64.88236407232364
 HEAD,0,package zio - object ZManaged - class AccessPartiallyApplied,6.0,5.0,11.0,0.0,1.0,4.0,4.0,0.0,0.0,0.0,3.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - object ZManaged - class AccessMPartiallyApplied,7.0,5.0,12.0,0.0,1.0,4.0,4.0,0.0,0.0,0.0,3.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - object ZManaged - class AccessManagedPartiallyApplied,7.0,1.0,8.0,0.0,1.0,4.0,4.0,0.0,0.0,0.0,3.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
@@ -445,7 +445,7 @@ HEAD,0,package zio - object ZManaged - class UnlessM,8.0,8.0,16.0,0.0,1.0,4.0,4.
 HEAD,0,package zio - object ZManaged - class UpdateService,5.0,5.0,9.0,0.0,1.0,4.0,4.0,0.0,0.0,0.0,3.0,1.0,1.0,0.0,3.0,2.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - object ZManaged - class WhenM,8.0,8.0,16.0,0.0,1.0,4.0,4.0,0.0,0.0,0.0,2.0,2.0,2.0,0.0,1.0,1.0,0.0,0.0,1.0,0.5
 HEAD,0,package zio - object ZManaged - class ReleaseMap,5.0,10.0,15.0,0.0,7.0,49.0,11.0,39.0,0.78,0.0,7.0,7.0,7.0,0.0,0.0,0.0,0.0,0.0,3.0,3.0
-HEAD,1,package zio - object ZManaged - object ReleaseMap,53.0,10.0,60.0,0.0,0.0,101.0,89.0,13.0,0.12745098039215685,0.0,48.0,0.0,24.0,15.0,122.0,38.0,96.0,24.0,2.0,2.0
+HEAD,1,package zio - object ZManaged - object ReleaseMap,53.0,10.0,60.0,0.0,0.0,101.0,89.0,13.0,0.12745098039215685,0.0,48.0,24.0,24.0,15.0,122.0,38.0,96.0,24.0,2.0,2.0
 HEAD,0,package zio - object ZManaged - object ReleaseMap - method make - class State,0.0,14.0,14.0,0.0,0.0,1.0,2.0,0.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ZManaged - object ReleaseMap - method make - class Exited,5.0,3.0,8.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ZManaged - object ReleaseMap - method make - class Running,5.0,9.0,14.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -459,7 +459,7 @@ HEAD,0,package zio - object ZManaged - class RefineToOrDieOps,9.0,1.0,10.0,0.0,1
 HEAD,0,package zio - trait App,6.0,2.0,8.0,2.0,2.0,12.0,5.0,7.0,0.5833333333333334,0.0,2.0,2.0,2.0,0.0,3.0,1.0,0.0,0.0,1.0,-0.42857142857142855
 HEAD,0,package internal - trait ExecutorPlatformSpecific,0.0,3.0,3.0,0.0,0.0,1.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class ZRefM,64.0,8.0,72.0,0.0,13.0,182.0,80.0,103.0,0.5628415300546448,3.0,38.0,24.0,24.0,0.0,76.0,65.0,0.0,0.0,20.0,19.0
-HEAD,0,package zio - object ZRefM,92.0,8.0,95.0,0.0,0.0,231.0,180.0,51.0,0.22077922077922077,3.0,64.0,0.0,3.0,0.0,12.0,12.0,0.0,0.0,2.0,2.0
+HEAD,0,package zio - object ZRefM,92.0,8.0,95.0,0.0,0.0,231.0,180.0,51.0,0.22077922077922077,3.0,64.0,3.0,3.0,0.0,12.0,12.0,0.0,0.0,2.0,2.0
 HEAD,0,package zio - object ZRefM - class Atomic,16.0,22.0,34.0,2.0,3.0,33.0,33.0,0.0,0.0,0.0,14.0,5.0,5.0,0.0,11.0,8.0,0.0,0.0,4.0,0.0
 HEAD,0,package zio - object ZRefM - class Atomic - method foldM - <$anon: zio.ZRefM.Derived[RC RD EC ED C D]>,6.0,0.0,6.0,2.0,2.0,6.0,6.0,0.0,0.0,0.0,3.0,2.0,2.0,0.0,2.0,2.0,0.0,0.0,2.0,2.0
 HEAD,0,package zio - object ZRefM - class Atomic - method foldAllM - <$anon: zio.ZRefM.DerivedAll[RC RD EC ED C D]>,6.0,0.0,6.0,2.0,2.0,6.0,6.0,0.0,0.0,0.0,3.0,2.0,2.0,0.0,3.0,2.0,0.0,0.0,2.0,2.0
@@ -471,30 +471,30 @@ HEAD,0,package zio - object ZRefM - class DerivedAll - method foldM - <$anon: zi
 HEAD,0,package zio - object ZRefM - class DerivedAll - method foldAllM - <$anon: zio.ZRefM.DerivedAll[RC RD EC ED C D]>,11.0,0.0,11.0,2.0,2.0,12.0,12.0,0.0,0.0,0.0,6.0,2.0,2.0,0.0,13.0,9.0,0.0,0.0,2.0,2.0
 HEAD,0,package zio - object ZRefM - class UnifiedSyntax,36.0,3.0,39.0,0.0,3.0,81.0,41.0,40.0,0.49382716049382713,0.0,23.0,15.0,15.0,17.0,61.0,43.0,30.0,9.0,9.0,8.325396825396826
 HEAD,0,package zio - class QueueBackPressureBenchmark,17.0,0.0,17.0,0.0,3.0,58.0,53.0,0.0,0.0,0.0,23.0,13.0,13.0,28.0,94.0,28.0,8.0,0.0,5.0,1.8
-HEAD,0,package interop - object javaz,33.0,2.0,35.0,0.0,0.0,71.0,56.0,4.0,0.06666666666666667,0.0,34.0,0.0,12.0,10.0,50.0,36.0,9.0,3.0,5.0,4.2253968253968255
+HEAD,0,package interop - object javaz,33.0,2.0,35.0,0.0,0.0,71.0,56.0,4.0,0.06666666666666667,0.0,34.0,12.0,12.0,10.0,50.0,36.0,9.0,3.0,5.0,4.2253968253968255
 HEAD,0,package interop - object javaz - method effectAsyncWithCompletionHandler - <$anon: java.nio.channels.CompletionHandler[T Any]>,9.0,0.0,9.0,1.0,2.0,7.0,7.0,0.0,0.0,0.0,8.0,4.0,4.0,5.0,7.0,6.0,3.0,1.0,2.0,-0.3111111111111111
-HEAD,0,package interop - object javaz - object CompletableFuture_,4.0,1.0,5.0,0.0,0.0,7.0,8.0,0.0,0.0,0.0,2.0,0.0,1.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
+HEAD,0,package interop - object javaz - object CompletableFuture_,4.0,1.0,5.0,0.0,0.0,7.0,8.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class ZQueue,82.0,10.0,89.0,1.0,15.0,224.0,119.0,104.0,0.4663677130044843,0.0,92.0,33.0,33.0,9.0,120.0,71.0,12.0,4.0,13.0,12.952380952380953
 HEAD,0,package zio - class ZQueue - method bothWithM - <$anon: zio.ZQueue[RA1 R3 EA1 E3 A1 D]>,25.0,0.0,25.0,2.0,10.0,24.0,24.0,0.0,0.0,0.0,33.0,12.0,12.0,18.0,35.0,24.0,12.0,4.0,8.0,5.0
 HEAD,0,package zio - class ZQueue - method dimapM - <$anon: zio.ZQueue[RC RD EC ED C D]>,18.0,0.0,18.0,2.0,10.0,14.0,14.0,0.0,0.0,0.0,24.0,10.0,10.0,0.0,18.0,12.0,0.0,0.0,5.0,5.0
 HEAD,0,package zio - class ZQueue - method filterInputM - <$anon: zio.ZQueue[R2 RB E2 EB A1 B]>,18.0,0.0,18.0,2.0,10.0,21.0,21.0,0.0,0.0,0.0,31.0,13.0,13.0,0.0,15.0,13.0,0.0,0.0,2.0,2.0
-HEAD,0,package zio - object ZQueue,59.0,10.0,67.0,1.0,0.0,367.0,287.0,69.0,0.19382022471910113,0.0,97.0,0.0,24.0,10.0,95.0,61.0,15.0,5.0,6.0,5.505263157894737
-HEAD,0,package zio - object ZQueue - object internal,42.0,44.0,82.0,0.0,0.0,182.0,159.0,19.0,0.10674157303370786,0.0,62.0,0.0,13.0,16.0,20.0,17.0,16.0,4.0,5.0,1.4
+HEAD,0,package zio - object ZQueue,59.0,10.0,67.0,1.0,0.0,367.0,287.0,69.0,0.19382022471910113,0.0,97.0,24.0,24.0,10.0,95.0,61.0,15.0,5.0,6.0,5.505263157894737
+HEAD,0,package zio - object ZQueue - object internal,42.0,44.0,82.0,0.0,0.0,182.0,159.0,19.0,0.10674157303370786,0.0,62.0,13.0,13.0,16.0,20.0,17.0,16.0,4.0,5.0,1.4
 HEAD,0,package zio - object ZQueue - object internal - class Strategy,12.0,5.0,17.0,0.0,4.0,34.0,34.0,1.0,0.02857142857142857,3.0,15.0,9.0,9.0,9.0,11.0,10.0,3.0,1.0,2.0,-1.7777777777777777
 HEAD,0,package zio - object ZQueue - object internal - class Sliding,16.0,2.0,18.0,2.0,4.0,27.0,25.0,2.0,0.07407407407407407,0.0,11.0,8.0,8.0,5.0,9.0,7.0,12.0,3.0,2.0,-0.9285714285714286
 HEAD,0,package zio - object ZQueue - object internal - class Dropping,11.0,2.0,13.0,2.0,4.0,12.0,11.0,1.0,0.08333333333333333,0.0,5.0,4.0,4.0,0.0,1.0,1.0,0.0,0.0,1.0,-1.0
 HEAD,0,package zio - object ZQueue - object internal - class BackPressure,31.0,2.0,33.0,2.0,1.0,58.0,54.0,3.0,0.05263157894736842,0.0,35.0,17.0,17.0,11.0,43.0,36.0,26.0,5.0,5.0,-1.3007210626185957
 HEAD,0,package zio - object ZQueue - method unsafeCreate - <$anon: zio.ZQueue[Any Any Nothing Nothing A A]>,31.0,0.0,31.0,2.0,4.0,113.0,101.0,6.0,0.056074766355140186,0.0,52.0,16.0,16.0,6.0,35.0,32.0,12.0,4.0,4.0,-3.0476190476190474
 HEAD,0,package stm - class TReentrantLock,29.0,5.0,32.0,0.0,2.0,108.0,58.0,51.0,0.46788990825688076,0.0,30.0,12.0,12.0,10.0,30.0,27.0,12.0,3.0,8.0,7.75
-HEAD,1,package stm - object TReentrantLock,28.0,5.0,29.0,0.0,0.0,74.0,38.0,36.0,0.4864864864864865,0.0,32.0,0.0,2.0,0.0,4.0,4.0,0.0,0.0,1.0,1.0
+HEAD,1,package stm - object TReentrantLock,28.0,5.0,29.0,0.0,0.0,74.0,38.0,36.0,0.4864864864864865,0.0,32.0,2.0,2.0,0.0,4.0,4.0,0.0,0.0,1.0,1.0
 HEAD,0,package stm - object TReentrantLock - class LockState,2.0,4.0,6.0,0.0,3.0,6.0,7.0,0.0,0.0,2.0,3.0,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stm - object TReentrantLock - class WriteLock,7.0,2.0,9.0,2.0,1.0,4.0,4.0,0.0,0.0,0.0,3.0,4.0,4.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package stm - object TReentrantLock - class ReadLock,10.0,3.0,13.0,1.0,2.0,32.0,17.0,15.0,0.46875,0.0,18.0,6.0,6.0,0.0,13.0,13.0,0.0,0.0,0.0,0.0
-HEAD,0,package stm - object TReentrantLock - object ReadLock,12.0,3.0,14.0,0.0,0.0,12.0,6.0,7.0,0.5384615384615384,0.0,5.0,0.0,2.0,0.0,5.0,5.0,0.0,0.0,0.0,0.0
+HEAD,0,package stm - object TReentrantLock - object ReadLock,12.0,3.0,14.0,0.0,0.0,12.0,6.0,7.0,0.5384615384615384,0.0,5.0,2.0,2.0,0.0,5.0,5.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - trait EitherCompat,12.0,2.0,14.0,0.0,0.0,8.0,8.0,0.0,0.0,2.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - trait EitherCompat - class EitherOps,11.0,1.0,12.0,0.0,1.0,6.0,7.0,0.0,0.0,0.0,6.0,2.0,2.0,0.0,7.0,7.0,0.0,0.0,2.0,2.0
 HEAD,0,package stm - class ZTRef,42.0,11.0,52.0,1.0,10.0,111.0,46.0,65.0,0.5855855855855856,3.0,29.0,21.0,21.0,0.0,48.0,42.0,0.0,0.0,14.0,11.0
-HEAD,0,package stm - object ZTRef,90.0,11.0,96.0,1.0,0.0,342.0,304.0,38.0,0.1111111111111111,3.0,78.0,0.0,3.0,0.0,14.0,14.0,0.0,0.0,1.0,1.0
+HEAD,0,package stm - object ZTRef,90.0,11.0,96.0,1.0,0.0,342.0,304.0,38.0,0.1111111111111111,3.0,78.0,3.0,3.0,0.0,14.0,14.0,0.0,0.0,1.0,1.0
 HEAD,0,package stm - object ZTRef - class Atomic,38.0,17.0,49.0,2.0,9.0,127.0,96.0,31.0,0.2440944881889764,0.0,31.0,17.0,17.0,5.0,55.0,52.0,6.0,2.0,13.0,11.69254658385093
 HEAD,0,package stm - object ZTRef - class Atomic - method fold - <$anon: zio.stm.ZTRef.Derived[EC ED C D]>,6.0,0.0,6.0,3.0,2.0,7.0,7.0,0.0,0.0,0.0,3.0,2.0,2.0,0.0,2.0,2.0,0.0,0.0,2.0,2.0
 HEAD,0,package stm - object ZTRef - class Atomic - method foldAll - <$anon: zio.stm.ZTRef.DerivedAll[EC ED C D]>,6.0,0.0,6.0,3.0,2.0,7.0,7.0,0.0,0.0,0.0,3.0,2.0,2.0,0.0,3.0,2.0,0.0,0.0,2.0,2.0
@@ -507,7 +507,7 @@ HEAD,0,package stm - object ZTRef - class DerivedAll - method foldAll - <$anon: 
 HEAD,0,package stm - object ZTRef - class UnifiedSyntax,27.0,1.0,28.0,0.0,1.0,88.0,88.0,0.0,0.0,0.0,31.0,38.0,38.0,88.0,79.0,53.0,104.0,31.0,9.0,8.737068965517242
 HEAD,0,package internal - class ForeachPar_Benchmark,15.0,0.0,15.0,0.0,1.0,13.0,11.0,0.0,0.0,0.0,11.0,3.0,3.0,0.0,10.0,7.0,0.0,0.0,3.0,0.1428571428571429
 HEAD,0,package zio - trait FiberPlatformSpecific,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package internal - object BenchUtils,30.0,6.0,36.0,0.0,0.0,19.0,19.0,0.0,0.0,0.0,7.0,0.0,10.0,4.0,13.0,12.0,8.0,0.0,2.0,2.0
+HEAD,0,package internal - object BenchUtils,30.0,6.0,36.0,0.0,0.0,19.0,19.0,0.0,0.0,0.0,7.0,10.0,10.0,4.0,13.0,12.0,8.0,0.0,2.0,2.0
 HEAD,0,package zio - trait TaskPlatformSpecific,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class ExitCode,3.0,5.0,8.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ExitCode,4.0,5.0,8.0,1.0,0.0,4.0,4.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -515,7 +515,7 @@ HEAD,0,package chunks - class ChunkAppendBenchmarks,8.0,0.0,8.0,0.0,1.0,26.0,23.
 HEAD,0,package zio - trait TaskPlatformSpecific,7.0,1.0,8.0,0.0,2.0,5.0,5.0,0.0,0.0,1.0,4.0,2.0,2.0,0.0,2.0,2.0,0.0,0.0,1.0,1.0
 HEAD,0,package internal - class OneElementConcurrentQueue,13.0,3.0,16.0,1.0,5.0,55.0,53.0,2.0,0.03636363636363636,0.0,18.0,16.0,16.0,0.0,28.0,28.0,0.0,0.0,2.0,-2.0
 HEAD,0,package internal - class ZInputStream,12.0,2.0,14.0,3.0,1.0,75.0,68.0,1.0,0.014492753623188406,0.0,24.0,18.0,18.0,0.0,36.0,30.0,0.0,0.0,8.0,-6.34920634920635
-HEAD,0,package internal - object ZInputStream,22.0,2.0,23.0,0.0,0.0,15.0,15.0,0.0,0.0,0.0,8.0,0.0,6.0,9.0,12.0,6.0,22.0,4.0,1.0,1.0
+HEAD,0,package internal - object ZInputStream,22.0,2.0,23.0,0.0,0.0,15.0,15.0,0.0,0.0,0.0,8.0,6.0,6.0,9.0,12.0,6.0,22.0,4.0,1.0,1.0
 HEAD,0,package zio - class IOLeftBindBenchmark,22.0,0.0,22.0,0.0,2.0,101.0,89.0,0.0,0.0,0.0,37.0,29.0,29.0,0.0,132.0,74.0,0.0,0.0,9.0,2.5238095238095237
 HEAD,17,package stream - class ZStream,542.0,22.0,559.0,0.0,61.0,2827.0,1827.0,972.0,0.34726688102893893,1.0,497.0,475.0,475.0,525.0,2199.0,1167.0,961.0,226.0,166.0,157.51848167174748
 HEAD,2,package stream - class ZStream - method catchAllCause - class State,0.0,32.0,32.0,0.0,0.0,1.0,2.0,0.0,0.0,18.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -539,7 +539,7 @@ HEAD,1,package stream - class ZStream - method zipWith - class Running,4.0,2.0,6
 HEAD,0,package stream - class ZStream - method zipWith - class LeftDone,4.0,4.0,8.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stream - class ZStream - method zipWith - class RightDone,4.0,4.0,8.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,1,package stream - class ZStream - method zipWith - object End,4.0,4.0,8.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,5,package stream - object ZStream,338.0,22.0,347.0,1.0,0.0,792.0,502.0,281.0,0.35887611749680715,1.0,219.0,0.0,106.0,87.0,341.0,264.0,131.0,36.0,48.0,44.56525233044037
+HEAD,5,package stream - object ZStream,338.0,22.0,347.0,1.0,0.0,792.0,502.0,281.0,0.35887611749680715,1.0,219.0,106.0,106.0,87.0,341.0,264.0,131.0,36.0,48.0,44.56525233044037
 HEAD,0,package stream - object ZStream - method apply - <$anon: zio.stream.ZStream[R E O]>,1.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stream - object ZStream - method fromIterator - object StreamEnd,3.0,1.0,4.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stream - object ZStream - method fromJavaIterator - <$anon: Iterator[A]>,4.0,0.0,4.0,2.0,2.0,4.0,4.0,0.0,0.0,0.0,4.0,2.0,2.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
@@ -550,12 +550,12 @@ HEAD,0,package stream - object ZStream - class AccessStreamPartiallyApplied,7.0,
 HEAD,1,package stream - object ZStream - class GroupBy,23.0,2.0,24.0,0.0,1.0,35.0,26.0,9.0,0.2571428571428571,0.0,16.0,8.0,8.0,26.0,22.0,18.0,23.0,8.0,3.0,3.0
 HEAD,1,package stream - object ZStream - class ProvideSomeLayer,9.0,2.0,10.0,0.0,1.0,6.0,6.0,0.0,0.0,0.0,4.0,1.0,1.0,0.0,2.0,2.0,0.0,0.0,1.0,1.0
 HEAD,0,package stream - object ZStream - class UpdateService,5.0,2.0,6.0,0.0,1.0,4.0,4.0,0.0,0.0,0.0,3.0,1.0,1.0,0.0,3.0,2.0,0.0,0.0,1.0,1.0
-HEAD,1,package stream - object ZStream - object Pull,17.0,4.0,21.0,0.0,0.0,9.0,10.0,0.0,0.0,0.0,15.0,0.0,6.0,0.0,10.0,10.0,0.0,0.0,2.0,2.0
+HEAD,1,package stream - object ZStream - object Pull,17.0,4.0,21.0,0.0,0.0,9.0,10.0,0.0,0.0,0.0,15.0,6.0,6.0,0.0,10.0,10.0,0.0,0.0,2.0,2.0
 HEAD,0,package stream - object ZStream - object Take,4.0,6.0,10.0,0.0,0.0,4.0,4.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stream - object ZStream - class BufferedPull,28.0,3.0,31.0,2.0,1.0,37.0,36.0,0.0,0.0,0.0,19.0,11.0,11.0,19.0,36.0,24.0,17.0,5.0,4.0,4.0
-HEAD,0,package stream - object ZStream - object BufferedPull,19.0,3.0,21.0,1.0,0.0,9.0,10.0,0.0,0.0,0.0,7.0,0.0,1.0,0.0,7.0,6.0,0.0,0.0,1.0,1.0
+HEAD,0,package stream - object ZStream - object BufferedPull,19.0,3.0,21.0,1.0,0.0,9.0,10.0,0.0,0.0,0.0,7.0,1.0,1.0,0.0,7.0,6.0,0.0,0.0,1.0,1.0
 HEAD,1,package stream - object ZStream - class Handoff,27.0,3.0,30.0,0.0,1.0,23.0,24.0,0.0,0.0,0.0,18.0,9.0,9.0,22.0,38.0,31.0,31.0,10.0,3.0,2.1294117647058823
-HEAD,0,package stream - object ZStream - object Handoff,19.0,3.0,21.0,0.0,0.0,12.0,13.0,0.0,0.0,0.0,6.0,0.0,1.0,0.0,5.0,5.0,0.0,0.0,1.0,0.7142857142857144
+HEAD,0,package stream - object ZStream - object Handoff,19.0,3.0,21.0,0.0,0.0,12.0,13.0,0.0,0.0,0.0,6.0,1.0,1.0,0.0,5.0,5.0,0.0,0.0,1.0,0.7142857142857144
 HEAD,0,package stream - object ZStream - object Handoff - trait State,0.0,32.0,32.0,0.0,0.0,1.0,2.0,0.0,0.0,18.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stream - object ZStream - object Handoff - object State,8.0,32.0,37.0,0.0,0.0,4.0,5.0,0.0,0.0,18.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stream - object ZStream - object Handoff - object State - class Empty,4.0,4.0,8.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -569,7 +569,7 @@ HEAD,0,package stream - object ZStream - object TerminationStrategy - object Eit
 HEAD,0,package stream - object ZStream - class RefineToOrDieOps,9.0,1.0,10.0,0.0,1.0,7.0,4.0,3.0,0.42857142857142855,0.0,3.0,1.0,1.0,0.0,3.0,2.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - trait FutureTransformCompat,6.0,1.0,6.0,0.0,2.0,6.0,6.0,0.0,0.0,1.0,4.0,2.0,2.0,0.0,4.0,2.0,0.0,0.0,2.0,2.0
 HEAD,0,package zio - class ChunkBuilder,1.0,40.0,41.0,3.0,0.0,1.0,1.0,0.0,0.0,18.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - object ChunkBuilder,53.0,40.0,74.0,0.0,0.0,311.0,266.0,34.0,0.11333333333333333,18.0,91.0,0.0,7.0,0.0,18.0,15.0,0.0,0.0,2.0,-1.3421052631578947
+HEAD,0,package zio - object ChunkBuilder,53.0,40.0,74.0,0.0,0.0,311.0,266.0,34.0,0.11333333333333333,18.0,91.0,7.0,7.0,0.0,18.0,15.0,0.0,0.0,2.0,-1.3421052631578947
 HEAD,0,package zio - object ChunkBuilder - method make - <$anon: zio.ChunkBuilder[A]>,13.0,0.0,13.0,4.0,1.0,31.0,29.0,0.0,0.0,0.0,14.0,9.0,9.0,0.0,15.0,15.0,0.0,0.0,4.0,-4.0
 HEAD,0,package zio - object ChunkBuilder - class Boolean,20.0,4.0,23.0,4.0,3.0,56.0,54.0,0.0,0.0,0.0,26.0,13.0,13.0,8.0,40.0,27.0,5.0,1.0,6.0,-3.0
 HEAD,0,package zio - object ChunkBuilder - class Byte,14.0,4.0,17.0,4.0,2.0,26.0,25.0,0.0,0.0,0.0,14.0,9.0,9.0,4.0,7.0,7.0,5.0,1.0,3.0,-1.0
@@ -582,13 +582,13 @@ HEAD,0,package zio - object ChunkBuilder - class Short,14.0,4.0,17.0,4.0,2.0,26.
 HEAD,0,package zio - trait BuildFromCompat,1.0,1.0,2.0,0.0,0.0,3.0,3.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - trait FutureTransformCompat,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package compression - class CompressionException,3.0,6.0,9.0,3.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package compression - object CompressionException,8.0,6.0,13.0,1.0,0.0,4.0,4.0,0.0,0.0,0.0,4.0,0.0,2.0,0.0,4.0,4.0,0.0,0.0,0.0,0.0
+HEAD,0,package compression - object CompressionException,8.0,6.0,13.0,1.0,0.0,4.0,4.0,0.0,0.0,0.0,4.0,2.0,2.0,0.0,4.0,4.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - trait PlatformSpecific,29.0,1.0,30.0,0.0,10.0,83.0,37.0,45.0,0.5487804878048781,1.0,21.0,12.0,12.0,1.0,14.0,12.0,1.0,0.0,4.0,0.19999999999999996
 HEAD,0,package internal - trait PlatformSpecific - method fromExecutor - <$anon: zio.internal.Platform>,17.0,0.0,17.0,1.0,3.0,13.0,13.0,0.0,0.0,0.0,9.0,4.0,4.0,0.0,2.0,2.0,0.0,0.0,2.0,-2.0
 HEAD,0,package fix - class CurriedAssert,1.0,1.0,2.0,0.0,1.0,13.0,13.0,0.0,0.0,0.0,1.0,3.0,3.0,12.0,10.0,2.0,15.0,4.0,1.0,1.0
 HEAD,0,package internal - class DefaultExecutors,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class GenBenchmarks,11.0,0.0,11.0,0.0,12.0,82.0,68.0,0.0,0.0,0.0,13.0,12.0,12.0,0.0,58.0,16.0,0.0,0.0,4.0,4.0
-HEAD,3,package stm - object STM,124.0,14.0,138.0,0.0,0.0,285.0,126.0,159.0,0.5578947368421052,0.0,100.0,0.0,50.0,0.0,84.0,49.0,0.0,0.0,26.0,26.0
+HEAD,3,package stm - object STM,124.0,14.0,138.0,0.0,0.0,285.0,126.0,159.0,0.5578947368421052,0.0,100.0,50.0,50.0,0.0,84.0,49.0,0.0,0.0,26.0,26.0
 HEAD,0,package internal - trait ExecutorPlatformSpecific,12.0,3.0,14.0,0.0,0.0,16.0,13.0,3.0,0.1875,1.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - trait ExecutorPlatformSpecific - <$anon: java.util.concurrent.AbstractExecutorService with scala.concurrent.ExecutionContextExecutorService>,12.0,0.0,12.0,3.0,3.0,10.0,10.0,0.0,0.0,0.0,6.0,3.0,3.0,0.0,2.0,2.0,0.0,0.0,2.0,-1.0
 HEAD,0,package chunks - class ChunkConcatBenchmarks,5.0,0.0,5.0,0.0,2.0,32.0,28.0,0.0,0.0,0.0,10.0,8.0,8.0,0.0,19.0,16.0,0.0,0.0,4.0,-2.0
@@ -598,10 +598,10 @@ HEAD,0,package zio - trait BuildFromCompat - class BuildFromOps,5.0,1.0,6.0,0.0,
 HEAD,0,package chunks - class ChunkArrayBenchmarks,15.0,0.0,15.0,0.0,1.0,22.0,14.0,0.0,0.0,0.0,22.0,7.0,7.0,0.0,20.0,18.0,0.0,0.0,7.0,-1.0
 HEAD,0,package stm - class TMapOpsBenchmarks,19.0,0.0,19.0,0.0,1.0,37.0,26.0,2.0,0.07142857142857142,0.0,30.0,8.0,8.0,0.0,37.0,32.0,0.0,0.0,8.0,-3.7777777777777777
 HEAD,0,package zio - trait ChunkLike,28.0,2.0,29.0,7.0,6.0,73.0,55.0,18.0,0.2465753424657534,1.0,31.0,12.0,12.0,0.0,26.0,22.0,0.0,0.0,3.0,1.7999999999999998
-HEAD,0,package zio - object ChunkLike,13.0,2.0,14.0,3.0,0.0,25.0,14.0,11.0,0.44,1.0,9.0,0.0,5.0,6.0,6.0,6.0,6.0,2.0,1.0,0.6363636363636364
+HEAD,0,package zio - object ChunkLike,13.0,2.0,14.0,3.0,0.0,25.0,14.0,11.0,0.44,1.0,9.0,5.0,5.0,6.0,6.0,6.0,6.0,2.0,1.0,0.6363636363636364
 HEAD,1,package zio - class Semaphore,44.0,6.0,50.0,1.0,3.0,74.0,47.0,25.0,0.3472222222222222,0.0,47.0,21.0,21.0,28.0,108.0,54.0,49.0,11.0,5.0,4.042223970626803
-HEAD,0,package zio - object Semaphore,13.0,6.0,18.0,1.0,0.0,6.0,3.0,3.0,0.5,0.0,4.0,0.0,1.0,0.0,4.0,4.0,0.0,0.0,1.0,1.0
-HEAD,0,package zio - object internals,15.0,1.0,16.0,0.0,0.0,10.0,10.0,0.0,0.0,0.0,3.0,0.0,2.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0
+HEAD,0,package zio - object Semaphore,13.0,6.0,18.0,1.0,0.0,6.0,3.0,3.0,0.5,0.0,4.0,1.0,1.0,0.0,4.0,4.0,0.0,0.0,1.0,1.0
+HEAD,0,package zio - object internals,15.0,1.0,16.0,0.0,0.0,10.0,10.0,0.0,0.0,0.0,3.0,2.0,2.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object internals - class Acquisition,3.0,2.0,5.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object internals - class NegativeArgument,3.0,1.0,4.0,5.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - trait FiberPlatformSpecific,33.0,1.0,34.0,0.0,2.0,45.0,42.0,1.0,0.023255813953488372,1.0,26.0,4.0,4.0,0.0,32.0,23.0,0.0,0.0,2.0,2.0
@@ -609,10 +609,10 @@ HEAD,0,package zio - trait FiberPlatformSpecific - method fromCompletionStage - 
 HEAD,0,package zio - trait FiberPlatformSpecific - method fromFutureJava - <$anon: zio.Fiber.Synthetic.Internal[Throwable A]>,23.0,0.0,23.0,3.0,5.0,18.0,17.0,0.0,0.0,0.0,16.0,6.0,6.0,0.0,15.0,11.0,0.0,0.0,3.0,3.0
 HEAD,0,package zio - trait BootstrapRuntime,8.0,4.0,12.0,1.0,0.0,8.0,4.0,4.0,0.5,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - class DefaultExecutors,23.0,1.0,24.0,0.0,1.0,48.0,48.0,0.0,0.0,1.0,29.0,4.0,4.0,1.0,25.0,22.0,3.0,0.0,2.0,0.9506172839506174
-HEAD,0,package internal - class DefaultExecutors - method fromThreadPoolExecutor - <$anon: zio.internal.Executor>,15.0,0.0,15.0,2.0,2.0,24.0,24.0,0.0,0.0,0.0,23.0,6.0,6.0,1.0,15.0,13.0,3.0,0.0,3.0,1.0
+HEAD,0,package internal - class DefaultExecutors - method fromThreadPoolExecutor - <$anon: zio.internal.Executor>,15.0,0.0,15.0,2.0,2.0,24.0,24.0,0.0,0.0,0.0,23.0,13.0,6.0,1.0,15.0,13.0,3.0,0.0,3.0,1.0
 HEAD,0,package internal - class DefaultExecutors - method fromThreadPoolExecutor - <$anon: zio.internal.Executor> - method metrics0 - <$anon: zio.internal.ExecutionMetrics>,7.0,0.0,7.0,1.0,5.0,13.0,13.0,0.0,0.0,0.0,16.0,7.0,7.0,0.0,11.0,11.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - trait ZManagedPlatformSpecific,24.0,1.0,25.0,0.0,3.0,40.0,40.0,0.0,0.0,1.0,23.0,8.0,8.0,0.0,45.0,34.0,0.0,0.0,5.0,3.9090909090909087
-HEAD,2,package zio - object Task,209.0,23.0,232.0,1.0,0.0,674.0,287.0,387.0,0.5741839762611276,0.0,248.0,0.0,124.0,0.0,203.0,119.0,0.0,0.0,76.0,76.0
+HEAD,2,package zio - object Task,209.0,23.0,232.0,1.0,0.0,674.0,287.0,387.0,0.5741839762611276,0.0,248.0,124.0,124.0,0.0,203.0,119.0,0.0,0.0,76.0,76.0
 HEAD,0,package zio - trait VersionSpecific,2.0,1.0,3.0,0.0,3.0,82.0,67.0,6.0,0.0821917808219178,1.0,3.0,5.0,5.0,3.0,3.0,2.0,6.0,1.0,1.0,1.0
 HEAD,1,package stream - trait ZSinkPlatformSpecificConstructors,35.0,1.0,36.0,0.0,2.0,62.0,46.0,17.0,0.2698412698412698,1.0,24.0,3.0,3.0,0.0,32.0,26.0,0.0,0.0,2.0,1.6220238095238095
 HEAD,1,package stream - trait ZStreamPlatformSpecificConstructors,106.0,3.0,107.0,0.0,13.0,361.0,272.0,85.0,0.23809523809523808,1.0,121.0,36.0,36.0,54.0,228.0,147.0,34.0,8.0,15.0,10.561923136286465
@@ -620,7 +620,7 @@ HEAD,0,package stream - trait ZStreamPlatformSpecificConstructors - method fromS
 HEAD,0,package stream - trait ZStreamPlatformSpecificConstructors - class Connection,34.0,3.0,37.0,0.0,1.0,50.0,38.0,13.0,0.2549019607843137,0.0,31.0,6.0,6.0,35.0,34.0,29.0,8.0,2.0,3.0,-0.46245614035087734
 HEAD,0,package stream - trait ZStreamPlatformSpecificConstructors - class Connection - method read - <$anon: java.nio.channels.CompletionHandler[Integer Void]>,18.0,0.0,18.0,1.0,2.0,7.0,7.0,0.0,0.0,0.0,12.0,2.0,2.0,0.0,10.0,10.0,0.0,0.0,2.0,-0.8363636363636364
 HEAD,0,package stream - trait ZStreamPlatformSpecificConstructors - class Connection - method write - <$anon: java.nio.channels.CompletionHandler[Integer Void]>,10.0,0.0,10.0,1.0,2.0,5.0,5.0,0.0,0.0,0.0,8.0,2.0,2.0,0.0,6.0,6.0,0.0,0.0,2.0,-0.6285714285714286
-HEAD,0,package stream - trait ZStreamPlatformSpecificConstructors - object Connection,11.0,3.0,12.0,0.0,0.0,7.0,5.0,3.0,0.375,0.0,4.0,0.0,1.0,0.0,5.0,4.0,0.0,0.0,1.0,1.0
+HEAD,0,package stream - trait ZStreamPlatformSpecificConstructors - object Connection,11.0,3.0,12.0,0.0,0.0,7.0,5.0,3.0,0.375,0.0,4.0,1.0,1.0,0.0,5.0,4.0,0.0,0.0,1.0,1.0
 HEAD,0,package stream - trait ZTransducerPlatformSpecificConstructors,42.0,1.0,43.0,0.0,3.0,140.0,115.0,21.0,0.15441176470588236,1.0,44.0,20.0,20.0,33.0,88.0,61.0,40.0,9.0,3.0,2.432571859779104
 HEAD,0,package zio - class FiberFailure,6.0,5.0,11.0,2.0,1.0,3.0,3.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stream - trait ZSinkPlatformSpecificConstructors,0.0,1.0,1.0,0.0,0.0,1.0,2.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -628,35 +628,35 @@ HEAD,0,package stream - trait ZStreamPlatformSpecificConstructors,20.0,3.0,23.0,
 HEAD,0,package stream - trait StreamPlatformSpecificConstructors,0.0,0.0,0.0,0.0,0.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stream - trait ZTransducerPlatformSpecificConstructors,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stm - class TQueue,29.0,5.0,34.0,0.0,2.0,155.0,106.0,49.0,0.3161290322580645,0.0,36.0,28.0,28.0,42.0,62.0,60.0,41.0,9.0,13.0,11.174830870279145
-HEAD,0,package stm - object TQueue,12.0,5.0,16.0,0.0,0.0,12.0,6.0,6.0,0.5,0.0,5.0,0.0,2.0,0.0,4.0,4.0,0.0,0.0,1.0,1.0
+HEAD,0,package stm - object TQueue,12.0,5.0,16.0,0.0,0.0,12.0,6.0,6.0,0.5,0.0,5.0,2.0,2.0,0.0,4.0,4.0,0.0,0.0,1.0,1.0
 HEAD,0,package internal - class SingleThreadedRingBuffer,11.0,2.0,13.0,0.0,1.0,46.0,45.0,0.0,0.0,0.0,19.0,11.0,11.0,0.0,31.0,22.0,0.0,0.0,6.0,-6.0
-HEAD,0,package internal - object SingleThreadedRingBuffer,3.0,2.0,4.0,0.0,0.0,3.0,3.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
-HEAD,1,package zio - object Queue,8.0,8.0,16.0,0.0,0.0,18.0,6.0,12.0,0.6666666666666666,0.0,8.0,0.0,4.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0
+HEAD,0,package internal - object SingleThreadedRingBuffer,3.0,2.0,4.0,0.0,0.0,3.0,3.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
+HEAD,1,package zio - object Queue,8.0,8.0,16.0,0.0,0.0,18.0,6.0,12.0,0.6666666666666666,0.0,8.0,4.0,4.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class InterruptStatus,3.0,14.0,17.0,2.0,1.0,4.0,4.0,0.0,0.0,2.0,3.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - object InterruptStatus,9.0,14.0,20.0,1.0,0.0,13.0,7.0,6.0,0.46153846153846156,2.0,3.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package zio - object InterruptStatus,9.0,14.0,20.0,1.0,0.0,13.0,7.0,6.0,0.46153846153846156,2.0,3.0,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object InterruptStatus - object Interruptible,4.0,3.0,7.0,3.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object InterruptStatus - object Uninterruptible,4.0,4.0,8.0,3.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stm - class TSemaphore,15.0,2.0,17.0,0.0,2.0,20.0,20.0,0.0,0.0,0.0,22.0,11.0,11.0,13.0,21.0,19.0,3.0,0.0,3.0,-0.2753623188405798
-HEAD,0,package stm - object TSemaphore,7.0,2.0,8.0,0.0,0.0,4.0,4.0,0.0,0.0,0.0,3.0,0.0,1.0,0.0,3.0,3.0,0.0,0.0,1.0,1.0
-HEAD,0,package internal - object Sync,4.0,7.0,11.0,0.0,0.0,6.0,6.0,0.0,0.0,0.0,1.0,0.0,2.0,1.0,0.0,0.0,1.0,0.0,1.0,0.6666666666666666
+HEAD,0,package stm - object TSemaphore,7.0,2.0,8.0,0.0,0.0,4.0,4.0,0.0,0.0,0.0,3.0,1.0,1.0,0.0,3.0,3.0,0.0,0.0,1.0,1.0
+HEAD,0,package internal - object Sync,4.0,7.0,11.0,0.0,0.0,6.0,6.0,0.0,0.0,0.0,1.0,2.0,2.0,1.0,0.0,0.0,1.0,0.0,1.0,0.6666666666666666
 HEAD,0,package zio - class Exit,66.0,51.0,114.0,2.0,18.0,180.0,88.0,92.0,0.5111111111111111,2.0,49.0,58.0,58.0,43.0,92.0,64.0,117.0,25.0,26.0,24.0
-HEAD,1,package zio - object Exit,40.0,51.0,88.0,1.0,0.0,35.0,35.0,0.0,0.0,2.0,31.0,0.0,13.0,4.0,43.0,35.0,8.0,2.0,6.0,5.333333333333333
+HEAD,1,package zio - object Exit,40.0,51.0,88.0,1.0,0.0,35.0,35.0,0.0,0.0,2.0,31.0,13.0,13.0,4.0,43.0,35.0,8.0,2.0,6.0,5.333333333333333
 HEAD,0,package zio - object Exit - class Success,4.0,4.0,8.0,3.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object Exit - class Failure,4.0,5.0,7.0,3.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class Has,5.0,36.0,41.0,1.0,1.0,15.0,11.0,4.0,0.26666666666666666,0.0,8.0,5.0,5.0,4.0,3.0,3.0,4.0,1.0,1.0,1.0
-HEAD,0,package zio - object Has,368.0,36.0,395.0,1.0,0.0,553.0,437.0,97.0,0.18164794007490637,0.0,79.0,0.0,26.0,10.0,270.0,77.0,10.0,3.0,24.0,23.0
+HEAD,0,package zio - object Has,368.0,36.0,395.0,1.0,0.0,553.0,437.0,97.0,0.18164794007490637,0.0,79.0,26.0,26.0,10.0,270.0,77.0,10.0,3.0,24.0,23.0
 HEAD,0,package zio - object Has - class IsHas,9.0,12.0,21.0,0.0,3.0,5.0,6.0,0.0,0.0,0.0,3.0,3.0,3.0,0.0,0.0,0.0,0.0,0.0,3.0,3.0
-HEAD,0,package zio - object Has - object IsHas,15.0,12.0,25.0,0.0,0.0,8.0,9.0,0.0,0.0,0.0,8.0,0.0,1.0,0.0,7.0,5.0,0.0,0.0,1.0,1.0
+HEAD,0,package zio - object Has - object IsHas,15.0,12.0,25.0,0.0,0.0,8.0,9.0,0.0,0.0,0.0,8.0,1.0,1.0,0.0,7.0,5.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - object Has - object IsHas - method ImplicitIs - <$anon: zio.Has.IsHas[R]>,13.0,0.0,13.0,1.0,3.0,5.0,5.0,0.0,0.0,0.0,7.0,3.0,3.0,0.0,6.0,6.0,0.0,0.0,3.0,3.0
 HEAD,0,package zio - object Has - class Union,3.0,10.0,13.0,0.0,1.0,3.0,4.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - object Has - object Union,9.0,10.0,16.0,1.0,0.0,7.0,7.0,0.0,0.0,0.0,4.0,0.0,1.0,0.0,3.0,3.0,0.0,0.0,1.0,1.0
+HEAD,0,package zio - object Has - object Union,9.0,10.0,16.0,1.0,0.0,7.0,7.0,0.0,0.0,0.0,4.0,1.0,1.0,0.0,3.0,3.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - object Has - object Union - method HasHasUnion - <$anon: zio.Has.Union[R R1]>,6.0,0.0,6.0,1.0,1.0,4.0,4.0,0.0,0.0,0.0,3.0,1.0,1.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object Has - class LowPriorityUnionImplicits,9.0,2.0,11.0,0.0,2.0,23.0,24.0,0.0,0.0,1.0,6.0,4.0,4.0,2.0,2.0,2.0,2.0,0.0,2.0,1.3333333333333335
 HEAD,0,package zio - object Has - class LowPriorityUnionImplicits - method HasAnyUnion - <$anon: zio.Has.Union[R Any]>,3.0,0.0,3.0,1.0,1.0,6.0,6.0,0.0,0.0,0.0,1.0,2.0,2.0,1.0,0.0,0.0,1.0,0.0,1.0,0.0
 HEAD,0,package zio - object Has - class LowPriorityUnionImplicits - method AnyHasUnion - <$anon: zio.Has.Union[Any R1]>,3.0,0.0,3.0,1.0,1.0,6.0,6.0,0.0,0.0,0.0,1.0,2.0,2.0,1.0,0.0,0.0,1.0,0.0,1.0,0.0
 HEAD,0,package zio - object Has - class LowPriorityUnionImplicits - <$anon: zio.Has.Union[Any Any]>,4.0,0.0,4.0,1.0,1.0,6.0,6.0,0.0,0.0,0.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,0.0,1.0,-0.6
 HEAD,0,package zio - object Has - class UnionAll,3.0,8.0,11.0,0.0,1.0,3.0,4.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - object Has - object UnionAll,10.0,8.0,15.0,1.0,0.0,7.0,7.0,0.0,0.0,0.0,4.0,0.0,1.0,0.0,3.0,3.0,0.0,0.0,1.0,1.0
+HEAD,0,package zio - object Has - object UnionAll,10.0,8.0,15.0,1.0,0.0,7.0,7.0,0.0,0.0,0.0,4.0,1.0,1.0,0.0,3.0,3.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - object Has - object UnionAll - method HasHasUnionAll - <$anon: zio.Has.UnionAll[R R1]>,7.0,0.0,7.0,1.0,1.0,4.0,4.0,0.0,0.0,0.0,3.0,1.0,1.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object Has - class LowPriorityUnionAllImplicits,9.0,2.0,11.0,0.0,2.0,23.0,24.0,0.0,0.0,1.0,6.0,4.0,4.0,2.0,2.0,2.0,2.0,0.0,2.0,1.3333333333333335
 HEAD,0,package zio - object Has - class LowPriorityUnionAllImplicits - method HasAnyUnionAll - <$anon: zio.Has.UnionAll[R Any]>,3.0,0.0,3.0,1.0,1.0,6.0,6.0,0.0,0.0,0.0,1.0,2.0,2.0,1.0,0.0,0.0,1.0,0.0,1.0,0.0
@@ -669,18 +669,18 @@ HEAD,0,package zio - class Fiber - method mapM - <$anon: zio.Fiber.Synthetic[E1 
 HEAD,0,package zio - class Fiber - method orElse - <$anon: zio.Fiber.Synthetic[E1 A1]>,20.0,0.0,20.0,2.0,5.0,22.0,22.0,0.0,0.0,0.0,17.0,11.0,11.0,6.0,24.0,14.0,29.0,4.0,4.0,2.0
 HEAD,0,package zio - class Fiber - method toFutureWith - <$anon: zio.CancelableFuture[A]>,9.0,0.0,9.0,3.0,1.0,4.0,4.0,0.0,0.0,0.0,5.0,1.0,1.0,0.0,3.0,3.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - class Fiber - method zipWith - <$anon: zio.Fiber.Synthetic[E1 C]>,24.0,0.0,24.0,2.0,5.0,14.0,14.0,0.0,0.0,0.0,21.0,7.0,7.0,7.0,29.0,17.0,11.0,2.0,5.0,3.0
-HEAD,1,package zio - object Fiber,105.0,35.0,121.0,1.0,0.0,343.0,193.0,150.0,0.43731778425655976,2.0,133.0,0.0,21.0,14.0,103.0,65.0,16.0,3.0,8.0,6.666666666666666
+HEAD,1,package zio - object Fiber,105.0,35.0,121.0,1.0,0.0,343.0,193.0,150.0,0.43731778425655976,2.0,133.0,21.0,21.0,14.0,103.0,65.0,16.0,3.0,8.0,6.666666666666666
 HEAD,0,package zio - object Fiber - class Runtime,14.0,33.0,45.0,1.0,2.0,28.0,13.0,15.0,0.5357142857142857,4.0,11.0,7.0,7.0,0.0,6.0,5.0,0.0,0.0,1.0,1.0
-HEAD,0,package zio - object Fiber - object Runtime,12.0,33.0,43.0,0.0,0.0,5.0,6.0,0.0,0.0,4.0,5.0,0.0,1.0,0.0,4.0,3.0,0.0,0.0,1.0,1.0
+HEAD,0,package zio - object Fiber - object Runtime,12.0,33.0,43.0,0.0,0.0,5.0,6.0,0.0,0.0,4.0,5.0,1.0,1.0,0.0,4.0,3.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - object Fiber - object Runtime - class Internal,1.0,19.0,20.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object Fiber - class Synthetic,1.0,11.0,11.0,1.0,0.0,1.0,1.0,0.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object Fiber - object Synthetic,3.0,11.0,12.0,0.0,0.0,3.0,4.0,0.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object Fiber - object Synthetic - class Internal,1.0,19.0,20.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object Fiber - class Descriptor,6.0,8.0,14.0,0.0,6.0,8.0,9.0,0.0,0.0,0.0,6.0,6.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - object Fiber - object Descriptor,10.0,8.0,16.0,0.0,0.0,26.0,19.0,8.0,0.2962962962962963,0.0,7.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
+HEAD,0,package zio - object Fiber - object Descriptor,10.0,8.0,16.0,0.0,0.0,26.0,19.0,8.0,0.2962962962962963,0.0,7.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - object Fiber - object Descriptor - method apply - <$anon: zio.Fiber.Descriptor>,8.0,0.0,8.0,1.0,6.0,8.0,8.0,0.0,0.0,0.0,6.0,6.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object Fiber - class Dump,6.0,5.0,11.0,1.0,5.0,18.0,8.0,10.0,0.5555555555555556,0.0,6.0,5.0,5.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - object Fiber - object Dump,8.0,5.0,11.0,1.0,0.0,14.0,15.0,0.0,0.0,0.0,5.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
+HEAD,0,package zio - object Fiber - object Dump,8.0,5.0,11.0,1.0,0.0,14.0,15.0,0.0,0.0,0.0,5.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - object Fiber - object Dump - method apply - <$anon: zio.Fiber.Dump>,5.0,0.0,5.0,2.0,4.0,6.0,6.0,0.0,0.0,0.0,4.0,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object Fiber - class Id,3.0,54.0,57.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object Fiber - object Id,5.0,54.0,58.0,1.0,0.0,6.0,4.0,3.0,0.42857142857142855,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -698,26 +698,26 @@ HEAD,0,package stm - class SingleRefBenchmark,21.0,0.0,21.0,0.0,1.0,20.0,16.0,0.
 HEAD,0,package internal - class JCToolsQueue,5.0,1.0,6.0,1.0,7.0,15.0,15.0,0.0,0.0,0.0,7.0,8.0,8.0,0.0,13.0,8.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - trait ChunkFactory,3.0,1.0,4.0,0.0,1.0,4.0,4.0,0.0,0.0,1.0,2.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
 HEAD,1,package zio - class Promise,36.0,21.0,56.0,1.0,4.0,148.0,89.0,59.0,0.39864864864864863,0.0,41.0,31.0,31.0,38.0,66.0,60.0,41.0,7.0,7.0,2.3399412143033174
-HEAD,0,package zio - object Promise,23.0,21.0,42.0,1.0,0.0,19.0,13.0,6.0,0.3157894736842105,0.0,6.0,0.0,3.0,0.0,8.0,8.0,0.0,0.0,1.0,1.0
+HEAD,0,package zio - object Promise,23.0,21.0,42.0,1.0,0.0,19.0,13.0,6.0,0.3157894736842105,0.0,6.0,3.0,3.0,0.0,8.0,8.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - object Promise - object internal,8.0,44.0,51.0,0.0,0.0,5.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object Promise - object internal - class State,2.0,14.0,16.0,2.0,0.0,1.0,1.0,0.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object Promise - object internal - class Pending,4.0,3.0,7.0,3.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object Promise - object internal - class Done,4.0,17.0,21.0,3.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - trait ZManagedPlatformSpecific,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,1,package zio - object RefM,7.0,6.0,12.0,0.0,0.0,17.0,8.0,9.0,0.5294117647058824,0.0,6.0,0.0,3.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0
+HEAD,1,package zio - object RefM,7.0,6.0,12.0,0.0,0.0,17.0,8.0,9.0,0.5294117647058824,0.0,6.0,3.0,3.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class TracingStatus,5.0,8.0,13.0,2.0,1.0,5.0,5.0,0.0,0.0,2.0,4.0,5.0,5.0,1.0,0.0,0.0,3.0,0.0,1.0,1.0
-HEAD,0,package zio - object TracingStatus,9.0,8.0,14.0,1.0,0.0,7.0,7.0,0.0,0.0,2.0,3.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package zio - object TracingStatus,9.0,8.0,14.0,1.0,0.0,7.0,7.0,0.0,0.0,2.0,3.0,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object TracingStatus - object Traced,4.0,16.0,19.0,3.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object TracingStatus - object Untraced,4.0,2.0,6.0,3.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - class OneElementConcurrentQueue,13.0,3.0,16.0,1.0,3.0,55.0,53.0,2.0,0.03636363636363636,0.0,21.0,16.0,16.0,0.0,28.0,28.0,0.0,0.0,2.0,-2.0
 HEAD,0,package zio - class BubbleSortBenchmarks,27.0,0.0,27.0,0.0,4.0,41.0,37.0,0.0,0.0,0.0,19.0,12.0,12.0,25.0,43.0,23.0,6.0,0.0,5.0,-1.4146341463414633
 HEAD,0,package internal - class PingPongBenchmark,8.0,0.0,8.0,0.0,2.0,43.0,33.0,0.0,0.0,0.0,12.0,10.0,10.0,0.0,33.0,26.0,0.0,0.0,3.0,-3.0
 HEAD,0,package internal - class OneShot,8.0,6.0,14.0,0.0,3.0,22.0,13.0,10.0,0.43478260869565216,0.0,4.0,6.0,6.0,0.0,7.0,6.0,0.0,0.0,2.0,-2.0
-HEAD,0,package internal - object OneShot,5.0,6.0,10.0,0.0,0.0,6.0,3.0,3.0,0.5,0.0,2.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
+HEAD,0,package internal - object OneShot,5.0,6.0,10.0,0.0,0.0,6.0,3.0,3.0,0.5,0.0,2.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
 HEAD,3,package zio - package object zio,21.0,10.0,30.0,1.0,0.0,33.0,30.0,13.0,0.3023255813953488,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,1,package zio - package object zio - object <*>,7.0,8.0,15.0,0.0,0.0,4.0,5.0,0.0,0.0,0.0,3.0,0.0,1.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
+HEAD,1,package zio - package object zio - object <*>,7.0,8.0,15.0,0.0,0.0,4.0,5.0,0.0,0.0,0.0,3.0,1.0,1.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class ZRef,38.0,21.0,59.0,1.0,9.0,112.0,42.0,70.0,0.625,3.0,24.0,19.0,19.0,0.0,45.0,39.0,0.0,0.0,13.0,12.0
-HEAD,2,package zio - object ZRef,81.0,21.0,96.0,1.0,0.0,518.0,472.0,46.0,0.0888030888030888,3.0,103.0,0.0,3.0,0.0,5.0,5.0,0.0,0.0,0.0,0.0
+HEAD,2,package zio - object ZRef,81.0,21.0,96.0,1.0,0.0,518.0,472.0,46.0,0.0888030888030888,3.0,103.0,3.0,3.0,0.0,5.0,5.0,0.0,0.0,0.0,0.0
 HEAD,1,package zio - object ZRef - class Atomic,27.0,22.0,45.0,2.0,11.0,150.0,150.0,0.0,0.0,0.0,41.0,36.0,36.0,0.0,70.0,66.0,0.0,0.0,23.0,2.2999662523856075
 HEAD,0,package zio - object ZRef - class Atomic - method fold - <$anon: zio.ZRef.Derived[EC ED C D]>,6.0,0.0,6.0,3.0,2.0,6.0,6.0,0.0,0.0,0.0,3.0,2.0,2.0,0.0,2.0,2.0,0.0,0.0,2.0,2.0
 HEAD,0,package zio - object ZRef - class Atomic - method foldAll - <$anon: zio.ZRef.DerivedAll[EC ED C D]>,6.0,0.0,6.0,3.0,2.0,6.0,6.0,0.0,0.0,0.0,3.0,2.0,2.0,0.0,3.0,2.0,0.0,0.0,2.0,2.0
@@ -733,30 +733,30 @@ HEAD,0,package zio - trait App,12.0,2.0,14.0,2.0,1.0,12.0,5.0,7.0,0.583333333333
 HEAD,0,package zio - class CancelableFuture,11.0,9.0,19.0,2.0,2.0,18.0,15.0,3.0,0.16666666666666666,0.0,11.0,6.0,6.0,0.0,6.0,3.0,0.0,0.0,3.0,2.166666666666667
 HEAD,0,package stm - class TSetOpsBenchmarks,12.0,0.0,12.0,0.0,1.0,13.0,10.0,0.0,0.0,0.0,9.0,2.0,2.0,0.0,7.0,7.0,0.0,0.0,2.0,-2.0
 HEAD,0,package internal - class ExecutionMetrics,2.0,3.0,5.0,0.0,6.0,26.0,8.0,18.0,0.6923076923076923,0.0,6.0,6.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - package duration - package object duration,41.0,17.0,54.0,0.0,0.0,91.0,92.0,0.0,0.0,0.0,73.0,0.0,2.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - package duration - package object duration - object Duration,22.0,16.0,35.0,0.0,0.0,27.0,28.0,0.0,0.0,0.0,26.0,0.0,12.0,3.0,15.0,15.0,5.0,1.0,1.0,1.0
-HEAD,0,package zio - package duration - package object duration - object Duration - object Finite,13.0,8.0,21.0,0.0,0.0,6.0,7.0,0.0,0.0,0.0,9.0,0.0,4.0,0.0,6.0,6.0,0.0,0.0,0.0,0.0
+HEAD,0,package zio - package duration - package object duration,41.0,17.0,54.0,0.0,0.0,91.0,92.0,0.0,0.0,0.0,73.0,2.0,2.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
+HEAD,0,package zio - package duration - package object duration - object Duration,22.0,16.0,35.0,0.0,0.0,27.0,28.0,0.0,0.0,0.0,26.0,12.0,12.0,3.0,15.0,15.0,5.0,1.0,1.0,1.0
+HEAD,0,package zio - package duration - package object duration - object Duration - object Finite,13.0,8.0,21.0,0.0,0.0,6.0,7.0,0.0,0.0,0.0,9.0,4.0,4.0,0.0,6.0,6.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - package duration - package object duration - class DurationOps,30.0,3.0,33.0,0.0,1.0,56.0,56.0,0.0,0.0,0.0,53.0,32.0,32.0,31.0,69.0,49.0,24.0,5.0,4.0,4.0
 HEAD,0,package zio - package duration - package object duration - <$anon: scala.math.Ordering[zio.duration.package.Duration]>,3.0,0.0,3.0,4.0,1.0,3.0,3.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class DurationSyntax,10.0,1.0,11.0,0.0,1.0,24.0,24.0,0.0,0.0,0.0,23.0,22.0,22.0,0.0,9.0,9.0,0.0,0.0,0.0,0.0
-HEAD,1,package zio - package random - package object random,61.0,11.0,69.0,0.0,0.0,244.0,185.0,56.0,0.23236514522821577,0.0,120.0,0.0,10.0,0.0,41.0,40.0,0.0,0.0,10.0,9.333333333333334
-HEAD,1,package zio - package random - package object random - object Random,53.0,8.0,59.0,1.0,0.0,152.0,149.0,0.0,0.0,0.0,105.0,0.0,20.0,15.0,92.0,75.0,8.0,2.0,6.0,5.851063829787234
+HEAD,1,package zio - package random - package object random,61.0,11.0,69.0,0.0,0.0,244.0,185.0,56.0,0.23236514522821577,0.0,120.0,10.0,10.0,0.0,41.0,40.0,0.0,0.0,10.0,9.333333333333334
+HEAD,1,package zio - package random - package object random - object Random,53.0,8.0,59.0,1.0,0.0,152.0,149.0,0.0,0.0,0.0,105.0,20.0,20.0,15.0,92.0,75.0,8.0,2.0,6.0,5.851063829787234
 HEAD,0,package zio - package random - package object random - object Random - trait Service,8.0,9.0,17.0,1.0,17.0,21.0,21.0,0.0,0.0,0.0,17.0,17.0,17.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - package random - package object random - object Random - object Service,26.0,9.0,33.0,1.0,0.0,45.0,46.0,0.0,0.0,0.0,30.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - package random - package object random - object Random - object Service - <$anon: zio.random.Random.Service>,23.0,0.0,23.0,2.0,7.0,43.0,43.0,0.0,0.0,0.0,30.0,10.0,10.0,0.0,26.0,19.0,0.0,0.0,5.0,1.0
 HEAD,0,package internal - class OfferBenchmark,6.0,0.0,6.0,0.0,2.0,24.0,19.0,0.0,0.0,0.0,9.0,4.0,4.0,0.0,9.0,9.0,0.0,0.0,2.0,-2.0
-HEAD,1,package macros - object AccessibleMacroExample,35.0,0.0,35.0,0.0,0.0,60.0,57.0,3.0,0.05,0.0,34.0,0.0,9.0,0.0,8.0,8.0,0.0,0.0,0.0,0.0
+HEAD,1,package macros - object AccessibleMacroExample,35.0,0.0,35.0,0.0,0.0,60.0,57.0,3.0,0.05,0.0,34.0,9.0,9.0,0.0,8.0,8.0,0.0,0.0,0.0,0.0
 HEAD,0,package macros - object AccessibleMacroExample - trait Foo,1.0,2.0,3.0,0.0,0.0,1.0,2.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package macros - object AccessibleMacroExample - class Bar,4.0,1.0,5.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package macros - object AccessibleMacroExample - class Wrapped,3.0,3.0,6.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,1,package macros - object AccessibleMacroExample - trait Service,7.0,2.0,9.0,0.0,8.0,12.0,13.0,0.0,0.0,0.0,8.0,8.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,1,package macros - object AccessibleMacroExample - <$anon: zio.examples.macros.AccessibleMacroExample.Service>,16.0,0.0,16.0,1.0,8.0,12.0,12.0,0.0,0.0,0.0,15.0,8.0,8.0,0.0,9.0,9.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class CanFail,0.0,16.0,16.0,0.0,0.0,1.0,2.0,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - object CanFail,2.0,16.0,17.0,1.0,0.0,6.0,5.0,1.0,0.16666666666666666,3.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,2,package zio - object URIO,311.0,1.0,312.0,0.0,0.0,673.0,289.0,384.0,0.5705794947994056,0.0,245.0,0.0,122.0,0.0,187.0,107.0,0.0,0.0,69.0,69.0
+HEAD,0,package zio - object CanFail,2.0,16.0,17.0,1.0,0.0,6.0,5.0,1.0,0.16666666666666666,3.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,2,package zio - object URIO,311.0,1.0,312.0,0.0,0.0,673.0,289.0,384.0,0.5705794947994056,0.0,245.0,122.0,122.0,0.0,187.0,107.0,0.0,0.0,69.0,69.0
 HEAD,0,package zio - trait ZIOPlatformSpecific,5.0,1.0,5.0,0.0,1.0,6.0,7.0,0.0,0.0,1.0,2.0,2.0,2.0,0.0,3.0,2.0,0.0,0.0,2.0,2.0
 HEAD,0,package zio - trait ZIOCompanionPlatformSpecific,9.0,1.0,10.0,0.0,3.0,7.0,6.0,1.0,0.14285714285714285,1.0,6.0,3.0,3.0,0.0,3.0,3.0,0.0,0.0,1.0,1.0
-HEAD,0,package zio - package blocking - package object blocking,65.0,16.0,78.0,0.0,0.0,181.0,114.0,67.0,0.3701657458563536,0.0,49.0,0.0,6.0,0.0,24.0,23.0,0.0,0.0,6.0,6.0
+HEAD,0,package zio - package blocking - package object blocking,65.0,16.0,78.0,0.0,0.0,181.0,114.0,67.0,0.3701657458563536,0.0,49.0,6.0,6.0,0.0,24.0,23.0,0.0,0.0,6.0,6.0
 HEAD,0,package zio - package blocking - package object blocking - object Blocking,45.0,6.0,51.0,1.0,0.0,111.0,79.0,32.0,0.2882882882882883,0.0,36.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - package blocking - package object blocking - object Blocking - trait Service,34.0,7.0,41.0,1.0,1.0,100.0,68.0,32.0,0.32,0.0,33.0,12.0,12.0,3.0,44.0,34.0,13.0,2.0,2.0,1.0408163265306123
 HEAD,0,package zio - package blocking - package object blocking - object Blocking - object Service,7.0,7.0,12.0,1.0,0.0,5.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -764,24 +764,24 @@ HEAD,0,package zio - package blocking - package object blocking - object Blockin
 HEAD,0,package zio - package blocking - package object blocking - object internal,9.0,4.0,13.0,0.0,0.0,20.0,21.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package macros - class accessible,3.0,0.0,3.0,2.0,1.0,3.0,3.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - class OneShot,11.0,6.0,17.0,0.0,4.0,52.0,35.0,18.0,0.33962264150943394,0.0,10.0,11.0,11.0,0.0,30.0,17.0,0.0,0.0,3.0,-3.0
-HEAD,0,package internal - object OneShot,6.0,6.0,11.0,0.0,0.0,7.0,4.0,3.0,0.42857142857142855,0.0,2.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
-HEAD,0,package internal - object RingBuffer,8.0,4.0,11.0,0.0,0.0,9.0,7.0,3.0,0.3,2.0,4.0,0.0,1.0,0.0,4.0,4.0,0.0,0.0,1.0,-1.0
+HEAD,0,package internal - object OneShot,6.0,6.0,11.0,0.0,0.0,7.0,4.0,3.0,0.42857142857142855,0.0,2.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
+HEAD,0,package internal - object RingBuffer,8.0,4.0,11.0,0.0,0.0,9.0,7.0,3.0,0.3,2.0,4.0,1.0,1.0,0.0,4.0,4.0,0.0,0.0,1.0,-1.0
 HEAD,0,package internal - class RingBuffer,12.0,4.0,16.0,1.0,2.0,140.0,89.0,52.0,0.36879432624113473,2.0,23.0,20.0,20.0,0.0,36.0,21.0,0.0,0.0,6.0,-6.0
-HEAD,0,package zio - package system - package object system,37.0,5.0,42.0,0.0,0.0,108.0,75.0,31.0,0.29245283018867924,0.0,51.0,0.0,6.0,0.0,24.0,24.0,0.0,0.0,6.0,6.0
-HEAD,0,package zio - package system - package object system - object System,32.0,8.0,38.0,1.0,0.0,56.0,54.0,0.0,0.0,0.0,41.0,0.0,4.0,0.0,12.0,12.0,0.0,0.0,4.0,4.0
+HEAD,0,package zio - package system - package object system,37.0,5.0,42.0,0.0,0.0,108.0,75.0,31.0,0.29245283018867924,0.0,51.0,6.0,6.0,0.0,24.0,24.0,0.0,0.0,6.0,6.0
+HEAD,0,package zio - package system - package object system - object System,32.0,8.0,38.0,1.0,0.0,56.0,54.0,0.0,0.0,0.0,41.0,4.0,4.0,0.0,12.0,12.0,0.0,0.0,4.0,4.0
 HEAD,0,package zio - package system - package object system - object System - trait Service,4.0,9.0,13.0,1.0,9.0,11.0,11.0,0.0,0.0,0.0,9.0,9.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - package system - package object system - object System - object Service,26.0,9.0,33.0,1.0,0.0,23.0,22.0,0.0,0.0,0.0,25.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - package system - package object system - object System - object Service - <$anon: zio.system.System.Service>,23.0,0.0,23.0,2.0,2.0,21.0,19.0,0.0,0.0,0.0,25.0,6.0,6.0,0.0,19.0,15.0,0.0,0.0,4.0,4.0
 HEAD,0,package zio - class =!=,1.0,4.0,5.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - object =!=,6.0,4.0,8.0,1.0,0.0,7.0,6.0,0.0,0.0,0.0,5.0,0.0,4.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
+HEAD,0,package zio - object =!=,6.0,4.0,8.0,1.0,0.0,7.0,6.0,0.0,0.0,0.0,5.0,4.0,4.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object =!= - method neq - <$anon: A =!= B>,1.0,0.0,1.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package internal - object Sync,4.0,7.0,11.0,0.0,0.0,6.0,6.0,0.0,0.0,0.0,1.0,0.0,2.0,1.0,0.0,0.0,1.0,0.0,1.0,0.6666666666666666
+HEAD,0,package internal - object Sync,4.0,7.0,11.0,0.0,0.0,6.0,6.0,0.0,0.0,0.0,1.0,2.0,2.0,1.0,0.0,0.0,1.0,0.0,1.0,0.6666666666666666
 HEAD,0,package zio - trait ManagedApp,14.0,1.0,14.0,2.0,2.0,12.0,8.0,4.0,0.3333333333333333,0.0,6.0,2.0,2.0,0.0,1.0,1.0,0.0,0.0,1.0,-1.0
 HEAD,0,package zio - trait ManagedApp - <$anon: zio.App>,10.0,0.0,10.0,3.0,1.0,4.0,4.0,0.0,0.0,0.0,4.0,1.0,1.0,0.0,3.0,3.0,0.0,0.0,1.0,1.0
 HEAD,0,package stream - class Take,20.0,6.0,26.0,2.0,1.0,40.0,18.0,22.0,0.55,0.0,16.0,6.0,6.0,0.0,15.0,13.0,0.0,0.0,5.0,5.0
-HEAD,2,package stream - object Take,30.0,6.0,35.0,1.0,0.0,54.0,22.0,32.0,0.5925925925925926,0.0,22.0,0.0,9.0,0.0,31.0,30.0,0.0,0.0,4.0,4.0
+HEAD,2,package stream - object Take,30.0,6.0,35.0,1.0,0.0,54.0,22.0,32.0,0.5925925925925926,0.0,22.0,9.0,9.0,0.0,31.0,30.0,0.0,0.0,4.0,4.0
 HEAD,0,package stream - class ZTransducer,43.0,6.0,48.0,0.0,2.0,95.0,59.0,37.0,0.3854166666666667,1.0,28.0,17.0,17.0,20.0,86.0,61.0,12.0,2.0,12.0,12.0
-HEAD,2,package stream - object ZTransducer,149.0,6.0,152.0,1.0,0.0,800.0,544.0,247.0,0.3122629582806574,1.0,159.0,0.0,136.0,204.0,564.0,326.0,285.0,73.0,31.0,30.232876712328768
+HEAD,2,package stream - object ZTransducer,149.0,6.0,152.0,1.0,0.0,800.0,544.0,247.0,0.3122629582806574,1.0,159.0,129.0,136.0,204.0,564.0,326.0,285.0,73.0,31.0,30.232876712328768
 HEAD,0,package stream - object ZTransducer - method apply - <$anon: zio.stream.ZTransducer[R E I O]>,1.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stream - object ZTransducer - method branchAfter - trait State,0.0,32.0,32.0,0.0,0.0,1.0,2.0,0.0,0.0,18.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stream - object ZTransducer - method branchAfter - object State,10.0,32.0,39.0,0.0,0.0,6.0,7.0,0.0,0.0,18.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -789,15 +789,15 @@ HEAD,0,package stream - object ZTransducer - method branchAfter - object State -
 HEAD,0,package stream - object ZTransducer - method branchAfter - object State - class Emitting,4.0,2.0,6.0,2.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stream - object ZTransducer - method foldWeightedDecompose - class FoldWeightedState,4.0,2.0,6.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stream - object ZTransducer - method foldWeightedDecomposeM - class FoldWeightedState,4.0,2.0,6.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package stream - object ZTransducer - object Push,6.0,4.0,10.0,0.0,0.0,5.0,6.0,0.0,0.0,0.0,4.0,0.0,2.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0
+HEAD,0,package stream - object ZTransducer - object Push,6.0,4.0,10.0,0.0,0.0,5.0,6.0,0.0,0.0,0.0,4.0,2.0,2.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - class Executor,13.0,32.0,43.0,1.0,3.0,36.0,18.0,18.0,0.5,1.0,10.0,5.0,5.0,0.0,2.0,2.0,0.0,0.0,1.0,-1.0
 HEAD,0,package internal - class Executor - <$anon: scala.concurrent.ExecutionContext>,9.0,0.0,9.0,1.0,2.0,6.0,6.0,0.0,0.0,0.0,7.0,3.0,3.0,0.0,5.0,5.0,0.0,0.0,2.0,-2.0
-HEAD,0,package internal - object Executor,12.0,32.0,41.0,1.0,0.0,19.0,16.0,3.0,0.15789473684210525,1.0,5.0,0.0,2.0,1.0,2.0,2.0,3.0,0.0,1.0,0.8400000000000001
+HEAD,0,package internal - object Executor,12.0,32.0,41.0,1.0,0.0,19.0,16.0,3.0,0.15789473684210525,1.0,5.0,2.0,2.0,1.0,2.0,2.0,3.0,0.0,1.0,0.8400000000000001
 HEAD,0,package internal - object Executor - method fromExecutionContext - <$anon: zio.internal.Executor>,8.0,0.0,8.0,2.0,3.0,11.0,11.0,0.0,0.0,0.0,4.0,4.0,4.0,1.0,1.0,1.0,3.0,0.0,1.0,-1.0
 HEAD,0,package clock - trait PlatformSpecific,13.0,2.0,15.0,0.0,0.0,22.0,22.0,0.0,0.0,1.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package clock - trait PlatformSpecific - <$anon: zio.internal.Scheduler>,12.0,0.0,12.0,1.0,1.0,20.0,20.0,0.0,0.0,0.0,5.0,4.0,4.0,7.0,6.0,3.0,20.0,0.0,1.0,0.5737704918032787
 HEAD,0,package zio - class ZLayer,92.0,34.0,118.0,0.0,9.0,211.0,123.0,89.0,0.419811320754717,5.0,61.0,37.0,37.0,43.0,115.0,80.0,65.0,19.0,24.0,24.0
-HEAD,1,package zio - object ZLayer,1984.0,34.0,2006.0,0.0,0.0,1882.0,1236.0,645.0,0.34290271132376393,5.0,243.0,0.0,175.0,0.0,1102.0,408.0,0.0,0.0,167.0,167.0
+HEAD,1,package zio - object ZLayer,1984.0,34.0,2006.0,0.0,0.0,1882.0,1236.0,645.0,0.34290271132376393,5.0,243.0,175.0,175.0,0.0,1102.0,408.0,0.0,0.0,167.0,167.0
 HEAD,1,package zio - object ZLayer - class Fold,3.0,7.0,9.0,2.0,0.0,5.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ZLayer - class Fresh,3.0,2.0,4.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ZLayer - class Managed,4.0,13.0,16.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -805,19 +805,19 @@ HEAD,0,package zio - object ZLayer - class Suspend,4.0,1.0,5.0,2.0,0.0,1.0,1.0,0
 HEAD,1,package zio - object ZLayer - class ZipWithPar,4.0,2.0,5.0,2.0,0.0,5.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ZLayer - class ZLayerPassthroughOps,6.0,1.0,7.0,0.0,1.0,8.0,4.0,4.0,0.5,0.0,3.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ZLayer - class MemoMap,2.0,4.0,5.0,0.0,1.0,8.0,4.0,5.0,0.5555555555555556,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - object ZLayer - object MemoMap,47.0,4.0,48.0,0.0,0.0,68.0,66.0,3.0,0.043478260869565216,0.0,30.0,0.0,16.0,42.0,88.0,26.0,76.0,15.0,1.0,1.0
+HEAD,0,package zio - object ZLayer - object MemoMap,47.0,4.0,48.0,0.0,0.0,68.0,66.0,3.0,0.043478260869565216,0.0,30.0,16.0,16.0,42.0,88.0,26.0,76.0,15.0,1.0,1.0
 HEAD,0,package zio - object ZLayer - object MemoMap - method make - <$anon: zio.ZLayer.MemoMap>,42.0,0.0,42.0,1.0,1.0,58.0,58.0,0.0,0.0,0.0,27.0,16.0,16.0,42.0,85.0,24.0,76.0,15.0,1.0,1.0
 HEAD,0,package zio - class IONarrowFlatMapBenchmark,22.0,0.0,22.0,0.0,2.0,93.0,82.0,0.0,0.0,0.0,34.0,20.0,20.0,0.0,78.0,45.0,0.0,0.0,9.0,4.1
 HEAD,0,package chunks - class ChainBenchmarks,10.0,0.0,10.0,0.0,5.0,34.0,26.0,0.0,0.0,0.0,21.0,8.0,8.0,0.0,20.0,16.0,0.0,0.0,6.0,6.0
 HEAD,0,package internal - class ReduceAllParBenchmark,14.0,0.0,14.0,0.0,1.0,14.0,12.0,0.0,0.0,0.0,10.0,3.0,3.0,0.0,10.0,7.0,0.0,0.0,3.0,0.0
 HEAD,0,package internal - class OneElementQueueSeqBenchmark,8.0,0.0,8.0,0.0,2.0,32.0,27.0,0.0,0.0,0.0,10.0,6.0,6.0,0.0,12.0,12.0,0.0,0.0,6.0,-1.3368983957219251
 HEAD,0,package chunks - class MixedChunkBenchmarks,16.0,0.0,16.0,0.0,1.0,46.0,37.0,0.0,0.0,0.0,30.0,8.0,8.0,0.0,68.0,27.0,0.0,0.0,8.0,-1.0
-HEAD,0,package internal - object RingBuffer,8.0,4.0,11.0,0.0,0.0,9.0,7.0,3.0,0.3,2.0,4.0,0.0,1.0,0.0,4.0,4.0,0.0,0.0,1.0,-1.0
+HEAD,0,package internal - object RingBuffer,8.0,4.0,11.0,0.0,0.0,9.0,7.0,3.0,0.3,2.0,4.0,1.0,1.0,0.0,4.0,4.0,0.0,0.0,1.0,-1.0
 HEAD,0,package internal - class RingBuffer,14.0,4.0,18.0,1.0,3.0,140.0,89.0,52.0,0.36879432624113473,2.0,25.0,20.0,20.0,0.0,36.0,23.0,0.0,0.0,6.0,-6.0
 HEAD,0,package internal - class RingBufferArb,3.0,4.0,7.0,2.0,1.0,3.0,3.0,0.0,0.0,0.0,4.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
-HEAD,0,package internal - object RingBufferArb,6.0,4.0,9.0,0.0,0.0,6.0,6.0,0.0,0.0,0.0,3.0,0.0,1.0,0.0,3.0,3.0,0.0,0.0,1.0,-1.0
+HEAD,0,package internal - object RingBufferArb,6.0,4.0,9.0,0.0,0.0,6.0,6.0,0.0,0.0,0.0,3.0,1.0,1.0,0.0,3.0,3.0,0.0,0.0,1.0,-1.0
 HEAD,0,package zio - class ChunkCanBuildFrom,3.0,12.0,15.0,1.0,2.0,4.0,4.0,0.0,0.0,0.0,2.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - object ChunkCanBuildFrom,23.0,12.0,25.0,0.0,0.0,74.0,47.0,27.0,0.36486486486486486,0.0,20.0,0.0,1.0,0.0,3.0,2.0,0.0,0.0,1.0,1.0
+HEAD,0,package zio - object ChunkCanBuildFrom,23.0,12.0,25.0,0.0,0.0,74.0,47.0,27.0,0.36486486486486486,0.0,20.0,1.0,1.0,0.0,3.0,2.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - object ChunkCanBuildFrom - method apply - <$anon: zio.ChunkCanBuildFrom[A]>,5.0,0.0,5.0,2.0,2.0,4.0,4.0,0.0,0.0,0.0,3.0,2.0,2.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ChunkCanBuildFrom - <$anon: zio.ChunkCanBuildFrom[Boolean]>,5.0,0.0,5.0,2.0,2.0,4.0,4.0,0.0,0.0,0.0,2.0,2.0,2.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ChunkCanBuildFrom - <$anon: zio.ChunkCanBuildFrom[Byte]>,5.0,0.0,5.0,2.0,2.0,4.0,4.0,0.0,0.0,0.0,2.0,2.0,2.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
@@ -828,20 +828,20 @@ HEAD,0,package zio - object ChunkCanBuildFrom - <$anon: zio.ChunkCanBuildFrom[In
 HEAD,0,package zio - object ChunkCanBuildFrom - <$anon: zio.ChunkCanBuildFrom[Long]>,5.0,0.0,5.0,2.0,2.0,4.0,4.0,0.0,0.0,0.0,2.0,2.0,2.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object ChunkCanBuildFrom - <$anon: zio.ChunkCanBuildFrom[Short]>,5.0,0.0,5.0,2.0,2.0,4.0,4.0,0.0,0.0,0.0,2.0,2.0,2.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package stm - class TPriorityQueue,44.0,1.0,45.0,0.0,2.0,134.0,89.0,45.0,0.3358208955223881,0.0,56.0,33.0,33.0,59.0,122.0,102.0,96.0,21.0,14.0,11.674057649667406
-HEAD,0,package stm - object TPriorityQueue,24.0,1.0,24.0,0.0,0.0,19.0,10.0,9.0,0.47368421052631576,0.0,13.0,0.0,3.0,0.0,20.0,16.0,0.0,0.0,3.0,3.0
+HEAD,0,package stm - object TPriorityQueue,24.0,1.0,24.0,0.0,0.0,19.0,10.0,9.0,0.47368421052631576,0.0,13.0,3.0,3.0,0.0,20.0,16.0,0.0,0.0,3.0,3.0
 HEAD,0,package stream - class SubscriptionRef,2.0,1.0,3.0,0.0,0.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package stream - object SubscriptionRef,12.0,1.0,12.0,0.0,0.0,9.0,6.0,3.0,0.3333333333333333,0.0,4.0,0.0,2.0,5.0,5.0,5.0,6.0,2.0,1.0,1.0
+HEAD,0,package stream - object SubscriptionRef,12.0,1.0,12.0,0.0,0.0,9.0,6.0,3.0,0.3333333333333333,0.0,4.0,2.0,2.0,5.0,5.0,5.0,6.0,2.0,1.0,1.0
 HEAD,0,package internal - class Tracing,4.0,15.0,19.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package internal - object Tracing,6.0,15.0,20.0,1.0,0.0,3.0,3.0,0.0,0.0,0.0,3.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
+HEAD,0,package internal - object Tracing,6.0,15.0,20.0,1.0,0.0,3.0,3.0,0.0,0.0,0.0,3.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
 HEAD,0,package stm - class TReentrantLockBenchmark,14.0,0.0,14.0,0.0,16.0,105.0,51.0,0.0,0.0,0.0,35.0,25.0,25.0,2.0,38.0,37.0,2.0,0.0,22.0,-20.51851851851852
 HEAD,0,package zio - class ZOutputStream,2.0,3.0,5.0,0.0,1.0,3.0,4.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - object ZOutputStream,10.0,3.0,11.0,0.0,0.0,8.0,8.0,0.0,0.0,0.0,5.0,0.0,1.0,0.0,4.0,4.0,0.0,0.0,1.0,0.14285714285714285
+HEAD,0,package zio - object ZOutputStream,10.0,3.0,11.0,0.0,0.0,8.0,8.0,0.0,0.0,0.0,5.0,1.0,1.0,0.0,4.0,4.0,0.0,0.0,1.0,0.14285714285714285
 HEAD,0,package zio - object ZOutputStream - method fromOutputStream - <$anon: zio.ZOutputStream>,8.0,0.0,8.0,1.0,1.0,6.0,6.0,0.0,0.0,0.0,4.0,1.0,1.0,0.0,3.0,3.0,0.0,0.0,1.0,-1.0
-HEAD,0,package stm - object TRef,7.0,9.0,16.0,0.0,0.0,12.0,6.0,6.0,0.5,0.0,4.0,0.0,2.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
-HEAD,0,package internal - object Sync,3.0,7.0,10.0,0.0,0.0,3.0,3.0,0.0,0.0,0.0,2.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
+HEAD,0,package stm - object TRef,7.0,9.0,16.0,0.0,0.0,12.0,6.0,6.0,0.5,0.0,4.0,2.0,2.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
+HEAD,0,package internal - object Sync,3.0,7.0,10.0,0.0,0.0,3.0,3.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0
 HEAD,0,package chunks - class ArrayBenchmarks,21.0,0.0,21.0,0.0,1.0,66.0,56.0,0.0,0.0,0.0,35.0,15.0,15.0,0.0,53.0,46.0,0.0,0.0,9.0,-6.0
 HEAD,0,package internal - class BenchQueueType,3.0,10.0,13.0,2.0,0.0,1.0,1.0,0.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package internal - object BenchQueueType,15.0,10.0,25.0,1.0,0.0,13.0,14.0,0.0,0.0,8.0,2.0,0.0,10.0,5.0,8.0,1.0,17.0,0.0,1.0,1.0
+HEAD,0,package internal - object BenchQueueType,15.0,10.0,25.0,1.0,0.0,13.0,14.0,0.0,0.0,8.0,2.0,10.0,10.0,5.0,8.0,1.0,17.0,0.0,1.0,1.0
 HEAD,0,package internal - object RingBufferPow2Type,4.0,2.0,6.0,3.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - object RingBufferArbType,4.0,2.0,6.0,3.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - object OneElementQueueType,4.0,2.0,6.0,3.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -851,7 +851,7 @@ HEAD,0,package internal - object JucBlockingType,4.0,2.0,6.0,3.0,0.0,1.0,1.0,0.0
 HEAD,0,package internal - object JCToolsType,4.0,2.0,6.0,3.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - object NotThreadSafeType,4.0,2.0,6.0,3.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package stm - class TPromise,22.0,1.0,23.0,0.0,1.0,17.0,16.0,0.0,0.0,0.0,16.0,7.0,7.0,9.0,14.0,13.0,5.0,0.0,2.0,2.0
-HEAD,0,package stm - object TPromise,8.0,1.0,8.0,0.0,0.0,4.0,4.0,0.0,0.0,0.0,3.0,0.0,1.0,0.0,3.0,3.0,0.0,0.0,1.0,1.0
+HEAD,0,package stm - object TPromise,8.0,1.0,8.0,0.0,0.0,4.0,4.0,0.0,0.0,0.0,3.0,1.0,1.0,0.0,3.0,3.0,0.0,0.0,1.0,1.0
 HEAD,0,package stm - class STMFlatMapBenchmark,10.0,0.0,10.0,0.0,1.0,12.0,9.0,0.0,0.0,0.0,10.0,2.0,2.0,0.0,13.0,8.0,0.0,0.0,1.0,0.4285714285714286
 HEAD,0,package internal - object PlatformConstants,2.0,2.0,4.0,0.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - trait ExecutorPlatformSpecific,13.0,3.0,14.0,0.0,0.0,16.0,13.0,3.0,0.1875,1.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -860,7 +860,7 @@ HEAD,0,package clock - trait PlatformSpecific,13.0,2.0,15.0,0.0,0.0,22.0,22.0,0.
 HEAD,0,package clock - trait PlatformSpecific - <$anon: zio.internal.Scheduler>,12.0,0.0,12.0,1.0,1.0,20.0,20.0,0.0,0.0,0.0,5.0,4.0,4.0,7.0,6.0,3.0,20.0,0.0,1.0,0.5737704918032787
 HEAD,0,package internal - class NamedThreadFactory,16.0,5.0,21.0,1.0,1.0,14.0,14.0,0.0,0.0,0.0,12.0,1.0,1.0,0.0,4.0,4.0,0.0,0.0,1.0,-1.0
 HEAD,0,package zio - class ZInputStream,3.0,3.0,6.0,0.0,3.0,5.0,6.0,0.0,0.0,0.0,3.0,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - object ZInputStream,14.0,3.0,15.0,0.0,0.0,35.0,35.0,0.0,0.0,0.0,17.0,0.0,6.0,2.0,31.0,16.0,8.0,2.0,1.0,0.180327868852459
+HEAD,0,package zio - object ZInputStream,14.0,3.0,15.0,0.0,0.0,35.0,35.0,0.0,0.0,0.0,17.0,6.0,6.0,2.0,31.0,16.0,8.0,2.0,1.0,0.180327868852459
 HEAD,0,package zio - object ZInputStream - method fromInputStream - <$anon: zio.ZInputStream>,12.0,0.0,12.0,1.0,3.0,32.0,32.0,0.0,0.0,0.0,16.0,8.0,8.0,4.0,30.0,20.0,8.0,2.0,2.0,0.2142857142857142
 HEAD,0,package zio - trait ZManagedPlatformSpecific,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class Cause,95.0,65.0,153.0,2.0,22.0,457.0,341.0,101.0,0.22850678733031674,8.0,113.0,152.0,152.0,89.0,397.0,161.0,589.0,127.0,31.0,28.311594202898554
@@ -869,16 +869,16 @@ HEAD,0,package zio - class Cause - method prettyPrint - class Step,1.0,3.0,4.0,1
 HEAD,0,package zio - class Cause - method prettyPrint - class Sequential,4.0,8.0,12.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class Cause - method prettyPrint - class Parallel,4.0,8.0,12.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class Cause - method prettyPrint - class Failure,4.0,5.0,9.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,1,package zio - object Cause,92.0,65.0,140.0,1.0,0.0,348.0,278.0,19.0,0.06397306397306397,8.0,91.0,0.0,40.0,18.0,110.0,31.0,204.0,39.0,2.0,2.0
-HEAD,1,package zio - object Cause - object Empty,6.0,8.0,13.0,0.0,0.0,12.0,6.0,0.0,0.0,0.0,3.0,0.0,1.0,0.0,3.0,3.0,0.0,0.0,1.0,1.0
-HEAD,0,package zio - object Cause - object Fail,10.0,8.0,16.0,0.0,0.0,14.0,8.0,0.0,0.0,0.0,5.0,0.0,2.0,0.0,4.0,4.0,0.0,0.0,1.0,1.0
-HEAD,0,package zio - object Cause - object Die,11.0,5.0,14.0,0.0,0.0,14.0,8.0,0.0,0.0,0.0,5.0,0.0,2.0,0.0,4.0,4.0,0.0,0.0,1.0,1.0
-HEAD,0,package zio - object Cause - object Interrupt,12.0,4.0,14.0,0.0,0.0,14.0,8.0,0.0,0.0,0.0,6.0,0.0,2.0,0.0,4.0,4.0,0.0,0.0,1.0,1.0
-HEAD,0,package zio - object Cause - object Traced,14.0,16.0,28.0,0.0,0.0,14.0,8.0,0.0,0.0,0.0,6.0,0.0,2.0,0.0,4.0,4.0,0.0,0.0,1.0,1.0
-HEAD,0,package zio - object Cause - object Then,9.0,4.0,11.0,0.0,0.0,14.0,8.0,0.0,0.0,0.0,5.0,0.0,2.0,0.0,4.0,4.0,0.0,0.0,1.0,1.0
-HEAD,0,package zio - object Cause - object Both,9.0,4.0,11.0,0.0,0.0,14.0,8.0,0.0,0.0,0.0,5.0,0.0,2.0,0.0,4.0,4.0,0.0,0.0,1.0,1.0
-HEAD,0,package zio - object Cause - object Internal,37.0,19.0,50.0,0.0,0.0,186.0,174.0,11.0,0.05945945945945946,0.0,53.0,0.0,32.0,25.0,75.0,28.0,129.0,31.0,5.0,5.0
-HEAD,0,package zio - object Cause - object Internal - object Empty,9.0,8.0,16.0,3.0,0.0,10.0,10.0,0.0,0.0,0.0,3.0,0.0,7.0,5.0,10.0,3.0,24.0,6.0,1.0,1.0
+HEAD,1,package zio - object Cause,92.0,65.0,140.0,1.0,0.0,348.0,278.0,19.0,0.06397306397306397,8.0,91.0,40.0,40.0,18.0,110.0,31.0,204.0,39.0,2.0,2.0
+HEAD,1,package zio - object Cause - object Empty,6.0,8.0,13.0,0.0,0.0,12.0,6.0,0.0,0.0,0.0,3.0,1.0,1.0,0.0,3.0,3.0,0.0,0.0,1.0,1.0
+HEAD,0,package zio - object Cause - object Fail,10.0,8.0,16.0,0.0,0.0,14.0,8.0,0.0,0.0,0.0,5.0,2.0,2.0,0.0,4.0,4.0,0.0,0.0,1.0,1.0
+HEAD,0,package zio - object Cause - object Die,11.0,5.0,14.0,0.0,0.0,14.0,8.0,0.0,0.0,0.0,5.0,2.0,2.0,0.0,4.0,4.0,0.0,0.0,1.0,1.0
+HEAD,0,package zio - object Cause - object Interrupt,12.0,4.0,14.0,0.0,0.0,14.0,8.0,0.0,0.0,0.0,6.0,2.0,2.0,0.0,4.0,4.0,0.0,0.0,1.0,1.0
+HEAD,0,package zio - object Cause - object Traced,14.0,16.0,28.0,0.0,0.0,14.0,8.0,0.0,0.0,0.0,6.0,2.0,2.0,0.0,4.0,4.0,0.0,0.0,1.0,1.0
+HEAD,0,package zio - object Cause - object Then,9.0,4.0,11.0,0.0,0.0,14.0,8.0,0.0,0.0,0.0,5.0,2.0,2.0,0.0,4.0,4.0,0.0,0.0,1.0,1.0
+HEAD,0,package zio - object Cause - object Both,9.0,4.0,11.0,0.0,0.0,14.0,8.0,0.0,0.0,0.0,5.0,2.0,2.0,0.0,4.0,4.0,0.0,0.0,1.0,1.0
+HEAD,0,package zio - object Cause - object Internal,37.0,19.0,50.0,0.0,0.0,186.0,174.0,11.0,0.05945945945945946,0.0,53.0,32.0,32.0,25.0,75.0,28.0,129.0,31.0,5.0,5.0
+HEAD,0,package zio - object Cause - object Internal - object Empty,9.0,8.0,16.0,3.0,0.0,10.0,10.0,0.0,0.0,0.0,3.0,7.0,7.0,5.0,10.0,3.0,24.0,6.0,1.0,1.0
 HEAD,0,package zio - object Cause - object Internal - class Fail,12.0,8.0,19.0,3.0,1.0,10.0,10.0,0.0,0.0,0.0,6.0,7.0,7.0,7.0,11.0,6.0,23.0,5.0,1.0,1.0
 HEAD,0,package zio - object Cause - object Internal - class Die,11.0,5.0,15.0,3.0,1.0,10.0,10.0,0.0,0.0,0.0,5.0,7.0,7.0,7.0,11.0,5.0,23.0,5.0,1.0,1.0
 HEAD,0,package zio - object Cause - object Internal - class Interrupt,12.0,4.0,15.0,3.0,1.0,11.0,11.0,0.0,0.0,0.0,8.0,7.0,7.0,7.0,13.0,7.0,23.0,5.0,1.0,1.0
@@ -889,14 +889,14 @@ HEAD,0,package zio - object Cause - object Internal - class Both,13.0,4.0,16.0,3
 HEAD,0,package zio - object Cause - object Internal - class Data,3.0,4.0,7.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object Cause - class FiberTrace,5.0,2.0,7.0,2.0,1.0,3.0,3.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - class Tracing,4.0,15.0,19.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package internal - object Tracing,7.0,15.0,21.0,1.0,0.0,7.0,7.0,0.0,0.0,0.0,7.0,0.0,3.0,0.0,7.0,7.0,0.0,0.0,1.0,1.0
+HEAD,0,package internal - object Tracing,7.0,15.0,21.0,1.0,0.0,7.0,7.0,0.0,0.0,0.0,7.0,3.0,3.0,0.0,7.0,7.0,0.0,0.0,1.0,1.0
 HEAD,0,package zio - trait FiberPlatformSpecific,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class NeedsEnv,0.0,11.0,11.0,0.0,0.0,1.0,2.0,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package zio - object NeedsEnv,2.0,11.0,12.0,1.0,0.0,6.0,5.0,1.0,0.16666666666666666,3.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package zio - object NeedsEnv,2.0,11.0,12.0,1.0,0.0,6.0,5.0,1.0,0.16666666666666666,3.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - class Supervisor,23.0,26.0,45.0,0.0,1.0,62.0,40.0,23.0,0.36507936507936506,0.0,14.0,5.0,5.0,0.0,16.0,10.0,0.0,0.0,2.0,2.0
 HEAD,0,package zio - class Supervisor - method && - <$anon: zio.Supervisor[(A  B)]>,13.0,0.0,13.0,1.0,1.0,13.0,13.0,0.0,0.0,0.0,8.0,3.0,3.0,0.0,7.0,5.0,0.0,0.0,3.0,3.0
 HEAD,0,package zio - class Supervisor - method || - <$anon: zio.Supervisor[(A  B)]>,13.0,0.0,13.0,1.0,1.0,13.0,13.0,0.0,0.0,0.0,8.0,3.0,3.0,0.0,7.0,5.0,0.0,0.0,3.0,3.0
-HEAD,0,package zio - object Supervisor,42.0,26.0,59.0,0.0,0.0,90.0,68.0,22.0,0.24444444444444444,0.0,30.0,0.0,3.0,0.0,25.0,17.0,0.0,0.0,2.0,1.6521739130434783
+HEAD,0,package zio - object Supervisor,42.0,26.0,59.0,0.0,0.0,90.0,68.0,22.0,0.24444444444444444,0.0,30.0,3.0,3.0,0.0,25.0,17.0,0.0,0.0,2.0,1.6521739130434783
 HEAD,0,package zio - object Supervisor - class Propagation,6.0,10.0,16.0,0.0,2.0,7.0,8.0,0.0,0.0,2.0,5.0,4.0,4.0,0.0,6.0,4.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object Supervisor - object Propagation,9.0,10.0,16.0,0.0,0.0,10.0,5.0,6.0,0.5454545454545454,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - object Supervisor - object Propagation - object Stop,5.0,3.0,7.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -905,5 +905,5 @@ HEAD,0,package zio - object Supervisor - method track - <$anon: zio.Supervisor[z
 HEAD,0,package zio - object Supervisor - method fibersIn - <$anon: zio.Supervisor[scala.collection.immutable.SortedSet[zio.Fiber.Runtime[Any Any]]]>,16.0,0.0,16.0,1.0,3.0,17.0,17.0,0.0,0.0,0.0,8.0,3.0,3.0,0.0,6.0,6.0,0.0,0.0,2.0,0.0
 HEAD,0,package zio - object Supervisor - <$anon: zio.Supervisor[Unit]>,11.0,0.0,11.0,1.0,3.0,10.0,10.0,0.0,0.0,0.0,3.0,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package internal - class UniqueKey,0.0,2.0,2.0,0.0,0.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package internal - object UniqueKey,2.0,2.0,3.0,0.0,0.0,3.0,3.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
+HEAD,0,package internal - object UniqueKey,2.0,2.0,3.0,0.0,0.0,3.0,3.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
 HEAD,0,package zio - trait TaskPlatformSpecific,3.0,1.0,4.0,0.0,1.0,17.0,14.0,3.0,0.17647058823529413,1.0,1.0,3.0,3.0,3.0,8.0,2.0,5.0,1.0,1.0,1.0

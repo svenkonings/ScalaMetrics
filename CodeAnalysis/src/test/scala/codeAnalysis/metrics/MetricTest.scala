@@ -54,6 +54,10 @@ class MetricTest extends UnitSpec {
     print(CyclomaticComplexity)
   }
 
+  test("Weighted Methoc Count test") {
+    print(WeightedMethodCount)
+  }
+
   test("Coupling Between Objects test") {
     print(CouplingBetweenObjects)
   }

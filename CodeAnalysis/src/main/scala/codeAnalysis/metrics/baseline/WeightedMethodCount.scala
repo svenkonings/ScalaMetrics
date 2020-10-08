@@ -9,12 +9,14 @@ object WeightedMethodCount extends MetricProducer {
 
 class WeightedMethodCount(override val compiler: Compiler) extends ObjectMetric {
 
-  import global.TreeExtensions
+  import global.{SymbolExtensions, TreeExtensions}
 
-  def weightedMethodCount(tree: global.ImplDef): Int =
-    tree.collectTraverse { case defDef: global.DefDef if defDef.symbol.owner == tree.symbol => defDef }
+  def weightedMethodCount(tree: global.ImplDef): Int = {
+    val name = tree.symbol.qualifiedName
+    tree.collectTraverse { case defDef: global.DefDef if defDef.symbol.owner.qualifiedName == name => defDef }
       .map(_.cyclomaticComplexity)
       .sum
+  }
 
   override def run(tree: global.ImplDef): List[MetricResult] = List(
     MetricResult("WeightedMethodCount", weightedMethodCount(tree))

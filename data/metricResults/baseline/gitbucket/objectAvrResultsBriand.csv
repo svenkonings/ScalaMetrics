@@ -1,19 +1,19 @@
 commit,faults,path,FanOut,FanIn,CouplingBetweenObjects,DepthOfInheritance,LackOfCohesionInMethods,LinesOfCode,SourceLinesOfCode,CommentLinesOfCode,CommentDensity,NumberOfChildren,ResponseForClass,WeightedMethodCount,CyclomaticComplexity,DepthOfNesting,OutDegree,OutDegreeDistinct,PatternSize,NumberOfPatternVariables,HasPointsFraction,ParadigmScoreFraction
-HEAD,0,package util - object HttpClientUtil,14.0,1.0,15.0,0.0,0.0,35.0,34.0,0.0,0.0,0.0,13.0,0.0,1.3333333333333333,0.0,8.333333333333334,4.333333333333333,0.0,0.0,0.3333333333333333,0.10638297872340424
+HEAD,0,package util - object HttpClientUtil,14.0,1.0,15.0,0.0,0.0,35.0,34.0,0.0,0.0,0.0,13.0,4.0,1.3333333333333333,0.0,8.333333333333334,4.333333333333333,0.0,0.0,0.3333333333333333,0.10638297872340424
 HEAD,2,package api - class ApiPullRequest,12.0,7.0,19.0,2.0,0.0,30.0,26.0,4.0,0.13333333333333333,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,2,package api - object ApiPullRequest,24.0,7.0,30.0,1.0,0.0,34.0,34.0,1.0,0.02857142857142857,0.0,9.0,0.0,4.0,3.0,12.0,7.0,10.0,2.0,1.0,1.0
+HEAD,2,package api - object ApiPullRequest,24.0,7.0,30.0,1.0,0.0,34.0,34.0,1.0,0.02857142857142857,0.0,9.0,4.0,4.0,3.0,12.0,7.0,10.0,2.0,1.0,1.0
 HEAD,0,package api - object ApiPullRequest - class Commit,6.0,9.0,15.0,2.0,0.0,4.0,4.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - trait GpgKeyComponent,6.0,1.0,7.0,0.0,0.0,16.0,17.0,0.0,0.0,1.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - trait GpgKeyComponent - class GpgKeys,4.0,1.0,5.0,0.0,3.0,12.0,12.0,0.0,0.0,0.0,3.0,3.0,1.0,0.0,2.0,1.6666666666666667,0.0,0.0,0.0,0.0
 HEAD,0,package model - class GpgKey,5.0,0.0,5.0,2.0,0.0,7.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package plugin - object Sessions,1.0,0.0,1.0,0.0,0.0,4.0,4.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - object Sessions,1.0,0.0,1.0,0.0,0.0,4.0,4.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
 HEAD,2,package controller - class IssuesController,19.0,1.0,20.0,3.0,0.0,19.0,19.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,4,package controller - trait IssuesControllerBase,22.0,1.0,23.0,2.0,3.0,395.0,373.0,10.0,0.02610966057441253,1.0,10.0,6.0,2.0,4.666666666666667,12.333333333333334,3.3333333333333335,2.6666666666666665,0.6666666666666666,1.0,1.0
 HEAD,0,package controller - trait IssuesControllerBase - class IssueCreateForm,4.0,1.0,5.0,2.0,0.0,8.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package controller - trait IssuesControllerBase - class CommentForm,4.0,3.0,7.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package controller - trait IssuesControllerBase - class IssueStateForm,4.0,1.0,5.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - class CreateAUser,4.0,0.0,4.0,2.0,0.0,9.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,9,package util - object JGitUtil,203.0,11.0,213.0,0.0,0.0,1206.0,955.0,256.0,0.21139554087530965,0.0,360.0,0.0,2.72,2.04,19.4,13.4,2.76,0.58,0.86,0.4571005683305578
+HEAD,9,package util - object JGitUtil,203.0,11.0,213.0,0.0,0.0,1206.0,955.0,256.0,0.21139554087530965,0.0,360.0,136.0,2.72,2.04,19.4,13.4,2.76,0.58,0.86,0.4571005683305578
 HEAD,0,package util - object JGitUtil - <$anon: util.Using.Releasable[org.eclipse.jgit.lib.ObjectDatabase]>,3.0,0.0,3.0,1.0,1.0,3.0,3.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,-1.0
 HEAD,0,package util - object JGitUtil - class RepositoryInfo,4.0,3.0,7.0,2.0,0.0,3.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package util - object JGitUtil - class FileInfo,7.0,4.0,11.0,2.0,0.0,12.0,12.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -30,7 +30,7 @@ HEAD,0,package util - object JGitUtil - class BlameInfo,6.0,1.0,7.0,2.0,0.0,11.0
 HEAD,0,package util - object JGitUtil - <$anon: <error>>,0.0,0.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package util - object JGitUtil - <$anon: <error>>,0.0,0.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package core - package model - package object model,1.0,0.0,1.0,0.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package util - object AuthUtil,9.0,2.0,11.0,0.0,0.0,13.0,12.0,0.0,0.0,0.0,5.0,0.0,1.5,0.5,3.0,2.5,1.5,0.0,0.5,-0.5
+HEAD,0,package util - object AuthUtil,9.0,2.0,11.0,0.0,0.0,13.0,12.0,0.0,0.0,0.0,5.0,3.0,1.5,0.5,3.0,2.5,1.5,0.0,0.5,-0.5
 HEAD,2,package service - trait MilestonesService,11.0,11.0,22.0,0.0,6.0,58.0,58.0,0.0,0.0,11.0,17.0,9.0,1.125,0.75,5.25,2.125,0.875,0.25,1.0,0.16666666666666669
 HEAD,3,package servlet - class GitRepositoryServlet,27.0,0.0,27.0,1.0,4.0,108.0,100.0,7.0,0.06542056074766354,0.0,10.0,13.0,3.25,7.5,22.5,4.25,4.25,0.75,1.0,-0.3401015228426396
 HEAD,1,package servlet - class GitBucketRepositoryResolver,15.0,1.0,16.0,1.0,1.0,15.0,14.0,1.0,0.06666666666666667,0.0,9.0,2.0,2.0,11.0,12.0,10.0,7.0,2.0,1.0,1.0
@@ -53,14 +53,14 @@ HEAD,2,package ssh - class DefaultGitReceivePack,22.0,1.0,23.0,2.0,1.0,27.0,26.0
 HEAD,2,package ssh - class PluginGitUploadPack,21.0,1.0,22.0,1.0,1.0,17.0,16.0,0.0,0.0,0.0,8.0,2.0,2.0,0.0,16.0,10.0,0.0,0.0,1.0,-0.5909090909090909
 HEAD,2,package ssh - class PluginGitReceivePack,21.0,1.0,22.0,1.0,1.0,17.0,16.0,0.0,0.0,0.0,8.0,2.0,2.0,0.0,16.0,10.0,0.0,0.0,1.0,-0.5909090909090909
 HEAD,0,package ssh - class GitCommandFactory,22.0,0.0,22.0,0.0,1.0,28.0,27.0,0.0,0.0,0.0,13.0,10.0,3.3333333333333335,2.3333333333333335,8.0,6.333333333333333,15.666666666666666,2.3333333333333335,0.3333333333333333,0.26666666666666666
-HEAD,0,package ssh - object PublicKeyAuthenticator,17.0,2.0,19.0,0.0,0.0,22.0,19.0,4.0,0.17391304347826086,0.0,5.0,0.0,1.0,0.0,1.5,1.5,0.0,0.0,0.5,-0.5
+HEAD,0,package ssh - object PublicKeyAuthenticator,17.0,2.0,19.0,0.0,0.0,22.0,19.0,4.0,0.17391304347826086,0.0,5.0,2.0,1.0,0.0,1.5,1.5,0.0,0.0,0.5,-0.5
 HEAD,0,package ssh - object PublicKeyAuthenticator - trait AuthType,0.0,11.0,11.0,0.0,0.0,1.0,2.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package ssh - object PublicKeyAuthenticator - object AuthType,12.0,11.0,20.0,0.0,0.0,13.0,11.0,3.0,0.21428571428571427,2.0,2.0,0.0,3.0,5.0,2.0,2.0,5.0,1.0,1.0,1.0
+HEAD,0,package ssh - object PublicKeyAuthenticator - object AuthType,12.0,11.0,20.0,0.0,0.0,13.0,11.0,3.0,0.21428571428571427,2.0,2.0,3.0,3.0,5.0,2.0,2.0,5.0,1.0,1.0,1.0
 HEAD,0,package ssh - object PublicKeyAuthenticator - object AuthType - class UserAuthType,4.0,3.0,7.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package ssh - object PublicKeyAuthenticator - object AuthType - class DeployKeyType,4.0,2.0,6.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package ssh - class PublicKeyAuthenticator,17.0,2.0,19.0,1.0,3.0,66.0,59.0,6.0,0.09230769230769231,0.0,8.0,8.0,2.6666666666666665,1.6666666666666667,13.0,3.6666666666666665,2.6666666666666665,0.3333333333333333,0.6666666666666666,0.38095238095238093
 HEAD,0,package api - class ApiCombinedCommitStatus,8.0,2.0,10.0,2.0,0.0,10.0,8.0,1.0,0.1111111111111111,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package api - object ApiCombinedCommitStatus,18.0,2.0,19.0,1.0,0.0,14.0,14.0,0.0,0.0,0.0,8.0,0.0,2.0,4.0,7.0,6.0,6.0,2.0,1.0,1.0
+HEAD,0,package api - object ApiCombinedCommitStatus,18.0,2.0,19.0,1.0,0.0,14.0,14.0,0.0,0.0,0.0,8.0,2.0,2.0,4.0,7.0,6.0,6.0,2.0,1.0,1.0
 HEAD,0,package api - trait ApiRepositoryBranchControllerBase,7.0,1.0,8.0,2.0,0.0,200.0,64.0,146.0,0.6952380952380952,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,2,package api - trait ApiPullRequestControllerBase,6.0,1.0,7.0,2.0,1.0,226.0,172.0,42.0,0.19626168224299065,1.0,1.0,6.0,6.0,17.0,40.0,2.0,35.0,10.0,1.0,1.0
 HEAD,0,package model - trait AccountExtraMailAddressComponent,4.0,1.0,5.0,0.0,0.0,10.0,11.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -96,8 +96,8 @@ HEAD,0,package model - class Milestone,5.0,1.0,6.0,2.0,0.0,9.0,9.0,0.0,0.0,0.0,0
 HEAD,1,package servlet - class InitializeListener,31.0,0.0,31.0,1.0,3.0,127.0,100.0,14.0,0.12280701754385964,0.0,21.0,17.0,4.25,2.25,21.0,6.5,4.5,1.25,1.0,-0.7173477564102564
 HEAD,0,package servlet - class DeleteOldActivityActor,2.0,0.0,2.0,1.0,1.0,15.0,14.0,0.0,0.0,0.0,1.0,3.0,3.0,11.0,9.0,1.0,4.0,1.0,1.0,1.0
 HEAD,0,package service - trait MergeService,70.0,8.0,77.0,0.0,8.0,351.0,315.0,29.0,0.08430232558139535,6.0,69.0,27.0,2.7,4.7,19.7,8.7,3.5,0.8,0.6,0.3526934353359044
-HEAD,1,package service - object MergeService,54.0,8.0,61.0,0.0,0.0,176.0,160.0,12.0,0.06976744186046512,6.0,69.0,0.0,2.0,5.0,8.0,5.0,5.0,1.0,1.0,1.0
-HEAD,0,package service - object MergeService - object Util,18.0,3.0,21.0,0.0,0.0,39.0,38.0,2.0,0.05,0.0,18.0,0.0,1.0,0.0,9.5,8.5,0.0,0.0,1.0,-0.38961038961038963
+HEAD,1,package service - object MergeService,54.0,8.0,61.0,0.0,0.0,176.0,160.0,12.0,0.06976744186046512,6.0,69.0,2.0,2.0,5.0,8.0,5.0,5.0,1.0,1.0,1.0
+HEAD,0,package service - object MergeService - object Util,18.0,3.0,21.0,0.0,0.0,39.0,38.0,2.0,0.05,0.0,18.0,2.0,1.0,0.0,9.5,8.5,0.0,0.0,1.0,-0.38961038961038963
 HEAD,1,package service - object MergeService - class MergeCacheInfo,40.0,2.0,42.0,0.0,1.0,129.0,116.0,10.0,0.07936507936507936,0.0,54.0,15.0,1.875,0.125,16.375,11.625,0.5,0.125,0.875,0.23031532362161167
 HEAD,1,package service - trait RepositoryCommitFileService,61.0,3.0,64.0,0.0,2.0,181.0,168.0,12.0,0.06666666666666667,2.0,62.0,13.0,3.25,8.75,27.5,16.25,4.0,1.25,1.0,0.820184741703729
 HEAD,0,package service - object RepositoryCommitFileService,5.0,3.0,8.0,0.0,0.0,3.0,3.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -108,13 +108,13 @@ HEAD,0,package controller - trait LabelsControllerBase - class LabelForm,3.0,1.0
 HEAD,0,package controller - trait LabelsControllerBase - method labelName - <$anon: <error>>,9.0,0.0,9.0,1.0,1.0,10.0,9.0,0.0,0.0,0.0,6.0,3.0,3.0,0.0,7.0,5.0,0.0,0.0,0.0,0.0
 HEAD,1,package controller - trait LabelsControllerBase - method uniqueLabelName - <$anon: <error>>,8.0,0.0,8.0,1.0,1.0,19.0,19.0,0.0,0.0,0.0,6.0,1.0,1.0,0.0,14.0,7.0,0.0,0.0,1.0,1.0
 HEAD,0,package service - trait SystemSettingsService,39.0,18.0,57.0,0.0,2.0,170.0,170.0,1.0,0.005847953216374269,16.0,30.0,10.0,3.3333333333333335,0.0,90.33333333333333,12.0,0.0,0.0,0.6666666666666666,0.18438868976503384
-HEAD,0,package service - object SystemSettingsService,44.0,18.0,61.0,0.0,0.0,189.0,183.0,0.0,0.0,16.0,27.0,0.0,2.0,0.0,11.0,8.333333333333334,0.0,0.0,1.0,1.0
+HEAD,0,package service - object SystemSettingsService,44.0,18.0,61.0,0.0,0.0,189.0,183.0,0.0,0.0,16.0,27.0,6.0,2.0,0.0,11.0,8.333333333333334,0.0,0.0,1.0,1.0
 HEAD,0,package service - object SystemSettingsService - class SystemSettings,14.0,23.0,37.0,2.0,2.0,43.0,40.0,0.0,0.0,0.0,7.0,3.0,1.0,0.0,6.666666666666667,2.6666666666666665,0.0,0.0,0.3333333333333333,0.3333333333333333
 HEAD,0,package service - object SystemSettingsService - class RepositoryOperation,3.0,3.0,6.0,2.0,0.0,7.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package service - object SystemSettingsService - class Ssh,4.0,3.0,7.0,2.0,0.0,5.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package service - object SystemSettingsService - class Ldap,4.0,3.0,7.0,2.0,0.0,14.0,14.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package service - object SystemSettingsService - class OIDC,3.0,4.0,7.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package service - object SystemSettingsService - object OIDC,7.0,4.0,10.0,1.0,0.0,9.0,10.0,0.0,0.0,0.0,2.0,0.0,1.0,0.0,5.0,3.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object SystemSettingsService - object OIDC,7.0,4.0,10.0,1.0,0.0,9.0,10.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,5.0,3.0,0.0,0.0,0.0,0.0
 HEAD,0,package service - object SystemSettingsService - class Smtp,4.0,5.0,9.0,2.0,0.0,10.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package service - object SystemSettingsService - class Proxy,5.0,2.0,7.0,2.0,0.0,6.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package service - object SystemSettingsService - class SshAddress,4.0,5.0,9.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -129,7 +129,7 @@ HEAD,0,package util - trait ReadableUsersAuthenticator,6.0,7.0,13.0,0.0,2.0,20.0
 HEAD,0,package util - trait WritableUsersAuthenticator,6.0,8.0,14.0,0.0,2.0,22.0,23.0,0.0,0.0,8.0,4.0,8.0,2.6666666666666665,0.6666666666666666,8.333333333333334,1.6666666666666667,5.666666666666667,1.3333333333333333,1.0,1.0
 HEAD,2,package util - trait GroupManagerAuthenticator,11.0,2.0,13.0,0.0,2.0,15.0,15.0,0.0,0.0,2.0,7.0,7.0,2.3333333333333335,1.3333333333333333,5.0,2.3333333333333335,4.333333333333333,1.0,0.6666666666666666,0.6666666666666666
 HEAD,0,package api - class ApiPersonIdent,4.0,7.0,11.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package api - object ApiPersonIdent,6.0,7.0,12.0,1.0,0.0,6.0,6.0,0.0,0.0,0.0,3.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiPersonIdent,6.0,7.0,12.0,1.0,0.0,6.0,6.0,0.0,0.0,0.0,3.0,2.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
 HEAD,0,package controller - class SystemSettingsController,5.0,1.0,6.0,4.0,0.0,5.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package controller - class Table,4.0,0.0,4.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package controller - class Column,4.0,0.0,4.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -143,14 +143,14 @@ HEAD,0,package controller - trait SystemSettingsControllerBase - class EditGroup
 HEAD,0,package controller - trait SystemSettingsControllerBase - method multiLineText - <$anon: <error>>,10.0,0.0,10.0,1.0,1.0,9.0,8.0,0.0,0.0,0.0,7.0,2.0,2.0,0.0,5.0,5.0,0.0,0.0,1.0,1.0
 HEAD,0,package controller - trait SystemSettingsControllerBase - method members - <$anon: <error>>,13.0,0.0,13.0,1.0,1.0,8.0,8.0,0.0,0.0,0.0,8.0,3.0,3.0,5.0,7.0,6.0,12.0,2.0,1.0,1.0
 HEAD,0,package controller - trait SystemSettingsControllerBase - method disableByNotYourself - <$anon: <error>>,2.0,0.0,2.0,1.0,1.0,10.0,9.0,0.0,0.0,0.0,1.0,2.0,2.0,0.0,8.0,2.0,0.0,0.0,0.0,0.0
-HEAD,3,package view - object helpers,62.0,4.0,65.0,2.0,0.0,425.0,303.0,119.0,0.28199052132701424,0.0,103.0,0.0,1.7317073170731707,1.1219512195121952,6.365853658536586,3.048780487804878,2.1463414634146343,0.2682926829268293,0.6097560975609756,0.5464733025708636
+HEAD,3,package view - object helpers,62.0,4.0,65.0,2.0,0.0,425.0,303.0,119.0,0.28199052132701424,0.0,103.0,71.0,1.7317073170731707,1.1219512195121952,6.365853658536586,3.048780487804878,2.1463414634146343,0.2682926829268293,0.6097560975609756,0.5464733025708636
 HEAD,1,package view - object helpers - class RegexReplaceString,6.0,1.0,7.0,0.0,1.0,5.0,5.0,0.0,0.0,0.0,6.0,1.0,1.0,0.0,4.0,4.0,0.0,0.0,1.0,1.0
 HEAD,0,package view - object helpers - class RichHtmlSeq,3.0,1.0,4.0,0.0,2.0,4.0,4.0,0.0,0.0,0.0,3.0,2.0,1.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package view - object helpers - class CommentDiffLine,4.0,1.0,5.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,11,package service - trait IssuesService,29.0,15.0,44.0,0.0,32.0,724.0,654.0,68.0,0.09418282548476455,10.0,52.0,117.0,3.4411764705882355,2.2941176470588234,17.647058823529413,2.735294117647059,19.264705882352942,5.147058823529412,1.0,0.9226415042660868
 HEAD,1,package service - object IssuesService,31.0,15.0,45.0,0.0,0.0,130.0,125.0,3.0,0.0234375,10.0,27.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,1,package service - object IssuesService - class IssueSearchCondition,18.0,6.0,24.0,2.0,1.0,75.0,73.0,0.0,0.0,0.0,20.0,25.0,6.25,3.25,22.0,5.0,16.0,1.5,0.5,0.5
-HEAD,1,package service - object IssuesService - object IssueSearchCondition,14.0,6.0,19.0,1.0,0.0,35.0,33.0,3.0,0.08333333333333333,0.0,8.0,0.0,3.3333333333333335,0.6666666666666666,13.0,3.6666666666666665,3.0,1.0,0.3333333333333333,0.3333333333333333
+HEAD,1,package service - object IssuesService - object IssueSearchCondition,14.0,6.0,19.0,1.0,0.0,35.0,33.0,3.0,0.08333333333333333,0.0,8.0,10.0,3.3333333333333335,0.6666666666666666,13.0,3.6666666666666665,3.0,1.0,0.3333333333333333,0.3333333333333333
 HEAD,0,package service - object IssuesService - class CommitStatusInfo,4.0,1.0,5.0,2.0,0.0,8.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package service - object IssuesService - class IssueInfo,6.0,1.0,7.0,2.0,0.0,8.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - class CreateAGroup,4.0,0.0,4.0,2.0,0.0,6.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -161,14 +161,14 @@ HEAD,0,package controller - trait IndexControllerBase - class OidcContext,3.0,1.
 HEAD,0,package model - trait GroupMemberComponent,4.0,1.0,5.0,0.0,0.0,10.0,11.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - trait GroupMemberComponent - class GroupMembers,2.0,1.0,3.0,0.0,1.0,6.0,6.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - class GroupMember,4.0,1.0,5.0,2.0,0.0,5.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package service - object WikiService,11.0,4.0,15.0,0.0,0.0,25.0,9.0,17.0,0.6538461538461539,3.0,5.0,0.0,1.0,0.0,3.0,2.0,0.0,0.0,1.0,1.0
+HEAD,0,package service - object WikiService,11.0,4.0,15.0,0.0,0.0,25.0,9.0,17.0,0.6538461538461539,3.0,5.0,2.0,1.0,0.0,3.0,2.0,0.0,0.0,1.0,1.0
 HEAD,0,package service - object WikiService - class WikiPageInfo,4.0,2.0,6.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package service - object WikiService - class WikiPageHistoryInfo,4.0,1.0,5.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,1,package service - trait WikiService,73.0,4.0,77.0,0.0,4.0,272.0,249.0,15.0,0.056818181818181816,3.0,90.0,33.0,5.5,2.5,37.166666666666664,24.666666666666668,7.5,0.5,1.0,0.3972047775551531
 HEAD,0,package service - trait WikiService - method revertWikiPage - class RevertInfo,3.0,1.0,4.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package plugin - trait TextDecorator,3.0,3.0,6.0,0.0,1.0,3.0,3.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
 HEAD,0,package api - class ApiGroup,8.0,2.0,10.0,2.0,0.0,6.0,6.0,1.0,0.14285714285714285,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package api - object ApiGroup,7.0,2.0,8.0,1.0,0.0,7.0,7.0,0.0,0.0,0.0,2.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiGroup,7.0,2.0,8.0,1.0,0.0,7.0,7.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
 HEAD,0,package controller - class RepositorySettingsController,10.0,1.0,11.0,3.0,0.0,10.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,9,package controller - trait RepositorySettingsControllerBase,62.0,2.0,63.0,2.0,7.0,465.0,362.0,90.0,0.19911504424778761,1.0,47.0,17.0,2.25,1.375,10.125,5.375,0.875,0.125,0.875,0.875
 HEAD,0,package controller - trait RepositorySettingsControllerBase - class OptionsForm,6.0,1.0,7.0,2.0,0.0,11.0,11.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -185,7 +185,7 @@ HEAD,0,package controller - trait RepositorySettingsControllerBase - method tran
 HEAD,0,package controller - trait RepositorySettingsControllerBase - method mergeOptions - <$anon: <error>>,10.0,0.0,10.0,1.0,2.0,15.0,14.0,0.0,0.0,0.0,10.0,4.0,2.0,0.0,5.5,3.5,0.0,0.0,0.5,0.5
 HEAD,0,package service - trait GpgKeyService,4.0,1.0,5.0,0.0,3.0,14.0,14.0,0.0,0.0,1.0,4.0,4.0,1.3333333333333333,2.0,4.333333333333333,2.0,1.3333333333333333,0.3333333333333333,1.0,0.1877394636015326
 HEAD,0,package api - class ApiCommit,10.0,3.0,13.0,2.0,0.0,14.0,14.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package api - object ApiCommit,18.0,3.0,20.0,1.0,0.0,21.0,18.0,0.0,0.0,0.0,6.0,0.0,1.0,0.0,11.0,8.0,0.0,0.0,1.0,1.0
+HEAD,0,package api - object ApiCommit,18.0,3.0,20.0,1.0,0.0,21.0,18.0,0.0,0.0,0.0,6.0,1.0,1.0,0.0,11.0,8.0,0.0,0.0,1.0,1.0
 HEAD,0,package controller - class PreProcessController,2.0,0.0,2.0,3.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,2,package controller - trait PreProcessControllerBase,1.0,1.0,2.0,2.0,0.0,33.0,20.0,20.0,0.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package controller - class PullRequestsController,19.0,1.0,20.0,3.0,0.0,19.0,19.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -197,8 +197,8 @@ HEAD,1,package servlet - class CompositeScalatraFilter,5.0,1.0,6.0,1.0,4.0,35.0,
 HEAD,0,package servlet - class MockFilterChain,2.0,1.0,3.0,0.0,1.0,6.0,6.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,-1.0
 HEAD,1,package api - class CreateARepository,6.0,0.0,6.0,2.0,1.0,13.0,12.0,0.0,0.0,0.0,7.0,1.0,1.0,0.0,8.0,5.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - class ApiComment,10.0,5.0,15.0,2.0,0.0,9.0,7.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package api - object ApiComment,10.0,5.0,14.0,1.0,0.0,16.0,16.0,0.0,0.0,0.0,2.0,0.0,1.0,0.0,2.0,1.0,0.0,0.0,0.0,0.0
-HEAD,0,package util - object TextAvatarUtil,35.0,0.0,35.0,0.0,0.0,90.0,88.0,2.0,0.022222222222222223,0.0,51.0,0.0,1.5555555555555556,0.0,11.666666666666666,8.555555555555555,0.0,0.0,0.3333333333333333,-0.1111111111111111
+HEAD,0,package api - object ApiComment,10.0,5.0,14.0,1.0,0.0,16.0,16.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,2.0,1.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object TextAvatarUtil,35.0,0.0,35.0,0.0,0.0,90.0,88.0,2.0,0.022222222222222223,0.0,51.0,14.0,1.5555555555555556,0.0,11.666666666666666,8.555555555555555,0.0,0.0,0.3333333333333333,-0.1111111111111111
 HEAD,0,package api - class ApiPath,3.0,28.0,31.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - class SshPath,3.0,1.0,4.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - trait LabelComponent,7.0,1.0,8.0,1.0,0.0,13.0,13.0,0.0,0.0,1.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -206,24 +206,24 @@ HEAD,0,package model - trait LabelComponent - class Labels,4.0,1.0,5.0,2.0,3.0,9
 HEAD,0,package model - class Label,6.0,3.0,9.0,2.0,0.0,12.0,11.0,0.0,0.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,8,package view - trait LinkConverter,31.0,3.0,34.0,0.0,2.0,102.0,88.0,14.0,0.13725490196078433,2.0,19.0,16.0,8.0,7.0,74.5,10.5,16.5,2.0,1.0,1.0
 HEAD,0,package api - class ApiCommits,8.0,2.0,10.0,2.0,0.0,12.0,12.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package api - object ApiCommits,38.0,2.0,39.0,1.0,0.0,101.0,99.0,3.0,0.029411764705882353,0.0,20.0,0.0,11.0,1.0,44.0,19.0,35.0,0.0,1.0,0.580952380952381
+HEAD,0,package api - object ApiCommits,38.0,2.0,39.0,1.0,0.0,101.0,99.0,3.0,0.029411764705882353,0.0,20.0,11.0,11.0,1.0,44.0,19.0,35.0,0.0,1.0,0.580952380952381
 HEAD,0,package api - object ApiCommits - class Commit,7.0,9.0,16.0,2.0,0.0,8.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - object ApiCommits - class Tree,4.0,3.0,7.0,2.0,0.0,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - object ApiCommits - class Stats,3.0,3.0,6.0,2.0,0.0,5.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - object ApiCommits - class File,5.0,2.0,7.0,2.0,0.0,10.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,3,package servlet - class TransactionFilter,5.0,0.0,5.0,0.0,3.0,24.0,20.0,2.0,0.09090909090909091,0.0,4.0,4.0,1.3333333333333333,0.0,5.666666666666667,1.0,0.0,0.0,1.0,-1.0
-HEAD,1,package servlet - object Database,13.0,7.0,20.0,0.0,0.0,25.0,24.0,0.0,0.0,0.0,7.0,0.0,1.0,0.0,0.3333333333333333,0.3333333333333333,0.0,0.0,0.3333333333333333,-0.3333333333333333
+HEAD,1,package servlet - object Database,13.0,7.0,20.0,0.0,0.0,25.0,24.0,0.0,0.0,0.0,7.0,3.0,1.0,0.0,0.3333333333333333,0.3333333333333333,0.0,0.0,0.3333333333333333,-0.3333333333333333
 HEAD,0,package api - trait ApiGitReferenceControllerBase,6.0,1.0,7.0,2.0,1.0,52.0,31.0,48.0,0.6075949367088608,1.0,2.0,2.0,2.0,0.0,24.0,2.0,0.0,0.0,0.0,0.0
-HEAD,0,package util - object EditorConfigUtil,36.0,1.0,36.0,0.0,0.0,111.0,105.0,0.0,0.0,0.0,27.0,0.0,10.0,4.0,16.0,3.0,20.0,2.0,1.0,1.0
+HEAD,0,package util - object EditorConfigUtil,36.0,1.0,36.0,0.0,0.0,111.0,105.0,0.0,0.0,0.0,27.0,10.0,10.0,4.0,16.0,3.0,20.0,2.0,1.0,1.0
 HEAD,0,package util - object EditorConfigUtil - class JGitResource,24.0,2.0,26.0,0.0,4.0,42.0,36.0,0.0,0.0,0.0,18.0,8.0,1.1428571428571428,0.14285714285714285,4.571428571428571,3.4285714285714284,0.5714285714285714,0.14285714285714285,0.42857142857142855,0.42857142857142855
 HEAD,0,package util - object EditorConfigUtil - class JGitResourcePath,4.0,2.0,6.0,0.0,5.0,26.0,26.0,0.0,0.0,0.0,5.0,6.0,1.2,1.0,2.6,1.4,0.8,0.2,0.2,0.2
-HEAD,0,package util - object EditorConfigUtil - object JGitResourcePath,6.0,2.0,7.0,0.0,0.0,4.0,5.0,0.0,0.0,0.0,2.0,0.0,1.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object EditorConfigUtil - object JGitResourcePath,6.0,2.0,7.0,0.0,0.0,4.0,5.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0
 HEAD,0,package util - object EditorConfigUtil - class EditorConfigInfo,5.0,1.0,6.0,2.0,0.0,5.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package plugin - object Results,6.0,0.0,6.0,0.0,0.0,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package plugin - object Results - class Redirect,3.0,1.0,4.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package plugin - object Results - class Fragment,2.0,1.0,3.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package plugin - trait RepositoryHook,2.0,3.0,5.0,0.0,5.0,7.0,7.0,0.0,0.0,0.0,5.0,5.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,-0.3333333333333333
-HEAD,0,package util - object GpgUtil,6.0,2.0,8.0,0.0,0.0,47.0,47.0,0.0,0.0,0.0,4.0,0.0,2.6666666666666665,6.666666666666667,11.333333333333334,2.0,6.666666666666667,1.6666666666666667,1.0,1.0
+HEAD,0,package util - object GpgUtil,6.0,2.0,8.0,0.0,0.0,47.0,47.0,0.0,0.0,0.0,4.0,8.0,2.6666666666666665,6.666666666666667,11.333333333333334,2.0,6.666666666666667,1.6666666666666667,1.0,1.0
 HEAD,2,package controller - class RepositoryViewerController,21.0,1.0,22.0,3.0,0.0,21.0,21.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,20,package controller - trait RepositoryViewerControllerBase,66.0,1.0,67.0,2.0,6.0,963.0,874.0,516.0,0.3712230215827338,1.0,68.0,24.0,4.0,4.833333333333333,29.333333333333332,10.0,4.5,0.8333333333333334,1.0,0.5760135135135135
 HEAD,0,package controller - trait RepositoryViewerControllerBase - class UploadForm,4.0,1.0,5.0,2.0,0.0,6.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -236,7 +236,7 @@ HEAD,0,package controller - trait RepositoryViewerControllerBase - method confli
 HEAD,1,package plugin - trait IssueHook,8.0,5.0,13.0,0.0,6.0,22.0,22.0,0.0,0.0,1.0,6.0,6.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,-0.3333333333333333
 HEAD,0,package plugin - trait PullRequestHook,5.0,3.0,8.0,1.0,1.0,3.0,3.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,-0.3333333333333333
 HEAD,0,package api - class ApiCommitListItem,9.0,2.0,11.0,2.0,0.0,9.0,9.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package api - object ApiCommitListItem,18.0,2.0,19.0,1.0,0.0,23.0,22.0,0.0,0.0,0.0,8.0,0.0,1.0,0.0,9.0,6.0,0.0,0.0,1.0,1.0
+HEAD,0,package api - object ApiCommitListItem,18.0,2.0,19.0,1.0,0.0,23.0,22.0,0.0,0.0,0.0,8.0,1.0,1.0,0.0,9.0,6.0,0.0,0.0,1.0,1.0
 HEAD,0,package api - object ApiCommitListItem - class Parent,6.0,2.0,8.0,2.0,0.0,3.0,3.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - object ApiCommitListItem - class Commit,7.0,9.0,16.0,2.0,0.0,6.0,5.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - trait ApiUserControllerBase,3.0,1.0,4.0,2.0,0.0,98.0,65.0,33.0,0.336734693877551,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -246,13 +246,13 @@ HEAD,0,package api - trait ApiRepositoryStatusControllerBase,2.0,1.0,3.0,2.0,0.0
 HEAD,0,package api - class CreateAStatus,11.0,0.0,11.0,2.0,1.0,18.0,12.0,6.0,0.3333333333333333,0.0,10.0,1.0,1.0,0.0,16.0,7.0,0.0,0.0,1.0,1.0
 HEAD,2,package controller - class DashboardController,16.0,1.0,17.0,3.0,0.0,16.0,16.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,1,package controller - trait DashboardControllerBase,12.0,1.0,13.0,2.0,1.0,97.0,97.0,0.0,0.0,1.0,7.0,12.0,4.0,5.0,17.0,4.0,3.0,0.0,1.0,1.0
-HEAD,0,package util - object ConfigUtil,23.0,3.0,26.0,0.0,0.0,30.0,28.0,0.0,0.0,0.0,24.0,0.0,2.75,0.0,8.5,6.25,0.0,0.0,1.0,1.0
+HEAD,0,package util - object ConfigUtil,23.0,3.0,26.0,0.0,0.0,30.0,28.0,0.0,0.0,0.0,24.0,11.0,2.75,0.0,8.5,6.25,0.0,0.0,1.0,1.0
 HEAD,0,package service - trait ProtectedBranchService,10.0,8.0,18.0,0.0,4.0,42.0,43.0,0.0,0.0,5.0,6.0,8.0,1.6,1.0,6.6,2.4,4.2,1.2,1.0,0.49696969696969695
 HEAD,2,package service - object ProtectedBranchService,33.0,8.0,38.0,0.0,0.0,111.0,92.0,15.0,0.14018691588785046,5.0,24.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package service - object ProtectedBranchService - class ProtectedBranchReceiveHook,17.0,2.0,19.0,1.0,1.0,31.0,30.0,0.0,0.0,0.0,10.0,3.0,3.0,0.0,15.0,11.0,0.0,0.0,1.0,1.0
 HEAD,2,package service - object ProtectedBranchService - class ProtectedBranchInfo,23.0,6.0,29.0,2.0,2.0,74.0,56.0,15.0,0.2112676056338028,0.0,15.0,21.0,5.25,4.25,10.0,4.0,12.0,1.25,1.0,1.0
-HEAD,0,package service - object ProtectedBranchService - object ProtectedBranchInfo,7.0,6.0,12.0,1.0,0.0,4.0,5.0,0.0,0.0,0.0,2.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
-HEAD,0,package <empty> - object Checksums,12.0,0.0,12.0,0.0,0.0,27.0,27.0,0.0,0.0,0.0,16.0,0.0,1.25,0.0,6.0,4.25,0.0,0.0,0.75,-0.059523809523809534
+HEAD,0,package service - object ProtectedBranchService - object ProtectedBranchInfo,7.0,6.0,12.0,1.0,0.0,4.0,5.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
+HEAD,0,package <empty> - object Checksums,12.0,0.0,12.0,0.0,0.0,27.0,27.0,0.0,0.0,0.0,16.0,5.0,1.25,0.0,6.0,4.25,0.0,0.0,0.75,-0.059523809523809534
 HEAD,0,package api - class CreateAnIssue,5.0,0.0,5.0,2.0,0.0,7.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,4,package service - trait PullRequestService,59.0,8.0,67.0,0.0,15.0,463.0,410.0,46.0,0.10087719298245613,6.0,55.0,61.0,3.8125,7.125,19.125,4.8125,16.8125,3.6875,0.9375,0.46921240247511437
 HEAD,0,package service - object PullRequestService,26.0,8.0,34.0,0.0,0.0,37.0,36.0,0.0,0.0,6.0,24.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -267,17 +267,17 @@ HEAD,0,package model - trait AccountComponent,5.0,1.0,6.0,0.0,0.0,36.0,37.0,0.0,
 HEAD,0,package model - trait AccountComponent - class Accounts,3.0,1.0,4.0,0.0,1.0,31.0,31.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - class Account,6.0,40.0,46.0,2.0,0.0,15.0,15.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,1,package util - object Keys,8.0,2.0,10.0,0.0,0.0,74.0,23.0,51.0,0.6891891891891891,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package util - object Keys - object Session,2.0,2.0,4.0,0.0,0.0,30.0,10.0,21.0,0.6774193548387096,0.0,3.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Keys - object Session,2.0,2.0,4.0,0.0,0.0,30.0,10.0,21.0,0.6774193548387096,0.0,3.0,3.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package util - object Keys - object Flash,2.0,1.0,3.0,0.0,0.0,10.0,5.0,6.0,0.5454545454545454,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,1,package util - object Keys - object Request,2.0,2.0,4.0,0.0,0.0,26.0,9.0,18.0,0.6666666666666666,0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package plugin - object Images,2.0,0.0,2.0,0.0,0.0,3.0,3.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,1,package util - object Keys - object Request,2.0,2.0,4.0,0.0,0.0,26.0,9.0,18.0,0.6666666666666666,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - object Images,2.0,0.0,2.0,0.0,0.0,3.0,3.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,1,package <empty> - class ScalatraBootstrap,25.0,0.0,25.0,1.0,2.0,55.0,52.0,4.0,0.07142857142857142,0.0,10.0,4.0,2.0,0.0,32.5,12.5,0.0,0.0,1.0,-0.9818181818181819
 HEAD,0,package api - trait ApiIssueLabelControllerBase,5.0,1.0,6.0,2.0,0.0,177.0,125.0,48.0,0.2774566473988439,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,3,package util - object JDBCUtil,66.0,3.0,68.0,0.0,0.0,195.0,192.0,0.0,0.0,0.0,102.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,3,package util - object JDBCUtil - class RichConnection,63.0,1.0,64.0,0.0,5.0,192.0,189.0,0.0,0.0,0.0,102.0,44.0,4.0,2.1818181818181817,17.90909090909091,12.909090909090908,7.7272727272727275,1.2727272727272727,1.0,0.6055154658144504
 HEAD,0,package util - object JDBCUtil - class TableDependency,4.0,2.0,6.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,1,package util - object StringUtil,41.0,16.0,57.0,0.0,0.0,141.0,107.0,38.0,0.2620689655172414,0.0,70.0,0.0,1.55,0.35,5.15,4.3,2.45,0.5,0.5,0.19444444444444448
-HEAD,0,package service - object RepositoryCreationService,11.0,4.0,15.0,0.0,0.0,18.0,19.0,0.0,0.0,2.0,12.0,0.0,1.5,2.0,3.0,3.0,1.5,0.25,0.75,-0.12500000000000003
+HEAD,1,package util - object StringUtil,41.0,16.0,57.0,0.0,0.0,141.0,107.0,38.0,0.2620689655172414,0.0,70.0,31.0,1.55,0.35,5.15,4.3,2.45,0.5,0.5,0.19444444444444448
+HEAD,0,package service - object RepositoryCreationService,11.0,4.0,15.0,0.0,0.0,18.0,19.0,0.0,0.0,2.0,12.0,6.0,1.5,2.0,3.0,3.0,1.5,0.25,0.75,-0.12500000000000003
 HEAD,0,package service - trait RepositoryCreationService,19.0,4.0,23.0,0.0,4.0,210.0,178.0,23.0,0.11442786069651742,2.0,15.0,15.0,3.0,2.4,27.8,4.4,2.8,0.6,0.8,-0.5019607843137256
 HEAD,0,package service - trait OpenIDConnectService,28.0,2.0,30.0,0.0,2.0,166.0,120.0,43.0,0.26380368098159507,1.0,17.0,17.0,3.4,7.2,10.8,6.4,11.4,2.2,0.8,0.47184927748308025
 HEAD,0,package service - object OpenIDConnectService,3.0,2.0,5.0,0.0,0.0,11.0,8.0,3.0,0.2727272727272727,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -286,11 +286,11 @@ HEAD,0,package plugin - class UserNameSuggestionProvider,7.0,1.0,8.0,1.0,1.0,7.0
 HEAD,0,package service - trait CommitsService,23.0,6.0,29.0,0.0,7.0,150.0,146.0,0.0,0.0,6.0,26.0,15.0,1.6666666666666667,1.0,7.555555555555555,4.222222222222222,1.4444444444444444,0.3333333333333333,0.8888888888888888,0.4705075445816187
 HEAD,0,package api - class CreateAFile,4.0,0.0,4.0,2.0,0.0,8.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - class ApiPullRequestReviewComment,15.0,4.0,19.0,2.0,0.0,39.0,19.0,26.0,0.5777777777777777,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package api - object ApiPullRequestReviewComment,10.0,4.0,13.0,1.0,0.0,17.0,17.0,0.0,0.0,0.0,2.0,0.0,1.0,0.0,3.0,2.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiPullRequestReviewComment,10.0,4.0,13.0,1.0,0.0,17.0,17.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,3.0,2.0,0.0,0.0,0.0,0.0
 HEAD,1,package service - trait HandleCommentService,31.0,2.0,33.0,0.0,1.0,104.0,76.0,7.0,0.08433734939759036,2.0,28.0,18.0,18.0,28.0,74.0,26.0,49.0,9.0,1.0,0.6257668711656441
 HEAD,0,package service - trait RequestCache,14.0,3.0,17.0,1.0,4.0,26.0,26.0,0.0,0.0,2.0,9.0,4.0,1.0,0.0,2.5,1.75,0.0,0.0,0.75,0.75
 HEAD,10,package service - trait RepositoryService,35.0,27.0,61.0,0.0,23.0,726.0,613.0,110.0,0.15214384508990317,23.0,54.0,81.0,3.0,2.7037037037037037,22.185185185185187,3.037037037037037,8.925925925925926,2.3703703703703702,1.0,0.510673763647277
-HEAD,0,package service - object RepositoryService,24.0,27.0,50.0,0.0,0.0,51.0,31.0,8.0,0.20512820512820512,23.0,18.0,0.0,1.3333333333333333,0.0,0.3333333333333333,0.3333333333333333,0.0,0.0,1.0,1.0
+HEAD,0,package service - object RepositoryService,24.0,27.0,50.0,0.0,0.0,51.0,31.0,8.0,0.20512820512820512,23.0,18.0,4.0,1.3333333333333333,0.0,0.3333333333333333,0.3333333333333333,0.0,0.0,1.0,1.0
 HEAD,0,package service - object RepositoryService - class RepositoryInfo,17.0,45.0,62.0,2.0,2.0,39.0,19.0,6.0,0.24,0.0,15.0,3.0,1.0,0.0,5.666666666666667,4.666666666666667,0.0,0.0,0.3333333333333333,0.3333333333333333
 HEAD,0,package util - class Mailer,16.0,0.0,16.0,0.0,2.0,68.0,69.0,0.0,0.0,0.0,12.0,6.0,2.0,1.0,14.666666666666666,5.666666666666667,2.0,0.6666666666666666,1.0,-0.33064568993772536
 HEAD,0,package api - trait FieldSerializable,0.0,7.0,7.0,0.0,0.0,1.0,1.0,0.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -300,27 +300,27 @@ HEAD,0,package model - trait SshKeyComponent,5.0,1.0,6.0,0.0,0.0,13.0,14.0,0.0,0
 HEAD,0,package model - trait SshKeyComponent - class SshKeys,3.0,1.0,4.0,0.0,2.0,9.0,9.0,0.0,0.0,0.0,2.0,2.0,1.0,0.0,2.5,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - class SshKey,4.0,0.0,4.0,2.0,0.0,6.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package plugin - trait Renderer,1.0,4.0,5.0,0.0,1.0,6.0,4.0,3.0,0.42857142857142855,2.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package plugin - object MarkdownRenderer,4.0,1.0,5.0,1.0,0.0,18.0,18.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,3.0,2.0,0.0,0.0,0.0,0.0
-HEAD,0,package plugin - object DefaultRenderer,4.0,1.0,5.0,1.0,0.0,5.0,5.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,4.0,2.0,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - object MarkdownRenderer,4.0,1.0,5.0,1.0,0.0,18.0,18.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,3.0,2.0,0.0,0.0,0.0,0.0
+HEAD,0,package plugin - object DefaultRenderer,4.0,1.0,5.0,1.0,0.0,5.0,5.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,4.0,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package plugin - class RenderRequest,7.0,4.0,11.0,2.0,0.0,10.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,2,package servlet - class PluginControllerFilter,13.0,0.0,13.0,1.0,3.0,34.0,34.0,0.0,0.0,0.0,11.0,9.0,3.0,3.3333333333333335,6.333333333333333,5.666666666666667,6.666666666666667,1.3333333333333333,1.0,-0.37777777777777777
 HEAD,0,package api - class ApiReleaseAsset,7.0,3.0,10.0,2.0,0.0,7.0,6.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package api - object ApiReleaseAsset,7.0,3.0,9.0,1.0,0.0,4.0,5.0,0.0,0.0,0.0,2.0,0.0,1.0,0.0,2.0,1.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiReleaseAsset,7.0,3.0,9.0,1.0,0.0,4.0,5.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,2.0,1.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - class ApiRelease,6.0,2.0,8.0,2.0,0.0,7.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package api - object ApiRelease,15.0,2.0,16.0,1.0,0.0,17.0,17.0,0.0,0.0,0.0,5.0,0.0,1.0,0.0,4.0,4.0,0.0,0.0,1.0,1.0
+HEAD,0,package api - object ApiRelease,15.0,2.0,16.0,1.0,0.0,17.0,17.0,0.0,0.0,0.0,5.0,1.0,1.0,0.0,4.0,4.0,0.0,0.0,1.0,1.0
 HEAD,0,package model - trait AccountWebHookComponent,9.0,1.0,10.0,1.0,0.0,13.0,13.0,0.0,0.0,1.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - trait AccountWebHookComponent - class AccountWebHooks,4.0,3.0,7.0,1.0,2.0,7.0,7.0,0.0,0.0,0.0,2.0,2.0,1.0,0.0,2.5,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - class AccountWebHook,6.0,0.0,6.0,2.0,0.0,6.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package util - object LDAPUtil,37.0,2.0,39.0,0.0,0.0,244.0,212.0,27.0,0.11297071129707113,0.0,39.0,0.0,3.3,4.0,10.0,3.7,3.5,1.0,0.5,0.48588235294117654
+HEAD,0,package util - object LDAPUtil,37.0,2.0,39.0,0.0,0.0,244.0,212.0,27.0,0.11297071129707113,0.0,39.0,33.0,3.3,4.0,10.0,3.7,3.5,1.0,0.5,0.48588235294117654
 HEAD,0,package util - object LDAPUtil - class LDAPUserInfo,3.0,1.0,4.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - class ApiEndPoint,3.0,0.0,3.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package servlet - class PluginAssetsServlet,13.0,0.0,13.0,0.0,1.0,35.0,35.0,1.0,0.027777777777777776,0.0,9.0,4.0,4.0,17.0,29.0,9.0,14.0,4.0,1.0,-0.05555555555555558
 HEAD,0,package api - class ApiObject,3.0,1.0,4.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - class ApiRef,4.0,0.0,4.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package util - object Directory,10.0,21.0,31.0,0.0,0.0,81.0,43.0,37.0,0.4625,0.0,18.0,0.0,1.0,0.0,1.3636363636363635,1.3636363636363635,0.0,0.0,0.0,0.0
+HEAD,0,package util - object Directory,10.0,21.0,31.0,0.0,0.0,81.0,43.0,37.0,0.4625,0.0,18.0,11.0,1.0,0.0,1.3636363636363635,1.3636363636363635,0.0,0.0,0.0,0.0
 HEAD,0,package api - class CreateAComment,3.0,0.0,3.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - class ApiIssue,22.0,6.0,28.0,2.0,0.0,28.0,25.0,3.0,0.10714285714285714,0.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package api - object ApiIssue,12.0,6.0,17.0,1.0,0.0,20.0,20.0,0.0,0.0,0.0,3.0,0.0,2.0,0.0,3.0,2.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiIssue,12.0,6.0,17.0,1.0,0.0,20.0,20.0,0.0,0.0,0.0,3.0,2.0,2.0,0.0,3.0,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - trait ApiReleaseControllerBase,5.0,1.0,6.0,2.0,0.0,161.0,109.0,52.0,0.32298136645962733,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - trait ReleaseTagComponent,7.0,1.0,8.0,1.0,0.0,19.0,19.0,0.0,0.0,1.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - trait ReleaseTagComponent - class ReleaseTags,4.0,1.0,5.0,1.0,2.0,13.0,13.0,0.0,0.0,0.0,3.0,3.0,1.0,0.0,2.0,1.6666666666666667,0.0,0.0,0.0,0.0
@@ -345,24 +345,24 @@ HEAD,0,package model - trait CommitCommentComponent,8.0,1.0,9.0,1.0,0.0,38.0,38.
 HEAD,0,package model - trait CommitCommentComponent - class CommitComments,5.0,2.0,7.0,2.0,2.0,33.0,33.0,0.0,0.0,0.0,2.0,2.0,1.0,0.0,1.5,1.5,0.0,0.0,0.0,0.0
 HEAD,0,package model - class CommitComment,7.0,7.0,14.0,2.0,0.0,17.0,17.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - class CommitComments,7.0,2.0,9.0,2.0,0.0,7.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package util - object LockUtil,11.0,5.0,16.0,0.0,0.0,26.0,17.0,9.0,0.34615384615384615,0.0,10.0,0.0,1.5,0.0,5.0,4.5,0.0,0.0,1.0,-0.14814814814814814
+HEAD,0,package util - object LockUtil,11.0,5.0,16.0,0.0,0.0,26.0,17.0,9.0,0.34615384615384615,0.0,10.0,3.0,1.5,0.0,5.0,4.5,0.0,0.0,1.0,-0.14814814814814814
 HEAD,0,package plugin - class PluginRegistry,44.0,16.0,60.0,0.0,28.0,101.0,102.0,1.0,0.009708737864077669,0.0,74.0,53.0,1.0192307692307692,0.11538461538461539,1.2307692307692308,1.2115384615384615,0.11538461538461539,0.019230769230769232,0.6538461538461539,-0.10354090354090356
-HEAD,0,package plugin - object PluginRegistry,46.0,16.0,60.0,0.0,0.0,174.0,156.0,17.0,0.09826589595375723,0.0,60.0,0.0,2.7777777777777777,3.2222222222222223,11.777777777777779,9.333333333333334,4.444444444444445,1.0,1.0,0.007678161591417487
+HEAD,0,package plugin - object PluginRegistry,46.0,16.0,60.0,0.0,0.0,174.0,156.0,17.0,0.09826589595375723,0.0,60.0,25.0,2.7777777777777777,3.2222222222222223,11.777777777777779,9.333333333333334,4.444444444444445,1.0,1.0,0.007678161591417487
 HEAD,0,package plugin - object PluginRegistry - method listPluginJars - <$anon: java.io.FilenameFilter>,2.0,0.0,2.0,1.0,1.0,3.0,3.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
 HEAD,0,package plugin - class Link,4.0,0.0,4.0,2.0,0.0,6.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package plugin - class PluginInfoBase,2.0,1.0,3.0,0.0,0.0,7.0,8.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package plugin - class PluginInfo,8.0,4.0,12.0,2.0,0.0,10.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package plugin - class PluginWatchThread,28.0,1.0,29.0,2.0,1.0,46.0,44.0,0.0,0.0,0.0,28.0,5.0,5.0,3.0,34.0,27.0,3.0,0.0,1.0,-0.7168141592920354
 HEAD,0,package plugin - class PluginWatchThread - method run - <$anon: Thread>,3.0,0.0,3.0,2.0,1.0,9.0,8.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,6.0,3.0,0.0,0.0,1.0,-1.0
-HEAD,0,package service - object PaginationHelper,10.0,2.0,12.0,0.0,0.0,8.0,8.0,1.0,0.1111111111111111,0.0,9.0,0.0,1.0,0.0,6.0,6.0,0.0,0.0,1.0,1.0
+HEAD,0,package service - object PaginationHelper,10.0,2.0,12.0,0.0,0.0,8.0,8.0,1.0,0.1111111111111111,0.0,9.0,1.0,1.0,0.0,6.0,6.0,0.0,0.0,1.0,1.0
 HEAD,0,package service - trait AccessTokenService,23.0,4.0,27.0,0.0,6.0,37.0,35.0,3.0,0.07894736842105263,4.0,18.0,10.0,1.4285714285714286,1.1428571428571428,5.428571428571429,3.142857142857143,2.0,0.5714285714285714,0.8571428571428571,0.3503401360544217
 HEAD,0,package service - object AccessTokenService,3.0,4.0,6.0,1.0,0.0,3.0,3.0,0.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,1,package ssh - object SshUtil,20.0,2.0,22.0,0.0,0.0,23.0,22.0,1.0,0.043478260869565216,0.0,17.0,0.0,2.0,2.5,7.0,7.0,2.0,0.5,0.5,-0.5
+HEAD,1,package ssh - object SshUtil,20.0,2.0,22.0,0.0,0.0,23.0,22.0,1.0,0.043478260869565216,0.0,17.0,4.0,2.0,2.5,7.0,7.0,2.0,0.5,0.5,-0.5
 HEAD,0,package servlet - class SessionCleanupListener,1.0,0.0,1.0,0.0,2.0,4.0,4.0,0.0,0.0,0.0,2.0,2.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,-1.0
 HEAD,1,package model - trait DeployKeyComponent,7.0,1.0,8.0,1.0,0.0,14.0,14.0,0.0,0.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,1,package model - trait DeployKeyComponent - class DeployKeys,4.0,1.0,5.0,1.0,2.0,10.0,10.0,0.0,0.0,0.0,2.0,2.0,1.0,0.0,3.5,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - class DeployKey,5.0,0.0,5.0,2.0,0.0,8.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package util - object Implicits,43.0,3.0,46.0,0.0,0.0,63.0,61.0,3.0,0.046875,0.0,35.0,0.0,1.0,0.0,1.5,1.5,0.0,0.0,0.5,0.5
+HEAD,0,package util - object Implicits,43.0,3.0,46.0,0.0,0.0,63.0,61.0,3.0,0.046875,0.0,35.0,2.0,1.0,0.0,1.5,1.5,0.0,0.0,0.5,0.5
 HEAD,0,package util - object Implicits - class RichSeq,11.0,1.0,12.0,0.0,1.0,13.0,12.0,0.0,0.0,0.0,7.0,5.0,2.5,5.0,5.0,3.5,8.0,2.0,1.0,1.0
 HEAD,0,package util - object Implicits - class RichString,19.0,2.0,21.0,0.0,1.0,21.0,21.0,0.0,0.0,0.0,16.0,5.0,2.5,1.5,8.5,7.0,3.0,0.5,0.5,0.18831168831168832
 HEAD,0,package util - object Implicits - class RichRequest,3.0,1.0,4.0,0.0,4.0,12.0,12.0,2.0,0.14285714285714285,0.0,4.0,7.0,1.75,0.75,3.5,1.5,1.5,0.75,0.25,0.25
@@ -385,19 +385,19 @@ HEAD,0,package service - trait WebHookIssueCommentService,13.0,2.0,15.0,2.0,1.0,
 HEAD,0,package service - object WebHookService,76.0,18.0,88.0,0.0,0.0,267.0,259.0,10.0,0.03717472118959108,10.0,41.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package service - object WebHookService - trait WebHookPayload,0.0,9.0,9.0,0.0,0.0,1.0,2.0,0.0,0.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package service - object WebHookService - class WebHookCreatePayload,7.0,2.0,9.0,2.0,0.0,11.0,11.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package service - object WebHookService - object WebHookCreatePayload,13.0,2.0,14.0,1.0,0.0,17.0,18.0,0.0,0.0,0.0,5.0,0.0,1.0,0.0,4.0,4.0,0.0,0.0,0.0,0.0
+HEAD,0,package service - object WebHookService - object WebHookCreatePayload,13.0,2.0,14.0,1.0,0.0,17.0,18.0,0.0,0.0,0.0,5.0,1.0,1.0,0.0,4.0,4.0,0.0,0.0,0.0,0.0
 HEAD,0,package service - object WebHookService - class WebHookPushPayload,18.0,3.0,21.0,2.0,0.0,18.0,18.0,1.0,0.05263157894736842,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package service - object WebHookService - object WebHookPushPayload,25.0,3.0,27.0,1.0,0.0,33.0,34.0,0.0,0.0,0.0,12.0,0.0,1.0,0.0,7.0,6.0,0.0,0.0,0.5,0.5
+HEAD,0,package service - object WebHookService - object WebHookPushPayload,25.0,3.0,27.0,1.0,0.0,33.0,34.0,0.0,0.0,0.0,12.0,2.0,1.0,0.0,7.0,6.0,0.0,0.0,0.5,0.5
 HEAD,0,package service - object WebHookService - class WebHookIssuesPayload,8.0,1.0,9.0,2.0,0.0,7.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package service - object WebHookService - class WebHookPullRequestPayload,8.0,2.0,10.0,2.0,0.0,7.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package service - object WebHookService - object WebHookPullRequestPayload,20.0,2.0,21.0,1.0,0.0,37.0,38.0,0.0,0.0,0.0,6.0,0.0,1.0,0.0,8.0,5.0,0.0,0.0,1.0,1.0
+HEAD,0,package service - object WebHookService - object WebHookPullRequestPayload,20.0,2.0,21.0,1.0,0.0,37.0,38.0,0.0,0.0,0.0,6.0,1.0,1.0,0.0,8.0,5.0,0.0,0.0,1.0,1.0
 HEAD,0,package service - object WebHookService - class WebHookIssueCommentPayload,8.0,2.0,10.0,2.0,0.0,7.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package service - object WebHookService - object WebHookIssueCommentPayload,27.0,2.0,28.0,1.0,0.0,27.0,27.0,0.0,0.0,0.0,10.0,0.0,1.0,0.0,14.0,9.0,0.0,0.0,1.0,1.0
+HEAD,0,package service - object WebHookService - object WebHookIssueCommentPayload,27.0,2.0,28.0,1.0,0.0,27.0,27.0,0.0,0.0,0.0,10.0,1.0,1.0,0.0,14.0,9.0,0.0,0.0,1.0,1.0
 HEAD,0,package service - object WebHookService - class WebHookPullRequestReviewCommentPayload,8.0,2.0,10.0,2.0,0.0,7.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package service - object WebHookService - object WebHookPullRequestReviewCommentPayload,24.0,2.0,25.0,1.0,0.0,42.0,43.0,0.0,0.0,0.0,8.0,0.0,1.0,0.0,10.0,7.0,0.0,0.0,1.0,1.0
+HEAD,0,package service - object WebHookService - object WebHookPullRequestReviewCommentPayload,24.0,2.0,25.0,1.0,0.0,42.0,43.0,0.0,0.0,0.0,8.0,1.0,1.0,0.0,10.0,7.0,0.0,0.0,1.0,1.0
 HEAD,0,package service - object WebHookService - class WebHookGollumPayload,6.0,2.0,8.0,2.0,0.0,5.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package service - object WebHookService - class WebHookGollumPagePayload,5.0,2.0,7.0,2.0,0.0,8.0,8.0,2.0,0.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package service - object WebHookService - object WebHookGollumPayload,21.0,2.0,22.0,1.0,0.0,31.0,32.0,0.0,0.0,0.0,11.0,0.0,1.5,5.5,5.0,5.0,4.0,1.5,0.5,0.5
+HEAD,0,package service - object WebHookService - object WebHookGollumPayload,21.0,2.0,22.0,1.0,0.0,31.0,32.0,0.0,0.0,0.0,11.0,3.0,1.5,5.5,5.0,5.0,4.0,1.5,0.5,0.5
 HEAD,0,package model - trait IssueComponent,22.0,1.0,23.0,1.0,0.0,49.0,49.0,0.0,0.0,1.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - trait IssueComponent - class IssueId,6.0,1.0,7.0,2.0,2.0,4.0,4.0,0.0,0.0,0.0,3.0,2.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - trait IssueComponent - class IssueOutline,8.0,1.0,9.0,2.0,1.0,7.0,7.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
@@ -405,7 +405,7 @@ HEAD,0,package model - trait IssueComponent - class Issues,7.0,5.0,12.0,2.0,2.0,
 HEAD,0,package model - class Issue,7.0,16.0,23.0,2.0,0.0,15.0,15.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,2,package servlet - class GitLfsTransferServlet,26.0,0.0,26.0,0.0,2.0,57.0,57.0,0.0,0.0,0.0,23.0,18.0,3.6,5.6,12.2,7.2,14.8,4.6,1.0,0.2397748592870544
 HEAD,0,package util - class RepositoryName,3.0,28.0,31.0,2.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package util - object RepositoryName,17.0,28.0,44.0,1.0,0.0,16.0,16.0,0.0,0.0,0.0,9.0,0.0,1.4,1.6,2.0,1.8,2.6,0.4,0.2,0.2
+HEAD,0,package util - object RepositoryName,17.0,28.0,44.0,1.0,0.0,16.0,16.0,0.0,0.0,0.0,9.0,7.0,1.4,1.6,2.0,1.8,2.6,0.4,0.2,0.2
 HEAD,0,package model - trait CollaboratorComponent,6.0,1.0,7.0,1.0,0.0,11.0,11.0,0.0,0.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - trait CollaboratorComponent - class Collaborators,3.0,1.0,4.0,1.0,2.0,7.0,7.0,0.0,0.0,0.0,2.0,2.0,1.0,0.0,2.5,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - class Collaborator,3.0,0.0,3.0,2.0,0.0,6.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -415,9 +415,9 @@ HEAD,0,package model - object Role - object ADMIN,2.0,1.0,3.0,1.0,0.0,1.0,1.0,0.
 HEAD,0,package model - object Role - object DEVELOPER,2.0,1.0,3.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - object Role - object GUEST,2.0,1.0,3.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - class ApiContents,7.0,2.0,9.0,2.0,0.0,10.0,10.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package api - object ApiContents,15.0,2.0,16.0,1.0,0.0,21.0,20.0,0.0,0.0,0.0,7.0,0.0,2.0,0.0,12.0,6.0,0.0,0.0,1.0,1.0
+HEAD,0,package api - object ApiContents,15.0,2.0,16.0,1.0,0.0,21.0,20.0,0.0,0.0,0.0,7.0,2.0,2.0,0.0,12.0,6.0,0.0,0.0,1.0,1.0
 HEAD,0,package model - class WebHookContentType,3.0,15.0,18.0,2.0,0.0,1.0,1.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package model - object WebHookContentType,19.0,15.0,31.0,1.0,0.0,9.0,10.0,0.0,0.0,2.0,11.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object WebHookContentType,19.0,15.0,31.0,1.0,0.0,9.0,10.0,0.0,0.0,2.0,11.0,3.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - object WebHookContentType - object JSON,2.0,1.0,3.0,3.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - object WebHookContentType - object FORM,2.0,1.0,3.0,3.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - trait WebHook,3.0,38.0,41.0,0.0,0.0,5.0,6.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -442,36 +442,36 @@ HEAD,0,package model - object WebHook - object Release,5.0,2.0,7.0,2.0,0.0,1.0,1
 HEAD,0,package model - object WebHook - object Status,5.0,2.0,7.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - object WebHook - object TeamAdd,5.0,2.0,7.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - object WebHook - object Watch,5.0,2.0,7.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package model - object WebHook - object Event,34.0,33.0,66.0,0.0,0.0,26.0,27.0,0.0,0.0,19.0,10.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object WebHook - object Event,34.0,33.0,66.0,0.0,0.0,26.0,27.0,0.0,0.0,19.0,10.0,2.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - trait IssueLabelComponent,8.0,1.0,9.0,1.0,0.0,9.0,9.0,0.0,0.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - trait IssueLabelComponent - class IssueLabels,5.0,1.0,6.0,2.0,2.0,5.0,5.0,0.0,0.0,0.0,2.0,2.0,1.0,0.0,2.5,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - class IssueLabel,4.0,0.0,4.0,2.0,0.0,6.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package api - object JsonFormat,35.0,5.0,40.0,0.0,0.0,64.0,61.0,3.0,0.046875,0.0,4.0,0.0,3.0,5.0,11.666666666666666,2.6666666666666665,8.0,2.0,1.0,1.0
+HEAD,0,package api - object JsonFormat,35.0,5.0,40.0,0.0,0.0,64.0,61.0,3.0,0.046875,0.0,4.0,9.0,3.0,5.0,11.666666666666666,2.6666666666666665,8.0,2.0,1.0,1.0
 HEAD,0,package api - object JsonFormat - class Context,4.0,10.0,14.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - class ApiPusher,3.0,4.0,7.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package api - object ApiPusher,5.0,4.0,8.0,1.0,0.0,3.0,3.0,0.0,0.0,0.0,2.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiPusher,5.0,4.0,8.0,1.0,0.0,3.0,3.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - trait RepositoryComponent,9.0,1.0,10.0,1.0,0.0,82.0,80.0,0.0,0.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - trait RepositoryComponent - class Repositories,6.0,1.0,7.0,1.0,2.0,77.0,75.0,0.0,0.0,0.0,2.0,3.0,1.5,2.5,6.0,3.0,3.5,1.0,0.5,0.5
 HEAD,0,package model - class Repository,7.0,5.0,12.0,2.0,0.0,15.0,15.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - class RepositoryOptions,5.0,1.0,6.0,2.0,0.0,9.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - class AddACollaborator,3.0,0.0,3.0,2.0,0.0,7.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,1,package core - object GitBucketCoreModule,2.0,0.0,2.0,2.0,0.0,64.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package util - object SyntaxSugars,34.0,29.0,63.0,0.0,0.0,57.0,47.0,4.0,0.0784313725490196,0.0,28.0,0.0,1.6666666666666667,0.16666666666666666,3.8333333333333335,3.0,0.5,0.0,1.0,0.2896080991319087
-HEAD,0,package util - object SyntaxSugars - object ~,5.0,1.0,6.0,0.0,0.0,3.0,4.0,0.0,0.0,0.0,2.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object SyntaxSugars,34.0,29.0,63.0,0.0,0.0,57.0,47.0,4.0,0.0784313725490196,0.0,28.0,10.0,1.6666666666666667,0.16666666666666666,3.8333333333333335,3.0,0.5,0.0,1.0,0.2896080991319087
+HEAD,0,package util - object SyntaxSugars - object ~,5.0,1.0,6.0,0.0,0.0,3.0,4.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
 HEAD,0,package util - object SyntaxSugars - class HeadValueAccessibleMap,7.0,1.0,8.0,0.0,1.0,5.0,6.0,0.0,0.0,0.0,10.0,3.0,1.0,0.0,1.3333333333333333,1.3333333333333333,0.0,0.0,0.3333333333333333,0.3333333333333333
 HEAD,0,package service - trait PrioritiesService,8.0,11.0,19.0,0.0,9.0,85.0,85.0,0.0,0.0,11.0,10.0,9.0,1.0,0.0,5.888888888888889,2.111111111111111,0.0,0.0,1.0,0.4280510018214936
 HEAD,0,package api - class ApiBranch,14.0,0.0,14.0,2.0,0.0,9.0,9.0,0.0,0.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - class ApiBranchCommit,3.0,2.0,5.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - class ApiBranchForList,4.0,0.0,4.0,2.0,0.0,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,7,package view - object Markdown,30.0,2.0,31.0,0.0,0.0,184.0,157.0,22.0,0.12290502793296089,0.0,43.0,0.0,1.5,0.0,5.0,3.0,0.0,0.0,0.25,0.25
+HEAD,7,package view - object Markdown,30.0,2.0,31.0,0.0,0.0,184.0,157.0,22.0,0.12290502793296089,0.0,43.0,6.0,1.5,0.0,5.0,3.0,0.0,0.0,0.25,0.25
 HEAD,7,package view - object Markdown - class GitBucketMarkedRenderer,20.0,1.0,21.0,2.0,7.0,120.0,110.0,5.0,0.043478260869565216,0.0,36.0,30.0,3.3333333333333335,0.5555555555555556,16.11111111111111,5.666666666666667,0.6666666666666666,0.2222222222222222,0.3333333333333333,0.1111111111111111
 HEAD,0,package servlet - class ApiAuthenticationFilter,18.0,0.0,18.0,1.0,4.0,43.0,41.0,0.0,0.0,0.0,8.0,11.0,2.75,3.0,11.75,2.0,7.5,1.25,1.0,-0.3516483516483516
 HEAD,0,package api - class ApiCommitStatus,10.0,3.0,13.0,2.0,0.0,12.0,12.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package api - object ApiCommitStatus,12.0,3.0,14.0,1.0,0.0,13.0,13.0,0.0,0.0,0.0,3.0,0.0,1.0,0.0,3.0,2.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiCommitStatus,12.0,3.0,14.0,1.0,0.0,13.0,13.0,0.0,0.0,0.0,3.0,1.0,1.0,0.0,3.0,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package plugin - trait ReceiveHook,6.0,5.0,11.0,0.0,2.0,8.0,8.0,0.0,0.0,1.0,2.0,2.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.33333333333333337
-HEAD,2,package util - object FileUtil,18.0,7.0,25.0,0.0,0.0,72.0,60.0,10.0,0.14285714285714285,0.0,35.0,0.0,1.6428571428571428,0.35714285714285715,2.642857142857143,2.2857142857142856,0.42857142857142855,0.14285714285714285,0.5,0.06493506493506494
+HEAD,2,package util - object FileUtil,18.0,7.0,25.0,0.0,0.0,72.0,60.0,10.0,0.14285714285714285,0.0,35.0,23.0,1.6428571428571428,0.35714285714285715,2.642857142857143,2.2857142857142856,0.42857142857142855,0.14285714285714285,0.5,0.06493506493506494
 HEAD,0,package api - class ApiPlugin,3.0,1.0,4.0,2.0,0.0,7.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package api - object ApiPlugin,6.0,1.0,6.0,1.0,0.0,5.0,5.0,0.0,0.0,0.0,3.0,0.0,1.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiPlugin,6.0,1.0,6.0,1.0,0.0,5.0,5.0,0.0,0.0,0.0,3.0,1.0,1.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - trait Profile,9.0,7.0,16.0,0.0,1.0,25.0,14.0,12.0,0.46153846153846156,1.0,3.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - trait Profile - class RichColumn,2.0,1.0,3.0,0.0,1.0,3.0,4.0,0.0,0.0,0.0,1.0,2.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - trait ProfileProvider,2.0,1.0,3.0,0.0,0.0,3.0,4.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -483,24 +483,24 @@ HEAD,0,package controller - trait PrioritiesControllerBase - class PriorityForm,
 HEAD,0,package controller - trait PrioritiesControllerBase - method priorityName - <$anon: <error>>,9.0,0.0,9.0,1.0,1.0,10.0,9.0,0.0,0.0,0.0,6.0,3.0,3.0,0.0,7.0,5.0,0.0,0.0,0.0,0.0
 HEAD,0,package controller - trait PrioritiesControllerBase - method uniquePriorityName - <$anon: <error>>,8.0,0.0,8.0,1.0,1.0,21.0,21.0,0.0,0.0,0.0,6.0,1.0,1.0,0.0,14.0,7.0,0.0,0.0,1.0,1.0
 HEAD,0,package api - class ApiBranchProtection,6.0,8.0,14.0,2.0,1.0,3.0,3.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
-HEAD,0,package api - object ApiBranchProtection,25.0,8.0,27.0,1.0,0.0,41.0,38.0,1.0,0.02564102564102564,0.0,8.0,0.0,1.0,0.0,5.0,5.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiBranchProtection,25.0,8.0,27.0,1.0,0.0,41.0,38.0,1.0,0.02564102564102564,0.0,8.0,1.0,1.0,0.0,5.0,5.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - object ApiBranchProtection - class EnablingAndDisabling,3.0,1.0,4.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - object ApiBranchProtection - class Status,4.0,2.0,6.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - object ApiBranchProtection - class EnforcementLevel,1.0,6.0,7.0,0.0,0.0,1.0,2.0,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - object ApiBranchProtection - object Off,5.0,2.0,7.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - object ApiBranchProtection - object NonAdmins,5.0,2.0,7.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - object ApiBranchProtection - object Everyone,5.0,2.0,7.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package api - object ApiBranchProtection - object EnforcementLevel,7.0,6.0,12.0,0.0,0.0,12.0,11.0,0.0,0.0,3.0,1.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiBranchProtection - object EnforcementLevel,7.0,6.0,12.0,0.0,0.0,12.0,11.0,0.0,0.0,3.0,1.0,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - trait ApiIssueCommentControllerBase,6.0,1.0,7.0,2.0,1.0,66.0,35.0,24.0,0.4067796610169492,1.0,1.0,1.0,1.0,0.0,3.0,2.0,0.0,0.0,1.0,1.0
 HEAD,0,package plugin - trait AccountHook,2.0,3.0,5.0,0.0,1.0,3.0,3.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,-0.3333333333333333
 HEAD,0,package api - class ApiUser,8.0,34.0,42.0,2.0,0.0,15.0,6.0,10.0,0.625,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package api - object ApiUser,7.0,34.0,40.0,1.0,0.0,9.0,9.0,0.0,0.0,0.0,2.0,0.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiUser,7.0,34.0,40.0,1.0,0.0,9.0,9.0,0.0,0.0,0.0,2.0,2.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
 HEAD,0,package controller - class ReleaseController,9.0,1.0,10.0,3.0,0.0,9.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,1,package controller - trait ReleaseControllerBase,18.0,1.0,19.0,2.0,1.0,178.0,168.0,4.0,0.023255813953488372,1.0,10.0,2.0,2.0,5.0,18.0,10.0,6.0,2.0,1.0,1.0
 HEAD,0,package controller - trait ReleaseControllerBase - class ReleaseForm,4.0,1.0,5.0,2.0,0.0,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,1,package service - trait ActivityService,6.0,11.0,17.0,0.0,25.0,359.0,358.0,0.0,0.0,11.0,29.0,36.0,1.44,0.68,6.08,2.08,2.52,0.72,0.96,-0.10666666666666667
 HEAD,0,package api - class ApiRepository,12.0,20.0,32.0,2.0,0.0,19.0,18.0,1.0,0.05263157894736842,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package api - object ApiRepository,12.0,20.0,31.0,1.0,0.0,33.0,31.0,0.0,0.0,0.0,8.0,0.0,1.0,0.0,1.5,1.5,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiRepository,12.0,20.0,31.0,1.0,0.0,33.0,31.0,0.0,0.0,0.0,8.0,4.0,1.0,0.0,1.5,1.5,0.0,0.0,0.0,0.0
 HEAD,0,package api - class ApiError,4.0,0.0,4.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - trait ApiRepositoryCollaboratorControllerBase,2.0,1.0,3.0,2.0,0.0,43.0,20.0,23.0,0.5348837209302325,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - trait ProtectedBranchComponent,7.0,1.0,8.0,1.0,0.0,21.0,21.0,0.0,0.0,1.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -511,9 +511,9 @@ HEAD,0,package model - class ProtectedBranchContext,3.0,0.0,3.0,2.0,0.0,1.0,1.0,
 HEAD,0,package model - trait CommitStatusComponent,11.0,1.0,12.0,1.0,0.0,31.0,31.0,0.0,0.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - trait CommitStatusComponent - class CommitStatuses,6.0,1.0,7.0,2.0,2.0,25.0,25.0,0.0,0.0,0.0,2.0,2.0,1.0,0.0,1.5,1.5,0.0,0.0,0.0,0.0
 HEAD,0,package model - class CommitStatus,7.0,5.0,12.0,2.0,0.0,13.0,13.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package model - object CommitStatus,11.0,5.0,15.0,1.0,0.0,16.0,17.0,0.0,0.0,0.0,3.0,0.0,1.0,0.0,4.0,3.0,0.0,0.0,0.0,0.0
+HEAD,0,package model - object CommitStatus,11.0,5.0,15.0,1.0,0.0,16.0,17.0,0.0,0.0,0.0,3.0,1.0,1.0,0.0,4.0,3.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - class CommitState,1.0,15.0,16.0,0.0,0.0,1.0,2.0,0.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package model - object CommitState,24.0,15.0,34.0,0.0,0.0,26.0,20.0,5.0,0.2,4.0,14.0,0.0,2.0,0.0,2.0,1.3333333333333333,0.0,0.0,0.0,0.0
+HEAD,0,package model - object CommitState,24.0,15.0,34.0,0.0,0.0,26.0,20.0,5.0,0.2,4.0,14.0,6.0,2.0,0.0,2.0,1.3333333333333333,0.0,0.0,0.0,0.0
 HEAD,0,package model - object CommitState - object ERROR,2.0,2.0,4.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - object CommitState - object FAILURE,2.0,2.0,4.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - object CommitState - object PENDING,2.0,3.0,5.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -523,14 +523,14 @@ HEAD,0,package model - trait RepositoryWebHookEventComponent - class RepositoryW
 HEAD,0,package model - class RepositoryWebHookEvent,4.0,0.0,4.0,2.0,0.0,6.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package service - trait ReleaseService,18.0,5.0,23.0,0.0,10.0,88.0,89.0,0.0,0.0,3.0,16.0,11.0,1.0,0.0,3.1818181818181817,2.3636363636363638,0.0,0.0,1.0,0.6363636363636365
 HEAD,0,package service - object ReleaseService,2.0,5.0,7.0,0.0,0.0,3.0,3.0,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,2,package util - object DatabaseConfig,25.0,2.0,27.0,0.0,0.0,45.0,37.0,1.0,0.02631578947368421,0.0,11.0,0.0,1.3333333333333333,0.0,4.0,3.3333333333333335,0.0,0.0,0.6666666666666666,0.6666666666666666
+HEAD,2,package util - object DatabaseConfig,25.0,2.0,27.0,0.0,0.0,45.0,37.0,1.0,0.02631578947368421,0.0,11.0,4.0,1.3333333333333333,0.0,4.0,3.3333333333333335,0.0,0.0,0.6666666666666666,0.6666666666666666
 HEAD,0,package util - trait DatabaseType,1.0,6.0,7.0,0.0,0.0,5.0,6.0,0.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package util - object DatabaseType,25.0,6.0,26.0,0.0,0.0,42.0,41.0,0.0,0.0,4.0,13.0,0.0,5.0,0.0,5.0,2.0,0.0,0.0,0.0,0.0
+HEAD,0,package util - object DatabaseType,25.0,6.0,26.0,0.0,0.0,42.0,41.0,0.0,0.0,4.0,13.0,5.0,5.0,0.0,5.0,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package util - object DatabaseType - object H2,3.0,1.0,4.0,1.0,0.0,5.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package util - object DatabaseType - object MySQL,3.0,1.0,4.0,1.0,0.0,5.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package util - object DatabaseType - object MariaDb,3.0,1.0,4.0,1.0,0.0,5.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package util - object DatabaseType - object PostgreSQL,5.0,1.0,6.0,1.0,0.0,5.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package util - object DatabaseType - object BlockingPostgresDriver,12.0,2.0,14.0,0.0,0.0,7.0,7.0,0.0,0.0,0.0,11.0,0.0,2.0,0.0,12.0,10.0,0.0,0.0,1.0,0.0
+HEAD,0,package util - object DatabaseType - object BlockingPostgresDriver,12.0,2.0,14.0,0.0,0.0,7.0,7.0,0.0,0.0,0.0,11.0,2.0,2.0,0.0,12.0,10.0,0.0,0.0,1.0,0.0
 HEAD,0,package util - trait Validations,12.0,1.0,13.0,0.0,1.0,40.0,26.0,12.0,0.3157894736842105,1.0,10.0,1.0,1.0,0.0,3.0,3.0,0.0,0.0,1.0,1.0
 HEAD,0,package util - trait Validations - <$anon: <error>>,6.0,0.0,6.0,1.0,1.0,10.0,9.0,0.0,0.0,0.0,6.0,3.0,3.0,0.0,6.0,4.0,0.0,0.0,0.0,0.0
 HEAD,0,package util - trait Validations - <$anon: <error>>,6.0,0.0,6.0,1.0,1.0,10.0,9.0,0.0,0.0,0.0,6.0,3.0,3.0,0.0,6.0,4.0,0.0,0.0,0.0,0.0
@@ -553,11 +553,11 @@ HEAD,0,package controller - trait WikiControllerBase - method conflictForNew - <
 HEAD,0,package controller - trait WikiControllerBase - method conflictForEdit - <$anon: <error>>,2.0,0.0,2.0,1.0,1.0,7.0,7.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,4.0,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - class UpdateAUser,3.0,0.0,3.0,2.0,0.0,9.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package service - trait RepositorySearchService,40.0,2.0,42.0,0.0,6.0,92.0,93.0,0.0,0.0,1.0,52.0,20.0,2.857142857142857,3.142857142857143,13.571428571428571,10.714285714285714,4.714285714285714,1.5714285714285714,1.0,0.8207282913165266
-HEAD,0,package service - object RepositorySearchService,22.0,2.0,24.0,0.0,0.0,38.0,38.0,0.0,0.0,1.0,25.0,0.0,2.0,0.0,42.0,22.0,0.0,0.0,1.0,1.0
+HEAD,0,package service - object RepositorySearchService,22.0,2.0,24.0,0.0,0.0,38.0,38.0,0.0,0.0,1.0,25.0,2.0,2.0,0.0,42.0,22.0,0.0,0.0,1.0,1.0
 HEAD,0,package service - object RepositorySearchService - class SearchResult,3.0,1.0,4.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package service - object RepositorySearchService - class IssueSearchResult,6.0,1.0,7.0,2.0,0.0,10.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package service - object RepositorySearchService - class FileSearchResult,5.0,2.0,7.0,2.0,0.0,6.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package ssh - object SshServer,12.0,1.0,13.0,0.0,0.0,33.0,34.0,0.0,0.0,0.0,12.0,0.0,1.5,0.0,6.75,3.25,0.0,0.0,0.5,-0.5
+HEAD,0,package ssh - object SshServer,12.0,1.0,13.0,0.0,0.0,33.0,34.0,0.0,0.0,0.0,12.0,6.0,1.5,0.0,6.75,3.25,0.0,0.0,0.5,-0.5
 HEAD,0,package ssh - class SshServerListener,12.0,0.0,12.0,1.0,2.0,16.0,16.0,0.0,0.0,0.0,12.0,3.0,1.5,0.0,3.5,3.0,0.0,0.0,1.0,-0.7999999999999999
 HEAD,0,package model - trait AccountFederationComponent,4.0,1.0,5.0,0.0,0.0,12.0,13.0,0.0,0.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - trait AccountFederationComponent - class AccountFederations,2.0,1.0,3.0,0.0,2.0,8.0,8.0,0.0,0.0,0.0,2.0,2.0,1.0,0.0,2.5,2.0,0.0,0.0,0.0,0.0
@@ -574,11 +574,11 @@ HEAD,0,package controller - trait AccountManagementControllerBase - method reser
 HEAD,0,package controller - class ApiController,45.0,1.0,46.0,3.0,0.0,45.0,45.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,6,package controller - trait ApiControllerBase,2.0,1.0,3.0,2.0,0.0,41.0,27.0,29.0,0.5178571428571429,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package api - class ApiLabel,6.0,4.0,10.0,2.0,0.0,3.0,3.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package api - object ApiLabel,6.0,4.0,9.0,1.0,0.0,7.0,7.0,0.0,0.0,0.0,2.0,0.0,1.0,0.0,2.0,1.0,0.0,0.0,0.0,0.0
+HEAD,0,package api - object ApiLabel,6.0,4.0,9.0,1.0,0.0,7.0,7.0,0.0,0.0,0.0,2.0,1.0,1.0,0.0,2.0,1.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - trait ReleaseAssetComponent,6.0,1.0,7.0,1.0,0.0,22.0,22.0,0.0,0.0,1.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - trait ReleaseAssetComponent - class ReleaseAssets,3.0,1.0,4.0,1.0,3.0,16.0,16.0,0.0,0.0,0.0,3.0,3.0,1.0,0.0,2.6666666666666665,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - class ReleaseAsset,6.0,2.0,8.0,2.0,0.0,12.0,12.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-HEAD,0,package <empty> - object PluginsJson,3.0,0.0,3.0,0.0,0.0,10.0,10.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,4.0,2.0,0.0,0.0,0.0,0.0
+HEAD,0,package <empty> - object PluginsJson,3.0,0.0,3.0,0.0,0.0,10.0,10.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,4.0,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - trait ActivityComponent,7.0,1.0,8.0,1.0,0.0,15.0,15.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - trait ActivityComponent - class Activities,4.0,1.0,5.0,1.0,1.0,10.0,10.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
 HEAD,0,package model - class Activity,6.0,0.0,6.0,2.0,0.0,10.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
