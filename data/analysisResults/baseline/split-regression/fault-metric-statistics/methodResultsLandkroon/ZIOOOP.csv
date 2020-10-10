@@ -1,0 +1,11 @@
+name,rows_with_data,faulty_rows_with_data,non_faulty_rows_with_data,percentage_faulty,percentage_total_faults
+CyclomaticComplexity,666,39,627,5.8558558558558556,100.0
+DepthOfNesting,18,0,18,0.0,0.0
+LinesOfCode,666,39,627,5.8558558558558556,100.0
+SourceLinesOfCode,666,39,627,5.8558558558558556,100.0
+CommentLinesOfCode,37,5,32,13.513513513513514,12.82051282051282
+CommentDensity,37,5,32,13.513513513513514,12.82051282051282
+OutDegree,601,31,570,5.158069883527454,79.48717948717949
+OutDegreeDistinct,601,31,570,5.158069883527454,79.48717948717949
+PatternSize,18,0,18,0.0,0.0
+NumberOfPatternVariables,2,0,2,0.0,0.0

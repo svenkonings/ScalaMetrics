@@ -1,0 +1,8 @@
+name,rows_with_data,faulty_rows_with_data,non_faulty_rows_with_data,percentage_faulty,percentage_total_faults
+NumberOfLambdaFunctions,1031,219,812,21.241513094083412,56.58914728682171
+SourceLinesOfLambda,1031,219,812,21.241513094083412,56.58914728682171
+LambdaScore,1031,219,812,21.241513094083412,56.58914728682171
+LambdaFunctionsUsingOuterVariables,13,4,9,30.76923076923077,1.03359173126615
+LambdaFunctionsUsingInnerVariables,22,11,11,50.0,2.842377260981912
+LambdaFunctionsWithSideEffects,287,117,170,40.76655052264808,30.23255813953488
+LambdaFunctionsWithAssignment,21,13,8,61.904761904761905,3.359173126614987

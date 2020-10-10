@@ -1,0 +1,6 @@
+name,rows_with_data,faulty_rows_with_data,non_faulty_rows_with_data,percentage_faulty,percentage_total_faults
+CyclomaticComplexity,47,3,44,6.382978723404255,100.0
+LinesOfCode,47,3,44,6.382978723404255,100.0
+SourceLinesOfCode,47,3,44,6.382978723404255,100.0
+OutDegree,42,1,41,2.380952380952381,33.33333333333333
+OutDegreeDistinct,42,1,41,2.380952380952381,33.33333333333333

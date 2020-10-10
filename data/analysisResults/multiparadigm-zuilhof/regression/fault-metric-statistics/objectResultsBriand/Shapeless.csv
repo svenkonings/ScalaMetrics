@@ -1,0 +1,5 @@
+name,rows_with_data,faulty_rows_with_data,non_faulty_rows_with_data,percentage_faulty,percentage_total_faults
+NumberOfLambdaFunctions,226,70,156,30.973451327433626,38.25136612021858
+SourceLinesOfLambda,226,70,156,30.973451327433626,38.25136612021858
+LambdaScore,226,70,156,30.973451327433626,38.25136612021858
+LambdaFunctionsWithSideEffects,2,1,1,50.0,0.546448087431694

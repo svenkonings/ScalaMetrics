@@ -1,0 +1,8 @@
+name,rows_with_data,faulty_rows_with_data,non_faulty_rows_with_data,percentage_faulty,percentage_total_faults
+ImplicitDefinitions,332,143,189,43.07228915662651,56.52173913043478
+ImplicitConversions,205,74,131,36.09756097560975,29.249011857707508
+ImplicitParameters,176,95,81,53.97727272727273,37.54940711462451
+OverridingPatternVariables,113,51,62,45.13274336283185,20.158102766798418
+UsageOfNull,47,29,18,61.702127659574465,11.462450592885375
+UnitVariables,1,0,1,0.0,0.0
+FunctionVariables,263,98,165,37.26235741444867,38.73517786561265

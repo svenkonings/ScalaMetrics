@@ -21,21 +21,25 @@ def main(args):
         summarise_directory(args, 'mulitvariate-baseline-control')
 
 
-def summarise_directory(args, directory):
+def summarise_directory(args, directory, columns=None):
+    if columns is None:
+        columns = ['name', 'precision', 'recall', 'mcc']
     folder = f'{args.folder}/regression/{directory}/'
     for category in categories:
         path = folder + category
-        df = read_all(path, ['name', 'precision', 'recall', 'mcc'])
+        df = read_all(path, columns)
         if df is not None:
             summarise(df, path, category, directory)
 
 
-def summarise_split_directory(args, directory):
+def summarise_split_directory(args, directory, columns=None):
+    if columns is None:
+        columns = ['name', 'precision', 'recall', 'mcc']
     folder = f'{args.folder}/split-regression/{directory}/'
     for category in categories:
         path = folder + category
         for paradigm in ['Neutral', 'OOP', 'FP', 'Mix']:
-            df = read_all(path, ['name', 'precision', 'recall', 'mcc'], paradigm)
+            df = read_all(path, columns, paradigm)
             if df is not None:
                 summarise(df, path, category + paradigm, directory, paradigm)
 

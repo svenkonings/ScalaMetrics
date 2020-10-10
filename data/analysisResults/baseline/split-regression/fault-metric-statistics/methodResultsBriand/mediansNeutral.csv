@@ -1,0 +1,11 @@
+name,count,percentage_faulty,percentage_total_faults
+CommentDensity,7,4.132231404958678,1.872659176029963
+CommentLinesOfCode,7,4.132231404958678,1.872659176029963
+CyclomaticComplexity,7,3.1220767072029934,100.0
+DepthOfNesting,6,0.0,0.0
+LinesOfCode,7,3.1220767072029934,100.0
+NumberOfPatternVariables,4,0.0,0.0
+OutDegree,7,3.885714285714285,93.44262295081968
+OutDegreeDistinct,7,3.885714285714285,93.44262295081968
+PatternSize,6,0.0,0.0
+SourceLinesOfCode,7,3.1220767072029934,100.0

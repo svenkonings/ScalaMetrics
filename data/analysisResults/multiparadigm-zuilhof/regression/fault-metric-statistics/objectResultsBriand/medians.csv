@@ -1,0 +1,8 @@
+name,count,percentage_faulty,percentage_total_faults
+LambdaFunctionsUsingInnerVariables,6,55.0,3.369378133652623
+LambdaFunctionsUsingOuterVariables,5,48.99328859060403,2.1978021978021984
+LambdaFunctionsWithAssignment,6,51.346153846153854,6.880076445293838
+LambdaFunctionsWithSideEffects,7,41.935483870967744,9.278350515463918
+LambdaScore,7,29.745042492917843,53.7313432835821
+NumberOfLambdaFunctions,7,29.745042492917843,53.7313432835821
+SourceLinesOfLambda,7,29.745042492917843,53.7313432835821

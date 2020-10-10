@@ -1,0 +1,16 @@
+name,rows_with_data,faulty_rows_with_data,non_faulty_rows_with_data,percentage_faulty,percentage_total_faults
+FanOut,398,20,378,5.025125628140704,100.0
+FanIn,342,18,324,5.263157894736842,90.0
+CouplingBetweenObjects,401,20,381,4.987531172069826,100.0
+DepthOfInheritance,343,14,329,4.081632653061225,70.0
+LackOfCohesionInMethods,65,3,62,4.615384615384616,15.0
+LinesOfCode,403,20,383,4.962779156327544,100.0
+SourceLinesOfCode,403,20,383,4.962779156327544,100.0
+CommentLinesOfCode,38,7,31,18.421052631578945,35.0
+CommentDensity,38,7,31,18.421052631578945,35.0
+NumberOfChildren,83,7,76,8.433734939759036,35.0
+ResponseForClass,158,12,146,7.59493670886076,60.0
+WeightedMethodCount,97,4,93,4.123711340206185,20.0
+CyclomaticComplexity,97,4,93,4.123711340206185,20.0
+OutDegree,92,3,89,3.260869565217391,15.0
+OutDegreeDistinct,92,3,89,3.260869565217391,15.0
