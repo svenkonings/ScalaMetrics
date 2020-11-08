@@ -49,24 +49,32 @@ def plot_balanced(category, args):
     projects = get_projects(category)
     if projects:
         for project, paradigms in list(projects.items()):
-            if len(paradigms) != 4:
+            if len(paradigms) != 5:
                 del projects[project]
 
         paradigm_means = {}
         columns = ['name', 'precision', 'recall', 'mcc']
-        for paradigm in ['Neutral', 'OOP', 'FP', 'Mix']:
+        for paradigm in ['All', 'Neutral', 'OOP', 'FP', 'Mix']:
             df = pd.DataFrame(columns=columns)
             for files in projects.values():
                 df = df.append(pd.read_csv(files[paradigm])[columns], ignore_index=True)
             paradigm_means[paradigm] = get_means(df)
-        all = get_results(category)
-        plot_barcharts('barchart-balanced', category, args, all, *paradigm_means.values())
+        plot_barcharts('barchart-balanced', category, args, *paradigm_means.values())
 
 
 def get_projects(category):
+    projects = defaultdict(dict)
+
+    files = glob(f'../data/analysisResults/baseline/regression/univariate/{category}/[!m]*.csv')
+    project_regex = re.compile(f'{category}/(.*)\\.csv')
+    for file in files:
+        file = file.replace('\\', '/')
+        search = project_regex.search(file)
+        project = search.group(1)
+        projects[project]['All'] = file
+
     files = glob(f'../data/analysisResults/baseline/split-regression/univariate/{category}/[!m]*.csv')
     project_regex = re.compile(f'{category}/(.*)(Neutral|OOP|FP|Mix)')
-    projects = defaultdict(dict)
     for file in files:
         file = file.replace('\\', '/')
         search = project_regex.search(file)
