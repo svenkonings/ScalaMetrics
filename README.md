@@ -276,7 +276,7 @@ The plots can be found in the
 [ResultAnalysis plots folder](https://github.com/svenkonings/ScalaMetrics/tree/master/ResultAnalysis/plots).
 For the plots in the research the following commands have been used:
 - `python plots/paradigm_score_plots.py --scatter-color --hist --write`
-- `python plots/baseline_plots.py --write`
+- `python plots/baseline_paradigm_plots.py --write`
 
 ## Credits
 The initial design of this framework has been inspired by the

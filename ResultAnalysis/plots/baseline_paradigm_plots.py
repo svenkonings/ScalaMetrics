@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 
 from analysis import categories
-from plots import get_split_results, savefig
+from plots import get_split_results, savefig, get_results
 
 
 def main(args):
@@ -18,25 +18,27 @@ def main(args):
 
 
 def plot_all(category, args):
+    all = get_results(category)
     neutral = get_split_results(category, 'Neutral')
     oop = get_split_results(category, 'OOP')
     fp = get_split_results(category, 'FP')
     mix = get_split_results(category, 'Mix')
     if neutral is not None and oop is not None and fp is not None and mix is not None:
-        plot_barcharts('barchart', category, args, neutral, oop, fp, mix)
+        plot_barcharts('barchart', category, args, all, neutral, oop, fp, mix)
 
 
-def plot_barcharts(folder, category, args, neutral, oop, fp, mix):
+def plot_barcharts(folder, category, args, all, neutral, oop, fp, mix):
     ind = np.arange(len(neutral))
-    width = 0.2
-    plt.bar(ind + 0 * width, neutral['mcc mean'], width, label='Neutral')  # , yerr=neutral['mcc std'])
-    plt.bar(ind + 1 * width, oop['mcc mean'], width, label='OOP')  # , yerr=oop['mcc std'])
-    plt.bar(ind + 2 * width, fp['mcc mean'], width, label='FP')  # , yerr=fp['mcc std'])
-    plt.bar(ind + 3 * width, mix['mcc mean'], width, label='Mixed')  # , yerr=mix['mcc std'])
+    width = 0.15
+    plt.bar(ind + 0 * width, all['mcc mean'], width, label='All')  # , yerr=all['mcc std'])
+    plt.bar(ind + 1 * width, neutral['mcc mean'], width, label='Neutral')  # , yerr=neutral['mcc std'])
+    plt.bar(ind + 2 * width, oop['mcc mean'], width, label='OOP')  # , yerr=oop['mcc std'])
+    plt.bar(ind + 3 * width, fp['mcc mean'], width, label='FP')  # , yerr=fp['mcc std'])
+    plt.bar(ind + 4 * width, mix['mcc mean'], width, label='Mixed')  # , yerr=mix['mcc std'])
     plt.title(category)
     plt.ylabel('MCC')
     plt.ylim(-0.05, 0.5)
-    plt.xticks(ticks=ind + 1.5 * width, labels=neutral['name'], rotation=-30, ha='left')
+    plt.xticks(ticks=ind + 2 * width, labels=neutral['name'], rotation=-30, ha='left')
     plt.grid(axis='y')
     plt.gcf().set_size_inches(16, 6)  # Double horizontal size
     plt.legend()
@@ -57,8 +59,8 @@ def plot_balanced(category, args):
             for files in projects.values():
                 df = df.append(pd.read_csv(files[paradigm])[columns], ignore_index=True)
             paradigm_means[paradigm] = get_means(df)
-
-        plot_barcharts('barchart-balanced', category, args, *paradigm_means.values())
+        all = get_results(category)
+        plot_barcharts('barchart-balanced', category, args, all, *paradigm_means.values())
 
 
 def get_projects(category):

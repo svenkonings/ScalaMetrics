@@ -4,6 +4,15 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
+def get_results(category):
+    try:
+        return pd.read_csv(
+            f'../data/analysisResults/baseline/regression/univariate/{category}/means.csv'
+        )
+    except FileNotFoundError:
+        return None
+
+
 def get_split_results(category, paradigm):
     try:
         return pd.read_csv(
