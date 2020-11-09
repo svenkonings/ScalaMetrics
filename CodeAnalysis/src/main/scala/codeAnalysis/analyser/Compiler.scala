@@ -11,6 +11,11 @@ import scala.util.matching.Regex
 import codeAnalysis.util.Extensions.SourceFileExtension
 
 class Compiler extends Closeable {
+  /**
+   * The global instance, which provides a set of types and operations associated with this compiler.
+   *
+   * @see `scala.reflect.api.Universe`
+   */
   val global: Global = {
     val settings = new Settings
     settings.usejavacp.value = true
@@ -108,7 +113,7 @@ class Compiler extends Closeable {
     treesFromLoadedSources(sources)
   }
 
-  def close(): Unit = {
+  override def close(): Unit = {
     global.askShutdown()
     global.close()
   }

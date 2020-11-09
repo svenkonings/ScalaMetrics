@@ -27,27 +27,30 @@ Table of contents:
 Source code metrics are used to measure and evaluate the code quality of
 software projects. Metrics are available for both Object-Oriented Programming
 (OOP) and Functional Programming (FP). However, there is little research on
-source code metrics for the combination of OOP and FP. Furthermore, existing OOP
-and FP metrics are not always applicable. For example, the usage of mutable
+source code metrics for the combination of OOP and FP. Furthermore, existing
+OOP and FP metrics are not always applicable. For example, the usage of mutable
 class variables (OOP) in lambda functions (FP) is a combination that does not
-occur in either paradigm on their own. Existing OOP and FP metrics are therefore
-unsuitable to give an indication of quality regarding these combined constructs.
+occur in either paradigm on their own. Existing OOP and FP metrics are
+therefore unsuitable to give an indication of quality regarding these combined
+constructs.
 
 Scala is a programming language which features an extensive combination of OOP
-and FP construct. The goal of this thesis is to research metrics for Scala which
-can detect potential faults when combining OOP and FP. We have implemented a
-framework for defining and analysing Scala metrics. Using this framework we have
-measured whether code was written using mostly OOP or FP-style constructs and
-analysed whether this affected the occurrence of potential faults. Next we
-implemented a baseline model of existing OOP and FP metrics. Candidate metrics
-were added to this baseline model to verify whether they improve the fault
-detection performance.
+and FP construct. The goal of this thesis is to research metrics for Scala
+which can detect potential faults when combining OOP and FP. We have
+implemented a framework for defining and analysing Scala metrics. Using this
+framework we have measured whether code was written using mostly OOP- or
+FP-style constructs and analysed whether this affected the occurrence of
+potential faults. Next, we implemented a baseline model of existing OOP and FP
+metrics. Candidate metrics were added to this baseline model to verify whether
+they improve the fault detection performance.
 
 In the analysed projects, there was a relatively higher number of faults when
-mixing OOP- and FP-style code. None of the researched candidate metrics
-significantly improved the fault detection performance of the baseline model.
-However, some of the metrics measured constructs for which over half of the
-objects using those constructs contained faults.
+mixing OOP- and FP-style code. Furthermore, most OOP metrics perform well on
+FP-style Scala code. The baseline model was often able to detect when code was
+wrong. Therefore, the candidate metrics did not significantly improve the fault
+detection performance of the baseline model. However, the candidate metrics did
+help to indicate why code contained faults. Constructs were found for which
+over half of the objects using those constructs contained faults.
 
 ## Framework design
 ![Framework design](https://github.com/svenkonings/ScalaMetrics/raw/master/img/Framework_design.svg?sanitize=true "Framework design")

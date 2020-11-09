@@ -2,14 +2,36 @@ package codeAnalysis.analyser.metric
 
 import scala.collection.mutable.ListBuffer
 
+/**
+ * Tree-like representation of the metric results.
+ */
 abstract class Result {
   private val _results: ListBuffer[Result] = ListBuffer()
   private val _metrics: ListBuffer[MetricResult] = ListBuffer()
 
+  /**
+   * The name of the tree this result is associated with.
+   */
   val name: String
+
+  /**
+   * The path of the file this result is associated with.
+   */
   val path: String
+
+  /**
+   * The start line of the code this result is associated with.
+   */
   val startLine: Int
+
+  /**
+   * Theend of the code this result is associated with.
+   */
   val endLine: Int
+
+  /**
+   * The number of faults this result is associated with.
+   */
   var faults: Int = 0
 
   def addResult(result: Result): Result = {

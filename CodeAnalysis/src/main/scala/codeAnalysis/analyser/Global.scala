@@ -9,6 +9,11 @@ import scala.reflect.internal.util.DefinedPosition
 import scala.tools.nsc.reporters.Reporter
 import scala.tools.nsc.{Settings, interactive}
 
+/**
+ * The global instance, which provides a set of types and operations associated with a compiler run.
+ *
+ * @see `scala.reflect.api.Universe`
+ */
 class Global(settings: Settings, reporter: Reporter) extends interactive.Global(settings, reporter) {
 
   // Code based on Scapegoat (https://github.com/sksamuel/scapegoat)
