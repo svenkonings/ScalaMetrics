@@ -1,5 +1,6 @@
 from analysis import categories, projects, save_dataframe, get_metric_results, get_columns, parse_args, \
     split_paradigm_score
+from analysis.summarise import summarise_split_directory, summarise_directory
 
 
 def main(args):
@@ -19,6 +20,10 @@ def main(args):
                         descriptive(scores, folder, category, name + paradigm, args)
                 else:
                     descriptive(df, folder, category, name, args)
+    if args.split_paradigm_score:
+        summarise_split_directory(args, 'descriptive', ['name', 'mean', 'std'])
+    else:
+        summarise_directory(args, 'descriptive', ['name', 'mean', 'std'])
 
 
 def descriptive(df, folder, category, name, args):
