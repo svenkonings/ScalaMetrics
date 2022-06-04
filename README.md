@@ -6,6 +6,7 @@ This framework has been developed as part of a Master's thesis.
 Programming in Scala
 - Author: Sven Konings
 - Year: 2020
+- URL: [essay.utwente.nl/85223](https://essay.utwente.nl/85223/)
 
 Table of contents:
 - [Paper abstract](#paper-abstract)
